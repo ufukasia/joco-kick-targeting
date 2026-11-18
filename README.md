@@ -106,6 +106,7 @@ Git stores every file byte-for-byte (`.gitattributes`), so the registered hashes
 python -m pip install -r requirements.txt               # Python 3.13, numpy, scipy, numba
 python -m pytest test_fast_ils.py test_online_reward.py # 9 tests
 python v2_analysis.py confirm --tag holdout2_10s        # confirmatory result from the stored runs (seconds)
+python scripts/verify_paper_numbers.py                  # recompute headline numbers, check them against the evidence ledger
 python readme_figures.py                                # the figures above (writes to release_meta/docs/ in the author's tree)
 ```
 
