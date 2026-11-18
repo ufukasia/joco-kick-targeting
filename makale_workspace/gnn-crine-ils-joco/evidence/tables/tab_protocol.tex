@@ -1,0 +1,25 @@
+% OTOMATIK URETIM — evidence/scripts/build_tables.py (protokol gercekleri ham config'lerden)
+\begin{table}[!htbp]
+ \centering\small
+ \caption{Deney kümeleri ve protokol: problem sayısı, tohum/problem, nominal yöntem bütçesi ve deney tohumu.}
+ \label{tab:protocol}
+\begin{tabularx}{\textwidth}{@{\extracolsep{\fill}} >{\raggedright\arraybackslash}X cccc >{\raggedright\arraybackslash}X}
+\toprule
+Deney & Problemler & Tohum/problem & Bütçe [sn] & Tohum & Durum \\
+\midrule
+On strateji, validation (sentetik) & 40 & 3 & 0,5 & 314159 & tamam \\% results/diversification_validation_40.json
+On strateji, bağımsız sentetik & 100 & 3 & 1 & 271828 & tamam \\% results/diversification_synthetic_100.json
+On strateji, standart TSPLIB & 9 & 10 & 5 & 161803 & tamam \\% results/diversification_tsplib_9x10.json
+On strateji, ilk dış World seti & 9 & 10 & 5 & 141421 & tamam (gr9882 durduruldu) \\% results/diversification_world_10x10.json
+Focused, validation (sentetik) & 40 & 3 & 0,5 & 57721 & tamam \\% results/focused_validation_40.json
+Focused, bağımsız sentetik & 100 & 3 & 1 & 7447 & tamam \\% results/focused_synthetic_100.json
+Focused, standart TSPLIB & 9 & 10 & 5 & 8899 & tamam \\% results/focused_tsplib_9x10.json
+Focused, yeni World & 10 & 10 & 5 & 10301 & tamam \\% results/focused_world_10x10.json
+Bağımsız Waterloo VLSI & 16 & 5 & 5 & 62003 & tamam \\% results/waterloo_vlsi_current_16x5.json
+TSPLIB ölçek katmanları & 72 & 5 & 5 & 91009 & tamam; 8 parça \\% results/tsplib_scale_72x5.json
+LKH-3 bütçe–performans & 19 & 10 & 1 ve 5 & 42577 & tamam \\% results/lkh_comparison_19x10.json
+Focused, World kick-aktiflik ön-uçuşu & 2 & 1 & 30 & 10301 & tamam; ho14473 kick=0 \\% results/focused_world_30s_preflight.json
+Focused, uzun-bütçe ön-uçuşu & 2 & 1 & 120 & 10301 & tamam; ho14473 kick=0 \\% results/focused_world_120s_preflight.json
+\bottomrule
+\end{tabularx}
+\end{table}

@@ -1,0 +1,37 @@
+{
+ "suite": "vlsi_old",
+ "seeds": 10,
+ "budget": 10.0,
+ "strategies": [
+  "random_global",
+  "gnn_global",
+  "knn_global",
+  "random_local",
+  "gnn_local",
+  "knn_local"
+ ],
+ "instances": [
+  "xqf131",
+  "xqg237",
+  "pma343",
+  "pka379",
+  "bcl380",
+  "pbl395",
+  "pbk411",
+  "pbn423",
+  "pbm436",
+  "xql662",
+  "rbx711",
+  "rbu737",
+  "dkg813",
+  "lim963",
+  "pbd984",
+  "xit1083",
+  "dca1389",
+  "bck2217",
+  "bch2762",
+  "beg3293"
+ ],
+ "extra": {},
+ "workers": 4
+}

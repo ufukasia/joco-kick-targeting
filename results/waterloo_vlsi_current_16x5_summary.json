@@ -1,0 +1,370 @@
+{
+  "experiment": "suspicious_centered_focused_ils",
+  "suite": "vlsi",
+  "metric": "negative_gap_pct",
+  "n_complete_instances": 16,
+  "quality_direction": "higher is better; real-world quality is negative BKS gap",
+  "inference_unit": "instance; seeds are averaged within each instance",
+  "multiplicity": "Holm across 1 alternative-versus-random comparisons",
+  "aggregate": {
+    "random": {
+      "mean_quality": -4.857900758722709,
+      "median_quality": -5.220301215924849,
+      "mean_cost": 2379.425,
+      "mean_elapsed_s": 5.437638713750085,
+      "mean_kicks": 11.7375,
+      "mean_accepted_kicks": 2.1374999999999997
+    },
+    "suspicious": {
+      "mean_quality": -4.65569105989514,
+      "median_quality": -4.882312673566782,
+      "mean_cost": 2377.1125,
+      "mean_elapsed_s": 5.415210141249963,
+      "mean_kicks": 11.5,
+      "mean_accepted_kicks": 2.75
+    }
+  },
+  "quality_ranking": [
+    "suspicious",
+    "random"
+  ],
+  "friedman": {
+    "statistic": null,
+    "p_value": 1.0,
+    "kendalls_w": 0.0,
+    "n_instances": 16,
+    "n_methods": 2
+  },
+  "comparisons": [
+    {
+      "comparison": "suspicious_minus_random",
+      "method": "suspicious",
+      "opponent": "random",
+      "n_instances": 16,
+      "n_nonzero": 15,
+      "mean_quality_difference": 0.2022096988275695,
+      "median_quality_difference": 0.2557836068474373,
+      "wins": 11,
+      "ties": 1,
+      "losses": 4,
+      "wilcoxon_statistic": 26.0,
+      "p_raw": 0.02899169921875,
+      "rank_biserial": 0.6333333333333333,
+      "p_holm": 0.02899169921875,
+      "significant_0_05": true,
+      "classification": "significant_benefit",
+      "bootstrap_95_ci": [
+        0.014227423256914286,
+        0.37571335181532967
+      ]
+    }
+  ],
+  "secondary_crine_comparison": null,
+  "per_instance": [
+    {
+      "instance": "xqf131",
+      "kind": null,
+      "n": 131,
+      "random": {
+        "quality": -1.3475177304964538,
+        "cost": 571.6,
+        "elapsed": 5.066182580000168,
+        "kicks": 62.6,
+        "accepted_kicks": 6.6
+      },
+      "suspicious": {
+        "quality": -1.099290780141844,
+        "cost": 570.2,
+        "elapsed": 5.03004949999995,
+        "kicks": 60.2,
+        "accepted_kicks": 7.8
+      }
+    },
+    {
+      "instance": "xqg237",
+      "kind": null,
+      "n": 237,
+      "random": {
+        "quality": -1.3542688910696763,
+        "cost": 1032.8,
+        "elapsed": 5.120481060000384,
+        "kicks": 29.2,
+        "accepted_kicks": 3.6
+      },
+      "suspicious": {
+        "quality": -1.354268891069676,
+        "cost": 1032.8,
+        "elapsed": 5.0613550000001855,
+        "kicks": 27.4,
+        "accepted_kicks": 3.4
+      }
+    },
+    {
+      "instance": "pma343",
+      "kind": null,
+      "n": 343,
+      "random": {
+        "quality": -3.070175438596492,
+        "cost": 1410.0,
+        "elapsed": 5.183802220000507,
+        "kicks": 12.0,
+        "accepted_kicks": 2.0
+      },
+      "suspicious": {
+        "quality": -2.646198830409357,
+        "cost": 1404.2,
+        "elapsed": 5.131003380000038,
+        "kicks": 13.6,
+        "accepted_kicks": 4.2
+      }
+    },
+    {
+      "instance": "pka379",
+      "kind": null,
+      "n": 379,
+      "random": {
+        "quality": -4.60960960960961,
+        "cost": 1393.4,
+        "elapsed": 5.193132279999918,
+        "kicks": 10.6,
+        "accepted_kicks": 2.0
+      },
+      "suspicious": {
+        "quality": -4.1441441441441444,
+        "cost": 1387.2,
+        "elapsed": 5.226525740000215,
+        "kicks": 10.4,
+        "accepted_kicks": 4.0
+      }
+    },
+    {
+      "instance": "pbl395",
+      "kind": null,
+      "n": 395,
+      "random": {
+        "quality": -3.091334894613583,
+        "cost": 1320.6,
+        "elapsed": 5.120768159999716,
+        "kicks": 13.4,
+        "accepted_kicks": 3.4
+      },
+      "suspicious": {
+        "quality": -2.8103044496487124,
+        "cost": 1317.0,
+        "elapsed": 5.182535899999857,
+        "kicks": 14.2,
+        "accepted_kicks": 3.4
+      }
+    },
+    {
+      "instance": "pbk411",
+      "kind": null,
+      "n": 411,
+      "random": {
+        "quality": -5.614296351451975,
+        "cost": 1418.4,
+        "elapsed": 5.19752096000011,
+        "kicks": 12.2,
+        "accepted_kicks": 2.0
+      },
+      "suspicious": {
+        "quality": -4.750558451228592,
+        "cost": 1406.8,
+        "elapsed": 5.200218039999891,
+        "kicks": 10.6,
+        "accepted_kicks": 3.2
+      }
+    },
+    {
+      "instance": "pbn423",
+      "kind": null,
+      "n": 423,
+      "random": {
+        "quality": -5.201465201465202,
+        "cost": 1436.0,
+        "elapsed": 5.237020080000366,
+        "kicks": 10.6,
+        "accepted_kicks": 2.8
+      },
+      "suspicious": {
+        "quality": -4.644688644688645,
+        "cost": 1428.4,
+        "elapsed": 5.160418980000031,
+        "kicks": 11.2,
+        "accepted_kicks": 3.4
+      }
+    },
+    {
+      "instance": "pbm436",
+      "kind": null,
+      "n": 436,
+      "random": {
+        "quality": -4.753984753984755,
+        "cost": 1511.6,
+        "elapsed": 5.166657760000453,
+        "kicks": 11.2,
+        "accepted_kicks": 3.0
+      },
+      "suspicious": {
+        "quality": -4.49064449064449,
+        "cost": 1507.8,
+        "elapsed": 5.174146380000093,
+        "kicks": 11.4,
+        "accepted_kicks": 5.0
+      }
+    },
+    {
+      "instance": "xql662",
+      "kind": null,
+      "n": 662,
+      "random": {
+        "quality": -5.650616792678075,
+        "cost": 2655.0,
+        "elapsed": 5.370964299999469,
+        "kicks": 5.6,
+        "accepted_kicks": 1.8
+      },
+      "suspicious": {
+        "quality": -5.340230799840828,
+        "cost": 2647.2,
+        "elapsed": 5.306770060000053,
+        "kicks": 5.4,
+        "accepted_kicks": 2.4
+      }
+    },
+    {
+      "instance": "rbx711",
+      "kind": null,
+      "n": 711,
+      "random": {
+        "quality": -4.597110754414125,
+        "cost": 3258.2,
+        "elapsed": 5.240809379999701,
+        "kicks": 4.4,
+        "accepted_kicks": 1.8
+      },
+      "suspicious": {
+        "quality": -5.341894060995185,
+        "cost": 3281.4,
+        "elapsed": 5.441048580000279,
+        "kicks": 4.8,
+        "accepted_kicks": 0.8
+      }
+    },
+    {
+      "instance": "rbu737",
+      "kind": null,
+      "n": 737,
+      "random": {
+        "quality": -5.467712733856367,
+        "cost": 3495.2,
+        "elapsed": 5.282796939999753,
+        "kicks": 6.0,
+        "accepted_kicks": 1.8
+      },
+      "suspicious": {
+        "quality": -5.606517803258901,
+        "cost": 3499.8,
+        "elapsed": 5.488036319999447,
+        "kicks": 5.2,
+        "accepted_kicks": 1.4
+      }
+    },
+    {
+      "instance": "dkg813",
+      "kind": null,
+      "n": 813,
+      "random": {
+        "quality": -5.239137230384495,
+        "cost": 3366.6,
+        "elapsed": 5.470026240000152,
+        "kicks": 4.2,
+        "accepted_kicks": 0.8
+      },
+      "suspicious": {
+        "quality": -5.014066895904971,
+        "cost": 3359.4,
+        "elapsed": 5.260337500000242,
+        "kicks": 4.0,
+        "accepted_kicks": 1.6
+      }
+    },
+    {
+      "instance": "lim963",
+      "kind": null,
+      "n": 963,
+      "random": {
+        "quality": -6.755109358192899,
+        "cost": 2977.4,
+        "elapsed": 6.037869520000095,
+        "kicks": 2.2,
+        "accepted_kicks": 1.4
+      },
+      "suspicious": {
+        "quality": -6.769451416278235,
+        "cost": 2977.8,
+        "elapsed": 5.688930419999815,
+        "kicks": 1.8,
+        "accepted_kicks": 1.4
+      }
+    },
+    {
+      "instance": "pbd984",
+      "kind": null,
+      "n": 984,
+      "random": {
+        "quality": -7.794065069717554,
+        "cost": 3015.0,
+        "elapsed": 6.068344640000578,
+        "kicks": 1.2,
+        "accepted_kicks": 0.4
+      },
+      "suspicious": {
+        "quality": -7.229174115123347,
+        "cost": 2999.2,
+        "elapsed": 5.677009519999411,
+        "kicks": 1.6,
+        "accepted_kicks": 1.2
+      }
+    },
+    {
+      "instance": "xit1083",
+      "kind": null,
+      "n": 1083,
+      "random": {
+        "quality": -6.82405845980888,
+        "cost": 3800.8,
+        "elapsed": 6.192002920000232,
+        "kicks": 1.6,
+        "accepted_kicks": 0.2
+      },
+      "suspicious": {
+        "quality": -6.689151208544127,
+        "cost": 3796.0,
+        "elapsed": 6.101536019999912,
+        "kicks": 1.0,
+        "accepted_kicks": 0.4
+      }
+    },
+    {
+      "instance": "dca1389",
+      "kind": null,
+      "n": 1389,
+      "random": {
+        "quality": -6.355948869223206,
+        "cost": 5408.2,
+        "elapsed": 6.0538403799997464,
+        "kicks": 0.8,
+        "accepted_kicks": 0.6
+      },
+      "suspicious": {
+        "quality": -6.560471976401179,
+        "cost": 5418.6,
+        "elapsed": 6.513440919999994,
+        "kicks": 1.2,
+        "accepted_kicks": 0.4
+      }
+    }
+  ],
+  "comparisons_vs_suspicious": []
+}

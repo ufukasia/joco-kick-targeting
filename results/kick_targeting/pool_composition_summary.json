@@ -1,0 +1,1643 @@
+{
+ "summary": {
+  "note": "Run was stopped by host memory pressure after 57/58 instances; summary rebuilt from the per-instance log lines.",
+  "n_instances": 57,
+  "gnn": {
+   "prec": 0.6480701754385965,
+   "rank": 6.012280701754387,
+   "absent": 0.003859649122807018,
+   "excess_wrong": 1.3036842105263158
+  },
+  "cheap": {
+   "prec": 0.6194736842105262,
+   "rank": 6.743859649122807,
+   "absent": 0.005263157894736842,
+   "excess_wrong": 1.4989473684210528
+  },
+  "knn": {
+   "prec": 0.6059649122807017,
+   "rank": 6.754385964912281,
+   "absent": 0.00543859649122807,
+   "excess_wrong": 1.6482456140350878
+  },
+  "oracle": {
+   "prec": 1.0,
+   "rank": 3.5473684210526315,
+   "absent": 0.0017543859649122807,
+   "excess_wrong": 0.5059649122807017
+  },
+  "excess_wrong_gnn_minus_knn": {
+   "mean": -0.34456140350877196,
+   "a_higher": 0,
+   "wilcoxon_p": 5.1312437041119736e-11
+  },
+  "excess_wrong_cheap_minus_knn": {
+   "mean": -0.1492982456140351,
+   "a_higher": 1,
+   "wilcoxon_p": 1.3713485526078872e-09
+  },
+  "excess_wrong_oracle_minus_knn": {
+   "mean": -1.142280701754386,
+   "a_higher": 0,
+   "wilcoxon_p": 5.13570839540824e-11
+  }
+ },
+ "rows": [
+  {
+   "instance": "xqf131",
+   "n": 131,
+   "gnn": {
+    "prec": 0.42,
+    "rank": 4.8,
+    "absent": 0.0,
+    "excess_wrong": 0.7
+   },
+   "cheap": {
+    "prec": 0.58,
+    "rank": 5.2,
+    "absent": 0.0,
+    "excess_wrong": 0.69
+   },
+   "knn": {
+    "prec": 0.5,
+    "rank": 4.8,
+    "absent": 0.0,
+    "excess_wrong": 0.8
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 2.1,
+    "absent": 0.0,
+    "excess_wrong": 0.04
+   }
+  },
+  {
+   "instance": "xqg237",
+   "n": 237,
+   "gnn": {
+    "prec": 0.43,
+    "rank": 6.4,
+    "absent": 0.0,
+    "excess_wrong": 1.09
+   },
+   "cheap": {
+    "prec": 0.36,
+    "rank": 7.1,
+    "absent": 0.0,
+    "excess_wrong": 1.21
+   },
+   "knn": {
+    "prec": 0.36,
+    "rank": 7.1,
+    "absent": 0.0,
+    "excess_wrong": 1.21
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 4.3,
+    "absent": 0.0,
+    "excess_wrong": 0.38
+   }
+  },
+  {
+   "instance": "pma343",
+   "n": 343,
+   "gnn": {
+    "prec": 0.55,
+    "rank": 8.8,
+    "absent": 0.0,
+    "excess_wrong": 1.52
+   },
+   "cheap": {
+    "prec": 0.45,
+    "rank": 9.4,
+    "absent": 0.0,
+    "excess_wrong": 1.99
+   },
+   "knn": {
+    "prec": 0.55,
+    "rank": 9.2,
+    "absent": 0.0,
+    "excess_wrong": 1.76
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 4.3,
+    "absent": 0.0,
+    "excess_wrong": 0.58
+   }
+  },
+  {
+   "instance": "pka379",
+   "n": 379,
+   "gnn": {
+    "prec": 0.45,
+    "rank": 8.2,
+    "absent": 0.0,
+    "excess_wrong": 1.26
+   },
+   "cheap": {
+    "prec": 0.32,
+    "rank": 8.8,
+    "absent": 0.0,
+    "excess_wrong": 1.5
+   },
+   "knn": {
+    "prec": 0.36,
+    "rank": 9.2,
+    "absent": 0.0,
+    "excess_wrong": 1.79
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.9,
+    "absent": 0.0,
+    "excess_wrong": 0.11
+   }
+  },
+  {
+   "instance": "bcl380",
+   "n": 380,
+   "gnn": {
+    "prec": 0.41,
+    "rank": 5.5,
+    "absent": 0.0,
+    "excess_wrong": 1.44
+   },
+   "cheap": {
+    "prec": 0.36,
+    "rank": 6.0,
+    "absent": 0.0,
+    "excess_wrong": 1.71
+   },
+   "knn": {
+    "prec": 0.36,
+    "rank": 6.0,
+    "absent": 0.0,
+    "excess_wrong": 2.15
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.4,
+    "absent": 0.0,
+    "excess_wrong": 0.56
+   }
+  },
+  {
+   "instance": "pbl395",
+   "n": 395,
+   "gnn": {
+    "prec": 0.61,
+    "rank": 5.2,
+    "absent": 0.0,
+    "excess_wrong": 1.1
+   },
+   "cheap": {
+    "prec": 0.61,
+    "rank": 5.7,
+    "absent": 0.0,
+    "excess_wrong": 1.06
+   },
+   "knn": {
+    "prec": 0.43,
+    "rank": 5.3,
+    "absent": 0.0,
+    "excess_wrong": 1.88
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.2,
+    "absent": 0.0,
+    "excess_wrong": 0.49
+   }
+  },
+  {
+   "instance": "pbk411",
+   "n": 411,
+   "gnn": {
+    "prec": 0.12,
+    "rank": 5.0,
+    "absent": 0.0,
+    "excess_wrong": 0.56
+   },
+   "cheap": {
+    "prec": 0.12,
+    "rank": 6.0,
+    "absent": 0.0,
+    "excess_wrong": 1.19
+   },
+   "knn": {
+    "prec": 0.08,
+    "rank": 5.8,
+    "absent": 0.0,
+    "excess_wrong": 1.46
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.0,
+    "absent": 0.0,
+    "excess_wrong": 0.26
+   }
+  },
+  {
+   "instance": "pbn423",
+   "n": 423,
+   "gnn": {
+    "prec": 0.72,
+    "rank": 6.0,
+    "absent": 0.0,
+    "excess_wrong": 1.87
+   },
+   "cheap": {
+    "prec": 0.84,
+    "rank": 6.8,
+    "absent": 0.0,
+    "excess_wrong": 2.15
+   },
+   "knn": {
+    "prec": 0.8,
+    "rank": 6.8,
+    "absent": 0.0,
+    "excess_wrong": 2.33
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 4.4,
+    "absent": 0.0,
+    "excess_wrong": 1.17
+   }
+  },
+  {
+   "instance": "pbm436",
+   "n": 436,
+   "gnn": {
+    "prec": 0.23,
+    "rank": 5.7,
+    "absent": 0.0,
+    "excess_wrong": 1.15
+   },
+   "cheap": {
+    "prec": 0.19,
+    "rank": 6.7,
+    "absent": 0.0,
+    "excess_wrong": 1.5
+   },
+   "knn": {
+    "prec": 0.19,
+    "rank": 6.7,
+    "absent": 0.0,
+    "excess_wrong": 1.5
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.0,
+    "absent": 0.0,
+    "excess_wrong": 0.36
+   }
+  },
+  {
+   "instance": "xql662",
+   "n": 662,
+   "gnn": {
+    "prec": 0.82,
+    "rank": 6.8,
+    "absent": 0.03,
+    "excess_wrong": 1.39
+   },
+   "cheap": {
+    "prec": 0.74,
+    "rank": 7.4,
+    "absent": 0.03,
+    "excess_wrong": 1.69
+   },
+   "knn": {
+    "prec": 0.69,
+    "rank": 7.4,
+    "absent": 0.03,
+    "excess_wrong": 1.88
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.1,
+    "absent": 0.0,
+    "excess_wrong": 0.38
+   }
+  },
+  {
+   "instance": "rbx711",
+   "n": 711,
+   "gnn": {
+    "prec": 0.52,
+    "rank": 5.3,
+    "absent": 0.0,
+    "excess_wrong": 0.91
+   },
+   "cheap": {
+    "prec": 0.52,
+    "rank": 6.0,
+    "absent": 0.0,
+    "excess_wrong": 0.89
+   },
+   "knn": {
+    "prec": 0.52,
+    "rank": 6.0,
+    "absent": 0.0,
+    "excess_wrong": 1.08
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.0,
+    "absent": 0.0,
+    "excess_wrong": 0.33
+   }
+  },
+  {
+   "instance": "rbu737",
+   "n": 737,
+   "gnn": {
+    "prec": 0.75,
+    "rank": 5.1,
+    "absent": 0.0,
+    "excess_wrong": 0.89
+   },
+   "cheap": {
+    "prec": 0.73,
+    "rank": 5.9,
+    "absent": 0.0,
+    "excess_wrong": 1.04
+   },
+   "knn": {
+    "prec": 0.7,
+    "rank": 6.0,
+    "absent": 0.0,
+    "excess_wrong": 1.11
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 2.6,
+    "absent": 0.0,
+    "excess_wrong": 0.12
+   }
+  },
+  {
+   "instance": "dkg813",
+   "n": 813,
+   "gnn": {
+    "prec": 0.5,
+    "rank": 5.8,
+    "absent": 0.02,
+    "excess_wrong": 1.46
+   },
+   "cheap": {
+    "prec": 0.52,
+    "rank": 6.8,
+    "absent": 0.02,
+    "excess_wrong": 1.69
+   },
+   "knn": {
+    "prec": 0.48,
+    "rank": 6.9,
+    "absent": 0.02,
+    "excess_wrong": 1.98
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 2.9,
+    "absent": 0.0,
+    "excess_wrong": 0.25
+   }
+  },
+  {
+   "instance": "lim963",
+   "n": 963,
+   "gnn": {
+    "prec": 0.61,
+    "rank": 5.1,
+    "absent": 0.0,
+    "excess_wrong": 1.44
+   },
+   "cheap": {
+    "prec": 0.61,
+    "rank": 6.3,
+    "absent": 0.0,
+    "excess_wrong": 1.88
+   },
+   "knn": {
+    "prec": 0.65,
+    "rank": 6.2,
+    "absent": 0.0,
+    "excess_wrong": 2.04
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.4,
+    "absent": 0.0,
+    "excess_wrong": 0.61
+   }
+  },
+  {
+   "instance": "pbd984",
+   "n": 984,
+   "gnn": {
+    "prec": 0.58,
+    "rank": 6.3,
+    "absent": 0.0,
+    "excess_wrong": 1.54
+   },
+   "cheap": {
+    "prec": 0.47,
+    "rank": 6.7,
+    "absent": 0.0,
+    "excess_wrong": 1.71
+   },
+   "knn": {
+    "prec": 0.53,
+    "rank": 6.8,
+    "absent": 0.0,
+    "excess_wrong": 1.78
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.5,
+    "absent": 0.0,
+    "excess_wrong": 0.47
+   }
+  },
+  {
+   "instance": "xit1083",
+   "n": 1083,
+   "gnn": {
+    "prec": 0.67,
+    "rank": 5.8,
+    "absent": 0.0,
+    "excess_wrong": 1.09
+   },
+   "cheap": {
+    "prec": 0.67,
+    "rank": 6.5,
+    "absent": 0.0,
+    "excess_wrong": 1.13
+   },
+   "knn": {
+    "prec": 0.61,
+    "rank": 6.5,
+    "absent": 0.0,
+    "excess_wrong": 1.25
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.3,
+    "absent": 0.0,
+    "excess_wrong": 0.37
+   }
+  },
+  {
+   "instance": "dka1376",
+   "n": 1376,
+   "gnn": {
+    "prec": 0.61,
+    "rank": 5.7,
+    "absent": 0.0,
+    "excess_wrong": 1.07
+   },
+   "cheap": {
+    "prec": 0.52,
+    "rank": 6.5,
+    "absent": 0.0,
+    "excess_wrong": 1.31
+   },
+   "knn": {
+    "prec": 0.55,
+    "rank": 6.6,
+    "absent": 0.0,
+    "excess_wrong": 1.38
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.3,
+    "absent": 0.0,
+    "excess_wrong": 0.4
+   }
+  },
+  {
+   "instance": "dca1389",
+   "n": 1389,
+   "gnn": {
+    "prec": 0.57,
+    "rank": 5.7,
+    "absent": 0.0,
+    "excess_wrong": 1.44
+   },
+   "cheap": {
+    "prec": 0.63,
+    "rank": 6.3,
+    "absent": 0.0,
+    "excess_wrong": 1.49
+   },
+   "knn": {
+    "prec": 0.65,
+    "rank": 6.3,
+    "absent": 0.0,
+    "excess_wrong": 1.54
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.9,
+    "absent": 0.0,
+    "excess_wrong": 0.57
+   }
+  },
+  {
+   "instance": "dja1436",
+   "n": 1436,
+   "gnn": {
+    "prec": 0.76,
+    "rank": 5.9,
+    "absent": 0.0,
+    "excess_wrong": 1.1
+   },
+   "cheap": {
+    "prec": 0.73,
+    "rank": 6.6,
+    "absent": 0.0,
+    "excess_wrong": 1.25
+   },
+   "knn": {
+    "prec": 0.69,
+    "rank": 6.7,
+    "absent": 0.0,
+    "excess_wrong": 1.34
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.6,
+    "absent": 0.0,
+    "excess_wrong": 0.44
+   }
+  },
+  {
+   "instance": "icw1483",
+   "n": 1483,
+   "gnn": {
+    "prec": 0.8,
+    "rank": 6.2,
+    "absent": 0.0,
+    "excess_wrong": 1.43
+   },
+   "cheap": {
+    "prec": 0.73,
+    "rank": 6.7,
+    "absent": 0.0,
+    "excess_wrong": 1.63
+   },
+   "knn": {
+    "prec": 0.75,
+    "rank": 6.8,
+    "absent": 0.0,
+    "excess_wrong": 1.76
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.5,
+    "absent": 0.0,
+    "excess_wrong": 0.58
+   }
+  },
+  {
+   "instance": "fra1488",
+   "n": 1488,
+   "gnn": {
+    "prec": 0.7,
+    "rank": 5.8,
+    "absent": 0.0,
+    "excess_wrong": 1.26
+   },
+   "cheap": {
+    "prec": 0.7,
+    "rank": 6.5,
+    "absent": 0.0,
+    "excess_wrong": 1.6
+   },
+   "knn": {
+    "prec": 0.67,
+    "rank": 6.5,
+    "absent": 0.0,
+    "excess_wrong": 1.76
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.4,
+    "absent": 0.0,
+    "excess_wrong": 0.5
+   }
+  },
+  {
+   "instance": "rbv1583",
+   "n": 1583,
+   "gnn": {
+    "prec": 0.79,
+    "rank": 6.0,
+    "absent": 0.02,
+    "excess_wrong": 1.1
+   },
+   "cheap": {
+    "prec": 0.72,
+    "rank": 6.8,
+    "absent": 0.02,
+    "excess_wrong": 1.13
+   },
+   "knn": {
+    "prec": 0.66,
+    "rank": 6.7,
+    "absent": 0.02,
+    "excess_wrong": 1.23
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.6,
+    "absent": 0.0,
+    "excess_wrong": 0.49
+   }
+  },
+  {
+   "instance": "rby1599",
+   "n": 1599,
+   "gnn": {
+    "prec": 0.69,
+    "rank": 6.1,
+    "absent": 0.0,
+    "excess_wrong": 1.01
+   },
+   "cheap": {
+    "prec": 0.75,
+    "rank": 7.0,
+    "absent": 0.01,
+    "excess_wrong": 1.24
+   },
+   "knn": {
+    "prec": 0.69,
+    "rank": 7.1,
+    "absent": 0.01,
+    "excess_wrong": 1.33
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.5,
+    "absent": 0.0,
+    "excess_wrong": 0.41
+   }
+  },
+  {
+   "instance": "fnb1615",
+   "n": 1615,
+   "gnn": {
+    "prec": 0.66,
+    "rank": 7.3,
+    "absent": 0.01,
+    "excess_wrong": 1.94
+   },
+   "cheap": {
+    "prec": 0.57,
+    "rank": 7.6,
+    "absent": 0.01,
+    "excess_wrong": 2.06
+   },
+   "knn": {
+    "prec": 0.58,
+    "rank": 7.7,
+    "absent": 0.01,
+    "excess_wrong": 2.13
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.3,
+    "absent": 0.0,
+    "excess_wrong": 0.56
+   }
+  },
+  {
+   "instance": "djc1785",
+   "n": 1785,
+   "gnn": {
+    "prec": 0.71,
+    "rank": 5.7,
+    "absent": 0.0,
+    "excess_wrong": 1.02
+   },
+   "cheap": {
+    "prec": 0.61,
+    "rank": 6.3,
+    "absent": 0.0,
+    "excess_wrong": 1.13
+   },
+   "knn": {
+    "prec": 0.61,
+    "rank": 6.3,
+    "absent": 0.0,
+    "excess_wrong": 1.23
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.1,
+    "absent": 0.0,
+    "excess_wrong": 0.3
+   }
+  },
+  {
+   "instance": "dcc1911",
+   "n": 1911,
+   "gnn": {
+    "prec": 0.64,
+    "rank": 5.6,
+    "absent": 0.0,
+    "excess_wrong": 1.2
+   },
+   "cheap": {
+    "prec": 0.56,
+    "rank": 6.0,
+    "absent": 0.0,
+    "excess_wrong": 1.26
+   },
+   "knn": {
+    "prec": 0.59,
+    "rank": 6.1,
+    "absent": 0.0,
+    "excess_wrong": 1.35
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.2,
+    "absent": 0.0,
+    "excess_wrong": 0.4
+   }
+  },
+  {
+   "instance": "dkd1973",
+   "n": 1973,
+   "gnn": {
+    "prec": 0.71,
+    "rank": 5.4,
+    "absent": 0.0,
+    "excess_wrong": 0.95
+   },
+   "cheap": {
+    "prec": 0.66,
+    "rank": 6.6,
+    "absent": 0.0,
+    "excess_wrong": 1.21
+   },
+   "knn": {
+    "prec": 0.68,
+    "rank": 6.4,
+    "absent": 0.0,
+    "excess_wrong": 1.36
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.3,
+    "absent": 0.0,
+    "excess_wrong": 0.34
+   }
+  },
+  {
+   "instance": "djb2036",
+   "n": 2036,
+   "gnn": {
+    "prec": 0.66,
+    "rank": 5.7,
+    "absent": 0.0,
+    "excess_wrong": 1.5
+   },
+   "cheap": {
+    "prec": 0.68,
+    "rank": 6.9,
+    "absent": 0.01,
+    "excess_wrong": 1.83
+   },
+   "knn": {
+    "prec": 0.71,
+    "rank": 6.9,
+    "absent": 0.01,
+    "excess_wrong": 2.02
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.6,
+    "absent": 0.0,
+    "excess_wrong": 0.65
+   }
+  },
+  {
+   "instance": "dcb2086",
+   "n": 2086,
+   "gnn": {
+    "prec": 0.66,
+    "rank": 6.3,
+    "absent": 0.01,
+    "excess_wrong": 1.15
+   },
+   "cheap": {
+    "prec": 0.57,
+    "rank": 6.9,
+    "absent": 0.01,
+    "excess_wrong": 1.44
+   },
+   "knn": {
+    "prec": 0.62,
+    "rank": 7.0,
+    "absent": 0.01,
+    "excess_wrong": 1.46
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.9,
+    "absent": 0.01,
+    "excess_wrong": 0.55
+   }
+  },
+  {
+   "instance": "bva2144",
+   "n": 2144,
+   "gnn": {
+    "prec": 0.7,
+    "rank": 5.5,
+    "absent": 0.0,
+    "excess_wrong": 1.4
+   },
+   "cheap": {
+    "prec": 0.64,
+    "rank": 6.2,
+    "absent": 0.0,
+    "excess_wrong": 1.74
+   },
+   "knn": {
+    "prec": 0.62,
+    "rank": 6.2,
+    "absent": 0.0,
+    "excess_wrong": 1.9
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.4,
+    "absent": 0.0,
+    "excess_wrong": 0.6
+   }
+  },
+  {
+   "instance": "xqc2175",
+   "n": 2175,
+   "gnn": {
+    "prec": 0.66,
+    "rank": 5.7,
+    "absent": 0.01,
+    "excess_wrong": 1.07
+   },
+   "cheap": {
+    "prec": 0.6,
+    "rank": 6.5,
+    "absent": 0.01,
+    "excess_wrong": 1.21
+   },
+   "knn": {
+    "prec": 0.61,
+    "rank": 6.5,
+    "absent": 0.01,
+    "excess_wrong": 1.33
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.7,
+    "absent": 0.01,
+    "excess_wrong": 0.42
+   }
+  },
+  {
+   "instance": "bck2217",
+   "n": 2217,
+   "gnn": {
+    "prec": 0.77,
+    "rank": 5.7,
+    "absent": 0.01,
+    "excess_wrong": 1.07
+   },
+   "cheap": {
+    "prec": 0.76,
+    "rank": 6.4,
+    "absent": 0.01,
+    "excess_wrong": 1.11
+   },
+   "knn": {
+    "prec": 0.71,
+    "rank": 6.3,
+    "absent": 0.01,
+    "excess_wrong": 1.21
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.6,
+    "absent": 0.0,
+    "excess_wrong": 0.46
+   }
+  },
+  {
+   "instance": "xpr2308",
+   "n": 2308,
+   "gnn": {
+    "prec": 0.65,
+    "rank": 5.7,
+    "absent": 0.0,
+    "excess_wrong": 1.14
+   },
+   "cheap": {
+    "prec": 0.63,
+    "rank": 6.4,
+    "absent": 0.0,
+    "excess_wrong": 1.25
+   },
+   "knn": {
+    "prec": 0.62,
+    "rank": 6.2,
+    "absent": 0.0,
+    "excess_wrong": 1.4
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.1,
+    "absent": 0.0,
+    "excess_wrong": 0.38
+   }
+  },
+  {
+   "instance": "ley2323",
+   "n": 2323,
+   "gnn": {
+    "prec": 0.56,
+    "rank": 6.1,
+    "absent": 0.01,
+    "excess_wrong": 1.51
+   },
+   "cheap": {
+    "prec": 0.57,
+    "rank": 7.0,
+    "absent": 0.01,
+    "excess_wrong": 1.63
+   },
+   "knn": {
+    "prec": 0.55,
+    "rank": 7.0,
+    "absent": 0.01,
+    "excess_wrong": 1.9
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.8,
+    "absent": 0.01,
+    "excess_wrong": 0.69
+   }
+  },
+  {
+   "instance": "dea2382",
+   "n": 2382,
+   "gnn": {
+    "prec": 0.76,
+    "rank": 6.4,
+    "absent": 0.0,
+    "excess_wrong": 1.32
+   },
+   "cheap": {
+    "prec": 0.73,
+    "rank": 6.8,
+    "absent": 0.0,
+    "excess_wrong": 1.37
+   },
+   "knn": {
+    "prec": 0.7,
+    "rank": 6.8,
+    "absent": 0.0,
+    "excess_wrong": 1.53
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.8,
+    "absent": 0.0,
+    "excess_wrong": 0.52
+   }
+  },
+  {
+   "instance": "rbw2481",
+   "n": 2481,
+   "gnn": {
+    "prec": 0.67,
+    "rank": 6.3,
+    "absent": 0.0,
+    "excess_wrong": 1.7
+   },
+   "cheap": {
+    "prec": 0.65,
+    "rank": 6.9,
+    "absent": 0.01,
+    "excess_wrong": 2.0
+   },
+   "knn": {
+    "prec": 0.63,
+    "rank": 7.1,
+    "absent": 0.01,
+    "excess_wrong": 2.12
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 4.2,
+    "absent": 0.01,
+    "excess_wrong": 0.87
+   }
+  },
+  {
+   "instance": "pds2566",
+   "n": 2566,
+   "gnn": {
+    "prec": 0.63,
+    "rank": 5.9,
+    "absent": 0.0,
+    "excess_wrong": 1.62
+   },
+   "cheap": {
+    "prec": 0.65,
+    "rank": 6.8,
+    "absent": 0.01,
+    "excess_wrong": 1.89
+   },
+   "knn": {
+    "prec": 0.62,
+    "rank": 7.1,
+    "absent": 0.01,
+    "excess_wrong": 2.06
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.6,
+    "absent": 0.0,
+    "excess_wrong": 0.62
+   }
+  },
+  {
+   "instance": "mlt2597",
+   "n": 2597,
+   "gnn": {
+    "prec": 0.68,
+    "rank": 5.9,
+    "absent": 0.01,
+    "excess_wrong": 1.77
+   },
+   "cheap": {
+    "prec": 0.61,
+    "rank": 6.8,
+    "absent": 0.01,
+    "excess_wrong": 2.11
+   },
+   "knn": {
+    "prec": 0.58,
+    "rank": 6.6,
+    "absent": 0.01,
+    "excess_wrong": 2.25
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.8,
+    "absent": 0.01,
+    "excess_wrong": 0.74
+   }
+  },
+  {
+   "instance": "bch2762",
+   "n": 2762,
+   "gnn": {
+    "prec": 0.7,
+    "rank": 6.6,
+    "absent": 0.01,
+    "excess_wrong": 1.76
+   },
+   "cheap": {
+    "prec": 0.64,
+    "rank": 7.3,
+    "absent": 0.01,
+    "excess_wrong": 1.91
+   },
+   "knn": {
+    "prec": 0.63,
+    "rank": 7.3,
+    "absent": 0.01,
+    "excess_wrong": 2.09
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 4.0,
+    "absent": 0.0,
+    "excess_wrong": 0.76
+   }
+  },
+  {
+   "instance": "irw2802",
+   "n": 2802,
+   "gnn": {
+    "prec": 0.66,
+    "rank": 5.6,
+    "absent": 0.01,
+    "excess_wrong": 1.57
+   },
+   "cheap": {
+    "prec": 0.57,
+    "rank": 6.6,
+    "absent": 0.01,
+    "excess_wrong": 1.78
+   },
+   "knn": {
+    "prec": 0.58,
+    "rank": 6.7,
+    "absent": 0.01,
+    "excess_wrong": 1.97
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 4.2,
+    "absent": 0.01,
+    "excess_wrong": 0.83
+   }
+  },
+  {
+   "instance": "lsm2854",
+   "n": 2854,
+   "gnn": {
+    "prec": 0.67,
+    "rank": 5.8,
+    "absent": 0.0,
+    "excess_wrong": 1.41
+   },
+   "cheap": {
+    "prec": 0.65,
+    "rank": 6.6,
+    "absent": 0.0,
+    "excess_wrong": 1.63
+   },
+   "knn": {
+    "prec": 0.63,
+    "rank": 6.8,
+    "absent": 0.01,
+    "excess_wrong": 1.89
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 4.2,
+    "absent": 0.01,
+    "excess_wrong": 0.75
+   }
+  },
+  {
+   "instance": "dbj2924",
+   "n": 2924,
+   "gnn": {
+    "prec": 0.7,
+    "rank": 5.8,
+    "absent": 0.0,
+    "excess_wrong": 1.21
+   },
+   "cheap": {
+    "prec": 0.71,
+    "rank": 6.6,
+    "absent": 0.0,
+    "excess_wrong": 1.3
+   },
+   "knn": {
+    "prec": 0.68,
+    "rank": 6.7,
+    "absent": 0.0,
+    "excess_wrong": 1.43
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.9,
+    "absent": 0.0,
+    "excess_wrong": 0.58
+   }
+  },
+  {
+   "instance": "xva2993",
+   "n": 2993,
+   "gnn": {
+    "prec": 0.67,
+    "rank": 6.1,
+    "absent": 0.01,
+    "excess_wrong": 1.53
+   },
+   "cheap": {
+    "prec": 0.72,
+    "rank": 6.9,
+    "absent": 0.01,
+    "excess_wrong": 1.72
+   },
+   "knn": {
+    "prec": 0.67,
+    "rank": 7.0,
+    "absent": 0.01,
+    "excess_wrong": 1.91
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.4,
+    "absent": 0.0,
+    "excess_wrong": 0.57
+   }
+  },
+  {
+   "instance": "pia3056",
+   "n": 3056,
+   "gnn": {
+    "prec": 0.75,
+    "rank": 7.0,
+    "absent": 0.0,
+    "excess_wrong": 1.58
+   },
+   "cheap": {
+    "prec": 0.73,
+    "rank": 7.5,
+    "absent": 0.0,
+    "excess_wrong": 1.72
+   },
+   "knn": {
+    "prec": 0.72,
+    "rank": 7.6,
+    "absent": 0.0,
+    "excess_wrong": 1.85
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 4.1,
+    "absent": 0.0,
+    "excess_wrong": 0.6
+   }
+  },
+  {
+   "instance": "dke3097",
+   "n": 3097,
+   "gnn": {
+    "prec": 0.77,
+    "rank": 5.9,
+    "absent": 0.0,
+    "excess_wrong": 1.2
+   },
+   "cheap": {
+    "prec": 0.71,
+    "rank": 6.5,
+    "absent": 0.0,
+    "excess_wrong": 1.34
+   },
+   "knn": {
+    "prec": 0.73,
+    "rank": 6.5,
+    "absent": 0.0,
+    "excess_wrong": 1.43
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.6,
+    "absent": 0.0,
+    "excess_wrong": 0.45
+   }
+  },
+  {
+   "instance": "lsn3119",
+   "n": 3119,
+   "gnn": {
+    "prec": 0.71,
+    "rank": 6.1,
+    "absent": 0.01,
+    "excess_wrong": 1.04
+   },
+   "cheap": {
+    "prec": 0.65,
+    "rank": 6.7,
+    "absent": 0.01,
+    "excess_wrong": 1.18
+   },
+   "knn": {
+    "prec": 0.61,
+    "rank": 6.6,
+    "absent": 0.01,
+    "excess_wrong": 1.34
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.6,
+    "absent": 0.0,
+    "excess_wrong": 0.36
+   }
+  },
+  {
+   "instance": "lta3140",
+   "n": 3140,
+   "gnn": {
+    "prec": 0.69,
+    "rank": 6.5,
+    "absent": 0.01,
+    "excess_wrong": 1.75
+   },
+   "cheap": {
+    "prec": 0.66,
+    "rank": 7.3,
+    "absent": 0.01,
+    "excess_wrong": 1.87
+   },
+   "knn": {
+    "prec": 0.65,
+    "rank": 7.3,
+    "absent": 0.01,
+    "excess_wrong": 2.16
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.9,
+    "absent": 0.01,
+    "excess_wrong": 0.75
+   }
+  },
+  {
+   "instance": "fdp3256",
+   "n": 3256,
+   "gnn": {
+    "prec": 0.73,
+    "rank": 6.5,
+    "absent": 0.0,
+    "excess_wrong": 1.84
+   },
+   "cheap": {
+    "prec": 0.66,
+    "rank": 7.2,
+    "absent": 0.0,
+    "excess_wrong": 2.08
+   },
+   "knn": {
+    "prec": 0.65,
+    "rank": 7.2,
+    "absent": 0.0,
+    "excess_wrong": 2.24
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.5,
+    "absent": 0.0,
+    "excess_wrong": 0.65
+   }
+  },
+  {
+   "instance": "beg3293",
+   "n": 3293,
+   "gnn": {
+    "prec": 0.65,
+    "rank": 6.6,
+    "absent": 0.02,
+    "excess_wrong": 1.83
+   },
+   "cheap": {
+    "prec": 0.64,
+    "rank": 7.7,
+    "absent": 0.04,
+    "excess_wrong": 2.17
+   },
+   "knn": {
+    "prec": 0.64,
+    "rank": 7.6,
+    "absent": 0.04,
+    "excess_wrong": 2.38
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.8,
+    "absent": 0.01,
+    "excess_wrong": 0.8
+   }
+  },
+  {
+   "instance": "dhb3386",
+   "n": 3386,
+   "gnn": {
+    "prec": 0.78,
+    "rank": 6.1,
+    "absent": 0.0,
+    "excess_wrong": 1.22
+   },
+   "cheap": {
+    "prec": 0.74,
+    "rank": 6.9,
+    "absent": 0.0,
+    "excess_wrong": 1.4
+   },
+   "knn": {
+    "prec": 0.73,
+    "rank": 6.9,
+    "absent": 0.0,
+    "excess_wrong": 1.5
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.3,
+    "absent": 0.0,
+    "excess_wrong": 0.39
+   }
+  },
+  {
+   "instance": "fjs3649",
+   "n": 3649,
+   "gnn": {
+    "prec": 0.77,
+    "rank": 6.1,
+    "absent": 0.01,
+    "excess_wrong": 1.09
+   },
+   "cheap": {
+    "prec": 0.72,
+    "rank": 6.8,
+    "absent": 0.01,
+    "excess_wrong": 1.31
+   },
+   "knn": {
+    "prec": 0.71,
+    "rank": 6.9,
+    "absent": 0.01,
+    "excess_wrong": 1.39
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.4,
+    "absent": 0.0,
+    "excess_wrong": 0.51
+   }
+  },
+  {
+   "instance": "fjr3672",
+   "n": 3672,
+   "gnn": {
+    "prec": 0.81,
+    "rank": 5.8,
+    "absent": 0.0,
+    "excess_wrong": 1.08
+   },
+   "cheap": {
+    "prec": 0.73,
+    "rank": 6.2,
+    "absent": 0.0,
+    "excess_wrong": 1.24
+   },
+   "knn": {
+    "prec": 0.72,
+    "rank": 6.4,
+    "absent": 0.0,
+    "excess_wrong": 1.37
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.5,
+    "absent": 0.0,
+    "excess_wrong": 0.48
+   }
+  },
+  {
+   "instance": "dlb3694",
+   "n": 3694,
+   "gnn": {
+    "prec": 0.69,
+    "rank": 5.9,
+    "absent": 0.0,
+    "excess_wrong": 0.91
+   },
+   "cheap": {
+    "prec": 0.67,
+    "rank": 6.6,
+    "absent": 0.0,
+    "excess_wrong": 1.05
+   },
+   "knn": {
+    "prec": 0.67,
+    "rank": 6.6,
+    "absent": 0.0,
+    "excess_wrong": 1.07
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.3,
+    "absent": 0.0,
+    "excess_wrong": 0.34
+   }
+  },
+  {
+   "instance": "ltb3729",
+   "n": 3729,
+   "gnn": {
+    "prec": 0.71,
+    "rank": 5.8,
+    "absent": 0.0,
+    "excess_wrong": 1.1
+   },
+   "cheap": {
+    "prec": 0.72,
+    "rank": 6.7,
+    "absent": 0.01,
+    "excess_wrong": 1.28
+   },
+   "knn": {
+    "prec": 0.68,
+    "rank": 6.7,
+    "absent": 0.01,
+    "excess_wrong": 1.39
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.6,
+    "absent": 0.0,
+    "excess_wrong": 0.42
+   }
+  },
+  {
+   "instance": "xqe3891",
+   "n": 3891,
+   "gnn": {
+    "prec": 0.72,
+    "rank": 6.2,
+    "absent": 0.01,
+    "excess_wrong": 1.17
+   },
+   "cheap": {
+    "prec": 0.7,
+    "rank": 6.9,
+    "absent": 0.01,
+    "excess_wrong": 1.36
+   },
+   "knn": {
+    "prec": 0.68,
+    "rank": 6.9,
+    "absent": 0.01,
+    "excess_wrong": 1.48
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.8,
+    "absent": 0.01,
+    "excess_wrong": 0.46
+   }
+  },
+  {
+   "instance": "xua3937",
+   "n": 3937,
+   "gnn": {
+    "prec": 0.69,
+    "rank": 6.1,
+    "absent": 0.0,
+    "excess_wrong": 1.75
+   },
+   "cheap": {
+    "prec": 0.71,
+    "rank": 6.7,
+    "absent": 0.0,
+    "excess_wrong": 1.89
+   },
+   "knn": {
+    "prec": 0.65,
+    "rank": 6.9,
+    "absent": 0.0,
+    "excess_wrong": 2.1
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.6,
+    "absent": 0.0,
+    "excess_wrong": 0.67
+   }
+  },
+  {
+   "instance": "dkc3938",
+   "n": 3938,
+   "gnn": {
+    "prec": 0.64,
+    "rank": 5.8,
+    "absent": 0.0,
+    "excess_wrong": 1.09
+   },
+   "cheap": {
+    "prec": 0.62,
+    "rank": 6.9,
+    "absent": 0.01,
+    "excess_wrong": 1.29
+   },
+   "knn": {
+    "prec": 0.61,
+    "rank": 6.8,
+    "absent": 0.01,
+    "excess_wrong": 1.37
+   },
+   "oracle": {
+    "prec": 1.0,
+    "rank": 3.9,
+    "absent": 0.0,
+    "excess_wrong": 0.5
+   }
+  }
+ ]
+}

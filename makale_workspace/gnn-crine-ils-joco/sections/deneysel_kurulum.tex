@@ -1,0 +1,74 @@
+\section{Deneysel kurulum}\label{sec:deney-kurulum}
+
+\subsection{Aşama 1 ve Aşama 2}\label{sec:deney-onkayit}
+
+Aşama~2'nin bütün kararları ilk koşudan önce \path{PROTOCOL.json} dosyasında sabitlendi ve dosyanın
+SHA-256 özeti kaydedildi (\texttt{cce83992\ldots}). % E791
+Birincil set, projede daha önce kullanılmamış 38 VLSI problemidir (VLSI-38; $n=1.376$--$3.954$,
+10 tohum, 10~sn). % E797
+Dört birincil hipotez GNN'yi rastgele ve kNN hedeflemeyle iki geometride karşılaştırır: Wilcoxon
+testleri tek Holm ailesinde düzeltilir, ``fark yok'' sonucu $\pm0{,}10$ puanlık sınırla iki tek
+yönlü testle (TOST) sınanır. % E792
+Tablo~\ref{tab:v2-sets} ikincil setleri verir. Bellek baskısıyla iki kez kesilen koşu, tamamlanmış
+kayıtlara dokunulmadan sürdürüldü.
+
+\input{../evidence/tables/v2_sets.tex}
+
+Birincil sonuçtan sonra eklenen kâhin hedefleme, sürekli tazelenen GNN, 60~sn bütçe ve iki MLP
+deneyleri keşifseldir.
+
+\subsection{Aşama 3: geliştirme ve seçim}\label{sec:deney-asama3}
+
+Aşama~3'ün yöntem ve ayar seçimleri yalnız geliştirme setlerinde yapıldı: VLSI-38, Aşama~1'in 20
+VLSI problemi (VLSI-20) ve Sentetik-1000 (5 tohum, 10~sn). Bu koşularda kNN ve fazla-uzunluk
+VLSI-38'de rastgeleden iyiydi ve birbirinden ayrışmadı. % E738, E739, E740
+Çevrimiçi model VLSI-38'de eşleşik sabit kolundan ($+0{,}210$ puan), diğer iki sette fazla-uzunluk
+vekilinden kötüydü ($+0{,}157$ ve $+0{,}148$; ikincisi soğuk başlatılmış sürüm). % E742, E745, E747
+Ardından kNN, fazla-uzunluk ve GNN için $f\in\{0{,}02;0{,}04;0{,}06;0{,}10\}$ ve
+$p\in\{0{,}5;0{,}75;0{,}9\}$ ızgarası VLSI-38 ile Sentetik-1000'de 3 tohumla koşuldu. Seçim kuralı
+ızgara sonuçlarından önce sapma kaydına yazıldı: iki setin ortalama gap'ini en küçükleyen hücre
+seçilir; varsayılan kural en iyiye 0,01 puandan yakınsa korunur. Kural kNN için 0,04/0,75,
+fazla-uzunluk için 0,06/0,5, GNN için 0,04/0,5'i seçti (Şekil~\ref{fig:v3-pool-grid}). % E750, E751, E752
+Kazanç-MLP dahil diğer sinyaller ayarlanmadı.
+
+\subsection{Aşama 3: dondurma, zaman damgası ve doğrulama seti}\label{sec:deney-dondurma}
+
+Protokol \path{PROTOCOL_v2.json} dosyasında donduruldu; dosya hipotezleri, analizi ve kod, model ve
+veri dosyalarının SHA-256 özetlerini içerir, kendi özeti \texttt{96eb1d9e\ldots8085}'tir. % E584
+Kod, doğrulama setini protokol donmadan çalıştırmayı reddeder. Protokolün öngördüğü Open Science
+Framework yazar için erişilemez olduğundan bu sapma kayda yazıldı; özet 12:51'de
+OpenTimestamps\footnote{\url{https://opentimestamps.org}} takvim sunucularına gönderildi ve holdout2
+koşusu hemen ardından başladı. Bitcoin tasdiki (blok 976258), koşu 540 görevin 384'ündeyken ve
+sonuçlara bakılmadan alındı. % E585, E964
+Bu blok zamanı, protokolün sonuçlar analiz edilmeden önce var olduğunu ve sonradan
+değiştirilmediğini gösteren, üçüncü kişilerce bağımsız doğrulanabilen ve kurcalamaya dayanıklı üst
+sınırdır; koşudan önceki sıralama yerel sapma kaydına dayanır.
+
+Holdout2, 54 problemden oluşur: 6 Waterloo VLSI, 3 National ve 3 TSPLIB problemi ile 14 uniform,
+14 kümeli ve 14 karışık sentetik problem ($n=1.689$--$9.882$). % E586, E591--E598
+TSPLIB problemleri Aşama~1'de kullanılmış, ancak hiçbir Aşama~2 ya da Aşama~3 koşusunda yer
+almamıştır. Sekiz strateji 10 tohum ve 10~sn ile koşuldu (toplam 4.320 koşu). % E587, E588, E590
+Bir (problem, tohum) çiftinin stratejileri aynı işçide ardışık çalışır ve vuruş tohumunu da
+paylaşır. Dört işçi Intel Core i5-9300H, Windows~11 x64, Python~3.13 ve Numba~0.68
+ile çalıştı; bütçe duvar-saati olduğundan vuruş sayıları donanıma bağlıdır
+(Tablo~\ref{tab:v3-mechanism}). Hiçbir koşu dışlanmadı.
+
+\subsection{Aşama 3: hipotezler ve istatistik}\label{sec:deney-istatistik}
+
+İstatistik birimi problemdir: gap önce 10 tohum üzerinden ortalanır ($n=54$). Dört doğrulayıcı
+hipotez sabit sırayla, her biri ancak öncekiler reddedildiyse $\alpha=0{,}05$ düzeyinde sınanır.
+V1 çevrimiçi skorun sabit doğrusal ön-bilgiden kötü, V2 vekilin rastgeleden iyi olduğunu öne sürer
+(iki taraflı Wilcoxon \citep{wilcoxon_1945}). V3 ve V4, vekilin GNN'ye ve kazanç-MLP'ye
+$\delta=0{,}05$ puandan fazla kötü olmadığını $d-\delta$ üzerinde tek yönlü Wilcoxon testiyle sınar
+\citep{schuirmann_1987_tost, lakens_2017_equivalence}. % E589
+Sınır, geliştirmede gözlenen en küçük anlamlı hedefleme etkisinin (fazla-uzunluk$-$rastgele,
+$-0{,}070$ puan) altındadır; daha dar bir sınır, problem başı farkların standart sapması 0,131'e
+ulaştığı için güçsüz kalırdı. % E739, E740
+Öte yandan sınır, GNN'nin rastgeleye karşı Aşama~2'deki etkisiyle ($-0{,}052$ puan) aynı büyüklüktedir;
+bu yüzden V3 tek başına GNN kazancının korunduğunu göstermez, V2 ve keşifsel üstünlük
+karşılaştırmasıyla birlikte okunmalıdır. % E803
+İkincil aile beş keşifsel üstünlük karşılaştırmasıdır (kNN$-$rastgele, fazla-uzunluk$-$kNN,
+GNN$-$kNN, kazanç-MLP$-$üyelik-MLP, fazla-uzunluk$-$GNN) ve Holm ile düzeltilir \citep{holm_1979}.
+Kayıtlı analiz betiği `:' içeren strateji adlarını ayrıştıramadığından aile, aynı istatistik
+işlevlerini çağıran ayrı bir betikle (\path{build_v3.py}) hesaplandı. Güven aralıkları 10.000
+tekrarlı bootstrap'la bulunur.

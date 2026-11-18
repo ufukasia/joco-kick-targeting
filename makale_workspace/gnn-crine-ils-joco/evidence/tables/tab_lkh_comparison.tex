@@ -1,0 +1,24 @@
+% OTOMATIK URETIM — evidence/scripts/build_tables.py
+% Kaynak: results/lkh_comparison_19x10_summary.json
+\begin{table}[!htbp]
+ \centering\small
+ \setlength{\tabcolsep}{3pt}
+ \caption{Suspicious ve LKH-3: eş nominal bütçede ortalama $-$BKS gap, gerçek toplam süre ve LKH-3$-$suspicious kalite farkı. Holm-$p$ dört küme--bütçe Wilcoxon testi üzerinden düzeltilmiştir; GA problem örnekleri üzerinden bootstrap \%95 aralığıdır.}
+ \label{tab:lkh-comparison}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccccccc}
+\toprule
+Küme & Bütçe & \multicolumn{2}{c}{$-$Gap} & \multicolumn{2}{c}{Süre [sn]} & $\Delta$ & Holm-$p$ \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+ & [sn] & LKH-3 & Susp. & LKH-3 & Susp. & LKH$-$S & \\
+\midrule
+TSPLIB-9 & 1 & -0,60 & -10,35 & 43,67 & 2,01 & \iyi{+9,74} & 0,0156 \\
+% TSPLIB-9 1s bootstrap95=[6.406425761280061, 12.823741420736356]
+TSPLIB-9 & 5 & -0,42 & -8,25 & 56,43 & 6,89 & \iyi{+7,83} & 0,0156 \\
+% TSPLIB-9 5s bootstrap95=[5.135461463218833, 10.472014354311057]
+World-10 & 1 & -1,47 & -24,37 & 190,08 & 2,86 & \iyi{+22,90} & 0,0156 \\
+% World-10 1s bootstrap95=[16.79168497817175, 27.85582851343928]
+World-10 & 5 & -0,88 & -16,64 & 190,46 & 8,58 & \iyi{+15,77} & 0,0156 \\
+% World-10 5s bootstrap95=[11.549837789859259, 19.362146313577565]
+\bottomrule
+\end{tabular*}
+\end{table}

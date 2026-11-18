@@ -1,0 +1,1037 @@
+{
+  "metric": "improvement_pct",
+  "n_complete_instances": 40,
+  "quality_direction": "higher is better; TSPLIB quality is negative gap",
+  "aggregate": {
+    "random": {
+      "mean_quality": 23.252281201067014,
+      "median_quality": 22.853221034683557,
+      "mean_cost": 6656.266666666667,
+      "mean_elapsed_s": 0.5754398225001447
+    },
+    "suspicious": {
+      "mean_quality": 23.70803966057602,
+      "median_quality": 23.565004361281154,
+      "mean_cost": 6612.3,
+      "mean_elapsed_s": 0.5834676391666713
+    },
+    "entropy": {
+      "mean_quality": 23.57227860090648,
+      "median_quality": 23.249006970479847,
+      "mean_cost": 6626.325,
+      "mean_elapsed_s": 0.596589125000052
+    },
+    "elite_entropy": {
+      "mean_quality": 23.26628660188515,
+      "median_quality": 23.06698950508508,
+      "mean_cost": 6654.35,
+      "mean_elapsed_s": 0.5688053750000108
+    }
+  },
+  "comparisons": [
+    {
+      "comparison": "elite_entropy_minus_random",
+      "n_instances": 40,
+      "n_nonzero": 26,
+      "mean_quality_difference": 0.014005400818134995,
+      "median_quality_difference": 0.0,
+      "wins": 13,
+      "ties": 14,
+      "losses": 13,
+      "wilcoxon_statistic": 174.0,
+      "p_raw": 0.9696103704263741,
+      "p_holm": 0.9696103704263741,
+      "significant_0_05": false
+    },
+    {
+      "comparison": "elite_entropy_minus_suspicious",
+      "n_instances": 40,
+      "n_nonzero": 39,
+      "mean_quality_difference": -0.4417530586908717,
+      "median_quality_difference": -0.27262485642813594,
+      "wins": 11,
+      "ties": 1,
+      "losses": 28,
+      "wilcoxon_statistic": 132.0,
+      "p_raw": 0.0003177408881417711,
+      "p_holm": 0.0006354817762835422,
+      "significant_0_05": true
+    },
+    {
+      "comparison": "elite_entropy_minus_entropy",
+      "n_instances": 40,
+      "n_nonzero": 39,
+      "mean_quality_difference": -0.3059919990213282,
+      "median_quality_difference": -0.27700808586228653,
+      "wins": 8,
+      "ties": 1,
+      "losses": 31,
+      "wilcoxon_statistic": 123.0,
+      "p_raw": 0.00019455440301425423,
+      "p_holm": 0.0005836632090427627,
+      "significant_0_05": true
+    }
+  ],
+  "per_instance": [
+    {
+      "instance": 0,
+      "kind": "uniform",
+      "random": {
+        "quality": 21.569386264533847,
+        "cost": 9782.0,
+        "elapsed": 0.5929109000001821
+      },
+      "suspicious": {
+        "quality": 22.309479639778818,
+        "cost": 9695.0,
+        "elapsed": 0.5850122999994104
+      },
+      "entropy": {
+        "quality": 21.865549398621862,
+        "cost": 9748.333333333334,
+        "elapsed": 0.6340608666663078
+      },
+      "elite_entropy": {
+        "quality": 21.29968675050184,
+        "cost": 9817.333333333334,
+        "elapsed": 0.5522971666675099
+      }
+    },
+    {
+      "instance": 1,
+      "kind": "clustered",
+      "random": {
+        "quality": 24.8290366505137,
+        "cost": 5153.666666666667,
+        "elapsed": 0.5755740333333961
+      },
+      "suspicious": {
+        "quality": 24.844705719770985,
+        "cost": 5152.666666666667,
+        "elapsed": 0.5710509333354518
+      },
+      "entropy": {
+        "quality": 24.732878250782903,
+        "cost": 5159.333333333333,
+        "elapsed": 0.5508550999996563
+      },
+      "elite_entropy": {
+        "quality": 24.90523801261305,
+        "cost": 5148.333333333333,
+        "elapsed": 0.5537086333327655
+      }
+    },
+    {
+      "instance": 2,
+      "kind": "mixed",
+      "random": {
+        "quality": 18.65575319717715,
+        "cost": 8153.333333333333,
+        "elapsed": 0.5810122666686462
+      },
+      "suspicious": {
+        "quality": 18.72571053761943,
+        "cost": 8148.666666666667,
+        "elapsed": 0.5656214666669257
+      },
+      "entropy": {
+        "quality": 18.553779753765735,
+        "cost": 8165.0,
+        "elapsed": 0.5517113666658892
+      },
+      "elite_entropy": {
+        "quality": 18.545294319439353,
+        "cost": 8165.0,
+        "elapsed": 0.634664599999572
+      }
+    },
+    {
+      "instance": 3,
+      "kind": "grid",
+      "random": {
+        "quality": 24.87894942465124,
+        "cost": 8365.0,
+        "elapsed": 0.5498000000006869
+      },
+      "suspicious": {
+        "quality": 24.86056876110929,
+        "cost": 8367.0,
+        "elapsed": 0.6075191333329713
+      },
+      "entropy": {
+        "quality": 24.86056876110929,
+        "cost": 8367.0,
+        "elapsed": 0.5660914666671791
+      },
+      "elite_entropy": {
+        "quality": 24.87894942465124,
+        "cost": 8365.0,
+        "elapsed": 0.5488745666649871
+      }
+    },
+    {
+      "instance": 4,
+      "kind": "flcluster",
+      "random": {
+        "quality": 24.605776727297865,
+        "cost": 5125.666666666667,
+        "elapsed": 0.5491334999993948
+      },
+      "suspicious": {
+        "quality": 24.574385185076242,
+        "cost": 5128.0,
+        "elapsed": 0.629445466666463
+      },
+      "entropy": {
+        "quality": 25.183976429147588,
+        "cost": 5084.666666666667,
+        "elapsed": 0.6862241666664582
+      },
+      "elite_entropy": {
+        "quality": 24.605776727297865,
+        "cost": 5125.666666666667,
+        "elapsed": 0.5475375333335251
+      }
+    },
+    {
+      "instance": 5,
+      "kind": "uniform",
+      "random": {
+        "quality": 25.314441803505954,
+        "cost": 8787.666666666666,
+        "elapsed": 0.5825821999994029
+      },
+      "suspicious": {
+        "quality": 26.069425033709233,
+        "cost": 8706.0,
+        "elapsed": 0.5690941333329343
+      },
+      "entropy": {
+        "quality": 25.25001987504906,
+        "cost": 8797.0,
+        "elapsed": 0.5762755666655721
+      },
+      "elite_entropy": {
+        "quality": 25.489963128037022,
+        "cost": 8765.333333333334,
+        "elapsed": 0.6016730999981519
+      }
+    },
+    {
+      "instance": 6,
+      "kind": "clustered",
+      "random": {
+        "quality": 25.972180133413968,
+        "cost": 5278.333333333333,
+        "elapsed": 0.6848892999999711
+      },
+      "suspicious": {
+        "quality": 26.28840278881791,
+        "cost": 5254.0,
+        "elapsed": 0.6422747999992376
+      },
+      "entropy": {
+        "quality": 26.011166488189797,
+        "cost": 5275.333333333333,
+        "elapsed": 0.6196355333328635
+      },
+      "elite_entropy": {
+        "quality": 25.972180133413968,
+        "cost": 5278.333333333333,
+        "elapsed": 0.6244471333326752
+      }
+    },
+    {
+      "instance": 7,
+      "kind": "mixed",
+      "random": {
+        "quality": 18.20374418758881,
+        "cost": 9612.333333333334,
+        "elapsed": 0.6049956666659758
+      },
+      "suspicious": {
+        "quality": 18.750107376692615,
+        "cost": 9542.0,
+        "elapsed": 0.6837671333341859
+      },
+      "entropy": {
+        "quality": 18.216691182591266,
+        "cost": 9610.666666666666,
+        "elapsed": 0.6988773666683604
+      },
+      "elite_entropy": {
+        "quality": 18.20374418758881,
+        "cost": 9612.333333333334,
+        "elapsed": 0.6029802999995203
+      }
+    },
+    {
+      "instance": 8,
+      "kind": "grid",
+      "random": {
+        "quality": 21.425919638694598,
+        "cost": 7319.333333333333,
+        "elapsed": 0.6054976999985229
+      },
+      "suspicious": {
+        "quality": 20.34431665684645,
+        "cost": 7413.0,
+        "elapsed": 0.5874605000002097
+      },
+      "entropy": {
+        "quality": 19.5081940338714,
+        "cost": 7490.333333333333,
+        "elapsed": 0.5519273666662533
+      },
+      "elite_entropy": {
+        "quality": 21.44946844359275,
+        "cost": 7317.333333333333,
+        "elapsed": 0.6088823666674822
+      }
+    },
+    {
+      "instance": 9,
+      "kind": "flcluster",
+      "random": {
+        "quality": 33.34727460369293,
+        "cost": 4399.666666666667,
+        "elapsed": 0.6534127333337286
+      },
+      "suspicious": {
+        "quality": 33.45832753426001,
+        "cost": 4394.333333333333,
+        "elapsed": 0.6596106333333106
+      },
+      "entropy": {
+        "quality": 34.00509928890946,
+        "cost": 4358.0,
+        "elapsed": 0.7379177333350526
+      },
+      "elite_entropy": {
+        "quality": 33.34727460369293,
+        "cost": 4399.666666666667,
+        "elapsed": 0.6516507666674443
+      }
+    },
+    {
+      "instance": 10,
+      "kind": "uniform",
+      "random": {
+        "quality": 21.82269258065884,
+        "cost": 7523.666666666667,
+        "elapsed": 0.5523914666664496
+      },
+      "suspicious": {
+        "quality": 23.320314463844216,
+        "cost": 7386.0,
+        "elapsed": 0.5780623000015718
+      },
+      "entropy": {
+        "quality": 21.929149312572346,
+        "cost": 7512.666666666667,
+        "elapsed": 0.545862466666828
+      },
+      "elite_entropy": {
+        "quality": 21.82269258065884,
+        "cost": 7523.666666666667,
+        "elapsed": 0.5208861333327756
+      }
+    },
+    {
+      "instance": 11,
+      "kind": "clustered",
+      "random": {
+        "quality": 21.05427639023293,
+        "cost": 3764.3333333333335,
+        "elapsed": 0.5557654000003822
+      },
+      "suspicious": {
+        "quality": 23.403555534854743,
+        "cost": 3658.3333333333335,
+        "elapsed": 0.5544777999991007
+      },
+      "entropy": {
+        "quality": 22.713307704820313,
+        "cost": 3688.6666666666665,
+        "elapsed": 0.5929824666673085
+      },
+      "elite_entropy": {
+        "quality": 22.17790080692372,
+        "cost": 3711.6666666666665,
+        "elapsed": 0.5366443666680425
+      }
+    },
+    {
+      "instance": 12,
+      "kind": "mixed",
+      "random": {
+        "quality": 24.025233460269096,
+        "cost": 7954.333333333333,
+        "elapsed": 0.5425544000014876
+      },
+      "suspicious": {
+        "quality": 23.96939481746467,
+        "cost": 7960.0,
+        "elapsed": 0.5243368999993739
+      },
+      "entropy": {
+        "quality": 24.51838930735275,
+        "cost": 7903.666666666667,
+        "elapsed": 0.6104946000001897
+      },
+      "elite_entropy": {
+        "quality": 24.016443796913208,
+        "cost": 7955.333333333333,
+        "elapsed": 0.562346033333597
+      }
+    },
+    {
+      "instance": 13,
+      "kind": "grid",
+      "random": {
+        "quality": 20.35453159502635,
+        "cost": 7376.666666666667,
+        "elapsed": 0.5525039333321425
+      },
+      "suspicious": {
+        "quality": 21.87223730936191,
+        "cost": 7232.0,
+        "elapsed": 0.6009857666673876
+      },
+      "entropy": {
+        "quality": 19.119897981023197,
+        "cost": 7487.666666666667,
+        "elapsed": 0.5507921666673307
+      },
+      "elite_entropy": {
+        "quality": 20.91871585096688,
+        "cost": 7320.0,
+        "elapsed": 0.5430698333342056
+      }
+    },
+    {
+      "instance": 14,
+      "kind": "flcluster",
+      "random": {
+        "quality": 29.567161331905126,
+        "cost": 4368.666666666667,
+        "elapsed": 0.5870473333355525
+      },
+      "suspicious": {
+        "quality": 29.025490057041186,
+        "cost": 4400.666666666667,
+        "elapsed": 0.5712234333332162
+      },
+      "entropy": {
+        "quality": 29.385305505120538,
+        "cost": 4383.0,
+        "elapsed": 0.5494715333322043
+      },
+      "elite_entropy": {
+        "quality": 29.05621430273945,
+        "cost": 4400.666666666667,
+        "elapsed": 0.5337813333341425
+      }
+    },
+    {
+      "instance": 15,
+      "kind": "uniform",
+      "random": {
+        "quality": 24.396054093252094,
+        "cost": 7597.333333333333,
+        "elapsed": 0.5414453666671761
+      },
+      "suspicious": {
+        "quality": 24.098788896641356,
+        "cost": 7626.0,
+        "elapsed": 0.5498515666671059
+      },
+      "entropy": {
+        "quality": 24.018429703732878,
+        "cost": 7635.333333333333,
+        "elapsed": 0.5706130333334537
+      },
+      "elite_entropy": {
+        "quality": 24.05093532099377,
+        "cost": 7628.666666666667,
+        "elapsed": 0.5342137999990276
+      }
+    },
+    {
+      "instance": 16,
+      "kind": "clustered",
+      "random": {
+        "quality": 26.77917859113464,
+        "cost": 5176.666666666667,
+        "elapsed": 0.6390832666669061
+      },
+      "suspicious": {
+        "quality": 27.141334906184824,
+        "cost": 5155.666666666667,
+        "elapsed": 0.5421807333332254
+      },
+      "entropy": {
+        "quality": 26.67670645074781,
+        "cost": 5184.666666666667,
+        "elapsed": 0.6365259333336629
+      },
+      "elite_entropy": {
+        "quality": 26.471762169974145,
+        "cost": 5200.666666666667,
+        "elapsed": 0.5969951000006404
+      }
+    },
+    {
+      "instance": 17,
+      "kind": "mixed",
+      "random": {
+        "quality": 24.58314151951629,
+        "cost": 7259.0,
+        "elapsed": 0.5351329999987987
+      },
+      "suspicious": {
+        "quality": 24.535003962259598,
+        "cost": 7265.333333333333,
+        "elapsed": 0.5602382666669049
+      },
+      "entropy": {
+        "quality": 25.563290483775152,
+        "cost": 7171.0,
+        "elapsed": 0.5784006666666149
+      },
+      "elite_entropy": {
+        "quality": 24.701129975780834,
+        "cost": 7246.666666666667,
+        "elapsed": 0.5493951666661209
+      }
+    },
+    {
+      "instance": 18,
+      "kind": "grid",
+      "random": {
+        "quality": 22.890373820694602,
+        "cost": 6736.0,
+        "elapsed": 0.5277104999986477
+      },
+      "suspicious": {
+        "quality": 22.890373820694602,
+        "cost": 6736.0,
+        "elapsed": 0.5580224666664435
+      },
+      "entropy": {
+        "quality": 22.890373820694602,
+        "cost": 6736.0,
+        "elapsed": 0.5760843999996723
+      },
+      "elite_entropy": {
+        "quality": 22.890373820694602,
+        "cost": 6736.0,
+        "elapsed": 0.5379728000019289
+      }
+    },
+    {
+      "instance": 19,
+      "kind": "flcluster",
+      "random": {
+        "quality": 30.399792492417276,
+        "cost": 4881.0,
+        "elapsed": 0.6635470666672821
+      },
+      "suspicious": {
+        "quality": 30.78261487270234,
+        "cost": 4855.333333333333,
+        "elapsed": 0.5926391333329472
+      },
+      "entropy": {
+        "quality": 30.83680091712617,
+        "cost": 4851.333333333333,
+        "elapsed": 0.6584807333347271
+      },
+      "elite_entropy": {
+        "quality": 30.3695120771215,
+        "cost": 4882.666666666667,
+        "elapsed": 0.6538008333324493
+      }
+    },
+    {
+      "instance": 20,
+      "kind": "uniform",
+      "random": {
+        "quality": 21.62819575139081,
+        "cost": 9452.666666666666,
+        "elapsed": 0.5414247333331635
+      },
+      "suspicious": {
+        "quality": 22.00794607798085,
+        "cost": 9409.333333333334,
+        "elapsed": 0.5704541666673322
+      },
+      "entropy": {
+        "quality": 22.024033630864594,
+        "cost": 9415.333333333334,
+        "elapsed": 0.6259684999992411
+      },
+      "elite_entropy": {
+        "quality": 21.3143471833249,
+        "cost": 9492.666666666666,
+        "elapsed": 0.6033843333340579
+      }
+    },
+    {
+      "instance": 21,
+      "kind": "clustered",
+      "random": {
+        "quality": 21.891484503159763,
+        "cost": 4508.666666666667,
+        "elapsed": 0.5804894666665253
+      },
+      "suspicious": {
+        "quality": 21.687417048959123,
+        "cost": 4521.333333333333,
+        "elapsed": 0.5829273333329184
+      },
+      "entropy": {
+        "quality": 21.814542461489726,
+        "cost": 4516.333333333333,
+        "elapsed": 0.5746508666670707
+      },
+      "elite_entropy": {
+        "quality": 21.89479398108553,
+        "cost": 4508.666666666667,
+        "elapsed": 0.5710388333342659
+      }
+    },
+    {
+      "instance": 22,
+      "kind": "mixed",
+      "random": {
+        "quality": 20.167778628252893,
+        "cost": 8614.333333333334,
+        "elapsed": 0.5496679666648561
+      },
+      "suspicious": {
+        "quality": 21.431711787497843,
+        "cost": 8480.666666666666,
+        "elapsed": 0.5787334666662597
+      },
+      "entropy": {
+        "quality": 21.44644046909812,
+        "cost": 8479.666666666666,
+        "elapsed": 0.6217178666665859
+      },
+      "elite_entropy": {
+        "quality": 20.447035232931608,
+        "cost": 8583.0,
+        "elapsed": 0.5206383999999767
+      }
+    },
+    {
+      "instance": 23,
+      "kind": "grid",
+      "random": {
+        "quality": 23.572250062330543,
+        "cost": 6760.666666666667,
+        "elapsed": 0.5226647000005565
+      },
+      "suspicious": {
+        "quality": 25.074661909166462,
+        "cost": 6606.666666666667,
+        "elapsed": 0.5378272333327914
+      },
+      "entropy": {
+        "quality": 25.24645114043798,
+        "cost": 6592.333333333333,
+        "elapsed": 0.5743709333340424
+      },
+      "elite_entropy": {
+        "quality": 23.605487837061528,
+        "cost": 6758.0,
+        "elapsed": 0.5145368666671857
+      }
+    },
+    {
+      "instance": 24,
+      "kind": "flcluster",
+      "random": {
+        "quality": 24.557546232151612,
+        "cost": 5088.333333333333,
+        "elapsed": 0.5872307333326413
+      },
+      "suspicious": {
+        "quality": 26.07596925165655,
+        "cost": 4968.0,
+        "elapsed": 0.7025253333340515
+      },
+      "entropy": {
+        "quality": 25.93893515592406,
+        "cost": 4978.333333333333,
+        "elapsed": 0.7313408000009076
+      },
+      "elite_entropy": {
+        "quality": 24.557546232151612,
+        "cost": 5088.333333333333,
+        "elapsed": 0.5884422333328985
+      }
+    },
+    {
+      "instance": 25,
+      "kind": "uniform",
+      "random": {
+        "quality": 22.045282790108804,
+        "cost": 8247.0,
+        "elapsed": 0.5720748666669048
+      },
+      "suspicious": {
+        "quality": 21.75377941562502,
+        "cost": 8276.333333333334,
+        "elapsed": 0.5638093999999304
+      },
+      "entropy": {
+        "quality": 22.161445498797388,
+        "cost": 8233.0,
+        "elapsed": 0.5442259999981616
+      },
+      "elite_entropy": {
+        "quality": 21.73658665778836,
+        "cost": 8279.333333333334,
+        "elapsed": 0.5714820666653395
+      }
+    },
+    {
+      "instance": 26,
+      "kind": "clustered",
+      "random": {
+        "quality": 25.47334792972715,
+        "cost": 3792.3333333333335,
+        "elapsed": 0.5406303666677559
+      },
+      "suspicious": {
+        "quality": 25.940139212818092,
+        "cost": 3767.3333333333335,
+        "elapsed": 0.5952957333320228
+      },
+      "entropy": {
+        "quality": 25.749712479692604,
+        "cost": 3777.6666666666665,
+        "elapsed": 0.5435892999994394
+      },
+      "elite_entropy": {
+        "quality": 25.47334792972715,
+        "cost": 3792.3333333333335,
+        "elapsed": 0.5785849666669188
+      }
+    },
+    {
+      "instance": 27,
+      "kind": "mixed",
+      "random": {
+        "quality": 19.470490830446135,
+        "cost": 5741.0,
+        "elapsed": 0.540869866667587
+      },
+      "suspicious": {
+        "quality": 19.530720562372483,
+        "cost": 5727.666666666667,
+        "elapsed": 0.5478982666669859
+      },
+      "entropy": {
+        "quality": 19.428648604378168,
+        "cost": 5744.0,
+        "elapsed": 0.5385411000000507
+      },
+      "elite_entropy": {
+        "quality": 19.15099698261905,
+        "cost": 5763.0,
+        "elapsed": 0.5303154999989298
+      }
+    },
+    {
+      "instance": 28,
+      "kind": "grid",
+      "random": {
+        "quality": 22.140515726050285,
+        "cost": 7069.666666666667,
+        "elapsed": 0.5555588666672217
+      },
+      "suspicious": {
+        "quality": 23.726453187707563,
+        "cost": 6923.0,
+        "elapsed": 0.5220348999998047
+      },
+      "entropy": {
+        "quality": 22.2006640139377,
+        "cost": 7059.0,
+        "elapsed": 0.5177732000011019
+      },
+      "elite_entropy": {
+        "quality": 22.123413874903132,
+        "cost": 7060.333333333333,
+        "elapsed": 0.5013051000011425
+      }
+    },
+    {
+      "instance": 29,
+      "kind": "flcluster",
+      "random": {
+        "quality": 17.770693554304387,
+        "cost": 4224.666666666667,
+        "elapsed": 0.550673100001101
+      },
+      "suspicious": {
+        "quality": 17.170782944715913,
+        "cost": 4254.0,
+        "elapsed": 0.5543806999994558
+      },
+      "entropy": {
+        "quality": 16.845883179749784,
+        "cost": 4269.666666666667,
+        "elapsed": 0.567791199999192
+      },
+      "elite_entropy": {
+        "quality": 16.941755887263582,
+        "cost": 4265.0,
+        "elapsed": 0.564543833334028
+      }
+    },
+    {
+      "instance": 30,
+      "kind": "uniform",
+      "random": {
+        "quality": 23.326618426098225,
+        "cost": 9357.0,
+        "elapsed": 0.5857919666680876
+      },
+      "suspicious": {
+        "quality": 24.669968557198022,
+        "cost": 9191.0,
+        "elapsed": 0.6422370999995716
+      },
+      "entropy": {
+        "quality": 24.517694347857994,
+        "cost": 9210.666666666666,
+        "elapsed": 0.5504927333325517
+      },
+      "elite_entropy": {
+        "quality": 23.546935205900535,
+        "cost": 9332.333333333334,
+        "elapsed": 0.5744459666651286
+      }
+    },
+    {
+      "instance": 31,
+      "kind": "clustered",
+      "random": {
+        "quality": 26.90975417169133,
+        "cost": 4286.0,
+        "elapsed": 0.5844190000013137
+      },
+      "suspicious": {
+        "quality": 26.752263530830245,
+        "cost": 4295.0,
+        "elapsed": 0.5776197333337526
+      },
+      "entropy": {
+        "quality": 27.369238453634438,
+        "cost": 4256.333333333333,
+        "elapsed": 0.6063934333324141
+      },
+      "elite_entropy": {
+        "quality": 26.849767553175756,
+        "cost": 4290.333333333333,
+        "elapsed": 0.5541594333335524
+      }
+    },
+    {
+      "instance": 32,
+      "kind": "mixed",
+      "random": {
+        "quality": 17.904550745374678,
+        "cost": 8136.666666666667,
+        "elapsed": 0.6186322000006234
+      },
+      "suspicious": {
+        "quality": 18.86625088635489,
+        "cost": 8035.333333333333,
+        "elapsed": 0.6181326666677099
+      },
+      "entropy": {
+        "quality": 18.93354385848211,
+        "cost": 8027.333333333333,
+        "elapsed": 0.6518077999996118
+      },
+      "elite_entropy": {
+        "quality": 18.383361801557246,
+        "cost": 8085.333333333333,
+        "elapsed": 0.6162195999992642
+      }
+    },
+    {
+      "instance": 33,
+      "kind": "grid",
+      "random": {
+        "quality": 19.66717350572155,
+        "cost": 9600.666666666666,
+        "elapsed": 0.5525127333324539
+      },
+      "suspicious": {
+        "quality": 21.446942678508645,
+        "cost": 9400.666666666666,
+        "elapsed": 0.6110314333321488
+      },
+      "entropy": {
+        "quality": 20.150716690170643,
+        "cost": 9544.333333333334,
+        "elapsed": 0.6094507666675781
+      },
+      "elite_entropy": {
+        "quality": 19.66717350572155,
+        "cost": 9600.666666666666,
+        "elapsed": 0.553807400000854
+      }
+    },
+    {
+      "instance": 34,
+      "kind": "flcluster",
+      "random": {
+        "quality": 28.227584004619118,
+        "cost": 3789.0,
+        "elapsed": 0.5598223000003296
+      },
+      "suspicious": {
+        "quality": 28.397580423098873,
+        "cost": 3778.0,
+        "elapsed": 0.5575182333341218
+      },
+      "entropy": {
+        "quality": 28.42507006084793,
+        "cost": 3776.6666666666665,
+        "elapsed": 0.5847808000010749
+      },
+      "elite_entropy": {
+        "quality": 28.227584004619118,
+        "cost": 3789.0,
+        "elapsed": 0.5605381666670534
+      }
+    },
+    {
+      "instance": 35,
+      "kind": "uniform",
+      "random": {
+        "quality": 22.61571702378048,
+        "cost": 8712.0,
+        "elapsed": 0.5512011666651233
+      },
+      "suspicious": {
+        "quality": 22.725292474040227,
+        "cost": 8699.0,
+        "elapsed": 0.5512031666670131
+      },
+      "entropy": {
+        "quality": 23.511300294880368,
+        "cost": 8606.333333333334,
+        "elapsed": 0.5270682666681145
+      },
+      "elite_entropy": {
+        "quality": 23.243605189475556,
+        "cost": 8640.666666666666,
+        "elapsed": 0.5398168333340436
+      }
+    },
+    {
+      "instance": 36,
+      "kind": "clustered",
+      "random": {
+        "quality": 28.264182574754027,
+        "cost": 3131.0,
+        "elapsed": 0.5528258000000884
+      },
+      "suspicious": {
+        "quality": 28.47033642493811,
+        "cost": 3122.0,
+        "elapsed": 0.53506099999989
+      },
+      "entropy": {
+        "quality": 28.724476090724405,
+        "cost": 3110.6666666666665,
+        "elapsed": 0.5834866000004695
+      },
+      "elite_entropy": {
+        "quality": 28.531285505962504,
+        "cost": 3120.3333333333335,
+        "elapsed": 0.5442565333335855
+      }
+    },
+    {
+      "instance": 37,
+      "kind": "mixed",
+      "random": {
+        "quality": 22.816068248672508,
+        "cost": 7926.666666666667,
+        "elapsed": 0.6189645666672732
+      },
+      "suspicious": {
+        "quality": 22.850675805460256,
+        "cost": 7922.0,
+        "elapsed": 0.5753671333319895
+      },
+      "entropy": {
+        "quality": 22.986713646079327,
+        "cost": 7908.666666666667,
+        "elapsed": 0.5947464333342699
+      },
+      "elite_entropy": {
+        "quality": 22.816068248672508,
+        "cost": 7926.666666666667,
+        "elapsed": 0.6229019999991579
+      }
+    },
+    {
+      "instance": 38,
+      "kind": "grid",
+      "random": {
+        "quality": 17.534239448676416,
+        "cost": 8266.666666666666,
+        "elapsed": 0.5626766666670543
+      },
+      "suspicious": {
+        "quality": 19.033666588330398,
+        "cost": 8108.333333333333,
+        "elapsed": 0.5750536000001981
+      },
+      "entropy": {
+        "quality": 19.831895210835864,
+        "cost": 8027.333333333333,
+        "elapsed": 0.63526299999891
+      },
+      "elite_entropy": {
+        "quality": 17.534239448676416,
+        "cost": 8266.666666666666,
+        "elapsed": 0.5599128666666123
+      }
+    },
+    {
+      "instance": 39,
+      "kind": "flcluster",
+      "random": {
+        "quality": 19.432875379192534,
+        "cost": 4931.0,
+        "elapsed": 0.6124718000003971
+      },
+      "suspicious": {
+        "quality": 19.444489781050837,
+        "cost": 4930.333333333333,
+        "elapsed": 0.6067201000005298
+      },
+      "entropy": {
+        "quality": 19.744164099371762,
+        "cost": 4909.666666666667,
+        "elapsed": 0.6368208666657059
+      },
+      "elite_entropy": {
+        "quality": 19.432875379192534,
+        "cost": 4931.0,
+        "elapsed": 0.5860624999998739
+      }
+    }
+  ]
+}

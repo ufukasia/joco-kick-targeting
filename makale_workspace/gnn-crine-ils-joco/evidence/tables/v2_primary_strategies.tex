@@ -1,0 +1,18 @@
+% OTOMATIK URETIM -- evidence/scripts/build_v2.py
+\begin{table}[!htbp]
+\centering\small\setlength{\tabcolsep}{4pt}
+\caption{Birincil set (38 VLSI problemi, 10 tohum, 10~sn): gap ve operasyonel sayaçlar. Model: skor süresi payı; Bayat: turda olmayan havuz kenarına düşen kesimler.}
+\label{tab:v2-primary-strategies}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc}
+\toprule
+Strateji & Ort. gap [\%] & Medyan & Kick/sn & Kabul & Model [\%] & Bayat [\%] \\
+\midrule
+Rastgele--global & 0{,}857 & 0{,}850 & 7402 & 151 & 0{,}0 & --- \\
+GNN--global & 0{,}804 & 0{,}836 & 4047 & 147 & 6{,}0 & 4{,}4 \\
+kNN--global & 0{,}755 & 0{,}774 & 4082 & 142 & 1{,}2 & 0{,}2 \\
+Rastgele--yerel & 1{,}219 & 1{,}249 & 12495 & 148 & 0{,}0 & --- \\
+GNN--yerel & 1{,}238 & 1{,}236 & 10519 & 145 & 5{,}1 & 2{,}9 \\
+kNN--yerel & 1{,}223 & 1{,}249 & 10930 & 145 & 0{,}9 & 0{,}2 \\
+\bottomrule
+\end{tabular*}
+\end{table}

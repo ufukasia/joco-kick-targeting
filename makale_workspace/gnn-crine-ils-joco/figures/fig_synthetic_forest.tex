@@ -1,0 +1,43 @@
+% Şekil: On stratejinin random'a farki + bootstrap %95 GA (100 bagimsiz sentetik problem).
+% Ana belge preamble gereksinimi: \usepackage{pgfplots}, \pgfplotsset{compat=1.18};
+%                        renkler iyiRenk/kotuRenk (figure-style.md kural 7).
+% Veri: figures/data/fig_synthetic_forest_{benefit,harm,inconclusive}.dat (tek satir)
+%   <= results/diversification_synthetic_100_summary.json → comparisons[] (bootstrap_95_ci).
+% yticklabels sirasi .dat'taki artan fark siralamasina (y=0..8) baglidir.
+\begin{tikzpicture}
+\begin{axis}[
+  width=\textwidth, height=8.6cm,
+  xlabel={Mean quality difference vs random [percentage points]},
+  ylabel={},
+  xmin=-0.55, xmax=0.35, ymin=-0.8, ymax=9.4,
+  ytick={0,...,8},
+  yticklabels={Elite-entropy, Backbone, Entropy, Hybrid, Reactive, Long-edge, Bandit, Adaptive-portfolio, Suspicious},
+  y tick label style={font=\small},
+  xticklabel style={/pgf/number format/fixed, /pgf/number format/precision=2},
+  scaled x ticks=false,
+  xmajorgrids=true, grid style={black!12},
+  clip=false,
+  legend style={at={(0.02,0.97)}, anchor=north west, font=\small, draw=black!40, fill=white, fill opacity=0.9, text opacity=1},
+]
+\draw[black, dashed, line width=0.7pt] (axis cs:0,-0.8) -- (axis cs:0,9.4);
+% anlamli zarar (kirmizi kare)
+\addplot[only marks, mark=square*, mark size=2.4pt, draw=kotuRenk, fill=kotuRenk,
+  error bars/x dir=both, error bars/x explicit]
+  table [x=mean_diff, y=y, x error minus=ci_lo, x error plus=ci_hi]
+  {figures/data/fig_synthetic_forest_harm.dat};
+\addlegendentry{Significant harm}
+% belirsiz (nötr: siyah bos daire)
+\addplot[only marks, mark=o, mark size=2.2pt, draw=black!70, fill=white,
+  error bars/x dir=both, error bars/x explicit]
+  table [x=mean_diff, y=y, x error minus=ci_lo, x error plus=ci_hi]
+  {figures/data/fig_synthetic_forest_inconclusive.dat};
+\addlegendentry{Inconclusive}
+% anlamli yarar (mavi dolu daire; önerilen = suspicious)
+\addplot[only marks, mark=*, mark size=2.8pt, draw=iyiRenk, fill=iyiRenk,
+  error bars/x dir=both, error bars/x explicit]
+  table [x=mean_diff, y=y, x error minus=ci_lo, x error plus=ci_hi]
+  {figures/data/fig_synthetic_forest_benefit.dat};
+\addlegendentry{Significant benefit}
+\node[font=\scriptsize\itshape, text=black!70, anchor=north west] at (axis cs:0.01,9.3) {random reference};
+\end{axis}
+\end{tikzpicture}

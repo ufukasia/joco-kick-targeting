@@ -1,0 +1,8 @@
+{
+ "spearman_gain": 0.5133084484323003,
+ "spearman_gain_knn": 0.5222116080287428,
+ "auc_wrong": 0.7765590889062002,
+ "auc_wrong_knn": 0.8120803137662929,
+ "n_train_rows": 244098,
+ "target_mean": 0.20962284920193858
+}

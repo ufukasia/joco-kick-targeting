@@ -1,0 +1,17 @@
+% OTOMATIK URETIM — evidence/scripts/build_tables.py
+% Kaynaklar: results/focused_synthetic_100_summary.json, results/focused_tsplib_9x10_summary.json, results/focused_world_10x10_summary.json → comparisons_vs_suspicious
+\begin{table}[!htbp]
+ \centering\small
+ \caption{Seçilmiş varyantların suspicious ile doğrudan karşılaştırması: üç kümede fark ve Holm-$p$; nötr değerlerde anlamlı fark yoktur.}
+ \label{tab:focused-suspicious}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc}
+\toprule
+Varyant & \multicolumn{2}{c}{Sent-100}  & \multicolumn{2}{c}{TSPLIB-9}  & \multicolumn{2}{c}{World-10} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+ & $\Delta$S & $p$ & $\Delta$S & $p$ & $\Delta$S & $p$ \\
+\midrule
+Susp.-reactive & +0,01 & 0,6025 & -0,00 & 0,4375 & +0,00 & 0,8438 \\
+Focused-bandit & +0,01 & 0,8441 & -0,12 & 0,4375 & -0,04 & 0,75 \\
+\bottomrule
+\end{tabular*}
+\end{table}

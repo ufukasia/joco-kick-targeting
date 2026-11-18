@@ -1,0 +1,27 @@
+\section{Sonuç}\label{sec:sonuc}
+
+Hızlı bir ILS'te double-bridge vuruşlarının nereye yönlendirileceğini, öğrenilmiş ve eğitimsiz
+sinyalleri ön-kayıtlı bir doğrulayıcı testte karşılaştırarak inceledik. Uygulayıcı için sonuç
+basittir: vuruşları en uzun tur kenarlarına (ön-kayıtlı vekilde uç noktaların yerel ölçeğine göre
+düzeltilmiş) yönlendirmek, bu motor ve 10~sn bütçede rastgele vuruştan geliştirme ve doğrulama
+setlerinde tutarlı biçimde iyidir; sınanan öğrenilmiş skorlar karşısında bunun için model eğitmek
+gerekmedi. Bu eğitimsiz vekil, LKH-3 turlarıyla eğitilmiş GNN'ye ve kazanç hedefli MLP'ye karşı
+kötü-değil testlerini geçti, doğrulama setinde ortalama gap'i \%1,094'ten \%0,922'ye indirdi ve
+keşifsel karşılaştırmalarda öğrenilmiş skorların önünde kaldı. % E608, E610
+Bu sonuç üç özellikle tutarlıdır: kazanca hizalı hedef, ihmal edilebilir hesap maliyeti ve her an
+güncel havuz; bunların payları ayrıştırılmadı. Keşifsel bir kolda yerel ölçek düzeltmesi olmadan en
+uzun kenarları hedeflemek de rastgeleye karşı benzer bir kazanç sağladı ve vekilden ortalamada
+ayrışmadı ($+0{,}009$ puan); bu, yararın bu motorda doğrudan kenar uzunluğu bilgisinden geldiğini
+düşündürür ve en basit vekile karşı sınama ilkesinin kendi önerimize de yararla uygulanabildiğini
+gösterir. % E965, E972
+
+Koşu içi çevrimiçi öğrenme ise kendi ödülünü artırırken son kaliteyi düşürdü: vuruş başına ortalama
+ödül, yerel aramanın onardığı nötr vuruşları ödüllendirir. Seyrek iyileşmeli aramalarda ödül tasarımı
+bu nedenle öncelikli bir sorudur. Yöntemsel ders de aynı yöndedir: öğrenilmiş bir arama bileşeni
+rastgele tabana değil, en basit kazanca hizalı eğitimsiz vekile karşı ve eşit duvar-saatinde
+değerlendirilmelidir.
+
+Sonraki adımlar, karşılaştırmanın LK/LKH düzeyindeki yerel aramalarda, daha uzun bütçelerde ve daha
+büyük, yayımlanmış öğrenilmiş modellerle tekrarı; ham ve ölçekle düzeltilmiş uzunluğun ön-kayıtlı bir
+eşdeğerlik testiyle karşılaştırılması ve seyrek iyileşmelere göre tasarlanmış ödüllerle çevrimiçi
+hedeflemenin yeniden sınanmasıdır.

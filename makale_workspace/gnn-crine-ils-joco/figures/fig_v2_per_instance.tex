@@ -1,0 +1,17 @@
+% v2: problem bazinda 10 sn gap farki (global kick), problem boyutuna gore. Veri: figures/data/v2_per_instance_primary.dat
+% Figur ici metin Ingilizce (figure-style.md kural 3).
+\begin{tikzpicture}
+\begin{axis}[width=\textwidth, height=5.2cm, xlabel={Instance size $n$}, ylabel={Gap difference [pt]},
+  tick label style={font=\scriptsize}, label style={font=\small},
+  y tick label style={/pgf/number format/fixed}, x tick label style={/pgf/number format/1000 sep={}},
+  scaled x ticks=false,
+  legend style={font=\scriptsize, at={(0.99,0.97)}, anchor=north east, draw=black!40, legend columns=3}]
+\addplot[black!40, domain=1300:4000, samples=2, forget plot] {0};
+\addplot[only marks, mark=*, mark size=1.8pt, iyiRenk] table[x=n, y=gnn_rand] {figures/data/v2_per_instance_primary.dat};
+\addlegendentry{GNN$-$Random}
+\addplot[only marks, mark=triangle*, mark size=2pt, orange!85!black] table[x=n, y=knn_rand] {figures/data/v2_per_instance_primary.dat};
+\addlegendentry{kNN$-$Random}
+\addplot[only marks, mark=diamond*, mark size=1.8pt, kotuRenk] table[x=n, y=gnn_knn] {figures/data/v2_per_instance_primary.dat};
+\addlegendentry{GNN$-$kNN}
+\end{axis}
+\end{tikzpicture}

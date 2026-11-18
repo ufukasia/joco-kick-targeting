@@ -1,0 +1,4 @@
+method mean_diff ci_lo ci_hi classification
+sreac 0.12890 0.03613 0.21849 significant_benefit
+fband 0.12883 0.01443 0.24170 significant_benefit
+susp 0.11582 0.02129 0.20409 significant_benefit

@@ -1,0 +1,82 @@
+% Şekil: Focused varyantlarin uc kumede random'a farki + bootstrap %95 GA.
+% Ana belge preamble gereksinimi: \usepackage{pgfplots}, \pgfplotsset{compat=1.18},
+%   \usepgfplotslibrary{groupplots}; renk iyiRenk (figure-style.md kural 7).
+% Veri: figures/data/fig_focused_ci_<suite>_<yontem>.dat (tek satir, y=ytick indeksi)
+%   <= results/focused_*_summary.json → comparisons[] (bootstrap_95_ci).
+% Her panelin yticklabels sirasi .dat'taki y indeksleriyle uyumludur.
+\begin{tikzpicture}
+\begin{groupplot}[
+  group style={rows=3, columns=1, vertical sep=16pt,
+               xlabels at=edge bottom, xticklabels at=edge bottom},
+  width=\textwidth, height=3.4cm,
+  xmin=-0.12, xmax=0.50,
+  xmajorgrids=true, grid style={black!12},
+  clip=false,
+  xlabel={Mean quality difference vs random [percentage points]},
+  x label style={font=\small},
+  tick label style={font=\small},
+  xticklabel style={/pgf/number format/fixed, /pgf/number format/precision=2},
+  scaled x ticks=false,
+]
+% ---- (a) synthetic: y=0 Susp.-reactive, y=1 Focused-bandit, y=2 Suspicious ----
+\nextgroupplot[
+  title={(a) Independent synthetic holdout, 100 problems, 1 s budget},
+  title style={font=\small, at={(0.02,1.0)}, anchor=south west},
+  ytick={0,1,2}, yticklabels={Susp.-reactive, Focused-bandit, Suspicious},
+  y tick label style={font=\small},
+]
+\draw[black, dashed, line width=0.7pt] (axis cs:0,-0.5) -- (axis cs:0,2.5);
+\addplot[only marks, mark=triangle*, mark size=2.6pt, draw=orange!85!black, fill=orange!85!black,
+  error bars/x dir=both, error bars/x explicit]
+  table [x=mean_diff, y=y, x error minus=ci_lo, x error plus=ci_hi]
+  {figures/data/fig_focused_ci_synthetic_sreac.dat};
+\addplot[only marks, mark=diamond*, mark size=2.6pt, draw=teal!70!black, fill=teal!70!black,
+  error bars/x dir=both, error bars/x explicit]
+  table [x=mean_diff, y=y, x error minus=ci_lo, x error plus=ci_hi]
+  {figures/data/fig_focused_ci_synthetic_fband.dat};
+\addplot[only marks, mark=*, mark size=2.6pt, draw=iyiRenk, fill=iyiRenk,
+  error bars/x dir=both, error bars/x explicit]
+  table [x=mean_diff, y=y, x error minus=ci_lo, x error plus=ci_hi]
+  {figures/data/fig_focused_ci_synthetic_susp.dat};
+% ---- (b) tsplib: y=0 Suspicious, y=1 Susp.-reactive, y=2 Focused-bandit ----
+\nextgroupplot[
+  title={(b) Standard TSPLIB-9, 10 seeds, 5 s budget},
+  title style={font=\small, at={(0.02,1.0)}, anchor=south west},
+  ytick={0,1,2}, yticklabels={Suspicious, Susp.-reactive, Focused-bandit},
+  y tick label style={font=\small},
+]
+\draw[black, dashed, line width=0.7pt] (axis cs:0,-0.5) -- (axis cs:0,2.5);
+\addplot[only marks, mark=*, mark size=2.6pt, draw=iyiRenk, fill=iyiRenk,
+  error bars/x dir=both, error bars/x explicit]
+  table [x=mean_diff, y=y, x error minus=ci_lo, x error plus=ci_hi]
+  {figures/data/fig_focused_ci_tsplib_susp.dat};
+\addplot[only marks, mark=triangle*, mark size=2.6pt, draw=orange!85!black, fill=orange!85!black,
+  error bars/x dir=both, error bars/x explicit]
+  table [x=mean_diff, y=y, x error minus=ci_lo, x error plus=ci_hi]
+  {figures/data/fig_focused_ci_tsplib_sreac.dat};
+\addplot[only marks, mark=diamond*, mark size=2.6pt, draw=teal!70!black, fill=teal!70!black,
+  error bars/x dir=both, error bars/x explicit]
+  table [x=mean_diff, y=y, x error minus=ci_lo, x error plus=ci_hi]
+  {figures/data/fig_focused_ci_tsplib_fband.dat};
+% ---- (c) world: y=0 Susp.-reactive, y=1 Suspicious, y=2 Focused-bandit ----
+\nextgroupplot[
+  title={(c) New World-10, 10 seeds, 5 s budget},
+  title style={font=\small, at={(0.02,1.0)}, anchor=south west},
+  ytick={0,1,2}, yticklabels={Susp.-reactive, Suspicious, Focused-bandit},
+  y tick label style={font=\small},
+]
+\draw[black, dashed, line width=0.7pt] (axis cs:0,-0.5) -- (axis cs:0,2.5);
+\addplot[only marks, mark=triangle*, mark size=2.6pt, draw=orange!85!black, fill=orange!85!black,
+  error bars/x dir=both, error bars/x explicit]
+  table [x=mean_diff, y=y, x error minus=ci_lo, x error plus=ci_hi]
+  {figures/data/fig_focused_ci_world_sreac.dat};
+\addplot[only marks, mark=*, mark size=2.6pt, draw=iyiRenk, fill=iyiRenk,
+  error bars/x dir=both, error bars/x explicit]
+  table [x=mean_diff, y=y, x error minus=ci_lo, x error plus=ci_hi]
+  {figures/data/fig_focused_ci_world_susp.dat};
+\addplot[only marks, mark=diamond*, mark size=2.6pt, draw=teal!70!black, fill=teal!70!black,
+  error bars/x dir=both, error bars/x explicit]
+  table [x=mean_diff, y=y, x error minus=ci_lo, x error plus=ci_hi]
+  {figures/data/fig_focused_ci_world_fband.dat};
+\end{groupplot}
+\end{tikzpicture}

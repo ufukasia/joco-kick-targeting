@@ -1,0 +1,38 @@
+% OTOMATIK URETIM -- evidence/scripts/build_v2.py
+\begin{table}[!htbp]
+\centering\small\setlength{\tabcolsep}{3pt}
+\caption{Keşifsel analizler (ön-kayıtlı değil, çokluk düzeltmesi yok), birincil 38 VLSI problemi, global geometri. $\Delta$: A$-$B gap farkı (puan; negatif A lehine).}
+\label{tab:v2-exploratory}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}Xcccc@{}}
+\toprule
+Karşılaştırma (A$-$B) & $\Delta$ & \%95 GA & A/E/B & Wilcoxon $p$ \\
+\midrule
+\multicolumn{5}{l}{\textit{Kâhin hedefleme (LKH referansında olmayan kenarlar), 10 sn, 3 tohum}} \\
+Kâhin$-$kNN (aynı oturum) & $-$0{,}049 & [$-$0{,}094; $-$0{,}006] & 23/0/15 & 0{,}0530 \\
+Kâhin$-$GNN (birincil, tohum 0--2) & $-$0{,}089 & [$-$0{,}144; $-$0{,}039] & 28/0/10 & 0{,}0018 \\
+Kâhin$-$Rastgele (birincil, tohum 0--2) & $-$0{,}127 & [$-$0{,}172; $-$0{,}083] & 30/0/8 & $<10^{-4}$ \\
+\addlinespace
+\multicolumn{5}{l}{\textit{Taze GNN (model süresi sınırı yok), 10 sn, 5 tohum}} \\
+GNN$-$Rastgele & +0{,}064 & [+0{,}018; +0{,}113] & 16/0/22 & 0{,}0414 \\
+GNN$-$kNN & +0{,}114 & [+0{,}058; +0{,}174] & 9/0/29 & 0{,}0005 \\
+kNN$-$Rastgele & $-$0{,}051 & [$-$0{,}081; $-$0{,}019] & 29/0/9 & 0{,}0023 \\
+Taze GNN$-$sınırlı GNN (birincil, tohum 0--4) & +0{,}070 & [+0{,}011; +0{,}134] & 16/0/22 & 0{,}1113 \\
+\addlinespace
+\multicolumn{5}{l}{\textit{Ucuz öğrenilmiş skor (MLP, $O(1)$ özellik), 10 sn, 5 tohum, aynı oturum}} \\
+Ucuz$-$kNN & +0{,}062 & [+0{,}030; +0{,}097] & 12/0/26 & 0{,}0009 \\
+Ucuz$-$GNN & +0{,}004 & [$-$0{,}033; +0{,}043] & 17/1/20 & 0{,}5707 \\
+Ucuz$-$Rastgele & $-$0{,}027 & [$-$0{,}056; +0{,}004] & 26/1/11 & 0{,}0913 \\
+GNN$-$kNN & +0{,}058 & [+0{,}016; +0{,}103] & 14/0/24 & 0{,}0399 \\
+\addlinespace
+\multicolumn{5}{l}{\textit{Kazanç hedefli ucuz skor (yanlışlık $\times$ fazla uzunluk), 10 sn, 5 tohum}} \\
+Kazanç$-$kNN & +0{,}016 & [$-$0{,}031; +0{,}061] & 15/1/22 & 0{,}3538 \\
+Kazanç$-$Rastgele & $-$0{,}030 & [$-$0{,}063; +0{,}003] & 26/1/11 & 0{,}0884 \\
+kNN$-$Rastgele & $-$0{,}046 & [$-$0{,}081; $-$0{,}009] & 27/0/11 & 0{,}0083 \\
+\addlinespace
+\multicolumn{5}{l}{\textit{60 sn bütçe, 3 tohum}} \\
+GNN$-$Rastgele & $-$0{,}031 & [$-$0{,}072; +0{,}010] & 22/0/16 & 0{,}1941 \\
+GNN$-$kNN & +0{,}026 & [$-$0{,}014; +0{,}069] & 17/0/21 & 0{,}3499 \\
+kNN$-$Rastgele & $-$0{,}057 & [$-$0{,}102; $-$0{,}011] & 25/0/13 & 0{,}0169 \\
+\bottomrule
+\end{tabularx}
+\end{table}

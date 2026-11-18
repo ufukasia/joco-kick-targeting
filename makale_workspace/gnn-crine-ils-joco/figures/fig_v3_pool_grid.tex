@@ -1,0 +1,38 @@
+% Havuz kurali izgarasi -- OTOMATIK URETIM: evidence/scripts/build_v3.py
+% Veri: figures/data/v3_pool_grid_{knn,excess,gnn}[_sel].dat (dev_grid_vlsi_primary_10s + dev_grid_synth1000_10s)
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=3 by 1, horizontal sep=0.35cm},
+  width=0.385\textwidth, height=5.0cm, xmin=0.01, xmax=0.11, ymin=-0.17, ymax=0.11,
+  xtick={0.02,0.04,0.06,0.10}, xticklabels={0.02,0.04,0.06,0.10},
+  xlabel={Pool fraction $f$}, tick label style={font=\scriptsize}, label style={font=\small},
+  title style={font=\small, yshift=-1ex},
+  y tick label style={/pgf/number format/fixed, /pgf/number format/precision=2},
+  ymajorgrids, grid style={black!10}]
+\nextgroupplot[title={kNN}, ylabel={$\Delta$ gap vs.\ Random [pt]}, legend to name=gridleg, legend columns=4, legend style={font=\scriptsize, draw=black!40}, ]
+\addplot[black!45, dashed, forget plot] coordinates {(0.01,0) (0.11,0)};
+\addplot[thick, iyiRenk, mark=*, mark size=1.4pt] table[x=frac, y=p050] {figures/data/v3_pool_grid_knn.dat};
+\addlegendentry{$p=0.5$}
+\addplot[thick, orange!85!black, dashed, mark=triangle*, mark size=1.6pt] table[x=frac, y=p075] {figures/data/v3_pool_grid_knn.dat};
+\addlegendentry{$p=0.75$}
+\addplot[thick, kotuRenk, densely dotted, mark=square*, mark size=1.3pt] table[x=frac, y=p090] {figures/data/v3_pool_grid_knn.dat};
+\addlegendentry{$p=0.9$}
+\addplot[only marks, mark=star, mark size=4pt, very thick, black] table[x=frac, y=d] {figures/data/v3_pool_grid_knn_sel.dat};
+\addlegendentry{selected rule}
+\node[anchor=south east, font=\scriptsize, fill=white, inner sep=1pt, text=black!60] at (axis cs:0.105,0) {Random};
+\nextgroupplot[title={Excess}, yticklabels={}, ]
+\addplot[black!45, dashed, forget plot] coordinates {(0.01,0) (0.11,0)};
+\addplot[thick, iyiRenk, mark=*, mark size=1.4pt] table[x=frac, y=p050] {figures/data/v3_pool_grid_excess.dat};
+\addplot[thick, orange!85!black, dashed, mark=triangle*, mark size=1.6pt] table[x=frac, y=p075] {figures/data/v3_pool_grid_excess.dat};
+\addplot[thick, kotuRenk, densely dotted, mark=square*, mark size=1.3pt] table[x=frac, y=p090] {figures/data/v3_pool_grid_excess.dat};
+\addplot[only marks, mark=star, mark size=4pt, very thick, black] table[x=frac, y=d] {figures/data/v3_pool_grid_excess_sel.dat};
+\node[anchor=south east, font=\scriptsize, fill=white, inner sep=1pt, text=black!60] at (axis cs:0.105,0) {Random};
+\nextgroupplot[title={GNN}, yticklabels={}, ]
+\addplot[black!45, dashed, forget plot] coordinates {(0.01,0) (0.11,0)};
+\addplot[thick, iyiRenk, mark=*, mark size=1.4pt] table[x=frac, y=p050] {figures/data/v3_pool_grid_gnn.dat};
+\addplot[thick, orange!85!black, dashed, mark=triangle*, mark size=1.6pt] table[x=frac, y=p075] {figures/data/v3_pool_grid_gnn.dat};
+\addplot[thick, kotuRenk, densely dotted, mark=square*, mark size=1.3pt] table[x=frac, y=p090] {figures/data/v3_pool_grid_gnn.dat};
+\addplot[only marks, mark=star, mark size=4pt, very thick, black] table[x=frac, y=d] {figures/data/v3_pool_grid_gnn_sel.dat};
+\node[anchor=south east, font=\scriptsize, fill=white, inner sep=1pt, text=black!60] at (axis cs:0.105,0) {Random};
+\end{groupplot}
+\node[anchor=north] at ([yshift=-0.9cm]group c2r1.south) {\pgfplotslegendfromname{gridleg}};
+\end{tikzpicture}

@@ -1,0 +1,52 @@
+% OTOMATIK URETIM — evidence/scripts/build_tables.py
+% Kaynaklar: results/diversification_validation_40_summary.json, results/diversification_synthetic_100_summary.json, results/diversification_tsplib_9x10_summary.json, results/diversification_world_10x10_summary.json
+\begin{table}[!htbp]
+ \centering\small
+ \caption{On strateji ve CRINE-only: sentetik kümede kalite, random farkı ve Holm-$p$ (CRINE: ham $p$). Mavi: yararlı; kırmızı: zararlı; düz siyah: Random referansı.}
+ \label{tab:ten-strategy}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc}
+\toprule
+Strateji & \multicolumn{3}{c}{Val-40}  & \multicolumn{3}{c}{Sent-100}  \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+ & Kalite & $\Delta$R & $p$ & Kalite & $\Delta$R & $p$ \\
+\midrule
+Suspicious & 24,46 & +0,20 & 0,269 & 24,66 & \iyi{+0,17} & 0,0014 \\
+Adaptive-port. & 24,39 & +0,14 & 1 & 24,54 & +0,05 & 1 \\
+Bandit & 24,40 & +0,14 & 1 & 24,51 & +0,02 & 1 \\
+Long-edge & 24,31 & +0,06 & 1 & 24,50 & +0,01 & 1 \\
+Random & 24,26 & --- & --- & 24,49 & --- & --- \\
+Reactive & 24,25 & -0,01 & 1 & 24,48 & -0,01 & 1 \\
+Hybrid & 24,24 & -0,02 & 1 & 24,41 & -0,08 & 1 \\
+Entropy & 24,25 & -0,01 & 1 & 24,40 & -0,09 & 0,506 \\
+Backbone & 24,17 & -0,08 & 1 & 24,13 & \kotu{-0,36} & $3,3\times10^{-6}$ \\
+Elite-entropy & 24,08 & -0,18 & 0,8948 & 24,11 & \kotu{-0,38} & $5,5\times10^{-7}$ \\
+\midrule
+CRINE-only$^{\dagger}$ & 22,29 & \kotu{-1,96} & $1,8\times10^{-12}$ & 22,03 & \kotu{-2,46} & $3,9\times10^{-18}$ \\
+\bottomrule
+\end{tabular*}
+\end{table}
+\begin{table}[!htbp]
+ \centering\small
+ \caption{On strateji ve ikincil CRINE-only: gerçek kümelerde ortalama $-$BKS gap, random'a farkı ve Holm-$p$ (CRINE: ham $p$). Renk kuralı Tablo~\ref{tab:ten-strategy} ile aynıdır.}
+ \label{tab:ten-strategy-real}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc}
+\toprule
+Strateji & \multicolumn{3}{c}{TSPLIB-9}  & \multicolumn{3}{c}{World-9}  \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+ & Kalite & $\Delta$R & $p$ & Kalite & $\Delta$R & $p$ \\
+\midrule
+Suspicious & -8,01 & +0,13 & 1 & -7,80 & +0,09 & 1 \\
+Adaptive-port. & -8,08 & +0,06 & 0,8438 & -7,79 & +0,10 & 1 \\
+Bandit & -8,09 & +0,05 & 1 & -7,79 & +0,10 & 1 \\
+Long-edge & -8,20 & -0,06 & 1 & -7,71 & +0,18 & 1 \\
+Random & -8,14 & --- & --- & -7,89 & --- & --- \\
+Reactive & -8,14 & -0,00 & 1 & -7,86 & +0,03 & 1 \\
+Hybrid & -8,08 & +0,06 & 1 & -7,94 & -0,04 & 1 \\
+Entropy & -8,14 & -0,00 & 1 & -7,77 & +0,13 & 1 \\
+Backbone & -8,17 & -0,03 & 1 & -7,91 & -0,02 & 1 \\
+Elite-entropy & -8,13 & +0,01 & 1 & -7,98 & -0,08 & 1 \\
+\midrule
+CRINE-only$^{\dagger}$ & -8,53 & -0,39 & 0,2188 & -9,39 & \kotu{-1,50} & 0,0391 \\
+\bottomrule
+\end{tabular*}
+\end{table}

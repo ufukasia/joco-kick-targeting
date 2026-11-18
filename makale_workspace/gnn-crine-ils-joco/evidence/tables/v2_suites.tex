@@ -1,0 +1,39 @@
+% OTOMATIK URETIM -- evidence/scripts/build_v2.py
+\begin{table}[!htbp]
+\centering\small\setlength{\tabcolsep}{2.5pt}
+\caption{İkincil setlerde aynı karşılaştırmalar. Holm düzeltmesi her set içinde H1--H4 ailesine uygulanmıştır; gap sentetik setlerde LKH-3 referansına, gerçek setlerde bilinen optimuma/BKS'ye göredir.}
+\label{tab:v2-suites}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc}
+\toprule
+Karşılaştırma (A$-$B) & $\Delta$ & \%95 GA & A/E/B & Wilcoxon $p$ & Holm-$p$ & TOST $p$ \\
+\midrule
+\multicolumn{7}{l}{\textit{VLSI-20 (önceki): 20 problem; rastgele--global gap 0{,}390\%}} \\
+GNN$-$Rastgele (global) & $-$0{,}014 & [$-$0{,}055; +0{,}025] & 10/1/9 & 0{,}7680 & 1{,}0000 & 0{,}0003 \\
+GNN$-$Rastgele (yerel) & $-$0{,}005 & [$-$0{,}046; +0{,}029] & 9/0/11 & 0{,}8983 & 1{,}0000 & $<10^{-4}$ \\
+GNN$-$kNN (global) & +0{,}043 & [+0{,}004; +0{,}076] & 5/0/15 & 0{,}0073 & 0{,}0292 & 0{,}0033 \\
+GNN$-$kNN (yerel) & +0{,}058 & [+0{,}011; +0{,}104] & 7/0/13 & 0{,}0532 & 0{,}1595 & 0{,}0517 \\
+kNN$-$Rastgele (global) & $-$0{,}057 & [$-$0{,}102; $-$0{,}016] & 13/1/6 & 0{,}0230 & --- & 0{,}0355 \\
+\addlinespace
+\multicolumn{7}{l}{\textit{TSPLIB-72: 72 problem; rastgele--global gap 0{,}250\%}} \\
+GNN$-$Rastgele (global) & +0{,}008 & [$-$0{,}027; +0{,}049] & 22/26/24 & 0{,}8371 & 1{,}0000 & $<10^{-4}$ \\
+GNN$-$Rastgele (yerel) & +0{,}058 & [$-$0{,}047; +0{,}162] & 14/26/32 & 0{,}0040 & 0{,}0159 & 0{,}2146 \\
+GNN$-$kNN (global) & +0{,}003 & [$-$0{,}034; +0{,}039] & 22/25/25 & 0{,}6787 & 1{,}0000 & $<10^{-4}$ \\
+GNN$-$kNN (yerel) & $-$0{,}056 & [$-$0{,}184; +0{,}041] & 19/21/32 & 0{,}2125 & 0{,}6376 & 0{,}2293 \\
+kNN$-$Rastgele (global) & +0{,}005 & [$-$0{,}033; +0{,}049] & 31/28/13 & 0{,}1912 & --- & $<10^{-4}$ \\
+\addlinespace
+\multicolumn{7}{l}{\textit{Sentetik-100 (1 sn): 100 problem; rastgele--global gap 0{,}024\%}} \\
+GNN$-$Rastgele (global) & +0{,}017 & [+0{,}004; +0{,}031] & 9/70/21 & 0{,}0104 & 0{,}0418 & $<10^{-4}$ \\
+GNN$-$Rastgele (yerel) & +0{,}002 & [$-$0{,}013; +0{,}016] & 13/70/17 & 0{,}5158 & 0{,}5158 & $<10^{-4}$ \\
+GNN$-$kNN (global) & +0{,}014 & [0{,}000; +0{,}031] & 10/68/22 & 0{,}0589 & 0{,}1648 & $<10^{-4}$ \\
+GNN$-$kNN (yerel) & $-$0{,}012 & [$-$0{,}026; 0{,}000] & 23/70/7 & 0{,}0549 & 0{,}1648 & $<10^{-4}$ \\
+kNN$-$Rastgele (global) & +0{,}003 & [$-$0{,}009; +0{,}015] & 10/76/14 & 0{,}9664 & --- & $<10^{-4}$ \\
+\addlinespace
+\multicolumn{7}{l}{\textit{Sentetik-1000: 40 problem; rastgele--global gap 0{,}382\%}} \\
+GNN$-$Rastgele (global) & $-$0{,}019 & [$-$0{,}056; +0{,}016] & 18/0/22 & 0{,}5900 & 0{,}6795 & $<10^{-4}$ \\
+GNN$-$Rastgele (yerel) & +0{,}146 & [+0{,}064; +0{,}243] & 12/0/28 & 0{,}0005 & 0{,}0022 & 0{,}8365 \\
+GNN$-$kNN (global) & +0{,}022 & [$-$0{,}012; +0{,}058] & 16/0/24 & 0{,}2535 & 0{,}6795 & $<10^{-4}$ \\
+GNN$-$kNN (yerel) & +0{,}094 & [$-$0{,}009; +0{,}227] & 15/0/25 & 0{,}2265 & 0{,}6795 & 0{,}4609 \\
+kNN$-$Rastgele (global) & $-$0{,}041 & [$-$0{,}095; +0{,}009] & 20/0/20 & 0{,}3754 & --- & 0{,}0172 \\
+\bottomrule
+\end{tabular*}
+\end{table}

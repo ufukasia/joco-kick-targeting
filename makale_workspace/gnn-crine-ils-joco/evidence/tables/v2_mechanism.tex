@@ -1,0 +1,16 @@
+% OTOMATIK URETIM -- evidence/scripts/build_v2.py
+\begin{table}[!htbp]
+\centering\small\setlength{\tabcolsep}{2.5pt}
+\caption{LKH-3 referans turunda bulunmayan (``yanlış'') tur kenarlarını ayırt etme, VLSI ortalamaları. Taban: yanlış kenar oranı; Kesinlik: havuzdaki yanlış oranı; $\rho$: GNN--kNN Spearman.}
+\label{tab:v2-mechanism}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccccccccc}
+\toprule
+ & Taban & \multicolumn{4}{c}{AUC} & \multicolumn{2}{c}{Kesinlik [\%]} & & Örtüşme \\
+\cmidrule(lr){3-6}\cmidrule(lr){7-8}
+Tur durumu & [\%] & GNN & kNN & Göreli uz. & Uzunluk & GNN & kNN & $\rho$ & [\%] \\
+\midrule
+Başlangıç turu (58) & 20{,}5 & 0{,}878 & 0{,}852 & 0{,}816 & 0{,}789 & 85{,}2 & 82{,}1 & 0{,}75 & 65 \\
+2 sn ILS turu (58) & 15{,}3 & 0{,}854 & 0{,}821 & 0{,}784 & 0{,}751 & 64{,}6 & 60{,}7 & 0{,}80 & 62 \\
+\bottomrule
+\end{tabular*}
+\end{table}

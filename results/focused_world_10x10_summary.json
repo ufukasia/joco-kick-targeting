@@ -1,0 +1,503 @@
+{
+  "experiment": "suspicious_centered_focused_ils",
+  "suite": "world",
+  "metric": "negative_gap_pct",
+  "n_complete_instances": 10,
+  "quality_direction": "higher is better; real-world quality is negative BKS gap",
+  "inference_unit": "instance; seeds are averaged within each instance",
+  "multiplicity": "Holm across 3 alternative-versus-random comparisons",
+  "aggregate": {
+    "random": {
+      "mean_quality": -16.45522625664925,
+      "median_quality": -17.236396973039557,
+      "mean_cost": 432560.35,
+      "mean_elapsed_s": 8.773546116000215,
+      "mean_kicks": 63.410000000000004,
+      "mean_accepted_kicks": 0.12
+    },
+    "suspicious": {
+      "mean_quality": -16.3126268019384,
+      "median_quality": -17.284052725594513,
+      "mean_cost": 432082.9699999999,
+      "mean_elapsed_s": 8.91516651299913,
+      "mean_kicks": 63.82000000000001,
+      "mean_accepted_kicks": 0.13999999999999999
+    },
+    "suspicious_reactive": {
+      "mean_quality": -16.30868633296604,
+      "median_quality": -17.36877273095938,
+      "mean_cost": 432365.43,
+      "mean_elapsed_s": 8.881462559999344,
+      "mean_kicks": 57.56,
+      "mean_accepted_kicks": 0.15
+    },
+    "focused_bandit": {
+      "mean_quality": -16.35487524359376,
+      "median_quality": -17.341536409494683,
+      "mean_cost": 432423.57999999996,
+      "mean_elapsed_s": 8.834379825999058,
+      "mean_kicks": 63.5,
+      "mean_accepted_kicks": 0.13
+    }
+  },
+  "quality_ranking": [
+    "suspicious_reactive",
+    "suspicious",
+    "focused_bandit",
+    "random"
+  ],
+  "friedman": {
+    "statistic": 3.1874999999999787,
+    "p_value": 0.36360994240389044,
+    "kendalls_w": 0.10624999999999929,
+    "n_instances": 10,
+    "n_methods": 4
+  },
+  "comparisons": [
+    {
+      "comparison": "suspicious_minus_random",
+      "method": "suspicious",
+      "opponent": "random",
+      "n_instances": 10,
+      "n_nonzero": 9,
+      "mean_quality_difference": 0.14259945471084948,
+      "median_quality_difference": 0.04481790418713061,
+      "wins": 6,
+      "ties": 1,
+      "losses": 3,
+      "wilcoxon_statistic": 12.0,
+      "p_raw": 0.25,
+      "rank_biserial": 0.4666666666666667,
+      "p_holm": 0.609375,
+      "significant_0_05": false,
+      "classification": "inconclusive",
+      "bootstrap_95_ci": [
+        -0.025558517875270872,
+        0.32758901509988475
+      ]
+    },
+    {
+      "comparison": "suspicious_reactive_minus_random",
+      "method": "suspicious_reactive",
+      "opponent": "random",
+      "n_instances": 10,
+      "n_nonzero": 9,
+      "mean_quality_difference": 0.14653992368321003,
+      "median_quality_difference": 0.1398909910447621,
+      "wins": 6,
+      "ties": 1,
+      "losses": 3,
+      "wilcoxon_statistic": 11.0,
+      "p_raw": 0.203125,
+      "rank_biserial": 0.5111111111111111,
+      "p_holm": 0.609375,
+      "significant_0_05": false,
+      "classification": "inconclusive",
+      "bootstrap_95_ci": [
+        -0.028790666420565575,
+        0.31731205953404695
+      ]
+    },
+    {
+      "comparison": "focused_bandit_minus_random",
+      "method": "focused_bandit",
+      "opponent": "random",
+      "n_instances": 10,
+      "n_nonzero": 9,
+      "mean_quality_difference": 0.10035101305549379,
+      "median_quality_difference": 0.03886445851992271,
+      "wins": 5,
+      "ties": 1,
+      "losses": 4,
+      "wilcoxon_statistic": 13.0,
+      "p_raw": 0.30078125,
+      "rank_biserial": 0.4222222222222222,
+      "p_holm": 0.609375,
+      "significant_0_05": false,
+      "classification": "inconclusive",
+      "bootstrap_95_ci": [
+        -0.05111868617089777,
+        0.25259837252118306
+      ]
+    }
+  ],
+  "secondary_crine_comparison": null,
+  "per_instance": [
+    {
+      "instance": "wi29",
+      "kind": null,
+      "n": 29,
+      "random": {
+        "quality": 0.0,
+        "cost": 27603.0,
+        "elapsed": 5.0043554099960605,
+        "kicks": 634.1,
+        "accepted_kicks": 1.2
+      },
+      "suspicious": {
+        "quality": 0.0,
+        "cost": 27603.0,
+        "elapsed": 5.003805960001773,
+        "kicks": 638.2,
+        "accepted_kicks": 1.4
+      },
+      "suspicious_reactive": {
+        "quality": 0.0,
+        "cost": 27603.0,
+        "elapsed": 5.003753819994745,
+        "kicks": 575.6,
+        "accepted_kicks": 1.5
+      },
+      "focused_bandit": {
+        "quality": 0.0,
+        "cost": 27603.0,
+        "elapsed": 5.003244109998922,
+        "kicks": 635.0,
+        "accepted_kicks": 1.3
+      }
+    },
+    {
+      "instance": "tz6117",
+      "kind": null,
+      "n": 6117,
+      "random": {
+        "quality": -15.261655156339463,
+        "cost": 454958.5,
+        "elapsed": 8.678168720002578,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious": {
+        "quality": -15.393952137982051,
+        "cost": 455480.7,
+        "elapsed": 8.549046319999615,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious_reactive": {
+        "quality": -15.408367492741656,
+        "cost": 455537.6,
+        "elapsed": 8.610393869999097,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "focused_bandit": {
+        "quality": -15.408367492741656,
+        "cost": 455537.6,
+        "elapsed": 8.580988350001281,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      }
+    },
+    {
+      "instance": "ym7663",
+      "kind": null,
+      "n": 7663,
+      "random": {
+        "quality": -15.35835074733335,
+        "cost": 274915.1,
+        "elapsed": 10.263610840003821,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious": {
+        "quality": -15.015525734954721,
+        "cost": 274098.1,
+        "elapsed": 10.546850069999346,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious_reactive": {
+        "quality": -15.015525734954721,
+        "cost": 274098.1,
+        "elapsed": 10.554946980001114,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "focused_bandit": {
+        "quality": -15.015525734954721,
+        "cost": 274098.1,
+        "elapsed": 10.496233779998146,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      }
+    },
+    {
+      "instance": "pm8079",
+      "kind": null,
+      "n": 8079,
+      "random": {
+        "quality": -18.860998650472332,
+        "cost": 136517.8,
+        "elapsed": 9.029324720001023,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious": {
+        "quality": -18.461277262635495,
+        "cost": 136058.7,
+        "elapsed": 9.473031989998708,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious_reactive": {
+        "quality": -18.461277262635495,
+        "cost": 136058.7,
+        "elapsed": 9.432233180002367,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "focused_bandit": {
+        "quality": -18.49775804274955,
+        "cost": 136100.6,
+        "elapsed": 9.101770899997792,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      }
+    },
+    {
+      "instance": "ei8246",
+      "kind": null,
+      "n": 8246,
+      "random": {
+        "quality": -12.839778630360234,
+        "cost": 232642.9,
+        "elapsed": 9.588633209998079,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious": {
+        "quality": -13.060517725577313,
+        "cost": 233098.0,
+        "elapsed": 10.325203439999314,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious_reactive": {
+        "quality": -12.839924140640537,
+        "cost": 232643.2,
+        "elapsed": 9.529756709994398,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "focused_bandit": {
+        "quality": -12.8435133942213,
+        "cost": 232650.6,
+        "elapsed": 9.520398049996583,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      }
+    },
+    {
+      "instance": "ja9847",
+      "kind": null,
+      "n": 9847,
+      "random": {
+        "quality": -23.53890031793529,
+        "cost": 607717.5,
+        "elapsed": 9.906686969999281,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious": {
+        "quality": -23.215862612923946,
+        "cost": 606128.4,
+        "elapsed": 10.128441970002314,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious_reactive": {
+        "quality": -23.215862612923946,
+        "cost": 606128.4,
+        "elapsed": 10.13061488000094,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "focused_bandit": {
+        "quality": -23.215862612923946,
+        "cost": 606128.4,
+        "elapsed": 10.09867884000123,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      }
+    },
+    {
+      "instance": "kz9976",
+      "kind": null,
+      "n": 9976,
+      "random": {
+        "quality": -17.96802089876361,
+        "cost": 1252680.0,
+        "elapsed": 9.703522540000268,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious": {
+        "quality": -17.949082806830518,
+        "cost": 1252478.9,
+        "elapsed": 9.614910409998265,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious_reactive": {
+        "quality": -18.333381989130608,
+        "cost": 1256559.7,
+        "elapsed": 9.41510720999795,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "focused_bandit": {
+        "quality": -18.256028688713705,
+        "cost": 1255738.3,
+        "elapsed": 9.763479389998247,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      }
+    },
+    {
+      "instance": "fi10639",
+      "kind": null,
+      "n": 10639,
+      "random": {
+        "quality": -16.504773047315506,
+        "cost": 606438.8,
+        "elapsed": 8.317199340002844,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious": {
+        "quality": -16.619022644358505,
+        "cost": 607033.5,
+        "elapsed": 8.07396321999695,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious_reactive": {
+        "quality": -16.404163472788152,
+        "cost": 605915.1,
+        "elapsed": 8.385154330002843,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "focused_bandit": {
+        "quality": -16.42704413027566,
+        "cost": 606034.2,
+        "elapsed": 8.407476910001424,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      }
+    },
+    {
+      "instance": "mo14185",
+      "kind": null,
+      "n": 14185,
+      "random": {
+        "quality": -19.718000734714316,
+        "cost": 511647.2,
+        "elapsed": 8.507330759998876,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious": {
+        "quality": -18.97994042730423,
+        "cost": 508492.9,
+        "elapsed": 8.716642449997016,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious_reactive": {
+        "quality": -19.085748648149057,
+        "cost": 508945.1,
+        "elapsed": 8.988322020000487,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "focused_bandit": {
+        "quality": -19.24198073363798,
+        "cost": 509612.8,
+        "elapsed": 8.529853629998978,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      }
+    },
+    {
+      "instance": "ho14473",
+      "kind": null,
+      "n": 14473,
+      "random": {
+        "quality": -24.501784383258418,
+        "cost": 220482.7,
+        "elapsed": 8.736628649999329,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious": {
+        "quality": -24.431086666817247,
+        "cost": 220357.5,
+        "elapsed": 8.719769299998006,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious_reactive": {
+        "quality": -24.322611975696248,
+        "cost": 220165.4,
+        "elapsed": 8.764342599999509,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "focused_bandit": {
+        "quality": -24.642671605719062,
+        "cost": 220732.2,
+        "elapsed": 8.841674299997976,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      }
+    }
+  ],
+  "comparisons_vs_suspicious": [
+    {
+      "comparison": "suspicious_reactive_minus_suspicious",
+      "method": "suspicious_reactive",
+      "opponent": "suspicious",
+      "n_instances": 10,
+      "n_nonzero": 6,
+      "mean_quality_difference": 0.003940468972360556,
+      "median_quality_difference": 0.0,
+      "wins": 3,
+      "ties": 4,
+      "losses": 3,
+      "wilcoxon_statistic": 9.0,
+      "p_raw": 0.84375,
+      "rank_biserial": 0.14285714285714285,
+      "p_holm": 0.84375,
+      "significant_0_05": false,
+      "classification": "inconclusive",
+      "bootstrap_95_ci": [
+        -0.10525275375679274,
+        0.09820466744114284
+      ]
+    },
+    {
+      "comparison": "focused_bandit_minus_suspicious",
+      "method": "focused_bandit",
+      "opponent": "suspicious",
+      "n_instances": 10,
+      "n_nonzero": 7,
+      "mean_quality_difference": -0.042248441655355684,
+      "median_quality_difference": -0.007207677379802213,
+      "wins": 2,
+      "ties": 3,
+      "losses": 5,
+      "wilcoxon_statistic": 8.0,
+      "p_raw": 0.375,
+      "rank_biserial": -0.42857142857142855,
+      "p_holm": 0.75,
+      "significant_0_05": false,
+      "classification": "inconclusive",
+      "bootstrap_95_ci": [
+        -0.14539688622994287,
+        0.05645209419128502
+      ]
+    }
+  ]
+}

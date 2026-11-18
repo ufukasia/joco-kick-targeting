@@ -1,0 +1,595 @@
+{
+  "source": "https://github.com/pdrozdowski/TSPLib.Net/tree/master/TSPLIB95/tsp",
+  "upstream": "https://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/",
+  "n_instances": 72,
+  "strata": {
+    "n_040_120": [
+      "eil51",
+      "berlin52",
+      "st70",
+      "eil76",
+      "pr76",
+      "gr96",
+      "rat99",
+      "rd100",
+      "kroB100",
+      "kroC100",
+      "kroD100",
+      "kroE100",
+      "eil101",
+      "lin105",
+      "pr107"
+    ],
+    "n_121_249": [
+      "pr124",
+      "bier127",
+      "ch130",
+      "pr136",
+      "gr137",
+      "pr144",
+      "kroA150",
+      "kroB150",
+      "pr152",
+      "u159",
+      "rat195",
+      "d198",
+      "gr202",
+      "kroA200",
+      "kroB200",
+      "tsp225",
+      "ts225",
+      "pr226",
+      "gr229"
+    ],
+    "n_250_499": [
+      "gil262",
+      "pr264",
+      "a280",
+      "pr299",
+      "lin318",
+      "linhp318",
+      "rd400",
+      "fl417",
+      "gr431",
+      "pr439",
+      "pcb442",
+      "d493"
+    ],
+    "n_500_999": [
+      "ali535",
+      "u574",
+      "rat575",
+      "p654",
+      "d657",
+      "gr666",
+      "u724",
+      "rat783"
+    ],
+    "n_1000_2500": [
+      "pr1002",
+      "u1060",
+      "vm1084",
+      "pcb1173",
+      "d1291",
+      "rl1304",
+      "rl1323",
+      "nrw1379",
+      "fl1400",
+      "u1432",
+      "fl1577",
+      "d1655",
+      "vm1748",
+      "u1817",
+      "d2103",
+      "u2152",
+      "u2319",
+      "pr2392"
+    ]
+  },
+  "instances": {
+    "eil51": {
+      "n": 51,
+      "bks": 426,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_040_120",
+      "reference": "TSPLIB optimal tour, cost recomputed and cross-checked"
+    },
+    "berlin52": {
+      "n": 52,
+      "bks": 7542,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_040_120",
+      "reference": "TSPLIB optimal tour, cost recomputed and cross-checked"
+    },
+    "st70": {
+      "n": 70,
+      "bks": 675,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_040_120",
+      "reference": "TSPLIB optimal tour, cost recomputed and cross-checked"
+    },
+    "eil76": {
+      "n": 76,
+      "bks": 538,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_040_120",
+      "reference": "TSPLIB optimal tour, cost recomputed and cross-checked"
+    },
+    "pr76": {
+      "n": 76,
+      "bks": 108159,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_040_120",
+      "reference": "TSPLIB optimal tour, cost recomputed and cross-checked"
+    },
+    "gr96": {
+      "n": 96,
+      "bks": 55209,
+      "edge_weight_type": "GEO",
+      "stratum": "n_040_120",
+      "reference": "TSPLIB optimal tour, cost recomputed and cross-checked"
+    },
+    "rat99": {
+      "n": 99,
+      "bks": 1211,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_040_120",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "rd100": {
+      "n": 100,
+      "bks": 7910,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_040_120",
+      "reference": "TSPLIB optimal tour, cost recomputed and cross-checked"
+    },
+    "kroB100": {
+      "n": 100,
+      "bks": 22141,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_040_120",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "kroC100": {
+      "n": 100,
+      "bks": 20749,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_040_120",
+      "reference": "TSPLIB optimal tour, cost recomputed and cross-checked"
+    },
+    "kroD100": {
+      "n": 100,
+      "bks": 21294,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_040_120",
+      "reference": "TSPLIB optimal tour, cost recomputed and cross-checked"
+    },
+    "kroE100": {
+      "n": 100,
+      "bks": 22068,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_040_120",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "eil101": {
+      "n": 101,
+      "bks": 629,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_040_120",
+      "reference": "TSPLIB optimal tour, cost recomputed and cross-checked"
+    },
+    "lin105": {
+      "n": 105,
+      "bks": 14379,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_040_120",
+      "reference": "TSPLIB optimal tour, cost recomputed and cross-checked"
+    },
+    "pr107": {
+      "n": 107,
+      "bks": 44303,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_040_120",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "pr124": {
+      "n": 124,
+      "bks": 59030,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_121_249",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "bier127": {
+      "n": 127,
+      "bks": 118282,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_121_249",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "ch130": {
+      "n": 130,
+      "bks": 6110,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_121_249",
+      "reference": "TSPLIB optimal tour, cost recomputed and cross-checked"
+    },
+    "pr136": {
+      "n": 136,
+      "bks": 96772,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_121_249",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "gr137": {
+      "n": 137,
+      "bks": 69853,
+      "edge_weight_type": "GEO",
+      "stratum": "n_121_249",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "pr144": {
+      "n": 144,
+      "bks": 58537,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_121_249",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "kroA150": {
+      "n": 150,
+      "bks": 26524,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_121_249",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "kroB150": {
+      "n": 150,
+      "bks": 26130,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_121_249",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "pr152": {
+      "n": 152,
+      "bks": 73682,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_121_249",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "u159": {
+      "n": 159,
+      "bks": 42080,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_121_249",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "rat195": {
+      "n": 195,
+      "bks": 2323,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_121_249",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "d198": {
+      "n": 198,
+      "bks": 15780,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_121_249",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "gr202": {
+      "n": 202,
+      "bks": 40160,
+      "edge_weight_type": "GEO",
+      "stratum": "n_121_249",
+      "reference": "TSPLIB optimal tour, cost recomputed and cross-checked"
+    },
+    "kroA200": {
+      "n": 200,
+      "bks": 29368,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_121_249",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "kroB200": {
+      "n": 200,
+      "bks": 29437,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_121_249",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "tsp225": {
+      "n": 225,
+      "bks": 3916,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_121_249",
+      "reference": "TSPLIB optimal tour, cost recomputed and cross-checked"
+    },
+    "ts225": {
+      "n": 225,
+      "bks": 126643,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_121_249",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "pr226": {
+      "n": 226,
+      "bks": 80369,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_121_249",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "gr229": {
+      "n": 229,
+      "bks": 134602,
+      "edge_weight_type": "GEO",
+      "stratum": "n_121_249",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "gil262": {
+      "n": 262,
+      "bks": 2378,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_250_499",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "pr264": {
+      "n": 264,
+      "bks": 49135,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_250_499",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "a280": {
+      "n": 280,
+      "bks": 2579,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_250_499",
+      "reference": "TSPLIB optimal tour, cost recomputed and cross-checked"
+    },
+    "pr299": {
+      "n": 299,
+      "bks": 48191,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_250_499",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "lin318": {
+      "n": 318,
+      "bks": 42029,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_250_499",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "linhp318": {
+      "n": 318,
+      "bks": 41345,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_250_499",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "rd400": {
+      "n": 400,
+      "bks": 15281,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_250_499",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "fl417": {
+      "n": 417,
+      "bks": 11861,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_250_499",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "gr431": {
+      "n": 431,
+      "bks": 171414,
+      "edge_weight_type": "GEO",
+      "stratum": "n_250_499",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "pr439": {
+      "n": 439,
+      "bks": 107217,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_250_499",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "pcb442": {
+      "n": 442,
+      "bks": 50778,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_250_499",
+      "reference": "TSPLIB optimal tour, cost recomputed and cross-checked"
+    },
+    "d493": {
+      "n": 493,
+      "bks": 35002,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_250_499",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "ali535": {
+      "n": 535,
+      "bks": 202339,
+      "edge_weight_type": "GEO",
+      "stratum": "n_500_999",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "u574": {
+      "n": 574,
+      "bks": 36905,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_500_999",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "rat575": {
+      "n": 575,
+      "bks": 6773,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_500_999",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "p654": {
+      "n": 654,
+      "bks": 34643,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_500_999",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "d657": {
+      "n": 657,
+      "bks": 48912,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_500_999",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "gr666": {
+      "n": 666,
+      "bks": 294358,
+      "edge_weight_type": "GEO",
+      "stratum": "n_500_999",
+      "reference": "TSPLIB optimal tour, cost recomputed and cross-checked"
+    },
+    "u724": {
+      "n": 724,
+      "bks": 41910,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_500_999",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "rat783": {
+      "n": 783,
+      "bks": 8806,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_500_999",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "pr1002": {
+      "n": 1002,
+      "bks": 259045,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_1000_2500",
+      "reference": "TSPLIB optimal tour, cost recomputed and cross-checked"
+    },
+    "u1060": {
+      "n": 1060,
+      "bks": 224094,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_1000_2500",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "vm1084": {
+      "n": 1084,
+      "bks": 239297,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_1000_2500",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "pcb1173": {
+      "n": 1173,
+      "bks": 56892,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_1000_2500",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "d1291": {
+      "n": 1291,
+      "bks": 50801,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_1000_2500",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "rl1304": {
+      "n": 1304,
+      "bks": 252948,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_1000_2500",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "rl1323": {
+      "n": 1323,
+      "bks": 270199,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_1000_2500",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "nrw1379": {
+      "n": 1379,
+      "bks": 56638,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_1000_2500",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "fl1400": {
+      "n": 1400,
+      "bks": 20127,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_1000_2500",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "u1432": {
+      "n": 1432,
+      "bks": 152970,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_1000_2500",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "fl1577": {
+      "n": 1577,
+      "bks": 22249,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_1000_2500",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "d1655": {
+      "n": 1655,
+      "bks": 62128,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_1000_2500",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "vm1748": {
+      "n": 1748,
+      "bks": 336556,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_1000_2500",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "u1817": {
+      "n": 1817,
+      "bks": 57201,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_1000_2500",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "d2103": {
+      "n": 2103,
+      "bks": 80450,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_1000_2500",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "u2152": {
+      "n": 2152,
+      "bks": 64253,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_1000_2500",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "u2319": {
+      "n": 2319,
+      "bks": 234256,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_1000_2500",
+      "reference": "TSPLIB95 documented best-known tour length"
+    },
+    "pr2392": {
+      "n": 2392,
+      "bks": 378032,
+      "edge_weight_type": "EUC_2D",
+      "stratum": "n_1000_2500",
+      "reference": "TSPLIB optimal tour, cost recomputed and cross-checked"
+    }
+  }
+}

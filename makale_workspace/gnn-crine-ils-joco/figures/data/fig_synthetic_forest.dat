@@ -1,0 +1,10 @@
+method mean_diff ci_lo ci_hi classification is_proposed
+elite_entropy -0.37916 -0.50078 -0.25825 significant_harm False
+backbone -0.35585 -0.48482 -0.23397 significant_harm False
+entropy -0.09023 -0.18911 0.00716 inconclusive False
+hybrid -0.07570 -0.17901 0.02450 inconclusive False
+reactive -0.00755 -0.03713 0.02096 inconclusive False
+long_edge 0.01329 -0.09552 0.12501 inconclusive False
+bandit 0.02396 -0.06639 0.11241 inconclusive False
+adaptive_portfolio 0.04781 -0.04325 0.13533 inconclusive False
+suspicious 0.16654 0.06586 0.26509 significant_benefit True

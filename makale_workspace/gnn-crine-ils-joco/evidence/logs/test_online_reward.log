@@ -1,0 +1,9 @@
+# py -3.13 -m pytest -q -p no:cacheprovider test_online_reward.py  (kanit-cikarici, 2026-11-17)
+# test_online_reward.py sha256 ed41a19254572a32243ce32f8000e71f3201c64766b9e99e7aaf36b401443485
+# online_targeting.py sha256 950aaf714c95ed80127b671b30b89f5e2f7e7551a864bc87f9ddcc54eadf0612 (PROTOCOL_v2 kaydiyla ayni)
+PASSED test_online_reward.py::test_improving_kick_gets_positive_reward
+PASSED test_online_reward.py::test_worsening_kick_gets_negative_reward_and_neutral_zero
+PASSED test_online_reward.py::test_pool_takes_highest_predicted_reward
+PASSED test_online_reward.py::test_ridge_weight_follows_reward_sign
+PASSED test_online_reward.py::test_probe_kernel_is_bit_identical_to_original
+5 passed in 3.39s

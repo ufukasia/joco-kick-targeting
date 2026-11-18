@@ -1,0 +1,35 @@
+% v2: birincil VLSI setinde ortalama gap'in zamana gore seyri (6 strateji) ve global farklar.
+% Veri: figures/data/v2_anytime_primary.dat, v2_anytime_primary_diff.dat (build_v2.py). Figur ici metin Ingilizce.
+\begin{tikzpicture}
+\begin{groupplot}[group style={columns=2, horizontal sep=52pt},
+  width=0.5\textwidth, height=5.6cm, xmode=log,
+  xtick={0.1,0.25,0.5,1,2,5,10}, xticklabels={0.1,0.25,0.5,1,2,5,10},
+  xlabel={Wall-clock time [s, log]}, tick label style={font=\scriptsize}, label style={font=\small},
+  legend style={font=\scriptsize, draw=black!40, fill=white, fill opacity=0.9, text opacity=1}]
+\nextgroupplot[ylabel={Mean gap [\%] (log)}, ymode=log, ymin=0.6, ymax=6,
+  ytick={0.75,1,1.5,2,3,5}, yticklabels={0.75,1,1.5,2,3,5}, log ticks with fixed point,
+  legend style={at={(0.5,1.03)}, anchor=south}, legend columns=3]
+\addplot[thick, black!70, mark=square*, mark size=1.4pt] table[x=t, y=random_global] {figures/data/v2_anytime_primary.dat};
+\addlegendentry{Random-G}
+\addplot[thick, iyiRenk, mark=*, mark size=1.4pt] table[x=t, y=gnn_global] {figures/data/v2_anytime_primary.dat};
+\addlegendentry{GNN-G}
+\addplot[thick, orange!85!black, mark=triangle*, mark size=1.6pt] table[x=t, y=knn_global] {figures/data/v2_anytime_primary.dat};
+\addlegendentry{kNN-G}
+\addplot[thick, dashed, black!70, mark=square, mark size=1.4pt] table[x=t, y=random_local] {figures/data/v2_anytime_primary.dat};
+\addlegendentry{Random-L}
+\addplot[thick, dashed, iyiRenk, mark=o, mark size=1.4pt] table[x=t, y=gnn_local] {figures/data/v2_anytime_primary.dat};
+\addlegendentry{GNN-L}
+\addplot[thick, dashed, orange!85!black, mark=triangle, mark size=1.6pt] table[x=t, y=knn_local] {figures/data/v2_anytime_primary.dat};
+\addlegendentry{kNN-L}
+\nextgroupplot[ylabel={Gap difference [pt]}, xmin=0.2, xmax=12, ymin=-0.16, ymax=0.2,
+  y tick label style={/pgf/number format/fixed},
+  legend style={at={(0.98,0.98)}, anchor=north east}, legend columns=1]
+\addplot[black!40, domain=0.2:12, samples=2, forget plot] {0};
+\addplot[thick, iyiRenk, mark=*, mark size=1.4pt] table[x=t, y=d_h1] {figures/data/v2_anytime_primary_diff.dat};
+\addlegendentry{GNN$-$Random}
+\addplot[thick, orange!85!black, mark=triangle*, mark size=1.6pt] table[x=t, y=d_s1] {figures/data/v2_anytime_primary_diff.dat};
+\addlegendentry{kNN$-$Random}
+\addplot[thick, kotuRenk, mark=diamond*, mark size=1.6pt] table[x=t, y=d_h3] {figures/data/v2_anytime_primary_diff.dat};
+\addlegendentry{GNN$-$kNN}
+\end{groupplot}
+\end{tikzpicture}

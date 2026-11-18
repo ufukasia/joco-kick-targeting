@@ -1,0 +1,428 @@
+{
+ "seed": 20261116,
+ "instances": {
+  "bgd4396": {
+   "stratum": "vlsi6",
+   "n": 4396,
+   "bks": 13009.0,
+   "bks_kind": "opt",
+   "real": true
+  },
+  "frv4410": {
+   "stratum": "vlsi6",
+   "n": 4410,
+   "bks": 10711.0,
+   "bks_kind": "opt",
+   "real": true
+  },
+  "bgf4475": {
+   "stratum": "vlsi6",
+   "n": 4475,
+   "bks": 13221.0,
+   "bks_kind": "opt",
+   "real": true
+  },
+  "fqm5087": {
+   "stratum": "vlsi6",
+   "n": 5087,
+   "bks": 13029.0,
+   "bks_kind": "opt",
+   "real": true
+  },
+  "bnd7168": {
+   "stratum": "vlsi6",
+   "n": 7168,
+   "bks": 21834.0,
+   "bks_kind": "opt",
+   "real": true
+  },
+  "ida8197": {
+   "stratum": "vlsi6",
+   "n": 8197,
+   "bks": 22338.0,
+   "bks_kind": "opt",
+   "real": true
+  },
+  "eg7146": {
+   "stratum": "national3",
+   "n": 7146,
+   "bks": 172386.0,
+   "bks_kind": "opt",
+   "real": true
+  },
+  "ar9152": {
+   "stratum": "national3",
+   "n": 9152,
+   "bks": 837479.0,
+   "bks_kind": "opt",
+   "real": true
+  },
+  "gr9882": {
+   "stratum": "national3",
+   "n": 9882,
+   "bks": 300899.0,
+   "bks_kind": "opt",
+   "real": true
+  },
+  "pcb3038": {
+   "stratum": "tsplib3",
+   "n": 3038,
+   "bks": 137694.0,
+   "bks_kind": "opt",
+   "real": true,
+   "note": "used in Phase 1 (slow engine, kick-inactive) only"
+  },
+  "fl3795": {
+   "stratum": "tsplib3",
+   "n": 3795,
+   "bks": 28772.0,
+   "bks_kind": "opt",
+   "real": true,
+   "note": "used in Phase 1 (slow engine, kick-inactive) only"
+  },
+  "fnl4461": {
+   "stratum": "tsplib3",
+   "n": 4461,
+   "bks": 182566.0,
+   "bks_kind": "opt",
+   "real": true,
+   "note": "used in Phase 1 (slow engine, kick-inactive) only"
+  },
+  "h2u00_2280": {
+   "stratum": "synth_uniform",
+   "n": 2280,
+   "real": false,
+   "bks": 34490987.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 79.46648120000003
+  },
+  "h2u01_1989": {
+   "stratum": "synth_uniform",
+   "n": 1989,
+   "real": false,
+   "bks": 32363692.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 76.4679534
+  },
+  "h2u02_3954": {
+   "stratum": "synth_uniform",
+   "n": 3954,
+   "real": false,
+   "bks": 45422483.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 112.52735810000001
+  },
+  "h2u03_2546": {
+   "stratum": "synth_uniform",
+   "n": 2546,
+   "real": false,
+   "bks": 36463890.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 83.47879800000004
+  },
+  "h2u04_3539": {
+   "stratum": "synth_uniform",
+   "n": 3539,
+   "real": false,
+   "bks": 42893639.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 105.35185419999999
+  },
+  "h2u05_2102": {
+   "stratum": "synth_uniform",
+   "n": 2102,
+   "real": false,
+   "bks": 33441971.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 64.89002720000002
+  },
+  "h2u06_3002": {
+   "stratum": "synth_uniform",
+   "n": 3002,
+   "real": false,
+   "bks": 39867091.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 83.65813370000001
+  },
+  "h2u07_2483": {
+   "stratum": "synth_uniform",
+   "n": 2483,
+   "real": false,
+   "bks": 36077039.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 77.16824899999995
+  },
+  "h2u08_3252": {
+   "stratum": "synth_uniform",
+   "n": 3252,
+   "real": false,
+   "bks": 41113999.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 89.63289149999991
+  },
+  "h2u09_2473": {
+   "stratum": "synth_uniform",
+   "n": 2473,
+   "real": false,
+   "bks": 35834167.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 72.58668379999995
+  },
+  "h2u10_1776": {
+   "stratum": "synth_uniform",
+   "n": 1776,
+   "real": false,
+   "bks": 30706307.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 38.7793762
+  },
+  "h2u11_1826": {
+   "stratum": "synth_uniform",
+   "n": 1826,
+   "real": false,
+   "bks": 31299531.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 34.62213869999994
+  },
+  "h2u12_2619": {
+   "stratum": "synth_uniform",
+   "n": 2619,
+   "real": false,
+   "bks": 36990298.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 74.46093260000009
+  },
+  "h2u13_3619": {
+   "stratum": "synth_uniform",
+   "n": 3619,
+   "real": false,
+   "bks": 43708081.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 88.65915689999997
+  },
+  "h2c00_2246": {
+   "stratum": "synth_clustered",
+   "n": 2246,
+   "real": false,
+   "bks": 15033225.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 70.67265090000001
+  },
+  "h2c01_2124": {
+   "stratum": "synth_clustered",
+   "n": 2124,
+   "real": false,
+   "bks": 14927305.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 68.8071273999999
+  },
+  "h2c02_2225": {
+   "stratum": "synth_clustered",
+   "n": 2225,
+   "real": false,
+   "bks": 15652189.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 74.21136080000008
+  },
+  "h2c03_1884": {
+   "stratum": "synth_clustered",
+   "n": 1884,
+   "real": false,
+   "bks": 14492390.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 69.56326049999996
+  },
+  "h2c04_1870": {
+   "stratum": "synth_clustered",
+   "n": 1870,
+   "real": false,
+   "bks": 13394216.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 67.71496400000001
+  },
+  "h2c05_2634": {
+   "stratum": "synth_clustered",
+   "n": 2634,
+   "real": false,
+   "bks": 17666538.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 75.00791230000004
+  },
+  "h2c06_2251": {
+   "stratum": "synth_clustered",
+   "n": 2251,
+   "real": false,
+   "bks": 14954058.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 70.4058225
+  },
+  "h2c07_1844": {
+   "stratum": "synth_clustered",
+   "n": 1844,
+   "real": false,
+   "bks": 14643028.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 67.34919550000006
+  },
+  "h2c08_3362": {
+   "stratum": "synth_clustered",
+   "n": 3362,
+   "real": false,
+   "bks": 18987394.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 84.4107176
+  },
+  "h2c09_1803": {
+   "stratum": "synth_clustered",
+   "n": 1803,
+   "real": false,
+   "bks": 14659737.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 66.64817149999999
+  },
+  "h2c10_2535": {
+   "stratum": "synth_clustered",
+   "n": 2535,
+   "real": false,
+   "bks": 16563543.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 73.181288
+  },
+  "h2c11_2043": {
+   "stratum": "synth_clustered",
+   "n": 2043,
+   "real": false,
+   "bks": 15508630.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 68.9678447
+  },
+  "h2c12_3913": {
+   "stratum": "synth_clustered",
+   "n": 3913,
+   "real": false,
+   "bks": 21631596.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 92.2515426
+  },
+  "h2c13_3529": {
+   "stratum": "synth_clustered",
+   "n": 3529,
+   "real": false,
+   "bks": 20142656.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 86.43293729999994
+  },
+  "h2m00_2671": {
+   "stratum": "synth_mixed",
+   "n": 2671,
+   "real": false,
+   "bks": 33073840.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 80.78775089999999
+  },
+  "h2m01_3703": {
+   "stratum": "synth_mixed",
+   "n": 3703,
+   "real": false,
+   "bks": 38953281.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 93.72129660000007
+  },
+  "h2m02_3348": {
+   "stratum": "synth_mixed",
+   "n": 3348,
+   "real": false,
+   "bks": 37236347.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 82.92874410000002
+  },
+  "h2m03_3901": {
+   "stratum": "synth_mixed",
+   "n": 3901,
+   "real": false,
+   "bks": 40316630.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 90.12129309999989
+  },
+  "h2m04_1860": {
+   "stratum": "synth_mixed",
+   "n": 1860,
+   "real": false,
+   "bks": 28161374.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 55.82432199999994
+  },
+  "h2m05_3923": {
+   "stratum": "synth_mixed",
+   "n": 3923,
+   "real": false,
+   "bks": 40413641.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 92.10983689999989
+  },
+  "h2m06_3572": {
+   "stratum": "synth_mixed",
+   "n": 3572,
+   "real": false,
+   "bks": 38278369.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 86.76879640000016
+  },
+  "h2m07_2568": {
+   "stratum": "synth_mixed",
+   "n": 2568,
+   "real": false,
+   "bks": 32767914.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 72.88852300000008
+  },
+  "h2m08_1747": {
+   "stratum": "synth_mixed",
+   "n": 1747,
+   "real": false,
+   "bks": 26650090.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 32.241997399999946
+  },
+  "h2m09_1689": {
+   "stratum": "synth_mixed",
+   "n": 1689,
+   "real": false,
+   "bks": 26606317.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 28.99825920000012
+  },
+  "h2m10_2398": {
+   "stratum": "synth_mixed",
+   "n": 2398,
+   "real": false,
+   "bks": 31600220.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 70.51276959999996
+  },
+  "h2m11_3302": {
+   "stratum": "synth_mixed",
+   "n": 3302,
+   "real": false,
+   "bks": 36313858.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 85.3798875
+  },
+  "h2m12_2990": {
+   "stratum": "synth_mixed",
+   "n": 2990,
+   "real": false,
+   "bks": 34882712.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 81.14179020000006
+  },
+  "h2m13_2215": {
+   "stratum": "synth_mixed",
+   "n": 2215,
+   "real": false,
+   "bks": 30225035.0,
+   "bks_kind": "lkh60",
+   "ref_wall": 71.72294190000002
+  }
+ }
+}

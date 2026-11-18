@@ -1,0 +1,22 @@
+% OTOMATIK URETIM -- evidence/scripts/build_v2.py
+\begin{table}[!htbp]
+\centering\small\setlength{\tabcolsep}{3pt}
+\caption{Bağlam: birincil VLSI setinde LKH-3 (3 tohum) ve hızlı ILS. LKH-3 bütçesi \texttt{TIME\_LIMIT}; süre sütunları ön-işlem dahil gerçek süre [sn].}
+\label{tab:v2-lkh}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc}
+\toprule
+Yöntem & Bütçe [sn] & Problem & Ort. gap [\%] & Medyan & Ort. & Maks. \\
+\midrule
+LKH-3 varsayılan & 1 & 38 & 0{,}154 & 8{,}3 & 10{,}1 & 27{,}0 \\
+LKH-3 varsayılan & 10 & 38 & 0{,}035 & 17{,}3 & 19{,}0 & 30{,}2 \\
+LKH-3 hızlı ön-işlem & 1 & 38 & 0{,}202 & 1{,}8 & 1{,}8 & 2{,}3 \\
+LKH-3 hızlı ön-işlem & 10 & 38 & 0{,}077 & 10{,}8 & 10{,}9 & 11{,}4 \\
+ILS Rastgele--global & 1 & 38 & 1{,}598 & 1{,}0 & 1{,}0 & 1{,}0 \\
+ILS Rastgele--global & 10 & 38 & 0{,}857 & 10{,}0 & 10{,}0 & 10{,}0 \\
+ILS GNN--global & 1 & 38 & 1{,}543 & 1{,}0 & 1{,}0 & 1{,}0 \\
+ILS GNN--global & 10 & 38 & 0{,}804 & 10{,}0 & 10{,}0 & 10{,}0 \\
+ILS kNN--global & 1 & 38 & 1{,}475 & 1{,}0 & 1{,}0 & 1{,}0 \\
+ILS kNN--global & 10 & 38 & 0{,}755 & 10{,}0 & 10{,}0 & 10{,}0 \\
+\bottomrule
+\end{tabular*}
+\end{table}

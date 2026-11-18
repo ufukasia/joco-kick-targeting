@@ -1,0 +1,631 @@
+% Literatür tabanı: GNN rehberli CRINE-ILS (JOCO)
+% Tüm künyeler Crossref/arXiv/yayıncı/IJCAI resmî sitesinden 2026-11-02 tarihinde doğrulanmıştır.
+% Künyeler tematik olarak gruplanmıştır.
+
+% ---------- ILS ve double-bridge ----------
+
+@article{martin_1992_largestep,
+  author   = {Martin, Olivier and Otto, Steve W. and Felten, Edward W.},
+  title    = {Large-step {Markov} chains for the {TSP} incorporating local search heuristics},
+  journal  = {Operations Research Letters},
+  volume   = {11},
+  number   = {4},
+  pages    = {219--224},
+  year     = {1992},
+  doi      = {10.1016/0167-6377(92)90028-2}
+}
+
+@incollection{lourenco_2010_ils,
+  author    = {Louren{\c{c}}o, Helena R. and Martin, Olivier C. and St{\"u}tzle, Thomas},
+  title     = {Iterated Local Search: Framework and Applications},
+  booktitle = {Handbook of Metaheuristics},
+  pages     = {363--397},
+  publisher = {Springer},
+  year      = {2010},
+  doi       = {10.1007/978-1-4419-1665-5_12}
+}
+
+% ---------- Lin--Kernighan--Helsgaun \c{c}izgisi ve LKH-3 ----------
+
+@article{lin_1973_lk,
+  author   = {Lin, S. and Kernighan, B. W.},
+  title    = {An Effective Heuristic Algorithm for the Traveling-Salesman Problem},
+  journal  = {Operations Research},
+  volume   = {21},
+  number   = {2},
+  pages    = {498--516},
+  year     = {1973},
+  doi      = {10.1287/opre.21.2.498}
+}
+
+@article{helsgaun_2000_lkh,
+  author   = {Helsgaun, Keld},
+  title    = {An effective implementation of the {Lin--Kernighan} traveling salesman heuristic},
+  journal  = {European Journal of Operational Research},
+  volume   = {126},
+  number   = {1},
+  pages    = {106--130},
+  year     = {2000},
+  doi      = {10.1016/S0377-2217(99)00284-2}
+}
+
+@techreport{helsgaun_2017_lkh3,
+  author      = {Helsgaun, Keld},
+  title       = {An Extension of the {Lin--Kernighan--Helsgaun} {TSP} Solver for Constrained Traveling Salesman and Vehicle Routing Problems},
+  institution = {Roskilde University},
+  year        = {2017},
+  url         = {http://www.akira.ruc.dk/~keld/research/LKH-3/LKH-3\_REPORT.pdf},
+  urldate     = {2026-11-02}
+}
+
+@article{reinelt_1991_tsplib,
+  author   = {Reinelt, Gerhard},
+  title    = {{TSPLIB} -- A Traveling Salesman Problem Library},
+  journal  = {ORSA Journal on Computing},
+  volume   = {3},
+  number   = {4},
+  pages    = {376--384},
+  year     = {1991},
+  doi      = {10.1287/ijoc.3.4.376}
+}
+
+@book{applegate_2006_tsp,
+  author    = {Applegate, David L. and Bixby, Robert E. and Chv{\'a}tal, Vasek and Cook, William J.},
+  title     = {The Traveling Salesman Problem: A Computational Study},
+  publisher = {Princeton University Press},
+  year      = {2006},
+  doi       = {10.1515/9781400841103}
+}
+
+% ---------- G\"{u}d\"{u}ml\"{u} yerel arama ve \"{o}\u{g}renilmi\c{s} sezgiseller ----------
+
+@misc{bello_2017_nco,
+  author        = {Bello, Irwan and Pham, Hieu and Le, Quoc V. and Norouzi, Mohammad and Bengio, Samy},
+  title         = {Neural Combinatorial Optimization with Reinforcement Learning},
+  year          = {2017},
+  eprint        = {1611.09940},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  note          = {ICLR 2017 Workshop Track}
+}
+
+@inproceedings{dai_2017_s2v,
+  author    = {Dai, Hanjun and Khalil, Elias B. and Zhang, Yuyu and Dilkina, Bistra and Song, Le},
+  title     = {Learning Combinatorial Optimization Algorithms over Graphs},
+  booktitle = {Advances in Neural Information Processing Systems 30 (NIPS 2017)},
+  pages     = {6348--6358},
+  year      = {2017},
+  note      = {arXiv:1704.01665}
+}
+
+@inproceedings{kool_2019_attention,
+  author    = {Kool, Wouter and Van Hoof, Max and Welling, Max},
+  title     = {Attention, Learn to Solve Routing Problems!},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2019},
+  note      = {arXiv:1803.08475}
+}
+
+@inproceedings{kwon_2020_pomo,
+  author    = {Kwon, Yeong-Dae and Choo, Jinho and Kim, Byoungjip and Yoon, Iljoo and Gwon, Youngjune and Min, Seungjai},
+  title     = {{POMO}: Policy Optimization with Multiple Optima for Reinforcement Learning},
+  booktitle = {Advances in Neural Information Processing Systems 33 (NeurIPS 2020)},
+  pages     = {21188--21198},
+  year      = {2020},
+  note      = {arXiv:2010.16011}
+}
+
+@inproceedings{hudson_2022_gnngls,
+  author    = {Hudson, Benjamin and Li, Qingbiao and Malencia, Matthew and Prorok, Amanda},
+  title     = {Graph Neural Network Guided Local Search for the Traveling Salesperson Problem},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2022},
+  url       = {https://openreview.net/forum?id=ar92oEosBIg},
+  urldate   = {2026-11-02},
+  note      = {arXiv:2110.05291}
+}
+
+@misc{joshi_2020_generalization,
+  author        = {Joshi, Chaitanya K. and Cappart, Quentin and Rousseau, Louis-Martin and Laurent, Thomas and Bresson, Xavier},
+  title         = {Learning {TSP} Requires Rethinking Generalization},
+  year          = {2020},
+  eprint        = {2006.07054},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG}
+}
+
+@article{wu_2022_improvement,
+  author   = {Wu, Yaoxin and Song, Wen and Cao, Zhiguang and Zhang, Jie and Lim, Andrew},
+  title    = {Learning Improvement Heuristics for Solving Routing Problems},
+  journal  = {IEEE Transactions on Neural Networks and Learning Systems},
+  volume   = {33},
+  number   = {9},
+  pages    = {5057--5069},
+  year     = {2022},
+  doi      = {10.1109/TNNLS.2021.3068828}
+}
+
+@inproceedings{fu_2021_generalize,
+  author    = {Fu, Zhang-Hua and Qiu, Kai-Bin and Zha, Hongyuan},
+  title     = {Generalize a Small Pre-trained Model to Arbitrarily Large {TSP} Instances},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume    = {35},
+  pages     = {7474--7482},
+  publisher = {AAAI Press},
+  year      = {2021},
+  doi       = {10.1609/aaai.v35i8.16916},
+  note      = {arXiv:2012.10658}
+}
+
+@inproceedings{xin_2021_neurolkh,
+  author    = {Xin, Liang and Song, Wen and Cao, Zhiguang and Zhang, Jie},
+  title     = {{NeuroLKH}: Combining Deep Learning Model with {Lin-Kernighan-Helsgaun} Heuristic for Solving the Traveling Salesman Problem},
+  booktitle = {Advances in Neural Information Processing Systems 34 (NeurIPS 2021)},
+  pages     = {7472--7483},
+  year      = {2021},
+  note      = {arXiv:2110.07983}
+}
+
+@article{zheng_2023_rlkh,
+  author   = {Zheng, Jiongzhi and He, Kun and Zhou, Jianhua and Jin, Yaochu and Li, Chu-Min},
+  title    = {Reinforced {Lin--Kernighan--Helsgaun} algorithms for the traveling salesman problems},
+  journal  = {Knowledge-Based Systems},
+  volume   = {260},
+  pages    = {110144},
+  year     = {2023},
+  doi      = {10.1016/j.knosys.2022.110144}
+}
+
+@inproceedings{qiu_2022_dimes,
+  author    = {Qiu, Ruizhong and Sun, Zhiqing and Yang, Yiming},
+  title     = {{DIMES}: A Differentiable Meta Solver for Combinatorial Optimization Problems},
+  booktitle = {Advances in Neural Information Processing Systems 35 (NeurIPS 2022)},
+  pages     = {25531--25546},
+  year      = {2022},
+  note      = {arXiv:2210.04123}
+}
+
+@inproceedings{pan_2023_htsp,
+  author    = {Pan, Xuanhao and Jin, Yan and Ding, Yuandong and Feng, Mingxiao and Zhao, Li and Song, Lei and Bian, Jiang},
+  title     = {{H-TSP}: Hierarchically Solving the Large-Scale Traveling Salesman Problem},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume    = {37},
+  pages     = {9345--9353},
+  publisher = {AAAI Press},
+  year      = {2023},
+  doi       = {10.1609/aaai.v37i8.26120},
+  note      = {arXiv:2304.09395}
+}
+
+@article{sui_2024_neuralgls,
+  author   = {Sui, Jingyan and Ding, Shizhe and Xia, Boyang and Liu, Ruizhi and Bu, Dongbo},
+  title    = {{NeuralGLS}: learning to guide local search with graph convolutional network for the traveling salesman problem},
+  journal  = {Neural Computing and Applications},
+  volume   = {36},
+  number   = {17},
+  pages    = {9687--9706},
+  year     = {2024},
+  doi      = {10.1007/s00521-023-09042-6}
+}
+
+@article{sui_2025_survey,
+  author   = {Sui, Jingyan and Ding, Shizhe and Huang, Xulin and Yu, Yue and Liu, Ruizhi and Xia, Boyang and Ding, Zhenxin and Xu, Liming and Zhang, Haicang and Yu, Chungong and Bu, Dongbo},
+  title    = {A survey on deep learning-based algorithms for the traveling salesman problem},
+  journal  = {Frontiers of Computer Science},
+  volume   = {19},
+  number   = {6},
+  pages    = {196322},
+  year     = {2025},
+  doi      = {10.1007/s11704-024-40490-y}
+}
+
+@article{bengio_2021_mlco,
+  author   = {Bengio, Yoshua and Lodi, Andrea and Prouvost, Antoine},
+  title    = {Machine learning for combinatorial optimization: A methodological tour d'horizon},
+  journal  = {European Journal of Operational Research},
+  volume   = {290},
+  number   = {2},
+  pages    = {405--421},
+  year     = {2021},
+  doi      = {10.1016/j.ejor.2020.07.063}
+}
+
+% ---------- Entropi ve backbone ----------
+
+@article{nagata_2020_entropy,
+  author   = {Nagata, Yuichi},
+  title    = {High-Order Entropy-Based Population Diversity Measures in the Traveling Salesman Problem},
+  journal  = {Evolutionary Computation},
+  volume   = {28},
+  number   = {4},
+  pages    = {595--619},
+  year     = {2020},
+  doi      = {10.1162/evco_a_00268}
+}
+
+@incollection{nagata_2013_entropy,
+  author    = {Nagata, Yuichi and Ono, Isao},
+  title     = {High-Order Sequence Entropies for Measuring Population Diversity in the Traveling Salesman Problem},
+  booktitle = {Evolutionary Computation in Combinatorial Optimization (EvoCOP 2013)},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {7832},
+  pages     = {179--190},
+  publisher = {Springer},
+  year      = {2013},
+  doi       = {10.1007/978-3-642-37198-1_16}
+}
+
+@incollection{glover_1998_scatter,
+  author    = {Glover, Fred},
+  title     = {A Template for Scatter Search and Path Relinking},
+  booktitle = {Artificial Evolution},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {1363},
+  pages     = {1--51},
+  publisher = {Springer},
+  year      = {1998},
+  doi       = {10.1007/BFb0026589}
+}
+
+@inproceedings{zhang_2005_bgls,
+  author    = {Zhang, Weixiong and Looks, Moshe},
+  title     = {A Novel Local Search Algorithm for the Traveling Salesman Problem that Exploits Backbones},
+  booktitle = {Proceedings of the 19th International Joint Conference on Artificial Intelligence (IJCAI 2005)},
+  pages     = {343--349},
+  year      = {2005},
+  url       = {https://www.ijcai.org/Proceedings/05/Papers/1443.pdf},
+  urldate   = {2026-11-02}
+}
+
+@inproceedings{kilby_2005_backbone,
+  author    = {Kilby, Philip and Slaney, John and Walsh, Toby},
+  title     = {The Backbone of the Travelling Salesperson},
+  booktitle = {Proceedings of the 19th International Joint Conference on Artificial Intelligence (IJCAI 2005)},
+  pages     = {175--179},
+  year      = {2005},
+  url       = {https://fileadmin.cs.lth.se/ai/Proceedings/ijcai05/IJCAI-2005-c.pdf},
+  urldate   = {2026-11-02}
+}
+
+% ---------- Reaktif arama ve VNS ----------
+
+@article{mladenovic_1997_vns,
+  author   = {Mladenovi{\'c}, Nenad and Hansen, Pierre},
+  title    = {Variable neighborhood search},
+  journal  = {Computers \& Operations Research},
+  volume   = {24},
+  number   = {11},
+  pages    = {1097--1100},
+  year     = {1997},
+  doi      = {10.1016/S0305-0548(97)00031-2}
+}
+
+@book{battiti_2009_reactive,
+  author    = {Battiti, Roberto and Brunato, Mauro and Mascia, Franco},
+  title     = {Reactive Search and Intelligent Optimization},
+  series    = {Operations Research/Computer Science Interfaces Series},
+  publisher = {Springer},
+  year      = {2009},
+  doi       = {10.1007/978-0-387-09624-7}
+}
+
+@article{voudouris_1999_gls,
+  author   = {Voudouris, Christos and Tsang, Edward},
+  title    = {Guided local search and its application to the traveling salesman problem},
+  journal  = {European Journal of Operational Research},
+  volume   = {113},
+  number   = {2},
+  pages    = {469--499},
+  year     = {1999},
+  doi      = {10.1016/S0377-2217(98)00099-X}
+}
+
+% ---------- UCB, AOS ve ALNS ----------
+
+@article{auer_2002_ucb,
+  author   = {Auer, Peter and Cesa-Bianchi, Nicol{\`o} and Fischer, Paul},
+  title    = {Finite-time Analysis of the Multiarmed Bandit Problem},
+  journal  = {Machine Learning},
+  volume   = {47},
+  number   = {2--3},
+  pages    = {235--256},
+  year     = {2002},
+  doi      = {10.1023/A:1013689704352}
+}
+
+@inproceedings{dacosta_2008_aos,
+  author    = {Da Costa, Luis and Fialho, {\'A}lvaro and Schoenauer, Marc and Sebag, Mich{\`e}le},
+  title     = {Adaptive operator selection with dynamic multi-armed bandits},
+  booktitle = {Proceedings of the 10th Annual Conference on Genetic and Evolutionary Computation (GECCO 2008)},
+  pages     = {913--920},
+  publisher = {ACM},
+  year      = {2008},
+  doi       = {10.1145/1389095.1389272}
+}
+
+@article{fialho_2010_aos,
+  author   = {Fialho, {\'A}lvaro and Da Costa, Luis and Schoenauer, Marc and Sebag, Mich{\`e}le},
+  title    = {Analyzing bandit-based adaptive operator selection mechanisms},
+  journal  = {Annals of Mathematics and Artificial Intelligence},
+  volume   = {60},
+  number   = {1--2},
+  pages    = {25--64},
+  year     = {2010},
+  doi      = {10.1007/s10472-010-9213-y}
+}
+
+@article{ropke_2006_alns,
+  author   = {Ropke, Stefan and Pisinger, David},
+  title    = {An Adaptive Large Neighborhood Search Heuristic for the Pickup and Delivery Problem with Time Windows},
+  journal  = {Transportation Science},
+  volume   = {40},
+  number   = {4},
+  pages    = {455--472},
+  year     = {2006},
+  doi      = {10.1287/trsc.1050.0135}
+}
+
+% ---------- Hızlı yerel arama motoru ve kick geometrisi (2026-11-15 eklendi; DOI'ler Crossref'ten doğrulandı) ----------
+
+@article{bentley_1992_fast,
+  author   = {Bentley, Jon Louis},
+  title    = {Fast Algorithms for Geometric Traveling Salesman Problems},
+  journal  = {ORSA Journal on Computing},
+  volume   = {4},
+  number   = {4},
+  pages    = {387--411},
+  year     = {1992},
+  doi      = {10.1287/ijoc.4.4.387}
+}
+
+@incollection{johnson_1997_case,
+  author    = {Johnson, David S. and McGeoch, Lyle A.},
+  title     = {The Traveling Salesman Problem: A Case Study in Local Optimization},
+  booktitle = {Local Search in Combinatorial Optimization},
+  editor    = {Aarts, Emile H. L. and Lenstra, Jan Karel},
+  publisher = {John Wiley \& Sons},
+  address   = {Chichester},
+  pages     = {215--310},
+  year      = {1997}
+}
+
+@article{applegate_2003_clk,
+  author   = {Applegate, David and Cook, William and Rohe, Andr{\'e}},
+  title    = {Chained {Lin-Kernighan} for Large Traveling Salesman Problems},
+  journal  = {INFORMS Journal on Computing},
+  volume   = {15},
+  number   = {1},
+  pages    = {82--92},
+  year     = {2003},
+  doi      = {10.1287/ijoc.15.1.82.15157}
+}
+
+@article{taillard_2019_popmusic,
+  author   = {Taillard, {\'E}ric D. and Helsgaun, Keld},
+  title    = {{POPMUSIC} for the travelling salesman problem},
+  journal  = {European Journal of Operational Research},
+  volume   = {272},
+  number   = {2},
+  pages    = {420--429},
+  year     = {2019},
+  doi      = {10.1016/j.ejor.2018.06.039}
+}
+
+% ---------- İstatistik ----------
+
+@article{wilcoxon_1945,
+  author   = {Wilcoxon, Frank},
+  title    = {Individual Comparisons by Ranking Methods},
+  journal  = {Biometrics Bulletin},
+  volume   = {1},
+  number   = {6},
+  pages    = {80--83},
+  year     = {1945},
+  doi      = {10.2307/3001968}
+}
+
+@article{holm_1979,
+  author   = {Holm, Sture},
+  title    = {A Simple Sequentially Rejective Multiple Test Procedure},
+  journal  = {Scandinavian Journal of Statistics},
+  volume   = {6},
+  number   = {2},
+  pages    = {65--70},
+  year     = {1979}
+}
+
+@article{lakens_2017_equivalence,
+  author   = {Lakens, Dani{\"e}l},
+  title    = {Equivalence Tests: A Practical Primer for t Tests, Correlations, and Meta-Analyses},
+  journal  = {Social Psychological and Personality Science},
+  volume   = {8},
+  number   = {4},
+  pages    = {355--362},
+  year     = {2017},
+  doi      = {10.1177/1948550617697177}
+}
+
+@article{demsar_2006_comparisons,
+  author   = {Dem{\v{s}}ar, Janez},
+  title    = {Statistical Comparisons of Classifiers over Multiple Data Sets},
+  journal  = {Journal of Machine Learning Research},
+  volume   = {7},
+  pages    = {1--30},
+  year     = {2006}
+}
+
+@inproceedings{xia_2024_rethinking,
+  author    = {Xia, Yifan and Yang, Xianliang and Liu, Zichuan and Liu, Zhihao and Song, Lei and Bian, Jiang},
+  title     = {Position: Rethinking Post-Hoc Search-Based Neural Approaches for Solving Large-Scale Traveling Salesman Problems},
+  booktitle = {Proceedings of the 41st International Conference on Machine Learning},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {235},
+  pages     = {54178--54190},
+  publisher = {PMLR},
+  year      = {2024}
+}
+
+% ---------- v3 çerçevesi (2026-11-17 eklendi; DOI'ler Crossref REST, arXiv'ler arXiv API ile doğrulandı) ----------
+
+% Kenar "kötülüğü" bilgisiyle rehberli yerel arama
+@article{arnold_2019_kgls,
+  author   = {Arnold, Florian and S{\"o}rensen, Kenneth},
+  title    = {Knowledge-guided local search for the vehicle routing problem},
+  journal  = {Computers \& Operations Research},
+  volume   = {105},
+  pages    = {32--46},
+  year     = {2019},
+  doi      = {10.1016/j.cor.2019.01.002}
+}
+
+@article{arnold_2019_vrpgood,
+  author   = {Arnold, Florian and S{\"o}rensen, Kenneth},
+  title    = {What makes a {VRP} solution good? {The} generation of problem-specific knowledge for heuristics},
+  journal  = {Computers \& Operations Research},
+  volume   = {106},
+  pages    = {280--288},
+  year     = {2019},
+  doi      = {10.1016/j.cor.2018.02.007}
+}
+
+% Öğrenilmiş rehberlik ve basit-taban eleştirileri
+@inproceedings{sun_2023_difusco,
+  author    = {Sun, Zhiqing and Yang, Yiming},
+  title     = {{DIFUSCO}: Graph-based Diffusion Solvers for Combinatorial Optimization},
+  booktitle = {Advances in Neural Information Processing Systems 36 (NeurIPS 2023)},
+  pages     = {3706--3731},
+  publisher = {Curran Associates},
+  year      = {2023},
+  doi       = {10.52202/075280-0164},
+  note      = {arXiv:2302.08224}
+}
+
+@inproceedings{bother_2022_wrong,
+  author    = {B{\"o}ther, Maximilian and Ki{\ss}ig, Otto and Taraz, Martin and Cohen, Sarel and Seidel, Karen and Friedrich, Tobias},
+  title     = {What's Wrong with Deep Learning in Tree Search for Combinatorial Optimization},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2022},
+  url       = {https://iclr.cc/virtual/2022/poster/6426},
+  urldate   = {2026-11-17},
+  note      = {arXiv:2201.10494}
+}
+
+@article{angelini_2023_gnngreedy,
+  author   = {Angelini, Maria Chiara and Ricci-Tersenghi, Federico},
+  title    = {Modern graph neural networks do worse than classical greedy algorithms in solving combinatorial optimization problems like maximum independent set},
+  journal  = {Nature Machine Intelligence},
+  volume   = {5},
+  number   = {1},
+  pages    = {29--31},
+  year     = {2023},
+  doi      = {10.1038/s42256-022-00589-y}
+}
+
+@article{accorsi_2022_guidelines,
+  author   = {Accorsi, Luca and Lodi, Andrea and Vigo, Daniele},
+  title    = {Guidelines for the computational testing of machine learning approaches to vehicle routing problems},
+  journal  = {Operations Research Letters},
+  volume   = {50},
+  number   = {2},
+  pages    = {229--234},
+  year     = {2022},
+  doi      = {10.1016/j.orl.2022.01.018}
+}
+
+@article{karimimamaghan_2022_mlmeta,
+  author   = {Karimi-Mamaghan, Maryam and Mohammadi, Mehrdad and Meyer, Patrick and Karimi-Mamaghan, Amir Mohammad and Talbi, El-Ghazali},
+  title    = {Machine learning at the service of meta-heuristics for solving combinatorial optimization problems: A state-of-the-art},
+  journal  = {European Journal of Operational Research},
+  volume   = {296},
+  number   = {2},
+  pages    = {393--422},
+  year     = {2022},
+  doi      = {10.1016/j.ejor.2021.04.032}
+}
+
+% AOS ödül / kredi ataması
+@inproceedings{fialho_2008_extreme,
+  author    = {Fialho, {\'A}lvaro and Da Costa, Luis and Schoenauer, Marc and Sebag, Mich{\`e}le},
+  title     = {Extreme Value Based Adaptive Operator Selection},
+  booktitle = {Parallel Problem Solving from Nature -- {PPSN} {X}},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {5199},
+  pages     = {175--184},
+  publisher = {Springer},
+  year      = {2008},
+  doi       = {10.1007/978-3-540-87700-4_18}
+}
+
+@inproceedings{thierens_2005_pursuit,
+  author    = {Thierens, Dirk},
+  title     = {An adaptive pursuit strategy for allocating operator probabilities},
+  booktitle = {Proceedings of the 7th Annual Conference on Genetic and Evolutionary Computation (GECCO 2005)},
+  pages     = {1539--1546},
+  publisher = {ACM},
+  year      = {2005},
+  doi       = {10.1145/1068009.1068251}
+}
+
+% Sezgisel deneyleri yöntembilimi, ön-kayıt ve eşdeğerlik testi
+@article{hooker_1995_testing,
+  author   = {Hooker, J. N.},
+  title    = {Testing heuristics: We have it all wrong},
+  journal  = {Journal of Heuristics},
+  volume   = {1},
+  number   = {1},
+  pages    = {33--42},
+  year     = {1995},
+  doi      = {10.1007/BF02430364}
+}
+
+@incollection{johnson_2002_guide,
+  author    = {Johnson, David S.},
+  title     = {A theoretician's guide to the experimental analysis of algorithms},
+  booktitle = {Data Structures, Near Neighbor Searches, and Methodology: Fifth and Sixth {DIMACS} Implementation Challenges},
+  series    = {DIMACS Series in Discrete Mathematics and Theoretical Computer Science},
+  volume    = {59},
+  pages     = {215--250},
+  publisher = {American Mathematical Society},
+  year      = {2002},
+  doi       = {10.1090/dimacs/059/11}
+}
+
+@book{mcgeoch_2012_guide,
+  author    = {McGeoch, Catherine C.},
+  title     = {A Guide to Experimental Algorithmics},
+  publisher = {Cambridge University Press},
+  address   = {Cambridge},
+  year      = {2012},
+  doi       = {10.1017/CBO9780511843747}
+}
+
+@misc{bartzbeielstein_2020_benchmarking,
+  author        = {Bartz-Beielstein, Thomas and Doerr, Carola and van den Berg, Daan and Bossek, Jakob and Chandrasekaran, Sowmya and Eftimov, Tome and Fischbach, Andreas and Kerschke, Pascal and La Cava, William and L{\'o}pez-Ib{\'a}{\~n}ez, Manuel and Malan, Katherine M. and Moore, Jason H. and Naujoks, Boris and Orzechowski, Patryk and Volz, Vanessa and Wagner, Markus and Weise, Thomas},
+  title         = {Benchmarking in Optimization: Best Practice and Open Issues},
+  year          = {2020},
+  eprint        = {2007.03488},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.NE}
+}
+
+@article{nosek_2018_prereg,
+  author   = {Nosek, Brian A. and Ebersole, Charles R. and DeHaven, Alexander C. and Mellor, David T.},
+  title    = {The preregistration revolution},
+  journal  = {Proceedings of the National Academy of Sciences},
+  volume   = {115},
+  number   = {11},
+  pages    = {2600--2606},
+  year     = {2018},
+  doi      = {10.1073/pnas.1708274114}
+}
+
+@article{schuirmann_1987_tost,
+  author   = {Schuirmann, Donald J.},
+  title    = {A comparison of the Two One-Sided Tests Procedure and the Power Approach for assessing the equivalence of average bioavailability},
+  journal  = {Journal of Pharmacokinetics and Biopharmaceutics},
+  volume   = {15},
+  number   = {6},
+  pages    = {657--680},
+  year     = {1987},
+  doi      = {10.1007/BF01068419}
+}

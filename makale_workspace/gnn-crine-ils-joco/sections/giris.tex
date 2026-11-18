@@ -1,0 +1,89 @@
+\section{Giriş}\label{sec:giris}
+
+Gezgin satıcı problemi (traveling salesman problem, TSP), rotalama, devre yerleşimi ve üretim
+planlamasındaki pek çok kararın ortak çekirdeğidir \citep{reinelt_1991_tsplib, applegate_2006_tsp}.
+Pratikte büyük örnekler yerel aramayla çözülür. Bu ailenin en yaygın iskeleti iteratif yerel
+aramadır (iterated local search, ILS): tur bir yerel optimuma indirilir, ardından bir pertürbasyonla
+sarsılır ve yeniden onarılır \citep{martin_1992_largestep, lourenco_2010_ils}. TSP'de bu pertürbasyon
+çoğunlukla double-bridge vuruşudur (kick). Vuruşun hangi tur kenarlarını kıracağı, aramanın sınırlı
+zamanı nereye harcayacağını belirler. Bu nedenle küçük görünen bu seçim, kısa bütçeli bir çözücünün
+kalitesini doğrudan etkiler \citep{johnson_1997_case, applegate_2003_clk}.
+
+\begin{figure}[!htbp]
+\centering
+\input{../figures/manset.tex}
+\caption{54 holdout2 probleminde 10~sn gap farkı, sıralı: (a) fazla-uzunluk$-$GNN, (b) fazla-uzunluk$-$rastgele; mavi: vekil lehine. Vitrinler, GNN'nin kendi çeyrekler arası aralığında kaldığı problemlerden katman başına en büyük avantajla seçildi; ölçüm gürültüsünün altındaki farklar beraberlik sayıldığında vekil problemlerin \%70'inde GNN'den iyidir.} % V013
+\label{fig:manset}
+\end{figure}
+
+Vuruşu rastgele değil de ``şüpheli'' kenarlara yöneltmek doğal bir fikirdir. Öğrenilmiş TSP
+yöntemlerinin başarılı bir kolu da tam olarak bunu yapar. Güçlü bir yerel aramanın içine bir model
+yerleştirir ve modelin kenar tahminleriyle aramayı yönlendirir: grafik sinir ağı (graph neural
+network, GNN) ile güdümlü yerel arama \citep{hudson_2022_gnngls}, öğrenilmiş aday kümeleri
+\citep{xin_2021_neurolkh} ve ısı haritası güdümlü arama \citep{qiu_2022_dimes, sun_2023_difusco}
+bunun örnekleridir \citep{karimimamaghan_2022_mlmeta}. Bu çizgiyi izleyerek,
+Lin--Kernighan--Helsgaun (LKH) çözücüsünün LKH-3 sürümüyle üretilen turlarla eğitilmiş bir GNN'nin turda kalmayacağını öngördüğü kenarları vuruşla kırmak
+kolay bir adımdır \citep{helsgaun_2017_lkh3}.
+
+Bu adımın değerini ölçmek ise sanıldığı kadar kolay değildir. Öğrenilmiş bir rehber çoğunlukla
+rastgele seçime ya da kendi varyantlarına karşı sınanır; aynı geometriden türetilebilecek en basit
+eğitimsiz vekile karşı sınanması seyrektir. Maksimum bağımsız küme probleminde GNN çıktısının
+rastgele değerlerle değiştirilmesinin başarımı pek değiştirmediği gösterilmiştir
+\citep{bother_2022_wrong}. Büyük ölçekli TSP'de de uzaklıktan türetilen basit bir ısı haritası,
+öğrenilmiş olanlarla rekabet edebilmiştir \citep{xia_2024_rethinking}. İkinci bir sorun, tahmin
+doğruluğunun arama faydasıyla eş tutulmasıdır. Bir modelin ``yanlış'' kenarları iyi ayırt etmesi,
+onları kırmanın turu kısaltacağı anlamına gelmez. Modelin çalışma süresi de aynı bütçeden
+ödenmelidir. Son olarak, yöntem ve ayar seçimi ile doğrulama aynı veride yapıldığında olumlu sonuç
+kolayca abartılır \citep{hooker_1995_testing, nosek_2018_prereg}.
+
+Bu çalışmada vuruş hedeflemeyi bu üç tuzaktan arındırılmış bir düzenekte inceledik. Önce saniyede
+binlerce vuruş atabilen hızlı bir ILS test ortamı kurduk ve bütün model sürelerini bütçeye yükledik.
+Ardından çalışmayı üç aşamada yürüttük. Aşama~1'de yavaş bir iskelette gözlediğimiz anlamlı yararın
+ölçüm gürültüsü olduğunu gördük ve bu iddiayı geri çektik. Aşama~2'de, ön-kayıtlı bir protokolle 38
+yeni çok büyük ölçekli tümleşik devre (very-large-scale integration, VLSI) probleminde GNN
+hedeflemesini rastgele vuruşa ve eğitimsiz bir $k$-en yakın komşu (kNN) sırasına karşı sınadık. % E797
+Aşama~3 doğrulayıcı aşamadır. Yöntem ve havuz ayarları yalnız geliştirme setlerinde seçildi. Protokol
+SHA-256 özetiyle donduruldu ve özet koşudan önce OpenTimestamps'a gönderildi; Bitcoin blok
+976258'e bağlanan bu kanıt, protokolün sonuçlar analiz edilmeden önce var olduğunu üçüncü
+kişilerce doğrulanabilir kılar. Test, geliştirmede hiç kullanılmamış 54 problemde (holdout2)
+koşuldu. % E584, E585, E586
+
+Sınanan adaylardan biri, güdümlü yerel aramanın (guided local search, GLS) ``uzun kenar şüphelidir''
+ilkesini \citep{voudouris_1999_gls} vuruş hedeflemeye taşıyan, eğitimsiz ve kenar başına $O(1)$
+maliyetli bir fazla-uzunluk vekilidir. Kenar uzunluğuna dayanan basit bir sinyaldir: uzunluktan uç
+noktaların yerel komşu ölçeğini çıkarır. Şekil~\ref{fig:manset} sonucu problem düzeyinde gösterir: her çubuk bir problemdir ve
+sıfırın altındaki mavi çubuklar vekilin daha düşük gap verdiği problemlerdir. Vekil 54 problemin
+41'inde GNN'den, 44'ünde rastgele vuruştan daha iyi sonuç verir; çubukların en uzunları kümeli ve
+gerçek problemlerdedir. % E789, E790
+GNN'ye karşı ön-kayıtlı iddia bir kötü-değil iddiasıdır; problemlerin çoğundaki üstünlük keşifsel
+bir bulgudur. Aynı ölçütü kendi vekilimize de uyguladık: protokol sonrası keşifsel bir kolda yerel
+ölçek düzeltmesi olmadan ham kenar uzunluğu da vekilden ortalamada ayrışmadı. Bu, yararın kenar
+uzunluğu bilgisinin kendisinden geldiğini düşündürür (Bölüm~\ref{sec:bulgular-duyarlilik}). % E972
+
+Bu çalışmanın başlıca katkıları şunlardır:
+\begin{itemize}
+  \item Kenar uzunluğuna dayalı eğitimsiz fazla-uzunluk vekilinin geliştirmede kullanılmamış 54 problemde rastgele vuruşa göre ortalama
+  gap'i 0,172 puan düşürdüğünü ($p=3{,}7\times10^{-7}$) ve GNN ile kazanç hedefli çok katmanlı
+  algılayıcıya (multilayer perceptron, MLP) 0,05 puanlık sınırla kötü olmadığını ön-kayıtlı
+  testlerle gösteriyoruz. % E600, E601, E602, E589
+  \item Öğrenilmiş skorlarda kestirim doğruluğunun arama faydasına kendiliğinden dönüşmediğini
+  ölçüyoruz: Aşama~2'de GNN yanlış kenarları 58 problemin 57'sinde kNN'den isabetli ayırt ettiği
+  hâlde aramada onun gerisinde kaldı; holdout2'de ikisi ayrışmadı, ucuz ve sürekli güncel vekil ise
+  ikisinden de iyi sonuç verdi (keşifsel). % E890, E805, E605, E604, E607
+  \item Koşu içinde çevrimiçi öğrenmenin aynı doğrusal modelin sabit hâline göre gap'i 0,291 puan
+  artırdığını ($p=1{,}6\times10^{-10}$) ve mekanizmasını ölçüyoruz: model kendi vuruş ödülünü
+  yükseltirken (12/12 problem) yerel aramanın onardığı nötr vuruşlara yönelir (\%47'den \%88'e). % E599, E941, E944
+  \item Geliştirmede seçim, SHA-256 ile dondurma, dış zaman damgası ve 54 bağımsız problemle
+  doğrulamadan oluşan bir ön-kayıt protokolünü ve ``öğrenilmiş skoru önce en basit eğitimsiz vekile
+  karşı sına'' ilkesini sunuyor, ilkeyi kendi vekilimize de uyguluyoruz: daha basit ham kenar
+  uzunluğu keşifsel olarak vekilden ayrışmadı. % E585, E586, E972
+\end{itemize}
+
+Uygulayıcı için sonuç sadedir: bu motorda ve 10~sn bütçede vuruşları hedeflemek kazandırır;
+sınanan öğrenilmiş skorlar karşısında bunun için model eğitmek gerekmedi. % E588
+
+Makalenin geri kalanı şöyle düzenlenmiştir.
+Bölüm~\ref{sec:ilgili-calismalar} ilgili çalışmaları, Bölüm~\ref{sec:yontem} test ortamını ve
+hedefleme sinyallerini, Bölüm~\ref{sec:deney-kurulum} üç aşamanın protokollerini verir.
+Bölüm~\ref{sec:bulgular} doğrulayıcı sonuçları ve mekanizmaları, Bölüm~\ref{sec:tartisma}
+yorumları ve sınırlılıkları sunar; Bölüm~\ref{sec:sonuc} çalışmayı bağlar.

@@ -1,0 +1,239 @@
+{
+  "experiment": "suspicious_centered_focused_ils",
+  "suite": "world",
+  "metric": "negative_gap_pct",
+  "n_complete_instances": 2,
+  "quality_direction": "higher is better; real-world quality is negative BKS gap",
+  "inference_unit": "instance; seeds are averaged within each instance",
+  "multiplicity": "Holm across 3 alternative-versus-random comparisons",
+  "aggregate": {
+    "random": {
+      "mean_quality": -6.601371038782102,
+      "median_quality": -6.601371038782102,
+      "mean_cost": 114038.0,
+      "mean_elapsed_s": 120.42474949998723,
+      "mean_kicks": 5095.5,
+      "mean_accepted_kicks": 0.5
+    },
+    "suspicious": {
+      "mean_quality": -6.070008808980643,
+      "median_quality": -6.070008808980643,
+      "mean_cost": 113097.0,
+      "mean_elapsed_s": 137.2104621000035,
+      "mean_kicks": 5013.0,
+      "mean_accepted_kicks": 1.0
+    },
+    "suspicious_reactive": {
+      "mean_quality": -6.070008808980643,
+      "median_quality": -6.070008808980643,
+      "mean_cost": 113097.0,
+      "mean_elapsed_s": 121.73792160001176,
+      "mean_kicks": 3640.5,
+      "mean_accepted_kicks": 1.0
+    },
+    "focused_bandit": {
+      "mean_quality": -5.825503128317485,
+      "median_quality": -5.825503128317485,
+      "mean_cost": 112664.0,
+      "mean_elapsed_s": 132.07119799999055,
+      "mean_kicks": 4179.0,
+      "mean_accepted_kicks": 1.0
+    }
+  },
+  "quality_ranking": [
+    "focused_bandit",
+    "suspicious",
+    "suspicious_reactive",
+    "random"
+  ],
+  "friedman": {
+    "statistic": 2.9999999999999956,
+    "p_value": 0.3916251762710895,
+    "kendalls_w": 0.4999999999999993,
+    "n_instances": 2,
+    "n_methods": 4
+  },
+  "comparisons": [
+    {
+      "comparison": "suspicious_minus_random",
+      "method": "suspicious",
+      "opponent": "random",
+      "n_instances": 2,
+      "n_nonzero": 1,
+      "mean_quality_difference": 0.5313622298014593,
+      "median_quality_difference": 0.5313622298014593,
+      "wins": 1,
+      "ties": 1,
+      "losses": 0,
+      "wilcoxon_statistic": 0.0,
+      "p_raw": 1.0,
+      "rank_biserial": 1.0,
+      "p_holm": 1.0,
+      "significant_0_05": false,
+      "classification": "inconclusive",
+      "bootstrap_95_ci": [
+        0.0,
+        1.0627244596029186
+      ]
+    },
+    {
+      "comparison": "suspicious_reactive_minus_random",
+      "method": "suspicious_reactive",
+      "opponent": "random",
+      "n_instances": 2,
+      "n_nonzero": 1,
+      "mean_quality_difference": 0.5313622298014593,
+      "median_quality_difference": 0.5313622298014593,
+      "wins": 1,
+      "ties": 1,
+      "losses": 0,
+      "wilcoxon_statistic": 0.0,
+      "p_raw": 1.0,
+      "rank_biserial": 1.0,
+      "p_holm": 1.0,
+      "significant_0_05": false,
+      "classification": "inconclusive",
+      "bootstrap_95_ci": [
+        0.0,
+        1.0627244596029186
+      ]
+    },
+    {
+      "comparison": "focused_bandit_minus_random",
+      "method": "focused_bandit",
+      "opponent": "random",
+      "n_instances": 2,
+      "n_nonzero": 1,
+      "mean_quality_difference": 0.7758679104646173,
+      "median_quality_difference": 0.7758679104646173,
+      "wins": 1,
+      "ties": 1,
+      "losses": 0,
+      "wilcoxon_statistic": 0.0,
+      "p_raw": 1.0,
+      "rank_biserial": 1.0,
+      "p_holm": 1.0,
+      "significant_0_05": false,
+      "classification": "inconclusive",
+      "bootstrap_95_ci": [
+        0.0,
+        1.5517358209292347
+      ]
+    }
+  ],
+  "secondary_crine_comparison": null,
+  "per_instance": [
+    {
+      "instance": "wi29",
+      "kind": null,
+      "n": 29,
+      "random": {
+        "quality": 0.0,
+        "cost": 27603.0,
+        "elapsed": 120.00681719998829,
+        "kicks": 10191.0,
+        "accepted_kicks": 1.0
+      },
+      "suspicious": {
+        "quality": 0.0,
+        "cost": 27603.0,
+        "elapsed": 120.00271060000523,
+        "kicks": 10026.0,
+        "accepted_kicks": 2.0
+      },
+      "suspicious_reactive": {
+        "quality": 0.0,
+        "cost": 27603.0,
+        "elapsed": 120.00790029999916,
+        "kicks": 7281.0,
+        "accepted_kicks": 2.0
+      },
+      "focused_bandit": {
+        "quality": 0.0,
+        "cost": 27603.0,
+        "elapsed": 120.00882449999335,
+        "kicks": 8358.0,
+        "accepted_kicks": 2.0
+      }
+    },
+    {
+      "instance": "ho14473",
+      "kind": null,
+      "n": 14473,
+      "random": {
+        "quality": -13.202742077564205,
+        "cost": 200473.0,
+        "elapsed": 120.84268179998617,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious": {
+        "quality": -12.140017617961286,
+        "cost": 198591.0,
+        "elapsed": 154.41821360000176,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious_reactive": {
+        "quality": -12.140017617961286,
+        "cost": 198591.0,
+        "elapsed": 123.46794290002435,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "focused_bandit": {
+        "quality": -11.65100625663497,
+        "cost": 197725.0,
+        "elapsed": 144.13357149998774,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      }
+    }
+  ],
+  "comparisons_vs_suspicious": [
+    {
+      "comparison": "suspicious_reactive_minus_suspicious",
+      "method": "suspicious_reactive",
+      "opponent": "suspicious",
+      "n_instances": 2,
+      "n_nonzero": 0,
+      "mean_quality_difference": 0.0,
+      "median_quality_difference": 0.0,
+      "wins": 0,
+      "ties": 2,
+      "losses": 0,
+      "wilcoxon_statistic": 0.0,
+      "p_raw": 1.0,
+      "rank_biserial": 0.0,
+      "p_holm": 1.0,
+      "significant_0_05": false,
+      "classification": "inconclusive",
+      "bootstrap_95_ci": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "comparison": "focused_bandit_minus_suspicious",
+      "method": "focused_bandit",
+      "opponent": "suspicious",
+      "n_instances": 2,
+      "n_nonzero": 1,
+      "mean_quality_difference": 0.24450568066315803,
+      "median_quality_difference": 0.24450568066315803,
+      "wins": 1,
+      "ties": 1,
+      "losses": 0,
+      "wilcoxon_statistic": 0.0,
+      "p_raw": 1.0,
+      "rank_biserial": 1.0,
+      "p_holm": 1.0,
+      "significant_0_05": false,
+      "classification": "inconclusive",
+      "bootstrap_95_ci": [
+        0.0,
+        0.48901136132631606
+      ]
+    }
+  ]
+}

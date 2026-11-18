@@ -1,0 +1,91 @@
+xqf131    n=  131 AUC gnn=0.767 cheap=0.737 knn=0.723 | prec gnn=0.417 cheap=0.583 knn=0.500 | ms gnn=3.3 cheap=0.49 knn=0.11
+xqg237    n=  237 AUC gnn=0.745 cheap=0.733 knn=0.726 | prec gnn=0.429 cheap=0.357 knn=0.357 | ms gnn=4.1 cheap=1.23 knn=0.84
+pma343    n=  343 AUC gnn=0.819 cheap=0.785 knn=0.786 | prec gnn=0.550 cheap=0.450 knn=0.550 | ms gnn=3.3 cheap=0.50 knn=0.14
+pka379    n=  379 AUC gnn=0.830 cheap=0.784 knn=0.775 | prec gnn=0.455 cheap=0.318 knn=0.364 | ms gnn=5.7 cheap=0.81 knn=0.22
+bcl380    n=  380 AUC gnn=0.864 cheap=0.851 knn=0.811 | prec gnn=0.409 cheap=0.364 knn=0.364 | ms gnn=4.0 cheap=1.33 knn=0.23
+pbl395    n=  395 AUC gnn=0.849 cheap=0.800 knn=0.787 | prec gnn=0.609 cheap=0.609 knn=0.435 | ms gnn=5.5 cheap=0.96 knn=0.24
+pbk411    n=  411 AUC gnn=0.676 cheap=0.691 knn=0.696 | prec gnn=0.125 cheap=0.125 knn=0.083 | ms gnn=3.8 cheap=0.81 knn=0.22
+pbn423    n=  423 AUC gnn=0.841 cheap=0.831 knn=0.824 | prec gnn=0.720 cheap=0.840 knn=0.800 | ms gnn=3.9 cheap=0.98 knn=0.23
+pbm436    n=  436 AUC gnn=0.748 cheap=0.705 knn=0.721 | prec gnn=0.231 cheap=0.192 knn=0.192 | ms gnn=3.9 cheap=0.81 knn=0.23
+xql662    n=  662 AUC gnn=0.876 cheap=0.852 knn=0.842 | prec gnn=0.769 cheap=0.744 knn=0.692 | ms gnn=4.2 cheap=1.16 knn=0.19
+rbx711    n=  711 AUC gnn=0.817 cheap=0.806 knn=0.769 | prec gnn=0.524 cheap=0.524 knn=0.524 | ms gnn=6.1 cheap=1.21 knn=0.31
+rbu737    n=  737 AUC gnn=0.836 cheap=0.813 knn=0.793 | prec gnn=0.750 cheap=0.727 knn=0.705 | ms gnn=6.0 cheap=1.29 knn=0.32
+dkg813    n=  813 AUC gnn=0.851 cheap=0.839 knn=0.787 | prec gnn=0.500 cheap=0.521 knn=0.479 | ms gnn=6.5 cheap=1.26 knn=0.36
+lim963    n=  963 AUC gnn=0.828 cheap=0.818 knn=0.805 | prec gnn=0.561 cheap=0.614 knn=0.649 | ms gnn=7.4 cheap=1.36 knn=0.49
+pbd984    n=  984 AUC gnn=0.851 cheap=0.850 knn=0.834 | prec gnn=0.576 cheap=0.475 knn=0.525 | ms gnn=8.2 cheap=1.55 knn=0.38
+xit1083   n= 1083 AUC gnn=0.854 cheap=0.830 knn=0.798 | prec gnn=0.672 cheap=0.672 knn=0.594 | ms gnn=16.1 cheap=1.98 knn=0.47
+dka1376   n= 1376 AUC gnn=0.870 cheap=0.862 knn=0.845 | prec gnn=0.610 cheap=0.524 knn=0.549 | ms gnn=7.0 cheap=1.35 knn=0.34
+dca1389   n= 1389 AUC gnn=0.835 cheap=0.826 knn=0.809 | prec gnn=0.566 cheap=0.627 knn=0.651 | ms gnn=7.7 cheap=1.97 knn=0.51
+dja1436   n= 1436 AUC gnn=0.878 cheap=0.860 knn=0.832 | prec gnn=0.756 cheap=0.733 knn=0.686 | ms gnn=10.4 cheap=1.88 knn=0.46
+icw1483   n= 1483 AUC gnn=0.868 cheap=0.865 knn=0.847 | prec gnn=0.795 cheap=0.727 knn=0.750 | ms gnn=10.4 cheap=2.04 knn=0.52
+fra1488   n= 1488 AUC gnn=0.861 cheap=0.852 knn=0.832 | prec gnn=0.697 cheap=0.697 knn=0.674 | ms gnn=10.7 cheap=2.08 knn=0.53
+rbv1583   n= 1583 AUC gnn=0.870 cheap=0.866 knn=0.846 | prec gnn=0.787 cheap=0.723 knn=0.660 | ms gnn=11.7 cheap=2.72 knn=0.84
+rby1599   n= 1599 AUC gnn=0.863 cheap=0.863 knn=0.844 | prec gnn=0.695 cheap=0.747 knn=0.695 | ms gnn=11.3 cheap=1.80 knn=0.56
+fnb1615   n= 1615 AUC gnn=0.815 cheap=0.838 knn=0.798 | prec gnn=0.656 cheap=0.573 knn=0.583 | ms gnn=10.7 cheap=2.31 knn=0.39
+djc1785   n= 1785 AUC gnn=0.832 cheap=0.840 knn=0.808 | prec gnn=0.710 cheap=0.607 knn=0.607 | ms gnn=13.0 cheap=2.36 knn=0.61
+dcc1911   n= 1911 AUC gnn=0.856 cheap=0.819 knn=0.807 | prec gnn=0.640 cheap=0.561 knn=0.588 | ms gnn=13.7 cheap=2.49 knn=0.67
+dkd1973   n= 1973 AUC gnn=0.850 cheap=0.841 knn=0.822 | prec gnn=0.712 cheap=0.661 knn=0.678 | ms gnn=13.9 cheap=2.69 knn=0.65
+djb2036   n= 2036 AUC gnn=0.863 cheap=0.865 knn=0.852 | prec gnn=0.664 cheap=0.680 knn=0.713 | ms gnn=12.5 cheap=1.78 knn=0.45
+dcb2086   n= 2086 AUC gnn=0.874 cheap=0.865 knn=0.846 | prec gnn=0.656 cheap=0.568 knn=0.624 | ms gnn=16.1 cheap=2.70 knn=1.44
+bva2144   n= 2144 AUC gnn=0.856 cheap=0.856 knn=0.823 | prec gnn=0.703 cheap=0.641 knn=0.617 | ms gnn=15.8 cheap=2.75 knn=0.92
+xqc2175   n= 2175 AUC gnn=0.863 cheap=0.847 knn=0.818 | prec gnn=0.662 cheap=0.600 knn=0.608 | ms gnn=15.2 cheap=2.90 knn=0.69
+bck2217   n= 2217 AUC gnn=0.893 cheap=0.885 knn=0.863 | prec gnn=0.774 cheap=0.767 knn=0.722 | ms gnn=16.5 cheap=2.79 knn=0.70
+xpr2308   n= 2308 AUC gnn=0.865 cheap=0.847 knn=0.821 | prec gnn=0.652 cheap=0.630 knn=0.623 | ms gnn=16.1 cheap=2.73 knn=0.77
+ley2323   n= 2323 AUC gnn=0.881 cheap=0.863 knn=0.834 | prec gnn=0.547 cheap=0.561 knn=0.547 | ms gnn=16.6 cheap=2.82 knn=0.73
+dea2382   n= 2382 AUC gnn=0.878 cheap=0.868 knn=0.841 | prec gnn=0.761 cheap=0.725 knn=0.704 | ms gnn=17.8 cheap=2.94 knn=0.78
+rbw2481   n= 2481 AUC gnn=0.890 cheap=0.876 knn=0.857 | prec gnn=0.669 cheap=0.649 knn=0.628 | ms gnn=17.8 cheap=3.01 knn=0.80
+pds2566   n= 2566 AUC gnn=0.872 cheap=0.852 knn=0.844 | prec gnn=0.634 cheap=0.647 knn=0.621 | ms gnn=17.8 cheap=3.04 knn=0.79
+mlt2597   n= 2597 AUC gnn=0.896 cheap=0.875 knn=0.854 | prec gnn=0.684 cheap=0.613 knn=0.581 | ms gnn=18.0 cheap=3.18 knn=0.81
+bch2762   n= 2762 AUC gnn=0.874 cheap=0.856 knn=0.845 | prec gnn=0.697 cheap=0.642 knn=0.630 | ms gnn=39.6 cheap=3.36 knn=0.87
+irw2802   n= 2802 AUC gnn=0.879 cheap=0.853 knn=0.846 | prec gnn=0.661 cheap=0.565 knn=0.583 | ms gnn=39.1 cheap=3.65 knn=0.94
+lsm2854   n= 2854 AUC gnn=0.866 cheap=0.866 knn=0.845 | prec gnn=0.643 cheap=0.655 knn=0.632 | ms gnn=32.6 cheap=2.80 knn=0.77
+dbj2924   n= 2924 AUC gnn=0.890 cheap=0.869 knn=0.855 | prec gnn=0.703 cheap=0.686 knn=0.680 | ms gnn=40.9 cheap=3.56 knn=0.90
+xva2993   n= 2993 AUC gnn=0.850 cheap=0.845 knn=0.834 | prec gnn=0.654 cheap=0.682 knn=0.665 | ms gnn=40.9 cheap=3.48 knn=0.91
+pia3056   n= 3056 AUC gnn=0.887 cheap=0.866 knn=0.855 | prec gnn=0.749 cheap=0.732 knn=0.716 | ms gnn=43.2 cheap=3.63 knn=0.93
+dke3097   n= 3097 AUC gnn=0.881 cheap=0.867 knn=0.847 | prec gnn=0.784 cheap=0.719 knn=0.741 | ms gnn=42.0 cheap=3.64 knn=0.93
+lsn3119   n= 3119 AUC gnn=0.850 cheap=0.835 knn=0.823 | prec gnn=0.711 cheap=0.652 knn=0.610 | ms gnn=44.8 cheap=3.60 knn=1.02
+lta3140   n= 3140 AUC gnn=0.873 cheap=0.858 knn=0.838 | prec gnn=0.665 cheap=0.628 knn=0.638 | ms gnn=42.5 cheap=3.78 knn=0.95
+fdp3256   n= 3256 AUC gnn=0.868 cheap=0.850 knn=0.825 | prec gnn=0.733 cheap=0.656 knn=0.651 | ms gnn=46.5 cheap=3.91 knn=1.09
+beg3293   n= 3293 AUC gnn=0.885 cheap=0.863 knn=0.851 | prec gnn=0.650 cheap=0.629 knn=0.645 | ms gnn=46.6 cheap=6.00 knn=1.05
+dhb3386   n= 3386 AUC gnn=0.869 cheap=0.855 knn=0.825 | prec gnn=0.778 cheap=0.739 knn=0.729 | ms gnn=60.0 cheap=5.87 knn=1.79
+fjs3649   n= 3649 AUC gnn=0.880 cheap=0.868 knn=0.854 | prec gnn=0.775 cheap=0.716 knn=0.702 | ms gnn=54.6 cheap=6.94 knn=2.70
+fjr3672   n= 3672 AUC gnn=0.878 cheap=0.856 knn=0.842 | prec gnn=0.809 cheap=0.732 knn=0.718 | ms gnn=55.9 cheap=4.81 knn=1.15
+dlb3694   n= 3694 AUC gnn=0.865 cheap=0.851 knn=0.832 | prec gnn=0.688 cheap=0.670 knn=0.665 | ms gnn=50.5 cheap=4.77 knn=1.18
+ltb3729   n= 3729 AUC gnn=0.875 cheap=0.858 knn=0.836 | prec gnn=0.758 cheap=0.722 knn=0.682 | ms gnn=46.2 cheap=4.39 knn=1.16
+xqe3891   n= 3891 AUC gnn=0.875 cheap=0.864 knn=0.830 | prec gnn=0.712 cheap=0.695 knn=0.682 | ms gnn=46.2 cheap=4.25 knn=0.91
+xua3937   n= 3937 AUC gnn=0.877 cheap=0.861 knn=0.830 | prec gnn=0.674 cheap=0.695 knn=0.640 | ms gnn=56.8 cheap=4.69 knn=1.19
+dkc3938   n= 3938 AUC gnn=0.877 cheap=0.857 knn=0.831 | prec gnn=0.648 cheap=0.631 knn=0.619 | ms gnn=58.2 cheap=4.66 knn=1.33
+dkf3954   n= 3954 AUC gnn=0.860 cheap=0.850 knn=0.835 | prec gnn=0.688 cheap=0.667 knn=0.650 | ms gnn=53.6 cheap=4.96 knn=3.26
+{
+ "n_instances": 58,
+ "base_rate_wrong": 0.1533203095424388,
+ "auc_gnn": 0.8541162805515368,
+ "auc_cheap": 0.8397569224629987,
+ "auc_knn": 0.8207018898199183,
+ "prec_gnn": 0.6466459160136183,
+ "prec_cheap": 0.6187945158524429,
+ "prec_knn": 0.6068633778422735,
+ "ms_gnn": 22.98895287378986,
+ "ms_cheap": 2.7380551724365496,
+ "ms_knn": 0.775001378998899,
+ "auc_cheap_minus_knn": {
+  "mean": 0.019055032643080515,
+  "a_higher": 55,
+  "wilcoxon_p": 1.4861240505356907e-10
+ },
+ "prec_cheap_minus_knn": {
+  "mean": 0.011931138010169503,
+  "a_higher": 36,
+  "wilcoxon_p": 0.028768553886650026
+ },
+ "auc_gnn_minus_cheap": {
+  "mean": 0.014359358088537914,
+  "a_higher": 52,
+  "wilcoxon_p": 4.290879645337005e-09
+ },
+ "prec_gnn_minus_cheap": {
+  "mean": 0.027851400161175353,
+  "a_higher": 41,
+  "wilcoxon_p": 4.8354991325094744e-05
+ }
+}

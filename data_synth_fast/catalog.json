@@ -1,0 +1,984 @@
+{
+ "instances": {
+  "h000_uniform": {
+   "suite": "synth_holdout",
+   "n": 113,
+   "kind": "uniform",
+   "ref": 8408.0,
+   "ref_wall": 0.4751046999990649
+  },
+  "h001_clustered": {
+   "suite": "synth_holdout",
+   "n": 153,
+   "kind": "clustered",
+   "ref": 6462.0,
+   "ref_wall": 0.4753848000000289
+  },
+  "h002_mixed": {
+   "suite": "synth_holdout",
+   "n": 83,
+   "kind": "mixed",
+   "ref": 6354.0,
+   "ref_wall": 0.22622749999936786
+  },
+  "h003_grid": {
+   "suite": "synth_holdout",
+   "n": 160,
+   "kind": "grid",
+   "ref": 7226.0,
+   "ref_wall": 0.32351550000021234
+  },
+  "h004_flcluster": {
+   "suite": "synth_holdout",
+   "n": 82,
+   "kind": "flcluster",
+   "ref": 3359.0,
+   "ref_wall": 0.15159750000020722
+  },
+  "h005_uniform": {
+   "suite": "synth_holdout",
+   "n": 82,
+   "kind": "uniform",
+   "ref": 6948.0,
+   "ref_wall": 0.18309249999947497
+  },
+  "h006_clustered": {
+   "suite": "synth_holdout",
+   "n": 116,
+   "kind": "clustered",
+   "ref": 3242.0,
+   "ref_wall": 0.4333179999994172
+  },
+  "h007_mixed": {
+   "suite": "synth_holdout",
+   "n": 94,
+   "kind": "mixed",
+   "ref": 6640.0,
+   "ref_wall": 0.16787990000011632
+  },
+  "h008_grid": {
+   "suite": "synth_holdout",
+   "n": 131,
+   "kind": "grid",
+   "ref": 7962.0,
+   "ref_wall": 0.32017659999837633
+  },
+  "h009_flcluster": {
+   "suite": "synth_holdout",
+   "n": 128,
+   "kind": "flcluster",
+   "ref": 4178.0,
+   "ref_wall": 0.21677769999951124
+  },
+  "h010_uniform": {
+   "suite": "synth_holdout",
+   "n": 129,
+   "kind": "uniform",
+   "ref": 8701.0,
+   "ref_wall": 0.25844019999931334
+  },
+  "h011_clustered": {
+   "suite": "synth_holdout",
+   "n": 119,
+   "kind": "clustered",
+   "ref": 4222.0,
+   "ref_wall": 0.186674700002186
+  },
+  "h012_mixed": {
+   "suite": "synth_holdout",
+   "n": 109,
+   "kind": "mixed",
+   "ref": 7291.0,
+   "ref_wall": 0.26659120000113035
+  },
+  "h013_grid": {
+   "suite": "synth_holdout",
+   "n": 86,
+   "kind": "grid",
+   "ref": 6279.0,
+   "ref_wall": 0.3925974999983737
+  },
+  "h014_flcluster": {
+   "suite": "synth_holdout",
+   "n": 81,
+   "kind": "flcluster",
+   "ref": 3504.0,
+   "ref_wall": 0.20733760000075563
+  },
+  "h015_uniform": {
+   "suite": "synth_holdout",
+   "n": 160,
+   "kind": "uniform",
+   "ref": 10089.0,
+   "ref_wall": 0.22580059999745572
+  },
+  "h016_clustered": {
+   "suite": "synth_holdout",
+   "n": 140,
+   "kind": "clustered",
+   "ref": 5761.0,
+   "ref_wall": 0.2056693999984418
+  },
+  "h017_mixed": {
+   "suite": "synth_holdout",
+   "n": 129,
+   "kind": "mixed",
+   "ref": 7325.0,
+   "ref_wall": 0.35805620000246563
+  },
+  "h018_grid": {
+   "suite": "synth_holdout",
+   "n": 98,
+   "kind": "grid",
+   "ref": 7259.0,
+   "ref_wall": 0.174842999997054
+  },
+  "h019_flcluster": {
+   "suite": "synth_holdout",
+   "n": 140,
+   "kind": "flcluster",
+   "ref": 4864.0,
+   "ref_wall": 0.21523660000093514
+  },
+  "h020_uniform": {
+   "suite": "synth_holdout",
+   "n": 87,
+   "kind": "uniform",
+   "ref": 7018.0,
+   "ref_wall": 0.2957667999980913
+  },
+  "h021_clustered": {
+   "suite": "synth_holdout",
+   "n": 114,
+   "kind": "clustered",
+   "ref": 4432.0,
+   "ref_wall": 0.31307830000150716
+  },
+  "h022_mixed": {
+   "suite": "synth_holdout",
+   "n": 152,
+   "kind": "mixed",
+   "ref": 7836.0,
+   "ref_wall": 0.41055899999992107
+  },
+  "h023_grid": {
+   "suite": "synth_holdout",
+   "n": 145,
+   "kind": "grid",
+   "ref": 7306.0,
+   "ref_wall": 0.4273929000009957
+  },
+  "h024_flcluster": {
+   "suite": "synth_holdout",
+   "n": 156,
+   "kind": "flcluster",
+   "ref": 4360.0,
+   "ref_wall": 1.0277238999988185
+  },
+  "h025_uniform": {
+   "suite": "synth_holdout",
+   "n": 137,
+   "kind": "uniform",
+   "ref": 8980.0,
+   "ref_wall": 0.31417789999977686
+  },
+  "h026_clustered": {
+   "suite": "synth_holdout",
+   "n": 87,
+   "kind": "clustered",
+   "ref": 4256.0,
+   "ref_wall": 0.2058569999971951
+  },
+  "h027_mixed": {
+   "suite": "synth_holdout",
+   "n": 132,
+   "kind": "mixed",
+   "ref": 7643.0,
+   "ref_wall": 0.18996939999851747
+  },
+  "h028_grid": {
+   "suite": "synth_holdout",
+   "n": 158,
+   "kind": "grid",
+   "ref": 8516.0,
+   "ref_wall": 0.5857654999999795
+  },
+  "h029_flcluster": {
+   "suite": "synth_holdout",
+   "n": 137,
+   "kind": "flcluster",
+   "ref": 4382.0,
+   "ref_wall": 0.202524699998321
+  },
+  "h030_uniform": {
+   "suite": "synth_holdout",
+   "n": 143,
+   "kind": "uniform",
+   "ref": 9301.0,
+   "ref_wall": 0.2066599000027054
+  },
+  "h031_clustered": {
+   "suite": "synth_holdout",
+   "n": 154,
+   "kind": "clustered",
+   "ref": 5278.0,
+   "ref_wall": 0.6482871000007435
+  },
+  "h032_mixed": {
+   "suite": "synth_holdout",
+   "n": 96,
+   "kind": "mixed",
+   "ref": 6801.0,
+   "ref_wall": 0.14435440000306698
+  },
+  "h033_grid": {
+   "suite": "synth_holdout",
+   "n": 107,
+   "kind": "grid",
+   "ref": 5977.0,
+   "ref_wall": 0.15440229999876465
+  },
+  "h034_flcluster": {
+   "suite": "synth_holdout",
+   "n": 137,
+   "kind": "flcluster",
+   "ref": 4650.0,
+   "ref_wall": 0.5666319999982079
+  },
+  "h035_uniform": {
+   "suite": "synth_holdout",
+   "n": 103,
+   "kind": "uniform",
+   "ref": 7738.0,
+   "ref_wall": 0.16749060000074678
+  },
+  "h036_clustered": {
+   "suite": "synth_holdout",
+   "n": 134,
+   "kind": "clustered",
+   "ref": 4283.0,
+   "ref_wall": 0.2520901000025333
+  },
+  "h037_mixed": {
+   "suite": "synth_holdout",
+   "n": 155,
+   "kind": "mixed",
+   "ref": 8148.0,
+   "ref_wall": 0.3535338000001502
+  },
+  "h038_grid": {
+   "suite": "synth_holdout",
+   "n": 96,
+   "kind": "grid",
+   "ref": 6581.0,
+   "ref_wall": 0.1494657000002917
+  },
+  "h039_flcluster": {
+   "suite": "synth_holdout",
+   "n": 120,
+   "kind": "flcluster",
+   "ref": 3857.0,
+   "ref_wall": 0.4126548999993247
+  },
+  "h040_uniform": {
+   "suite": "synth_holdout",
+   "n": 91,
+   "kind": "uniform",
+   "ref": 6980.0,
+   "ref_wall": 0.16178420000142069
+  },
+  "h041_clustered": {
+   "suite": "synth_holdout",
+   "n": 145,
+   "kind": "clustered",
+   "ref": 5232.0,
+   "ref_wall": 0.617003700001078
+  },
+  "h042_mixed": {
+   "suite": "synth_holdout",
+   "n": 106,
+   "kind": "mixed",
+   "ref": 6834.0,
+   "ref_wall": 0.32874200000151177
+  },
+  "h043_grid": {
+   "suite": "synth_holdout",
+   "n": 156,
+   "kind": "grid",
+   "ref": 7908.0,
+   "ref_wall": 0.5597586000003503
+  },
+  "h044_flcluster": {
+   "suite": "synth_holdout",
+   "n": 112,
+   "kind": "flcluster",
+   "ref": 4517.0,
+   "ref_wall": 0.34650499999770545
+  },
+  "h045_uniform": {
+   "suite": "synth_holdout",
+   "n": 106,
+   "kind": "uniform",
+   "ref": 8330.0,
+   "ref_wall": 0.2647973000021011
+  },
+  "h046_clustered": {
+   "suite": "synth_holdout",
+   "n": 90,
+   "kind": "clustered",
+   "ref": 2664.0,
+   "ref_wall": 0.1506848999997601
+  },
+  "h047_mixed": {
+   "suite": "synth_holdout",
+   "n": 83,
+   "kind": "mixed",
+   "ref": 5956.0,
+   "ref_wall": 0.2336442999985593
+  },
+  "h048_grid": {
+   "suite": "synth_holdout",
+   "n": 111,
+   "kind": "grid",
+   "ref": 7506.0,
+   "ref_wall": 0.32885719999831053
+  },
+  "h049_flcluster": {
+   "suite": "synth_holdout",
+   "n": 142,
+   "kind": "flcluster",
+   "ref": 4831.0,
+   "ref_wall": 0.3240662999996857
+  },
+  "h050_uniform": {
+   "suite": "synth_holdout",
+   "n": 110,
+   "kind": "uniform",
+   "ref": 8321.0,
+   "ref_wall": 0.26322240000081365
+  },
+  "h051_clustered": {
+   "suite": "synth_holdout",
+   "n": 103,
+   "kind": "clustered",
+   "ref": 4360.0,
+   "ref_wall": 0.3667083000000275
+  },
+  "h052_mixed": {
+   "suite": "synth_holdout",
+   "n": 130,
+   "kind": "mixed",
+   "ref": 7908.0,
+   "ref_wall": 0.23171560000264435
+  },
+  "h053_grid": {
+   "suite": "synth_holdout",
+   "n": 114,
+   "kind": "grid",
+   "ref": 7367.0,
+   "ref_wall": 0.24074020000261953
+  },
+  "h054_flcluster": {
+   "suite": "synth_holdout",
+   "n": 81,
+   "kind": "flcluster",
+   "ref": 4062.0,
+   "ref_wall": 0.15768670000034035
+  },
+  "h055_uniform": {
+   "suite": "synth_holdout",
+   "n": 133,
+   "kind": "uniform",
+   "ref": 9051.0,
+   "ref_wall": 1.080739100001665
+  },
+  "h056_clustered": {
+   "suite": "synth_holdout",
+   "n": 86,
+   "kind": "clustered",
+   "ref": 5160.0,
+   "ref_wall": 0.14753399999972316
+  },
+  "h057_mixed": {
+   "suite": "synth_holdout",
+   "n": 154,
+   "kind": "mixed",
+   "ref": 7505.0,
+   "ref_wall": 0.2621330999972997
+  },
+  "h058_grid": {
+   "suite": "synth_holdout",
+   "n": 150,
+   "kind": "grid",
+   "ref": 8337.0,
+   "ref_wall": 0.25411479999820585
+  },
+  "h059_flcluster": {
+   "suite": "synth_holdout",
+   "n": 96,
+   "kind": "flcluster",
+   "ref": 4551.0,
+   "ref_wall": 0.5845139999983076
+  },
+  "h060_uniform": {
+   "suite": "synth_holdout",
+   "n": 112,
+   "kind": "uniform",
+   "ref": 8455.0,
+   "ref_wall": 0.16619949999949313
+  },
+  "h061_clustered": {
+   "suite": "synth_holdout",
+   "n": 149,
+   "kind": "clustered",
+   "ref": 4312.0,
+   "ref_wall": 0.49448449999908917
+  },
+  "h062_mixed": {
+   "suite": "synth_holdout",
+   "n": 125,
+   "kind": "mixed",
+   "ref": 7186.0,
+   "ref_wall": 0.6179893999978958
+  },
+  "h063_grid": {
+   "suite": "synth_holdout",
+   "n": 88,
+   "kind": "grid",
+   "ref": 6798.0,
+   "ref_wall": 0.18868339999971795
+  },
+  "h064_flcluster": {
+   "suite": "synth_holdout",
+   "n": 132,
+   "kind": "flcluster",
+   "ref": 4203.0,
+   "ref_wall": 0.26932139999917126
+  },
+  "h065_uniform": {
+   "suite": "synth_holdout",
+   "n": 141,
+   "kind": "uniform",
+   "ref": 8948.0,
+   "ref_wall": 0.3328780999981973
+  },
+  "h066_clustered": {
+   "suite": "synth_holdout",
+   "n": 140,
+   "kind": "clustered",
+   "ref": 5314.0,
+   "ref_wall": 0.46996029999718303
+  },
+  "h067_mixed": {
+   "suite": "synth_holdout",
+   "n": 135,
+   "kind": "mixed",
+   "ref": 7551.0,
+   "ref_wall": 0.19928299999810406
+  },
+  "h068_grid": {
+   "suite": "synth_holdout",
+   "n": 82,
+   "kind": "grid",
+   "ref": 5492.0,
+   "ref_wall": 0.17743139999947743
+  },
+  "h069_flcluster": {
+   "suite": "synth_holdout",
+   "n": 148,
+   "kind": "flcluster",
+   "ref": 4513.0,
+   "ref_wall": 0.3840178999998898
+  },
+  "h070_uniform": {
+   "suite": "synth_holdout",
+   "n": 113,
+   "kind": "uniform",
+   "ref": 8006.0,
+   "ref_wall": 0.16710990000137826
+  },
+  "h071_clustered": {
+   "suite": "synth_holdout",
+   "n": 107,
+   "kind": "clustered",
+   "ref": 4906.0,
+   "ref_wall": 0.1903918000025442
+  },
+  "h072_mixed": {
+   "suite": "synth_holdout",
+   "n": 127,
+   "kind": "mixed",
+   "ref": 7447.0,
+   "ref_wall": 0.5772610999993049
+  },
+  "h073_grid": {
+   "suite": "synth_holdout",
+   "n": 88,
+   "kind": "grid",
+   "ref": 6579.0,
+   "ref_wall": 0.21666779999941355
+  },
+  "h074_flcluster": {
+   "suite": "synth_holdout",
+   "n": 145,
+   "kind": "flcluster",
+   "ref": 4747.0,
+   "ref_wall": 0.27279920000000857
+  },
+  "h075_uniform": {
+   "suite": "synth_holdout",
+   "n": 159,
+   "kind": "uniform",
+   "ref": 9575.0,
+   "ref_wall": 0.30970730000262847
+  },
+  "h076_clustered": {
+   "suite": "synth_holdout",
+   "n": 88,
+   "kind": "clustered",
+   "ref": 2613.0,
+   "ref_wall": 0.11026549999951385
+  },
+  "h077_mixed": {
+   "suite": "synth_holdout",
+   "n": 136,
+   "kind": "mixed",
+   "ref": 7563.0,
+   "ref_wall": 0.2828585000024759
+  },
+  "h078_grid": {
+   "suite": "synth_holdout",
+   "n": 86,
+   "kind": "grid",
+   "ref": 6660.0,
+   "ref_wall": 0.22647110000252724
+  },
+  "h079_flcluster": {
+   "suite": "synth_holdout",
+   "n": 81,
+   "kind": "flcluster",
+   "ref": 3096.0,
+   "ref_wall": 0.23852399999668705
+  },
+  "h080_uniform": {
+   "suite": "synth_holdout",
+   "n": 87,
+   "kind": "uniform",
+   "ref": 7543.0,
+   "ref_wall": 0.1382061000003887
+  },
+  "h081_clustered": {
+   "suite": "synth_holdout",
+   "n": 140,
+   "kind": "clustered",
+   "ref": 5186.0,
+   "ref_wall": 1.2671519000032276
+  },
+  "h082_mixed": {
+   "suite": "synth_holdout",
+   "n": 104,
+   "kind": "mixed",
+   "ref": 7009.0,
+   "ref_wall": 0.2382270999987668
+  },
+  "h083_grid": {
+   "suite": "synth_holdout",
+   "n": 87,
+   "kind": "grid",
+   "ref": 6922.0,
+   "ref_wall": 0.20970329999909154
+  },
+  "h084_flcluster": {
+   "suite": "synth_holdout",
+   "n": 121,
+   "kind": "flcluster",
+   "ref": 4633.0,
+   "ref_wall": 0.3660751999996137
+  },
+  "h085_uniform": {
+   "suite": "synth_holdout",
+   "n": 125,
+   "kind": "uniform",
+   "ref": 8503.0,
+   "ref_wall": 0.349809200000891
+  },
+  "h086_clustered": {
+   "suite": "synth_holdout",
+   "n": 103,
+   "kind": "clustered",
+   "ref": 3330.0,
+   "ref_wall": 0.2953085999979521
+  },
+  "h087_mixed": {
+   "suite": "synth_holdout",
+   "n": 129,
+   "kind": "mixed",
+   "ref": 7827.0,
+   "ref_wall": 0.19911210000282153
+  },
+  "h088_grid": {
+   "suite": "synth_holdout",
+   "n": 95,
+   "kind": "grid",
+   "ref": 7071.0,
+   "ref_wall": 0.18836020000162534
+  },
+  "h089_flcluster": {
+   "suite": "synth_holdout",
+   "n": 123,
+   "kind": "flcluster",
+   "ref": 4157.0,
+   "ref_wall": 0.2048691999989387
+  },
+  "h090_uniform": {
+   "suite": "synth_holdout",
+   "n": 112,
+   "kind": "uniform",
+   "ref": 7921.0,
+   "ref_wall": 0.42216539999935776
+  },
+  "h091_clustered": {
+   "suite": "synth_holdout",
+   "n": 152,
+   "kind": "clustered",
+   "ref": 5130.0,
+   "ref_wall": 0.3742949999978009
+  },
+  "h092_mixed": {
+   "suite": "synth_holdout",
+   "n": 86,
+   "kind": "mixed",
+   "ref": 6190.0,
+   "ref_wall": 0.1904415000026347
+  },
+  "h093_grid": {
+   "suite": "synth_holdout",
+   "n": 132,
+   "kind": "grid",
+   "ref": 7903.0,
+   "ref_wall": 0.24451140000019222
+  },
+  "h094_flcluster": {
+   "suite": "synth_holdout",
+   "n": 127,
+   "kind": "flcluster",
+   "ref": 4174.0,
+   "ref_wall": 0.5486774999990303
+  },
+  "h095_uniform": {
+   "suite": "synth_holdout",
+   "n": 128,
+   "kind": "uniform",
+   "ref": 9029.0,
+   "ref_wall": 0.4816861000035715
+  },
+  "h096_clustered": {
+   "suite": "synth_holdout",
+   "n": 128,
+   "kind": "clustered",
+   "ref": 5463.0,
+   "ref_wall": 0.25548500000149943
+  },
+  "h097_mixed": {
+   "suite": "synth_holdout",
+   "n": 121,
+   "kind": "mixed",
+   "ref": 6879.0,
+   "ref_wall": 0.266568199996982
+  },
+  "h098_grid": {
+   "suite": "synth_holdout",
+   "n": 103,
+   "kind": "grid",
+   "ref": 7290.0,
+   "ref_wall": 0.18075450000105775
+  },
+  "h099_flcluster": {
+   "suite": "synth_holdout",
+   "n": 111,
+   "kind": "flcluster",
+   "ref": 3660.0,
+   "ref_wall": 0.19963869999992312
+  },
+  "k000_uniform": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "uniform",
+   "ref": 23131.0,
+   "ref_wall": 9.369019599998865
+  },
+  "k001_clustered": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "clustered",
+   "ref": 10620.0,
+   "ref_wall": 11.828188400002546
+  },
+  "k002_mixed": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "mixed",
+   "ref": 19622.0,
+   "ref_wall": 13.522038799997972
+  },
+  "k003_grid": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "grid",
+   "ref": 16966.0,
+   "ref_wall": 9.568401299999095
+  },
+  "k004_flcluster": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "flcluster",
+   "ref": 12613.0,
+   "ref_wall": 31.687235500001407
+  },
+  "k005_uniform": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "uniform",
+   "ref": 23110.0,
+   "ref_wall": 10.907225500002824
+  },
+  "k006_clustered": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "clustered",
+   "ref": 14533.0,
+   "ref_wall": 10.091548599997623
+  },
+  "k007_mixed": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "mixed",
+   "ref": 18750.0,
+   "ref_wall": 15.64691650000168
+  },
+  "k008_grid": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "grid",
+   "ref": 14972.0,
+   "ref_wall": 21.46366439999838
+  },
+  "k009_flcluster": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "flcluster",
+   "ref": 11643.0,
+   "ref_wall": 27.75352019999991
+  },
+  "k010_uniform": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "uniform",
+   "ref": 23218.0,
+   "ref_wall": 13.45780339999692
+  },
+  "k011_clustered": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "clustered",
+   "ref": 15798.0,
+   "ref_wall": 9.129551999998512
+  },
+  "k012_mixed": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "mixed",
+   "ref": 19926.0,
+   "ref_wall": 15.910017300000618
+  },
+  "k013_grid": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "grid",
+   "ref": 13676.0,
+   "ref_wall": 31.4901944000012
+  },
+  "k014_flcluster": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "flcluster",
+   "ref": 12304.0,
+   "ref_wall": 32.00368130000061
+  },
+  "k015_uniform": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "uniform",
+   "ref": 22951.0,
+   "ref_wall": 11.494958600000245
+  },
+  "k016_clustered": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "clustered",
+   "ref": 10223.0,
+   "ref_wall": 26.926522300000215
+  },
+  "k017_mixed": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "mixed",
+   "ref": 22093.0,
+   "ref_wall": 12.135927500003163
+  },
+  "k018_grid": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "grid",
+   "ref": 15713.0,
+   "ref_wall": 30.9464040999992
+  },
+  "k019_flcluster": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "flcluster",
+   "ref": 13868.0,
+   "ref_wall": 23.032823300000018
+  },
+  "k020_uniform": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "uniform",
+   "ref": 23220.0,
+   "ref_wall": 18.09340710000106
+  },
+  "k021_clustered": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "clustered",
+   "ref": 11955.0,
+   "ref_wall": 18.283563000000868
+  },
+  "k022_mixed": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "mixed",
+   "ref": 20291.0,
+   "ref_wall": 30.7140916999997
+  },
+  "k023_grid": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "grid",
+   "ref": 12818.0,
+   "ref_wall": 31.78663450000022
+  },
+  "k024_flcluster": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "flcluster",
+   "ref": 10075.0,
+   "ref_wall": 31.64133330000186
+  },
+  "k025_uniform": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "uniform",
+   "ref": 22879.0,
+   "ref_wall": 13.38059770000109
+  },
+  "k026_clustered": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "clustered",
+   "ref": 11985.0,
+   "ref_wall": 31.418665299999702
+  },
+  "k027_mixed": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "mixed",
+   "ref": 20413.0,
+   "ref_wall": 15.89590970000063
+  },
+  "k028_grid": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "grid",
+   "ref": 13651.0,
+   "ref_wall": 17.4388076000032
+  },
+  "k029_flcluster": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "flcluster",
+   "ref": 9280.0,
+   "ref_wall": 31.658579799997824
+  },
+  "k030_uniform": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "uniform",
+   "ref": 22690.0,
+   "ref_wall": 6.501664499999606
+  },
+  "k031_clustered": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "clustered",
+   "ref": 12090.0,
+   "ref_wall": 31.758296900003188
+  },
+  "k032_mixed": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "mixed",
+   "ref": 19387.0,
+   "ref_wall": 14.68871819999913
+  },
+  "k033_grid": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "grid",
+   "ref": 11367.0,
+   "ref_wall": 31.743925600003422
+  },
+  "k034_flcluster": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "flcluster",
+   "ref": 12660.0,
+   "ref_wall": 20.449309599996923
+  },
+  "k035_uniform": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "uniform",
+   "ref": 23066.0,
+   "ref_wall": 9.089592799999082
+  },
+  "k036_clustered": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "clustered",
+   "ref": 8883.0,
+   "ref_wall": 31.90143910000188
+  },
+  "k037_mixed": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "mixed",
+   "ref": 20618.0,
+   "ref_wall": 31.662827000000107
+  },
+  "k038_grid": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "grid",
+   "ref": 16627.0,
+   "ref_wall": 31.575651199997083
+  },
+  "k039_flcluster": {
+   "suite": "synth_1000",
+   "n": 1000,
+   "kind": "flcluster",
+   "ref": 10570.0,
+   "ref_wall": 30.15720220000003
+  }
+ }
+}

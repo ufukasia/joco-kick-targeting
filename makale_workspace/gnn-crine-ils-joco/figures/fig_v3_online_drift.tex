@@ -1,0 +1,32 @@
+% Cevrimici ogrenme kaymasi -- OTOMATIK URETIM: evidence/scripts/build_v3.py
+% Veri: figures/data/v3_online_drift.dat (holdout2_10s_mechanism.json drift[*] + ham kosumlardan kabul orani)
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=1 by 2, vertical sep=1.9cm},
+  width=\textwidth, height=5.0cm, xmode=log, xmin=1450, xmax=10500,
+  xtick={1500,2000,3000,4000,6000,8000,10000}, xticklabels={1500,2000,3000,4000,6000,8000,10000},
+  xlabel={Instance size $n$ (log scale)}, tick label style={font=\scriptsize}, label style={font=\small},
+  title style={font=\small, yshift=-1ex},
+  ymajorgrids, grid style={black!10},
+  legend style={font=\scriptsize, draw=black!40, fill=white, legend columns=2}]
+\nextgroupplot[title={(a) Which edges does the kick pool target?}, ylabel={Relative edge length},
+  ymin=0, ymax=3.9, legend style={at={(0.99,0.97)}, anchor=north east}]
+\addplot[only marks, mark=square*, mark size=1.4pt, black!75] table[x=n, y=rel_prior] {figures/data/v3_online_drift.dat};
+\addlegendentry{Prior weights $w_0$ (static)}
+\addplot[only marks, mark=*, mark size=1.4pt, iyiRenk] table[x=n, y=rel_excess] {figures/data/v3_online_drift.dat};
+\addlegendentry{Excess proxy}
+\addplot[only marks, mark=triangle*, mark size=1.7pt, kotuRenk] table[x=n, y=rel_learned] {figures/data/v3_online_drift.dat};
+\addlegendentry{Learned weights $w_{\mathrm{final}}$}
+\addplot[only marks, mark=x, mark size=1.4pt, black!40] table[x=n, y=rel_all] {figures/data/v3_online_drift.dat};
+\addlegendentry{All tour edges}
+\nextgroupplot[title={(b) Kick acceptance rate}, ylabel={Accepted kicks [\%] (log)}, ymode=log, ymin=0.1, ymax=40,
+  log ticks with fixed point, legend style={at={(0.01,0.97)}, anchor=north west}]
+\addplot[only marks, mark=square*, mark size=1.4pt, black!75] table[x=n, y=acc_linprior] {figures/data/v3_online_drift.dat};
+\addlegendentry{Static-linear}
+\addplot[only marks, mark=*, mark size=1.4pt, iyiRenk] table[x=n, y=acc_excess] {figures/data/v3_online_drift.dat};
+\addlegendentry{Excess}
+\addplot[only marks, mark=triangle*, mark size=1.7pt, kotuRenk] table[x=n, y=acc_online] {figures/data/v3_online_drift.dat};
+\addlegendentry{Online (warm)}
+\addplot[only marks, mark=x, mark size=1.4pt, black!40] table[x=n, y=acc_random] {figures/data/v3_online_drift.dat};
+\addlegendentry{Random}
+\end{groupplot}
+\end{tikzpicture}

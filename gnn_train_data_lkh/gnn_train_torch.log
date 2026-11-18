@@ -1,0 +1,156 @@
+loaded 1080 graphs from C:\Users\ufuka\OneDrive - Ostim Teknik Universitesi\Masaüstü\tsplib\gnn_train_data_lkh in 2.4s  (device=cuda, NVIDIA GeForce RTX 4060 Ti)
+train graphs: 954  val graphs: 126 (14/120 instances held out)
+C:\Users\ufuka\OneDrive - Ostim Teknik Universitesi\Masaüstü\tsplib\gnn_train_torch.py:258: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:837.)
+  tot += float(loss) * len(chunk)
+epoch   1/150  train_loss=1.2515  val_loss=1.0543  node_acc=0.964  edge_acc=0.777  susp_decile=0.735  t=0.8s  *best*
+epoch   2/150  train_loss=0.9914  val_loss=0.9987  node_acc=0.964  edge_acc=0.780  susp_decile=0.619  t=0.5s  *best*
+epoch   3/150  train_loss=0.9527  val_loss=0.9733  node_acc=0.964  edge_acc=0.783  susp_decile=0.583  t=0.6s  *best*
+epoch   4/150  train_loss=0.9318  val_loss=0.9539  node_acc=0.964  edge_acc=0.787  susp_decile=0.516  t=0.6s  *best*
+epoch   5/150  train_loss=0.9118  val_loss=0.9322  node_acc=0.964  edge_acc=0.791  susp_decile=0.492  t=0.6s  *best*
+epoch   6/150  train_loss=0.8991  val_loss=0.9213  node_acc=0.964  edge_acc=0.797  susp_decile=0.476  t=0.5s  *best*
+epoch   7/150  train_loss=0.8897  val_loss=0.9179  node_acc=0.964  edge_acc=0.798  susp_decile=0.461  t=0.6s  *best*
+epoch   8/150  train_loss=0.8843  val_loss=0.9098  node_acc=0.964  edge_acc=0.802  susp_decile=0.445  t=0.6s  *best*
+epoch   9/150  train_loss=0.8754  val_loss=0.9044  node_acc=0.963  edge_acc=0.805  susp_decile=0.447  t=0.6s  *best*
+epoch  10/150  train_loss=0.8692  val_loss=0.9000  node_acc=0.963  edge_acc=0.806  susp_decile=0.430  t=0.5s  *best*
+epoch  11/150  train_loss=0.8659  val_loss=0.8963  node_acc=0.963  edge_acc=0.808  susp_decile=0.426  t=0.6s  *best*
+epoch  12/150  train_loss=0.8630  val_loss=0.8938  node_acc=0.961  edge_acc=0.809  susp_decile=0.426  t=0.6s  *best*
+epoch  13/150  train_loss=0.8580  val_loss=0.8937  node_acc=0.962  edge_acc=0.809  susp_decile=0.420  t=0.6s  *best*
+epoch  14/150  train_loss=0.8585  val_loss=0.8888  node_acc=0.961  edge_acc=0.810  susp_decile=0.425  t=0.6s  *best*
+epoch  15/150  train_loss=0.8542  val_loss=0.8942  node_acc=0.957  edge_acc=0.809  susp_decile=0.426  t=0.6s
+epoch  16/150  train_loss=0.8531  val_loss=0.8900  node_acc=0.957  edge_acc=0.810  susp_decile=0.433  t=0.6s
+epoch  17/150  train_loss=0.8469  val_loss=0.8883  node_acc=0.962  edge_acc=0.812  susp_decile=0.418  t=0.6s  *best*
+epoch  18/150  train_loss=0.8478  val_loss=0.8841  node_acc=0.958  edge_acc=0.811  susp_decile=0.404  t=0.6s  *best*
+epoch  19/150  train_loss=0.8479  val_loss=0.8831  node_acc=0.958  edge_acc=0.811  susp_decile=0.419  t=0.6s  *best*
+epoch  20/150  train_loss=0.8415  val_loss=0.8833  node_acc=0.952  edge_acc=0.810  susp_decile=0.414  t=0.6s
+epoch  21/150  train_loss=0.8402  val_loss=0.8825  node_acc=0.932  edge_acc=0.814  susp_decile=0.410  t=0.6s  *best*
+epoch  22/150  train_loss=0.8380  val_loss=0.8856  node_acc=0.957  edge_acc=0.810  susp_decile=0.408  t=0.6s
+epoch  23/150  train_loss=0.8368  val_loss=0.8819  node_acc=0.956  edge_acc=0.812  susp_decile=0.411  t=0.6s  *best*
+epoch  24/150  train_loss=0.8316  val_loss=0.8785  node_acc=0.948  edge_acc=0.815  susp_decile=0.406  t=0.6s  *best*
+epoch  25/150  train_loss=0.8291  val_loss=0.8781  node_acc=0.941  edge_acc=0.811  susp_decile=0.418  t=0.6s  *best*
+epoch  26/150  train_loss=0.8290  val_loss=0.8794  node_acc=0.922  edge_acc=0.816  susp_decile=0.412  t=0.6s
+epoch  27/150  train_loss=0.8285  val_loss=0.8755  node_acc=0.948  edge_acc=0.814  susp_decile=0.415  t=0.6s  *best*
+epoch  28/150  train_loss=0.8263  val_loss=0.8765  node_acc=0.947  edge_acc=0.815  susp_decile=0.413  t=0.5s
+epoch  29/150  train_loss=0.8242  val_loss=0.8748  node_acc=0.954  edge_acc=0.815  susp_decile=0.420  t=0.6s  *best*
+epoch  30/150  train_loss=0.8260  val_loss=0.8741  node_acc=0.945  edge_acc=0.814  susp_decile=0.420  t=0.5s  *best*
+epoch  31/150  train_loss=0.8235  val_loss=0.8726  node_acc=0.949  edge_acc=0.816  susp_decile=0.417  t=0.6s  *best*
+epoch  32/150  train_loss=0.8209  val_loss=0.8826  node_acc=0.929  edge_acc=0.815  susp_decile=0.421  t=0.6s
+epoch  33/150  train_loss=0.8204  val_loss=0.8721  node_acc=0.949  edge_acc=0.816  susp_decile=0.410  t=0.5s  *best*
+epoch  34/150  train_loss=0.8165  val_loss=0.8722  node_acc=0.937  edge_acc=0.817  susp_decile=0.413  t=0.6s
+epoch  35/150  train_loss=0.8136  val_loss=0.8754  node_acc=0.951  edge_acc=0.815  susp_decile=0.416  t=0.5s
+epoch  36/150  train_loss=0.8132  val_loss=0.8725  node_acc=0.949  edge_acc=0.817  susp_decile=0.412  t=0.5s
+epoch  37/150  train_loss=0.8126  val_loss=0.8869  node_acc=0.958  edge_acc=0.811  susp_decile=0.412  t=0.6s
+epoch  38/150  train_loss=0.8308  val_loss=0.8764  node_acc=0.934  edge_acc=0.819  susp_decile=0.406  t=0.6s
+epoch  39/150  train_loss=0.8214  val_loss=0.8801  node_acc=0.960  edge_acc=0.813  susp_decile=0.406  t=0.6s
+epoch  40/150  train_loss=0.8133  val_loss=0.8732  node_acc=0.955  edge_acc=0.816  susp_decile=0.417  t=0.5s
+epoch  41/150  train_loss=0.8126  val_loss=0.8712  node_acc=0.951  edge_acc=0.816  susp_decile=0.415  t=0.6s  *best*
+epoch  42/150  train_loss=0.8097  val_loss=0.8738  node_acc=0.951  edge_acc=0.814  susp_decile=0.412  t=0.6s
+epoch  43/150  train_loss=0.8064  val_loss=0.8690  node_acc=0.939  edge_acc=0.817  susp_decile=0.414  t=0.6s  *best*
+epoch  44/150  train_loss=0.8091  val_loss=0.8670  node_acc=0.940  edge_acc=0.819  susp_decile=0.411  t=0.6s  *best*
+epoch  45/150  train_loss=0.8082  val_loss=0.8889  node_acc=0.958  edge_acc=0.811  susp_decile=0.407  t=0.5s
+epoch  46/150  train_loss=0.8140  val_loss=0.8637  node_acc=0.940  edge_acc=0.819  susp_decile=0.410  t=0.5s  *best*
+epoch  47/150  train_loss=0.8050  val_loss=0.8758  node_acc=0.958  edge_acc=0.814  susp_decile=0.406  t=0.6s
+epoch  48/150  train_loss=0.8057  val_loss=0.8649  node_acc=0.952  edge_acc=0.819  susp_decile=0.412  t=0.6s
+epoch  49/150  train_loss=0.8064  val_loss=0.8845  node_acc=0.961  edge_acc=0.814  susp_decile=0.403  t=0.5s
+epoch  50/150  train_loss=0.8067  val_loss=0.8654  node_acc=0.942  edge_acc=0.819  susp_decile=0.405  t=0.5s
+epoch  51/150  train_loss=0.8024  val_loss=0.8718  node_acc=0.954  edge_acc=0.815  susp_decile=0.412  t=0.5s
+epoch  52/150  train_loss=0.7998  val_loss=0.8683  node_acc=0.927  edge_acc=0.820  susp_decile=0.420  t=0.5s
+epoch  53/150  train_loss=0.8013  val_loss=0.8653  node_acc=0.935  edge_acc=0.821  susp_decile=0.416  t=0.6s
+epoch  54/150  train_loss=0.8051  val_loss=0.8704  node_acc=0.957  edge_acc=0.817  susp_decile=0.411  t=0.5s
+epoch  55/150  train_loss=0.8024  val_loss=0.8709  node_acc=0.954  edge_acc=0.818  susp_decile=0.408  t=0.5s
+epoch  56/150  train_loss=0.7990  val_loss=0.8642  node_acc=0.947  edge_acc=0.820  susp_decile=0.408  t=0.5s
+epoch  57/150  train_loss=0.8005  val_loss=0.8661  node_acc=0.951  edge_acc=0.819  susp_decile=0.411  t=0.5s
+epoch  58/150  train_loss=0.7953  val_loss=0.8759  node_acc=0.955  edge_acc=0.814  susp_decile=0.416  t=0.5s
+epoch  59/150  train_loss=0.7966  val_loss=0.8668  node_acc=0.946  edge_acc=0.818  susp_decile=0.416  t=0.5s
+epoch  60/150  train_loss=0.7958  val_loss=0.8690  node_acc=0.947  edge_acc=0.816  susp_decile=0.413  t=0.5s
+epoch  61/150  train_loss=0.7942  val_loss=0.8656  node_acc=0.936  edge_acc=0.819  susp_decile=0.419  t=0.6s
+epoch  62/150  train_loss=0.7926  val_loss=0.8836  node_acc=0.957  edge_acc=0.812  susp_decile=0.419  t=0.6s
+epoch  63/150  train_loss=0.7953  val_loss=0.8742  node_acc=0.955  edge_acc=0.816  susp_decile=0.416  t=0.5s
+epoch  64/150  train_loss=0.7915  val_loss=0.8688  node_acc=0.944  edge_acc=0.816  susp_decile=0.417  t=0.5s
+epoch  65/150  train_loss=0.7931  val_loss=0.8671  node_acc=0.945  edge_acc=0.819  susp_decile=0.423  t=0.5s
+epoch  66/150  train_loss=0.7935  val_loss=0.8664  node_acc=0.929  edge_acc=0.820  susp_decile=0.417  t=0.6s
+epoch  67/150  train_loss=0.7903  val_loss=0.8667  node_acc=0.948  edge_acc=0.819  susp_decile=0.422  t=0.6s
+epoch  68/150  train_loss=0.7938  val_loss=0.8664  node_acc=0.928  edge_acc=0.820  susp_decile=0.416  t=0.6s
+epoch  69/150  train_loss=0.7916  val_loss=0.8662  node_acc=0.945  edge_acc=0.818  susp_decile=0.422  t=0.6s
+epoch  70/150  train_loss=0.7908  val_loss=0.8642  node_acc=0.933  edge_acc=0.823  susp_decile=0.420  t=0.6s
+epoch  71/150  train_loss=0.7916  val_loss=0.8824  node_acc=0.952  edge_acc=0.815  susp_decile=0.416  t=0.6s
+epoch  72/150  train_loss=0.7976  val_loss=0.8676  node_acc=0.931  edge_acc=0.821  susp_decile=0.417  t=0.6s
+epoch  73/150  train_loss=0.7915  val_loss=0.8675  node_acc=0.945  edge_acc=0.819  susp_decile=0.413  t=0.6s
+epoch  74/150  train_loss=0.7864  val_loss=0.8669  node_acc=0.934  edge_acc=0.820  susp_decile=0.422  t=0.6s
+epoch  75/150  train_loss=0.7870  val_loss=0.8694  node_acc=0.949  edge_acc=0.816  susp_decile=0.422  t=0.5s
+epoch  76/150  train_loss=0.7881  val_loss=0.8649  node_acc=0.946  edge_acc=0.820  susp_decile=0.422  t=0.6s
+epoch  77/150  train_loss=0.7894  val_loss=0.8661  node_acc=0.941  edge_acc=0.820  susp_decile=0.419  t=0.5s
+epoch  78/150  train_loss=0.7892  val_loss=0.8732  node_acc=0.955  edge_acc=0.815  susp_decile=0.411  t=0.6s
+epoch  79/150  train_loss=0.7873  val_loss=0.8883  node_acc=0.958  edge_acc=0.813  susp_decile=0.406  t=0.6s
+epoch  80/150  train_loss=0.7854  val_loss=0.8710  node_acc=0.951  edge_acc=0.819  susp_decile=0.415  t=0.6s
+epoch  81/150  train_loss=0.7875  val_loss=0.8717  node_acc=0.952  edge_acc=0.818  susp_decile=0.413  t=0.5s
+epoch  82/150  train_loss=0.7858  val_loss=0.8682  node_acc=0.928  edge_acc=0.822  susp_decile=0.423  t=0.5s
+epoch  83/150  train_loss=0.7878  val_loss=0.8667  node_acc=0.953  edge_acc=0.819  susp_decile=0.417  t=0.5s
+epoch  84/150  train_loss=0.7858  val_loss=0.8670  node_acc=0.944  edge_acc=0.820  susp_decile=0.420  t=0.5s
+epoch  85/150  train_loss=0.7833  val_loss=0.8752  node_acc=0.953  edge_acc=0.817  susp_decile=0.415  t=0.6s
+epoch  86/150  train_loss=0.7850  val_loss=0.8647  node_acc=0.947  edge_acc=0.821  susp_decile=0.417  t=0.6s
+epoch  87/150  train_loss=0.7816  val_loss=0.8662  node_acc=0.937  edge_acc=0.822  susp_decile=0.418  t=0.6s
+epoch  88/150  train_loss=0.7890  val_loss=0.8717  node_acc=0.953  edge_acc=0.817  susp_decile=0.412  t=0.5s
+epoch  89/150  train_loss=0.7815  val_loss=0.8680  node_acc=0.942  edge_acc=0.822  susp_decile=0.426  t=0.5s
+epoch  90/150  train_loss=0.7838  val_loss=0.8707  node_acc=0.955  edge_acc=0.818  susp_decile=0.412  t=0.6s
+epoch  91/150  train_loss=0.7825  val_loss=0.8673  node_acc=0.922  edge_acc=0.821  susp_decile=0.422  t=0.5s
+epoch  92/150  train_loss=0.7797  val_loss=0.8670  node_acc=0.943  edge_acc=0.821  susp_decile=0.426  t=0.5s
+epoch  93/150  train_loss=0.7793  val_loss=0.8671  node_acc=0.943  edge_acc=0.821  susp_decile=0.409  t=0.5s
+epoch  94/150  train_loss=0.7858  val_loss=0.8703  node_acc=0.955  edge_acc=0.818  susp_decile=0.415  t=0.6s
+epoch  95/150  train_loss=0.7797  val_loss=0.8769  node_acc=0.953  edge_acc=0.816  susp_decile=0.421  t=0.6s
+epoch  96/150  train_loss=0.7794  val_loss=0.8696  node_acc=0.920  edge_acc=0.820  susp_decile=0.423  t=0.6s
+epoch  97/150  train_loss=0.7795  val_loss=0.8829  node_acc=0.956  edge_acc=0.816  susp_decile=0.425  t=0.5s
+epoch  98/150  train_loss=0.7802  val_loss=0.8938  node_acc=0.959  edge_acc=0.813  susp_decile=0.421  t=0.5s
+epoch  99/150  train_loss=0.7892  val_loss=0.8637  node_acc=0.933  edge_acc=0.822  susp_decile=0.421  t=0.5s  *best*
+epoch 100/150  train_loss=0.7809  val_loss=0.8666  node_acc=0.946  edge_acc=0.821  susp_decile=0.421  t=0.5s
+epoch 101/150  train_loss=0.7775  val_loss=0.8652  node_acc=0.937  edge_acc=0.822  susp_decile=0.423  t=0.5s
+epoch 102/150  train_loss=0.7774  val_loss=0.8685  node_acc=0.921  edge_acc=0.822  susp_decile=0.417  t=0.6s
+epoch 103/150  train_loss=0.7768  val_loss=0.8651  node_acc=0.940  edge_acc=0.823  susp_decile=0.422  t=0.6s
+epoch 104/150  train_loss=0.7769  val_loss=0.8663  node_acc=0.920  edge_acc=0.820  susp_decile=0.416  t=0.6s
+epoch 105/150  train_loss=0.7758  val_loss=0.8663  node_acc=0.935  edge_acc=0.822  susp_decile=0.418  t=0.5s
+epoch 106/150  train_loss=0.7777  val_loss=0.8696  node_acc=0.950  edge_acc=0.822  susp_decile=0.415  t=0.5s
+epoch 107/150  train_loss=0.7731  val_loss=0.8686  node_acc=0.940  edge_acc=0.822  susp_decile=0.420  t=0.6s
+epoch 108/150  train_loss=0.7782  val_loss=0.8768  node_acc=0.949  edge_acc=0.820  susp_decile=0.415  t=0.5s
+epoch 109/150  train_loss=0.7740  val_loss=0.8692  node_acc=0.943  edge_acc=0.821  susp_decile=0.424  t=0.6s
+epoch 110/150  train_loss=0.7733  val_loss=0.8672  node_acc=0.940  edge_acc=0.821  susp_decile=0.416  t=0.5s
+epoch 111/150  train_loss=0.7817  val_loss=0.8661  node_acc=0.950  edge_acc=0.823  susp_decile=0.416  t=0.5s
+epoch 112/150  train_loss=0.7809  val_loss=0.8647  node_acc=0.948  edge_acc=0.823  susp_decile=0.415  t=0.5s
+epoch 113/150  train_loss=0.7724  val_loss=0.8641  node_acc=0.938  edge_acc=0.823  susp_decile=0.414  t=0.6s
+epoch 114/150  train_loss=0.7767  val_loss=0.8693  node_acc=0.947  edge_acc=0.821  susp_decile=0.422  t=0.5s
+epoch 115/150  train_loss=0.7724  val_loss=0.8676  node_acc=0.936  edge_acc=0.821  susp_decile=0.422  t=0.6s
+epoch 116/150  train_loss=0.7728  val_loss=0.8778  node_acc=0.950  edge_acc=0.819  susp_decile=0.420  t=0.6s
+epoch 117/150  train_loss=0.7756  val_loss=0.8731  node_acc=0.955  edge_acc=0.820  susp_decile=0.415  t=0.6s
+epoch 118/150  train_loss=0.7726  val_loss=0.8654  node_acc=0.930  edge_acc=0.821  susp_decile=0.422  t=0.5s
+epoch 119/150  train_loss=0.7728  val_loss=0.8645  node_acc=0.940  edge_acc=0.822  susp_decile=0.418  t=0.5s
+epoch 120/150  train_loss=0.7752  val_loss=0.8752  node_acc=0.949  edge_acc=0.820  susp_decile=0.419  t=0.5s
+epoch 121/150  train_loss=0.7743  val_loss=0.9075  node_acc=0.960  edge_acc=0.812  susp_decile=0.414  t=0.5s
+epoch 122/150  train_loss=0.7740  val_loss=0.8794  node_acc=0.951  edge_acc=0.819  susp_decile=0.424  t=0.5s
+epoch 123/150  train_loss=0.7746  val_loss=0.8708  node_acc=0.949  edge_acc=0.821  susp_decile=0.423  t=0.6s
+epoch 124/150  train_loss=0.7761  val_loss=0.8663  node_acc=0.945  edge_acc=0.823  susp_decile=0.419  t=0.5s
+epoch 125/150  train_loss=0.7693  val_loss=0.8675  node_acc=0.946  edge_acc=0.822  susp_decile=0.424  t=0.6s
+epoch 126/150  train_loss=0.7709  val_loss=0.8662  node_acc=0.945  edge_acc=0.821  susp_decile=0.423  t=0.6s
+epoch 127/150  train_loss=0.7716  val_loss=0.8779  node_acc=0.952  edge_acc=0.822  susp_decile=0.424  t=0.5s
+epoch 128/150  train_loss=0.7705  val_loss=0.8675  node_acc=0.950  edge_acc=0.823  susp_decile=0.417  t=0.6s
+epoch 129/150  train_loss=0.7710  val_loss=0.8642  node_acc=0.942  edge_acc=0.823  susp_decile=0.417  t=0.5s
+epoch 130/150  train_loss=0.7699  val_loss=0.8672  node_acc=0.937  edge_acc=0.821  susp_decile=0.422  t=0.6s
+epoch 131/150  train_loss=0.7692  val_loss=0.8671  node_acc=0.941  edge_acc=0.822  susp_decile=0.416  t=0.6s
+epoch 132/150  train_loss=0.7679  val_loss=0.8666  node_acc=0.935  edge_acc=0.823  susp_decile=0.427  t=0.6s
+epoch 133/150  train_loss=0.7708  val_loss=0.8677  node_acc=0.938  edge_acc=0.822  susp_decile=0.417  t=0.6s
+epoch 134/150  train_loss=0.7734  val_loss=0.8691  node_acc=0.923  edge_acc=0.819  susp_decile=0.417  t=0.6s
+epoch 135/150  train_loss=0.7725  val_loss=0.8677  node_acc=0.917  edge_acc=0.821  susp_decile=0.411  t=0.6s
+epoch 136/150  train_loss=0.7695  val_loss=0.8938  node_acc=0.957  edge_acc=0.816  susp_decile=0.421  t=0.5s
+epoch 137/150  train_loss=0.7715  val_loss=0.8664  node_acc=0.941  edge_acc=0.823  susp_decile=0.411  t=0.5s
+epoch 138/150  train_loss=0.7701  val_loss=0.8658  node_acc=0.943  edge_acc=0.822  susp_decile=0.410  t=0.5s
+epoch 139/150  train_loss=0.7674  val_loss=0.8785  node_acc=0.947  edge_acc=0.820  susp_decile=0.416  t=0.5s
+epoch 140/150  train_loss=0.7680  val_loss=0.8717  node_acc=0.940  edge_acc=0.823  susp_decile=0.413  t=0.6s
+epoch 141/150  train_loss=0.7699  val_loss=0.8665  node_acc=0.941  edge_acc=0.823  susp_decile=0.418  t=0.6s
+epoch 142/150  train_loss=0.7686  val_loss=0.8683  node_acc=0.942  edge_acc=0.823  susp_decile=0.415  t=0.5s
+epoch 143/150  train_loss=0.7783  val_loss=0.8754  node_acc=0.954  edge_acc=0.819  susp_decile=0.421  t=0.5s
+epoch 144/150  train_loss=0.7697  val_loss=0.8675  node_acc=0.943  edge_acc=0.821  susp_decile=0.417  t=0.5s
+epoch 145/150  train_loss=0.7668  val_loss=0.8711  node_acc=0.943  edge_acc=0.822  susp_decile=0.421  t=0.5s
+epoch 146/150  train_loss=0.7670  val_loss=0.8841  node_acc=0.956  edge_acc=0.817  susp_decile=0.412  t=0.5s
+epoch 147/150  train_loss=0.7646  val_loss=0.8758  node_acc=0.946  edge_acc=0.820  susp_decile=0.418  t=0.5s
+epoch 148/150  train_loss=0.7638  val_loss=0.8695  node_acc=0.929  edge_acc=0.822  susp_decile=0.415  t=0.5s
+epoch 149/150  train_loss=0.7639  val_loss=0.8822  node_acc=0.948  edge_acc=0.821  susp_decile=0.419  t=0.6s
+epoch 150/150  train_loss=0.7708  val_loss=0.9123  node_acc=0.960  edge_acc=0.813  susp_decile=0.413  t=0.6s
+saved best weights (epoch 99, val_loss=0.8637) -> C:\Users\ufuka\OneDrive - Ostim Teknik Universitesi\Masaüstü\tsplib\models\gnn_trained.npz

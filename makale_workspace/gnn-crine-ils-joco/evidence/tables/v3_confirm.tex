@@ -1,0 +1,23 @@
+% OTOMATIK URETIM -- evidence/scripts/build_v3.py (elle duzenleme)
+\begin{table}[!htbp]
+\centering\small\setlength{\tabcolsep}{3pt}
+\caption{Doğrulayıcı test (PROTOCOL\_v2, holdout2: 54 problem, 10 tohum, 10~sn). $\Delta$: A$-$B gap farkı [puan], negatif A lehine; kötü-değil sınırı 0{,}05. Renk: anlamlı fark.}
+\label{tab:v3-confirm}
+\begin{tabularx}{\textwidth}{@{}l>{\raggedright\arraybackslash}Xlccccl@{}}
+\toprule
+ID & Karşılaştırma (A$-$B) & Test & $\Delta$ & \%95 GA & A/E/B & $p$ & Karar \\
+\midrule
+V1 & Çevrimiçi $-$ Sabit doğrusal & üstünlük & \kotu{+0{,}291} & [+0{,}221; +0{,}367] & 0/0/54 & $1{,}6\times10^{-10}$ & $H_0$ ret \\ % E599
+V2 & Fazla-uzunluk $-$ Rastgele & üstünlük & \iyi{$-$0{,}172} & [$-$0{,}255; $-$0{,}098] & 44/0/10 & $3{,}7\times10^{-7}$ & $H_0$ ret \\ % E600
+V3 & Fazla-uzunluk $-$ GNN & kötü-değil & \iyi{$-$0{,}119} & [$-$0{,}195; $-$0{,}051] & 41/0/13 & $7{,}9\times10^{-9}$ & $H_0$ ret \\ % E601
+V4 & Fazla-uzunluk $-$ Kazanç-MLP & kötü-değil & \iyi{$-$0{,}083} & [$-$0{,}146; $-$0{,}026] & 42/0/12 & $1{,}8\times10^{-7}$ & $H_0$ ret \\ % E602
+\midrule
+\multicolumn{8}{l}{\textit{İkincil, keşifsel (protokolde adı geçen 5 çift; $p$ Holm düzeltmeli)}} \\
+-- & kNN $-$ Rastgele & üstünlük & $-$0{,}079 & [$-$0{,}149; $-$0{,}018] & 31/0/23 & 0{,}169 & anlamsız \\ % E603
+-- & Fazla-uzunluk $-$ kNN & üstünlük & \iyi{$-$0{,}093} & [$-$0{,}144; $-$0{,}040] & 43/0/11 & $3{,}4\times10^{-5}$ & anlamlı \\ % E604
+-- & GNN $-$ kNN & üstünlük & +0{,}026 & [$-$0{,}027; +0{,}089] & 30/0/24 & 1{,}000 & anlamsız \\ % E605
+-- & Kazanç-MLP $-$ Üyelik-MLP & üstünlük & $-$0{,}006 & [$-$0{,}052; +0{,}038] & 25/0/29 & 1{,}000 & anlamsız \\ % E606
+-- & Fazla-uzunluk $-$ GNN & üstünlük & \iyi{$-$0{,}119} & [$-$0{,}195; $-$0{,}051] & 41/0/13 & $1{,}0\times10^{-4}$ & anlamlı \\ % E607
+\bottomrule
+\end{tabularx}
+\end{table}

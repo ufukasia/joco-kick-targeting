@@ -1,0 +1,15 @@
+% OTOMATIK URETIM — evidence/scripts/build_tables.py
+% Kaynak: results/waterloo_vlsi_current_16x5_summary.json
+\begin{table}[!htbp]
+ \centering\small
+ \caption{Bağımsız 16 Waterloo VLSI problemi ve beş tohumda suspicious--random karşılaştırması. $-$Gap ve farklar puan; süre gerçekleşen ortalama saniyedir.}
+ \label{tab:vlsi-primary}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc}
+\toprule
+Yöntem & $-$Gap & Süre & Kick & Kabul & $\Delta$R & Wilcoxon $p$ \\
+\midrule
+Random & -4,86 & 5,44 & 11,74 & 2,14 & --- & --- \\
+Suspicious & -4,66 & 5,42 & 11,50 & 2,75 & \iyi{+0,20} & \iyi{0,029} \\
+\bottomrule
+\end{tabular*}
+\end{table}

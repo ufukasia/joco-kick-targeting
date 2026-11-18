@@ -1,0 +1,780 @@
+{
+  "status": "post-hoc exploratory analysis; not independent confirmatory evidence",
+  "sources": [
+    "results/tsplib_scale_72x5_summary.json",
+    "results/focused_tsplib_9x10_summary.json"
+  ],
+  "classification_basis": "TSPLIB file COMMENT fields: drilling problem or rattled grid",
+  "multiplicity": "Holm across four exploratory regime comparisons",
+  "inference_unit": "instance; seeds averaged within instance",
+  "n_unique_instances": 27,
+  "comparisons": [
+    {
+      "comparison": "suspicious_minus_random",
+      "method": "suspicious",
+      "opponent": "random",
+      "n_instances": 23,
+      "n_nonzero": 17,
+      "mean_quality_difference": -0.2095551861642481,
+      "median_quality_difference": 0.0,
+      "wins": 10,
+      "ties": 6,
+      "losses": 7,
+      "wilcoxon_statistic": 62.0,
+      "p_raw": 0.4924592974852695,
+      "rank_biserial": 0.1895424836601307,
+      "regime": "pcb_drilling_all",
+      "instances": [
+        "u159",
+        "d198",
+        "a280",
+        "fl417",
+        "pcb442",
+        "d493",
+        "u574",
+        "p654",
+        "d657",
+        "u724",
+        "u1060",
+        "pcb1173",
+        "d1291",
+        "fl1400",
+        "u1432",
+        "fl1577",
+        "d1655",
+        "u1817",
+        "d2103",
+        "u2152",
+        "u2319",
+        "pcb3038",
+        "fl3795"
+      ],
+      "kick_active_both": 17,
+      "zero_kick_both": 6,
+      "mean_gap_random": 8.355352007136338,
+      "mean_gap_suspicious": 8.564907193300584,
+      "mean_elapsed_random": 5.927020962608999,
+      "mean_elapsed_suspicious": 5.931068469130348,
+      "p_holm": 0.4924592974852695,
+      "significant_0_05": false,
+      "bootstrap_95_ci": [
+        -0.9201865865966206,
+        0.22826849123758294
+      ]
+    },
+    {
+      "comparison": "suspicious_minus_random",
+      "method": "suspicious",
+      "opponent": "random",
+      "n_instances": 10,
+      "n_nonzero": 10,
+      "mean_quality_difference": 0.32351387141760457,
+      "median_quality_difference": 0.2791722103005392,
+      "wins": 8,
+      "ties": 0,
+      "losses": 2,
+      "wilcoxon_statistic": 8.0,
+      "p_raw": 0.048828125,
+      "rank_biserial": 0.7090909090909091,
+      "regime": "pcb_drilling_n_le_999",
+      "instances": [
+        "u159",
+        "d198",
+        "a280",
+        "fl417",
+        "pcb442",
+        "d493",
+        "u574",
+        "p654",
+        "d657",
+        "u724"
+      ],
+      "kick_active_both": 10,
+      "zero_kick_both": 0,
+      "mean_gap_random": 6.149393523048637,
+      "mean_gap_suspicious": 5.825879651631032,
+      "mean_elapsed_random": 5.296002960000115,
+      "mean_elapsed_suspicious": 5.364998187999663,
+      "p_holm": 0.1953125,
+      "significant_0_05": false,
+      "bootstrap_95_ci": [
+        0.022070369632407598,
+        0.5898711035787262
+      ]
+    },
+    {
+      "comparison": "suspicious_minus_random",
+      "method": "suspicious",
+      "opponent": "random",
+      "n_instances": 13,
+      "n_nonzero": 7,
+      "mean_quality_difference": -0.6196083073810578,
+      "median_quality_difference": 0.0,
+      "wins": 2,
+      "ties": 6,
+      "losses": 5,
+      "wilcoxon_statistic": 5.0,
+      "p_raw": 0.15625,
+      "rank_biserial": -0.6428571428571429,
+      "regime": "pcb_drilling_n_ge_1000",
+      "instances": [
+        "u1060",
+        "pcb1173",
+        "d1291",
+        "fl1400",
+        "u1432",
+        "fl1577",
+        "d1655",
+        "u1817",
+        "d2103",
+        "u2152",
+        "u2319",
+        "pcb3038",
+        "fl3795"
+      ],
+      "kick_active_both": 7,
+      "zero_kick_both": 6,
+      "mean_gap_random": 10.05224314874226,
+      "mean_gap_suspicious": 10.671851456123317,
+      "mean_elapsed_random": 6.412419426154296,
+      "mean_elapsed_suspicious": 6.366507146923182,
+      "p_holm": 0.375,
+      "significant_0_05": false,
+      "bootstrap_95_ci": [
+        -1.7625716314714526,
+        0.009042845473039197
+      ]
+    },
+    {
+      "comparison": "suspicious_minus_random",
+      "method": "suspicious",
+      "opponent": "random",
+      "n_instances": 4,
+      "n_nonzero": 4,
+      "mean_quality_difference": 0.4189470424865169,
+      "median_quality_difference": 0.4259846513858293,
+      "wins": 4,
+      "ties": 0,
+      "losses": 0,
+      "wilcoxon_statistic": 0.0,
+      "p_raw": 0.125,
+      "rank_biserial": 1.0,
+      "regime": "rattled_grid",
+      "instances": [
+        "rat99",
+        "rat195",
+        "rat575",
+        "rat783"
+      ],
+      "kick_active_both": 4,
+      "zero_kick_both": 0,
+      "mean_gap_random": 4.465886245154005,
+      "mean_gap_suspicious": 4.046939202667487,
+      "mean_elapsed_random": 5.452435594999588,
+      "mean_elapsed_suspicious": 5.254244039999685,
+      "p_holm": 0.375,
+      "significant_0_05": false,
+      "bootstrap_95_ci": [
+        0.3533557668044017,
+        0.4775007092693196
+      ]
+    }
+  ],
+  "per_instance": [
+    {
+      "instance": "rat99",
+      "kind": null,
+      "n": 99,
+      "random": {
+        "quality": -0.8587943848059455,
+        "cost": 1221.4,
+        "elapsed": 5.106717939999362,
+        "kicks": 29.4,
+        "accepted_kicks": 5.6
+      },
+      "suspicious": {
+        "quality": -0.44591246903385634,
+        "cost": 1216.4,
+        "elapsed": 5.062226060000103,
+        "kicks": 32.0,
+        "accepted_kicks": 5.0
+      },
+      "source": "tsplib_scale_72x5",
+      "family": "rattled_grid"
+    },
+    {
+      "instance": "u159",
+      "kind": null,
+      "n": 159,
+      "random": {
+        "quality": -1.0242395437262357,
+        "cost": 42511.0,
+        "elapsed": 5.073049379999429,
+        "kicks": 27.4,
+        "accepted_kicks": 3.4
+      },
+      "suspicious": {
+        "quality": -1.7200570342205324,
+        "cost": 42803.8,
+        "elapsed": 5.083650759999,
+        "kicks": 30.8,
+        "accepted_kicks": 3.4
+      },
+      "source": "tsplib_scale_72x5",
+      "family": "pcb_drilling"
+    },
+    {
+      "instance": "rat195",
+      "kind": null,
+      "n": 195,
+      "random": {
+        "quality": -1.9974171330176496,
+        "cost": 2369.4,
+        "elapsed": 5.127775439999823,
+        "kicks": 22.2,
+        "accepted_kicks": 2.8
+      },
+      "suspicious": {
+        "quality": -1.55832974601808,
+        "cost": 2359.2,
+        "elapsed": 5.095145139998931,
+        "kicks": 21.4,
+        "accepted_kicks": 4.2
+      },
+      "source": "tsplib_scale_72x5",
+      "family": "rattled_grid"
+    },
+    {
+      "instance": "d198",
+      "kind": null,
+      "n": 198,
+      "random": {
+        "quality": -1.452471482889734,
+        "cost": 16009.2,
+        "elapsed": 5.1913678599994455,
+        "kicks": 12.8,
+        "accepted_kicks": 4.0
+      },
+      "suspicious": {
+        "quality": -1.4778200253485425,
+        "cost": 16013.2,
+        "elapsed": 5.2362990799992986,
+        "kicks": 12.2,
+        "accepted_kicks": 4.4
+      },
+      "source": "tsplib_scale_72x5",
+      "family": "pcb_drilling"
+    },
+    {
+      "instance": "a280",
+      "kind": null,
+      "n": 280,
+      "random": {
+        "quality": -4.164404808065141,
+        "cost": 2686.4,
+        "elapsed": 5.238350340000034,
+        "kicks": 8.0,
+        "accepted_kicks": 2.8
+      },
+      "suspicious": {
+        "quality": -4.00930593253199,
+        "cost": 2682.4,
+        "elapsed": 5.133269439999276,
+        "kicks": 8.4,
+        "accepted_kicks": 3.0
+      },
+      "source": "tsplib_scale_72x5",
+      "family": "pcb_drilling"
+    },
+    {
+      "instance": "fl417",
+      "kind": null,
+      "n": 417,
+      "random": {
+        "quality": -5.846050080094427,
+        "cost": 12554.4,
+        "elapsed": 5.430178560000786,
+        "kicks": 4.8,
+        "accepted_kicks": 1.0
+      },
+      "suspicious": {
+        "quality": -5.684175027400725,
+        "cost": 12535.2,
+        "elapsed": 5.1929529800007,
+        "kicks": 4.8,
+        "accepted_kicks": 1.4
+      },
+      "source": "tsplib_scale_72x5",
+      "family": "pcb_drilling"
+    },
+    {
+      "instance": "pcb442",
+      "kind": null,
+      "n": 442,
+      "random": {
+        "quality": -4.1356492969396195,
+        "cost": 52878.0,
+        "elapsed": 5.264417240001057,
+        "kicks": 10.6,
+        "accepted_kicks": 6.0
+      },
+      "suspicious": {
+        "quality": -3.369569498601757,
+        "cost": 52489.0,
+        "elapsed": 5.33895837999953,
+        "kicks": 10.0,
+        "accepted_kicks": 6.4
+      },
+      "source": "tsplib_scale_72x5",
+      "family": "pcb_drilling"
+    },
+    {
+      "instance": "d493",
+      "kind": null,
+      "n": 493,
+      "random": {
+        "quality": -8.22924404319753,
+        "cost": 37882.4,
+        "elapsed": 5.2092931800005315,
+        "kicks": 10.0,
+        "accepted_kicks": 4.6
+      },
+      "suspicious": {
+        "quality": -7.9841151934175185,
+        "cost": 37796.6,
+        "elapsed": 5.226825839999947,
+        "kicks": 9.6,
+        "accepted_kicks": 5.8
+      },
+      "source": "tsplib_scale_72x5",
+      "family": "pcb_drilling"
+    },
+    {
+      "instance": "u574",
+      "kind": null,
+      "n": 574,
+      "random": {
+        "quality": -7.148082915594093,
+        "cost": 39543.0,
+        "elapsed": 5.408426320000581,
+        "kicks": 2.0,
+        "accepted_kicks": 1.2
+      },
+      "suspicious": {
+        "quality": -6.156347378404011,
+        "cost": 39177.0,
+        "elapsed": 5.615759839999373,
+        "kicks": 2.0,
+        "accepted_kicks": 1.4
+      },
+      "source": "tsplib_scale_72x5",
+      "family": "pcb_drilling"
+    },
+    {
+      "instance": "rat575",
+      "kind": null,
+      "n": 575,
+      "random": {
+        "quality": -7.798612136424038,
+        "cost": 7301.2,
+        "elapsed": 5.8741886399991925,
+        "kicks": 3.2,
+        "accepted_kicks": 3.0
+      },
+      "suspicious": {
+        "quality": -7.299571829322308,
+        "cost": 7267.4,
+        "elapsed": 5.617827540000144,
+        "kicks": 3.0,
+        "accepted_kicks": 2.8
+      },
+      "source": "tsplib_scale_72x5",
+      "family": "rattled_grid"
+    },
+    {
+      "instance": "p654",
+      "kind": null,
+      "n": 654,
+      "random": {
+        "quality": -14.816846116098493,
+        "cost": 39776.0,
+        "elapsed": 5.462556079999922,
+        "kicks": 2.6,
+        "accepted_kicks": 0.4
+      },
+      "suspicious": {
+        "quality": -14.231446468261987,
+        "cost": 39573.2,
+        "elapsed": 5.839927879999595,
+        "kicks": 2.4,
+        "accepted_kicks": 0.6
+      },
+      "source": "tsplib_scale_72x5",
+      "family": "pcb_drilling"
+    },
+    {
+      "instance": "d657",
+      "kind": null,
+      "n": 657,
+      "random": {
+        "quality": -8.667402682368335,
+        "cost": 53151.4,
+        "elapsed": 5.304673179999372,
+        "kicks": 3.0,
+        "accepted_kicks": 2.4
+      },
+      "suspicious": {
+        "quality": -8.354187111547269,
+        "cost": 52998.2,
+        "elapsed": 5.7158393999998225,
+        "kicks": 3.4,
+        "accepted_kicks": 2.2
+      },
+      "source": "tsplib_scale_72x5",
+      "family": "pcb_drilling"
+    },
+    {
+      "instance": "u724",
+      "kind": null,
+      "n": 724,
+      "random": {
+        "quality": -6.009544261512765,
+        "cost": 44428.6,
+        "elapsed": 5.377717459999985,
+        "kicks": 5.6,
+        "accepted_kicks": 4.4
+      },
+      "suspicious": {
+        "quality": -5.271772846575996,
+        "cost": 44119.4,
+        "elapsed": 5.2664982800000875,
+        "kicks": 5.2,
+        "accepted_kicks": 3.8
+      },
+      "source": "tsplib_scale_72x5",
+      "family": "pcb_drilling"
+    },
+    {
+      "instance": "rat783",
+      "kind": null,
+      "n": 783,
+      "random": {
+        "quality": -7.208721326368385,
+        "cost": 9440.8,
+        "elapsed": 5.701060359999974,
+        "kicks": 5.2,
+        "accepted_kicks": 3.2
+      },
+      "suspicious": {
+        "quality": -6.883942766295706,
+        "cost": 9412.2,
+        "elapsed": 5.241777419999562,
+        "kicks": 4.2,
+        "accepted_kicks": 3.2
+      },
+      "source": "tsplib_scale_72x5",
+      "family": "rattled_grid"
+    },
+    {
+      "instance": "u1060",
+      "kind": null,
+      "n": 1060,
+      "random": {
+        "quality": -10.705239765455568,
+        "cost": 248083.8,
+        "elapsed": 6.849063980000937,
+        "kicks": 0.6,
+        "accepted_kicks": 0.2
+      },
+      "suspicious": {
+        "quality": -10.764589859612485,
+        "cost": 248216.8,
+        "elapsed": 6.739212520000001,
+        "kicks": 0.6,
+        "accepted_kicks": 0.0
+      },
+      "source": "tsplib_scale_72x5",
+      "family": "pcb_drilling"
+    },
+    {
+      "instance": "pcb1173",
+      "kind": null,
+      "n": 1173,
+      "random": {
+        "quality": -4.672361667721296,
+        "cost": 59550.2,
+        "elapsed": 5.672154960001353,
+        "kicks": 1.8,
+        "accepted_kicks": 0.8
+      },
+      "suspicious": {
+        "quality": -4.587991281726781,
+        "cost": 59502.2,
+        "elapsed": 5.5848008399982065,
+        "kicks": 2.0,
+        "accepted_kicks": 1.2
+      },
+      "source": "tsplib_scale_72x5",
+      "family": "pcb_drilling"
+    },
+    {
+      "instance": "d1291",
+      "kind": null,
+      "n": 1291,
+      "random": {
+        "quality": -7.799059073640282,
+        "cost": 54763.0,
+        "elapsed": 5.830635600000823,
+        "kicks": 0.8,
+        "accepted_kicks": 0.6
+      },
+      "suspicious": {
+        "quality": -8.434479636227632,
+        "cost": 55085.8,
+        "elapsed": 5.586688800001139,
+        "kicks": 0.8,
+        "accepted_kicks": 0.6
+      },
+      "source": "tsplib_scale_72x5",
+      "family": "pcb_drilling"
+    },
+    {
+      "instance": "fl1400",
+      "kind": null,
+      "n": 1400,
+      "random": {
+        "quality": -12.298901972474784,
+        "cost": 22602.4,
+        "elapsed": 5.433701459999429,
+        "kicks": 2.0,
+        "accepted_kicks": 0.8
+      },
+      "suspicious": {
+        "quality": -19.4296219009291,
+        "cost": 24037.6,
+        "elapsed": 5.475970479998796,
+        "kicks": 2.8,
+        "accepted_kicks": 0.8
+      },
+      "source": "tsplib_scale_72x5",
+      "family": "pcb_drilling"
+    },
+    {
+      "instance": "u1432",
+      "kind": null,
+      "n": 1432,
+      "random": {
+        "quality": -5.579656141727137,
+        "cost": 161505.2,
+        "elapsed": 6.338959560000513,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious": {
+        "quality": -5.579656141727137,
+        "cost": 161505.2,
+        "elapsed": 6.459507460000168,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "source": "tsplib_scale_72x5",
+      "family": "pcb_drilling"
+    },
+    {
+      "instance": "fl1577",
+      "kind": null,
+      "n": 1577,
+      "random": {
+        "quality": -20.052137174704477,
+        "cost": 26710.4,
+        "elapsed": 7.121080660000734,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious": {
+        "quality": -20.052137174704477,
+        "cost": 26710.4,
+        "elapsed": 7.035664819999511,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "source": "tsplib_scale_72x5",
+      "family": "pcb_drilling"
+    },
+    {
+      "instance": "d1655",
+      "kind": null,
+      "n": 1655,
+      "random": {
+        "quality": -13.201455060520217,
+        "cost": 70329.8,
+        "elapsed": 6.050415300000168,
+        "kicks": 0.2,
+        "accepted_kicks": 0.0
+      },
+      "suspicious": {
+        "quality": -12.926860674736028,
+        "cost": 70159.2,
+        "elapsed": 6.400250019999658,
+        "kicks": 0.2,
+        "accepted_kicks": 0.2
+      },
+      "source": "tsplib_scale_72x5",
+      "family": "pcb_drilling"
+    },
+    {
+      "instance": "u1817",
+      "kind": null,
+      "n": 1817,
+      "random": {
+        "quality": -11.294208143214279,
+        "cost": 63661.4,
+        "elapsed": 6.268228700001055,
+        "kicks": 0.8,
+        "accepted_kicks": 0.6
+      },
+      "suspicious": {
+        "quality": -11.607139735319313,
+        "cost": 63840.4,
+        "elapsed": 6.149291380000795,
+        "kicks": 0.8,
+        "accepted_kicks": 0.6
+      },
+      "source": "tsplib_scale_72x5",
+      "family": "pcb_drilling"
+    },
+    {
+      "instance": "d2103",
+      "kind": null,
+      "n": 2103,
+      "random": {
+        "quality": -4.819390926041019,
+        "cost": 84327.2,
+        "elapsed": 6.27938084000125,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious": {
+        "quality": -5.094841516469858,
+        "cost": 84548.8,
+        "elapsed": 5.844837199999165,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "source": "tsplib_scale_72x5",
+      "family": "pcb_drilling"
+    },
+    {
+      "instance": "u2152",
+      "kind": null,
+      "n": 2152,
+      "random": {
+        "quality": -12.13421941387951,
+        "cost": 72049.6,
+        "elapsed": 5.224415379999118,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious": {
+        "quality": -12.13421941387951,
+        "cost": 72049.6,
+        "elapsed": 5.258934040000168,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "source": "tsplib_scale_72x5",
+      "family": "pcb_drilling"
+    },
+    {
+      "instance": "u2319",
+      "kind": null,
+      "n": 2319,
+      "random": {
+        "quality": -1.3720886551465064,
+        "cost": 237470.2,
+        "elapsed": 5.7762324999996055,
+        "kicks": 1.6,
+        "accepted_kicks": 0.0
+      },
+      "suspicious": {
+        "quality": -1.3720886551465064,
+        "cost": 237470.2,
+        "elapsed": 5.751157340001373,
+        "kicks": 1.6,
+        "accepted_kicks": 0.0
+      },
+      "source": "tsplib_scale_72x5",
+      "family": "pcb_drilling"
+    },
+    {
+      "instance": "pcb3038",
+      "kind": null,
+      "n": 3038,
+      "random": {
+        "quality": -8.858047554722791,
+        "cost": 149891.0,
+        "elapsed": 7.72254733999871,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious": {
+        "quality": -8.858047554722791,
+        "cost": 149891.0,
+        "elapsed": 7.75355630000413,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious_reactive": {
+        "quality": -8.858047554722791,
+        "cost": 149891.0,
+        "elapsed": 7.6820525800008905,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "focused_bandit": {
+        "quality": -8.858047554722791,
+        "cost": 149891.0,
+        "elapsed": 7.697864790001768,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "source": "focused_tsplib_9x10",
+      "family": "pcb_drilling"
+    },
+    {
+      "instance": "fl3795",
+      "kind": null,
+      "n": 3795,
+      "random": {
+        "quality": -17.892395384401503,
+        "cost": 33920.0,
+        "elapsed": 8.794636260002154,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious": {
+        "quality": -17.892395384401503,
+        "cost": 33920.0,
+        "elapsed": 8.724721709998267,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "suspicious_reactive": {
+        "quality": -17.892395384401503,
+        "cost": 33920.0,
+        "elapsed": 8.748547259999032,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "focused_bandit": {
+        "quality": -17.892395384401503,
+        "cost": 33920.0,
+        "elapsed": 8.777341249999882,
+        "kicks": 0.0,
+        "accepted_kicks": 0.0
+      },
+      "source": "focused_tsplib_9x10",
+      "family": "pcb_drilling"
+    }
+  ]
+}

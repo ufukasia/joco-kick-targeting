@@ -1,0 +1,36 @@
+% MANSET (hero) -- OTOMATIK URETIM: evidence/scripts/build_v3.py (figures/scripts/manset.py)
+% Veri: figures/data/manset_diff_gnn.dat, manset_diff_random.dat, manset_vitrin.csv (vitrin_sec.py, kategori A)
+% Kanit: E789 (vs GNN), E790 (vs Random); vitrin: evidence/vitrin.json
+% vitrin_sec kazanma orani (gurultu |d|>0.0156 pt): 70.4%
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=1 by 2, vertical sep=1.25cm},
+  width=\textwidth, height=5.4cm, xmin=0, xmax=55, xtick=\empty,
+  xlabel={Holdout2 instances, sorted by $\Delta$ (54)}, title style={font=\small, yshift=-1ex},
+  tick label style={font=\scriptsize}, label style={font=\small},
+  y tick label style={/pgf/number format/fixed, /pgf/number format/precision=1},
+  ymajorgrids, grid style={black!10}]
+\nextgroupplot[ymin=-1.4, ymax=0.8,
+  ylabel={$\Delta$ gap, Excess $-$ GNN [pt]}, title={(a) Excess vs.\ GNN}]
+\addplot[ybar, bar width=0.72, fill=iyiRenk, draw=none] table[x=rank, y=win, unbounded coords=jump] {figures/data/manset_diff_gnn.dat};
+\addplot[ybar, bar width=0.72, fill=kotuRenk, draw=none] table[x=rank, y=loss, unbounded coords=jump] {figures/data/manset_diff_gnn.dat};
+\draw[black!60] (axis cs:0,0) -- (axis cs:55,0);
+\node[anchor=north west, font=\small, fill=white, inner sep=2pt, align=left] at (axis description cs:0.01,0.97) {\textcolor{iyiRenk}{\textbf{Excess lower gap: 41/54}}\quad \textcolor{kotuRenk}{\textit{GNN lower gap: 13/54}}};
+\node[circle, fill=black, inner sep=1.1pt] (v0) at (axis cs:1,-1.18350) {};
+\node[anchor=west, font=\scriptsize, fill=white, inner sep=1pt, draw=black!30] (l0) at (axis cs:19,-1.0751) {h2c02 (clustered): Excess 0.29\%, GNN 1.47\%};
+\draw[black!70, thin, -{Latex[length=1.5mm]}] (l0.west) -- (v0);
+\node[circle, fill=black, inner sep=1.1pt] (v1) at (axis cs:3,-0.81961) {};
+\node[anchor=west, font=\scriptsize, fill=white, inner sep=1pt, draw=black!30] (l1) at (axis cs:19,-0.7861) {eg7146 (real): Excess 1.53\%, GNN 2.35\%};
+\draw[black!70, thin, -{Latex[length=1.5mm]}] (l1.west) -- (v1);
+\node[circle, fill=black, inner sep=1.1pt] (v2) at (axis cs:17,-0.12025) {};
+\node[anchor=west, font=\scriptsize, fill=white, inner sep=1pt, draw=black!30] (l2) at (axis cs:19,-0.4970) {h2u12 (uniform): Excess 0.46\%, GNN 0.58\%};
+\draw[black!70, thin, -{Latex[length=1.5mm]}] (l2.west) -- (v2);
+\node[anchor=east, font=\scriptsize, fill=white, inner sep=1pt, draw=black!30, text=kotuRenk] (c0) at (axis cs:51.5,0.2803) {counter-example h2c13 (clustered): Excess 2.16\%, GNN 1.53\%};
+\draw[black!70, thin, -{Latex[length=1.5mm]}] (c0.east) -- (axis cs:53.6,0.2803);
+\nextgroupplot[ymin=-1.5, ymax=0.6,
+  ylabel={$\Delta$ gap, Excess $-$ Random [pt]}, title={(b) Excess vs.\ Random}]
+\addplot[ybar, bar width=0.72, fill=iyiRenk, draw=none] table[x=rank, y=win, unbounded coords=jump] {figures/data/manset_diff_random.dat};
+\addplot[ybar, bar width=0.72, fill=kotuRenk, draw=none] table[x=rank, y=loss, unbounded coords=jump] {figures/data/manset_diff_random.dat};
+\draw[black!60] (axis cs:0,0) -- (axis cs:55,0);
+\node[anchor=north west, font=\small, fill=white, inner sep=2pt, align=left] at (axis description cs:0.01,0.97) {\textcolor{iyiRenk}{\textbf{Excess lower gap: 44/54}}\quad \textcolor{kotuRenk}{\textit{Random lower gap: 10/54}}};
+\end{groupplot}
+\end{tikzpicture}

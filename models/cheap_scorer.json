@@ -1,0 +1,11 @@
+{
+ "chosen": "mlp",
+ "auc_lr": 0.8254004471837825,
+ "auc_mlp": 0.8322345351983421,
+ "auc_knn_rank": 0.8120803137662926,
+ "n_train_rows": 244098,
+ "n_val_rows": 45810,
+ "train_files": 100,
+ "val_files": 20,
+ "n_features": 17
+}

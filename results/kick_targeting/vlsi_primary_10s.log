@@ -1,0 +1,616 @@
+[1/380      63s] dkf3954 s0 n=3954 best=random_global random_global=0.845 gnn_global=1.117 knn_global=0.957 random_local=1.587 gnn_local=1.141 knn_local=1.452
+[2/380      63s] dkf3954 s1 n=3954 best=knn_global random_global=1.348 gnn_global=1.220 knn_global=0.901 random_local=1.356 gnn_local=1.499 knn_local=1.428
+[3/380      63s] dkf3954 s3 n=3954 best=gnn_global random_global=0.957 gnn_global=0.877 knn_global=1.069 random_local=1.595 gnn_local=1.149 knn_local=1.348
+[4/380      63s] dkf3954 s2 n=3954 best=gnn_global random_global=0.925 gnn_global=0.694 knn_global=0.806 random_local=1.164 gnn_local=1.356 knn_local=0.981
+[5/380      63s] dkf3954 s4 n=3954 best=gnn_global random_global=1.053 gnn_global=0.566 knn_global=0.686 random_local=1.101 gnn_local=1.021 knn_local=1.316
+[6/380      63s] dkf3954 s5 n=3954 best=knn_global random_global=1.085 gnn_global=1.029 knn_global=0.798 random_local=1.388 gnn_local=1.133 knn_local=1.244
+[7/380      63s] dkf3954 s6 n=3954 best=knn_global random_global=1.244 gnn_global=0.957 knn_global=0.941 random_local=1.180 gnn_local=1.499 knn_local=1.380
+[8/380      63s] dkf3954 s7 n=3954 best=knn_local random_global=1.292 gnn_global=1.133 knn_global=0.989 random_local=1.085 gnn_local=1.196 knn_local=0.949
+[9/380     123s] dkf3954 s8 n=3954 best=knn_global random_global=1.125 gnn_global=1.117 knn_global=0.893 random_local=1.284 gnn_local=1.539 knn_local=1.635
+[10/380     123s] dkf3954 s9 n=3954 best=random_global random_global=0.933 gnn_global=0.981 knn_global=0.933 random_local=1.523 gnn_local=1.563 knn_local=1.204
+[11/380     123s] dkc3938 s0 n=3938 best=gnn_local random_global=1.040 gnn_global=0.904 knn_global=1.048 random_local=1.272 gnn_local=0.728 knn_local=1.408
+[12/380     123s] dkc3938 s1 n=3938 best=knn_global random_global=0.992 gnn_global=0.880 knn_global=0.696 random_local=1.176 gnn_local=1.616 knn_local=1.104
+[13/380     123s] dkc3938 s2 n=3938 best=gnn_local random_global=1.008 gnn_global=0.952 knn_global=0.856 random_local=1.192 gnn_local=0.808 knn_local=0.920
+[14/380     123s] dkc3938 s3 n=3938 best=gnn_global random_global=0.904 gnn_global=0.800 knn_global=1.072 random_local=1.360 gnn_local=1.512 knn_local=1.440
+[15/380     123s] dkc3938 s4 n=3938 best=knn_global random_global=1.400 gnn_global=1.568 knn_global=0.888 random_local=1.480 gnn_local=1.368 knn_local=0.944
+[16/380     124s] dkc3938 s5 n=3938 best=gnn_global random_global=1.128 gnn_global=1.024 knn_global=1.056 random_local=1.536 gnn_local=1.048 knn_local=1.336
+[17/380     183s] dkc3938 s8 n=3938 best=gnn_global random_global=0.888 gnn_global=0.672 knn_global=1.024 random_local=1.176 gnn_local=1.328 knn_local=1.272
+[18/380     183s] dkc3938 s6 n=3938 best=gnn_global random_global=1.320 gnn_global=0.808 knn_global=1.016 random_local=1.000 gnn_local=0.936 knn_local=0.952
+[19/380     183s] dkc3938 s7 n=3938 best=random_global random_global=0.928 gnn_global=1.024 knn_global=0.968 random_local=1.232 gnn_local=1.384 knn_local=1.064
+[20/380     183s] xua3937 s0 n=3937 best=knn_global random_global=1.281 gnn_global=1.237 knn_global=0.676 random_local=1.495 gnn_local=1.824 knn_local=1.263
+[21/380     183s] dkc3938 s9 n=3938 best=knn_global random_global=1.184 gnn_global=1.032 knn_global=0.656 random_local=2.064 gnn_local=1.456 knn_local=1.112
+[22/380     184s] xua3937 s2 n=3937 best=gnn_global random_global=1.166 gnn_global=0.854 knn_global=1.005 random_local=1.788 gnn_local=1.691 knn_local=1.824
+[23/380     184s] xua3937 s1 n=3937 best=gnn_global random_global=0.934 gnn_global=0.543 knn_global=0.952 random_local=1.975 gnn_local=1.308 knn_local=1.388
+[24/380     184s] xua3937 s3 n=3937 best=random_global random_global=1.299 gnn_global=1.397 knn_global=1.317 random_local=1.762 gnn_local=1.851 knn_local=1.868
+[25/380     244s] xua3937 s4 n=3937 best=gnn_global random_global=1.210 gnn_global=1.121 knn_global=1.468 random_local=2.118 gnn_local=1.566 knn_local=1.495
+[26/380     244s] xua3937 s5 n=3937 best=gnn_global random_global=1.157 gnn_global=0.899 knn_global=1.041 random_local=1.726 gnn_local=1.762 knn_local=1.780
+[27/380     244s] xua3937 s6 n=3937 best=random_global random_global=1.139 gnn_global=1.166 knn_global=1.379 random_local=1.637 gnn_local=1.237 knn_local=1.361
+[28/380     244s] xua3937 s7 n=3937 best=knn_global random_global=1.050 gnn_global=1.174 knn_global=0.685 random_local=1.628 gnn_local=1.717 knn_local=1.744
+[29/380     244s] xua3937 s8 n=3937 best=random_global random_global=0.730 gnn_global=1.246 knn_global=0.747 random_local=1.521 gnn_local=1.379 knn_local=1.833
+[30/380     244s] xua3937 s9 n=3937 best=knn_global random_global=1.166 gnn_global=1.086 knn_global=1.050 random_local=1.539 gnn_local=1.628 knn_local=2.144
+[31/380     244s] xqe3891 s0 n=3891 best=knn_global random_global=1.142 gnn_global=0.975 knn_global=0.834 random_local=1.576 gnn_local=1.584 knn_local=1.276
+[32/380     244s] xqe3891 s1 n=3891 best=gnn_global random_global=0.892 gnn_global=0.867 knn_global=1.025 random_local=1.175 gnn_local=1.234 knn_local=1.100
+[33/380     304s] xqe3891 s2 n=3891 best=gnn_global random_global=1.234 gnn_global=1.100 knn_global=1.167 random_local=1.617 gnn_local=1.392 knn_local=1.317
+[34/380     304s] xqe3891 s3 n=3891 best=random_global random_global=1.075 gnn_global=1.242 knn_global=1.209 random_local=1.476 gnn_local=1.209 knn_local=1.517
+[35/380     304s] xqe3891 s4 n=3891 best=gnn_global random_global=1.142 gnn_global=1.100 knn_global=1.142 random_local=1.542 gnn_local=1.767 knn_local=1.326
+[36/380     304s] xqe3891 s5 n=3891 best=random_global random_global=0.542 gnn_global=0.834 knn_global=0.825 random_local=1.517 gnn_local=1.259 knn_local=1.134
+[37/380     304s] xqe3891 s7 n=3891 best=gnn_global random_global=0.959 gnn_global=0.909 knn_global=0.950 random_local=1.451 gnn_local=1.226 knn_local=1.217
+[38/380     304s] xqe3891 s8 n=3891 best=knn_global random_global=1.267 gnn_global=1.184 knn_global=0.734 random_local=1.242 gnn_local=1.301 knn_local=1.167
+[39/380     304s] xqe3891 s6 n=3891 best=knn_global random_global=1.351 gnn_global=1.150 knn_global=1.109 random_local=1.501 gnn_local=1.576 knn_local=1.392
+[40/380     304s] xqe3891 s9 n=3891 best=gnn_global random_global=1.042 gnn_global=0.775 knn_global=1.092 random_local=1.426 gnn_local=1.609 knn_local=1.542
+[41/380     364s] ltb3729 s0 n=3729 best=knn_global random_global=1.057 gnn_global=0.990 knn_global=0.837 random_local=1.362 gnn_local=1.514 knn_local=1.362
+[42/380     364s] ltb3729 s1 n=3729 best=random_global random_global=0.761 gnn_global=0.871 knn_global=1.049 random_local=1.438 gnn_local=1.540 knn_local=1.514
+[43/380     364s] ltb3729 s2 n=3729 best=gnn_global random_global=0.990 gnn_global=0.626 knn_global=0.922 random_local=1.142 gnn_local=1.269 knn_local=1.303
+[44/380     364s] ltb3729 s3 n=3729 best=gnn_global random_global=1.167 gnn_global=0.778 knn_global=1.032 random_local=1.167 gnn_local=1.057 knn_local=1.413
+[45/380     365s] ltb3729 s6 n=3729 best=random_global random_global=0.787 gnn_global=0.880 knn_global=0.998 random_local=1.354 gnn_local=1.396 knn_local=1.108
+[46/380     365s] ltb3729 s4 n=3729 best=random_global random_global=0.846 gnn_global=1.150 knn_global=0.897 random_local=1.345 gnn_local=1.582 knn_local=1.362
+[47/380     365s] ltb3729 s7 n=3729 best=gnn_global random_global=0.897 gnn_global=0.837 knn_global=0.973 random_local=1.210 gnn_local=1.421 knn_local=1.328
+[48/380     365s] ltb3729 s5 n=3729 best=random_global random_global=0.812 gnn_global=1.057 knn_global=1.024 random_local=1.438 gnn_local=1.337 knn_local=1.573
+[49/380     424s] ltb3729 s8 n=3729 best=gnn_global random_global=0.914 gnn_global=0.888 knn_global=0.981 random_local=1.320 gnn_local=1.227 knn_local=1.421
+[50/380     425s] ltb3729 s9 n=3729 best=knn_global random_global=1.218 gnn_global=0.837 knn_global=0.821 random_local=1.176 gnn_local=1.531 knn_local=1.269
+[51/380     425s] dlb3694 s4 n=3694 best=gnn_global random_global=1.013 gnn_global=0.693 knn_global=1.004 random_local=1.642 gnn_local=1.569 knn_local=1.360
+[52/380     425s] dlb3694 s1 n=3694 best=knn_global random_global=0.867 gnn_global=1.150 knn_global=0.776 random_local=1.478 gnn_local=1.104 knn_local=1.232
+[53/380     425s] dlb3694 s0 n=3694 best=gnn_global random_global=0.794 gnn_global=0.648 knn_global=0.949 random_local=1.287 gnn_local=1.241 knn_local=1.378
+[54/380     425s] dlb3694 s5 n=3694 best=knn_global random_global=1.031 gnn_global=0.940 knn_global=0.858 random_local=1.350 gnn_local=1.323 knn_local=1.560
+[55/380     425s] dlb3694 s3 n=3694 best=gnn_global random_global=1.141 gnn_global=1.013 knn_global=1.058 random_local=1.496 gnn_local=1.524 knn_local=1.433
+[56/380     425s] dlb3694 s2 n=3694 best=gnn_global random_global=0.922 gnn_global=0.712 knn_global=0.949 random_local=1.332 gnn_local=1.369 knn_local=1.360
+[57/380     485s] dlb3694 s6 n=3694 best=knn_global random_global=0.995 gnn_global=0.885 knn_global=0.849 random_local=1.177 gnn_local=1.433 knn_local=1.287
+[58/380     485s] dlb3694 s7 n=3694 best=knn_global random_global=1.168 gnn_global=1.195 knn_global=1.040 random_local=1.597 gnn_local=1.560 knn_local=1.451
+[59/380     485s] dlb3694 s8 n=3694 best=gnn_global random_global=1.122 gnn_global=0.739 knn_global=1.086 random_local=1.350 gnn_local=1.606 knn_local=1.524
+[60/380     485s] dlb3694 s9 n=3694 best=knn_global random_global=1.296 gnn_global=1.077 knn_global=1.049 random_local=1.277 gnn_local=1.542 knn_local=1.323
+[61/380     485s] fjr3672 s0 n=3672 best=random_global random_global=0.771 gnn_global=0.833 knn_global=1.094 random_local=1.083 gnn_local=1.031 knn_local=0.958
+[62/380     485s] fjr3672 s1 n=3672 best=knn_local random_global=0.656 gnn_global=0.771 knn_global=1.052 random_local=1.156 gnn_local=1.219 knn_local=0.583
+[63/380     485s] fjr3672 s3 n=3672 best=gnn_local random_global=0.781 gnn_global=0.937 knn_global=0.771 random_local=1.094 gnn_local=0.719 knn_local=1.344
+[64/380     485s] fjr3672 s2 n=3672 best=gnn_global random_global=0.750 gnn_global=0.500 knn_global=0.906 random_local=0.698 gnn_local=0.802 knn_local=0.615
+[65/380     545s] fjr3672 s4 n=3672 best=knn_global random_global=1.042 gnn_global=0.917 knn_global=0.729 random_local=1.427 gnn_local=1.125 knn_local=0.989
+[66/380     545s] fjr3672 s5 n=3672 best=random_global random_global=0.677 gnn_global=0.989 knn_global=1.000 random_local=0.917 gnn_local=1.187 knn_local=0.802
+[67/380     545s] fjr3672 s6 n=3672 best=gnn_global random_global=1.010 gnn_global=0.823 knn_global=0.927 random_local=1.198 gnn_local=1.062 knn_local=1.135
+[68/380     545s] fjr3672 s7 n=3672 best=gnn_global random_global=0.958 gnn_global=0.677 knn_global=0.885 random_local=0.989 gnn_local=0.781 knn_local=1.239
+[69/380     545s] fjr3672 s8 n=3672 best=gnn_global random_global=0.792 gnn_global=0.583 knn_global=0.781 random_local=0.937 gnn_local=1.323 knn_local=0.760
+[70/380     545s] fjr3672 s9 n=3672 best=random_global random_global=0.573 gnn_global=0.719 knn_global=0.906 random_local=0.864 gnn_local=1.031 knn_local=0.750
+[71/380     545s] fjs3649 s0 n=3649 best=gnn_global random_global=1.079 gnn_global=0.518 knn_global=0.723 random_local=0.798 gnn_local=0.971 knn_local=0.917
+[72/380     546s] fjs3649 s1 n=3649 best=gnn_global random_global=1.219 gnn_global=0.820 knn_global=0.971 random_local=1.014 gnn_local=0.971 knn_local=1.132
+[73/380     605s] fjs3649 s2 n=3649 best=random_global random_global=0.572 gnn_global=0.777 knn_global=1.003 random_local=1.003 gnn_local=0.884 knn_local=0.992
+[74/380     605s] fjs3649 s3 n=3649 best=random_global random_global=0.733 gnn_global=0.841 knn_global=0.777 random_local=0.949 gnn_local=1.251 knn_local=1.111
+[75/380     605s] fjs3649 s4 n=3649 best=gnn_global random_global=0.895 gnn_global=0.593 knn_global=0.852 random_local=0.874 gnn_local=0.701 knn_local=0.863
+[76/380     606s] fjs3649 s5 n=3649 best=knn_global random_global=1.057 gnn_global=0.917 knn_global=0.712 random_local=0.841 gnn_local=1.391 knn_local=0.981
+[77/380     606s] fjs3649 s6 n=3649 best=random_local random_global=1.089 gnn_global=0.971 knn_global=0.992 random_local=0.820 gnn_local=1.046 knn_local=1.154
+[78/380     606s] fjs3649 s8 n=3649 best=knn_global random_global=0.992 gnn_global=1.111 knn_global=0.938 random_local=1.132 gnn_local=1.316 knn_local=1.143
+[79/380     606s] fjs3649 s7 n=3649 best=gnn_global random_global=0.852 gnn_global=0.647 knn_global=0.906 random_local=1.111 gnn_local=1.079 knn_local=1.208
+[80/380     606s] fjs3649 s9 n=3649 best=gnn_global random_global=1.154 gnn_global=0.593 knn_global=0.928 random_local=0.992 gnn_local=1.251 knn_local=0.863
+[81/380     665s] dhb3386 s0 n=3386 best=knn_global random_global=1.122 gnn_global=1.042 knn_global=0.673 random_local=1.607 gnn_local=1.446 knn_local=1.320
+[82/380     666s] dhb3386 s2 n=3386 best=gnn_global random_global=1.104 gnn_global=1.051 knn_global=1.176 random_local=1.643 gnn_local=1.598 knn_local=1.500
+[83/380     666s] dhb3386 s1 n=3386 best=gnn_global random_global=0.799 gnn_global=0.754 knn_global=0.934 random_local=1.194 gnn_local=1.221 knn_local=1.401
+[84/380     666s] dhb3386 s3 n=3386 best=knn_global random_global=0.997 gnn_global=0.889 knn_global=0.799 random_local=1.473 gnn_local=1.347 knn_local=1.464
+[85/380     666s] dhb3386 s5 n=3386 best=random_global random_global=0.898 gnn_global=1.015 knn_global=1.015 random_local=1.508 gnn_local=1.365 knn_local=1.257
+[86/380     666s] dhb3386 s7 n=3386 best=knn_global random_global=1.167 gnn_global=1.311 knn_global=1.033 random_local=1.643 gnn_local=1.428 knn_local=1.464
+[87/380     666s] dhb3386 s4 n=3386 best=knn_global random_global=0.943 gnn_global=1.320 knn_global=0.781 random_local=1.886 gnn_local=1.589 knn_local=1.832
+[88/380     666s] dhb3386 s6 n=3386 best=gnn_global random_global=1.086 gnn_global=0.817 knn_global=0.979 random_local=1.320 gnn_local=1.212 knn_local=1.302
+[89/380     725s] dhb3386 s8 n=3386 best=gnn_global random_global=0.979 gnn_global=0.889 knn_global=1.060 random_local=1.571 gnn_local=1.733 knn_local=1.383
+[90/380     726s] dhb3386 s9 n=3386 best=knn_global random_global=0.673 gnn_global=0.862 knn_global=0.664 random_local=1.185 gnn_local=1.706 knn_local=1.428
+[91/380     726s] fdp3256 s0 n=3256 best=knn_global random_global=1.059 gnn_global=0.969 knn_global=0.570 random_local=1.529 gnn_local=1.689 knn_local=1.589
+[92/380     726s] fdp3256 s1 n=3256 best=random_global random_global=0.839 gnn_global=0.899 knn_global=0.879 random_local=1.319 gnn_local=1.479 knn_local=1.239
+[93/380     726s] fdp3256 s2 n=3256 best=gnn_global random_global=0.979 gnn_global=0.739 knn_global=0.879 random_local=1.369 gnn_local=1.489 knn_local=1.159
+[94/380     726s] fdp3256 s5 n=3256 best=knn_global random_global=1.059 gnn_global=1.179 knn_global=0.909 random_local=1.489 gnn_local=1.599 knn_local=1.619
+[95/380     726s] fdp3256 s3 n=3256 best=knn_global random_global=1.109 gnn_global=1.069 knn_global=0.929 random_local=1.878 gnn_local=1.709 knn_local=1.809
+[96/380     726s] fdp3256 s4 n=3256 best=random_global random_global=0.460 gnn_global=0.769 knn_global=0.869 random_local=1.239 gnn_local=1.319 knn_local=1.519
+[97/380     786s] fdp3256 s6 n=3256 best=random_global random_global=0.590 gnn_global=0.879 knn_global=0.629 random_local=1.219 gnn_local=1.429 knn_local=0.799
+[98/380     786s] fdp3256 s7 n=3256 best=knn_global random_global=0.689 gnn_global=0.729 knn_global=0.560 random_local=1.459 gnn_local=1.299 knn_local=1.319
+[99/380     786s] fdp3256 s8 n=3256 best=knn_global random_global=1.149 gnn_global=1.229 knn_global=1.029 random_local=1.489 gnn_local=1.429 knn_local=1.379
+[100/380     786s] fdp3256 s9 n=3256 best=gnn_global random_global=1.129 gnn_global=0.969 knn_global=1.369 random_local=1.429 gnn_local=1.119 knn_local=1.629
+[101/380     787s] lta3140 s0 n=3140 best=knn_global random_global=0.809 gnn_global=0.799 knn_global=0.725 random_local=1.124 gnn_local=0.956 knn_local=1.072
+[102/380     787s] lta3140 s1 n=3140 best=knn_global random_global=0.935 gnn_global=0.862 knn_global=0.830 random_local=1.912 gnn_local=1.671 knn_local=1.355
+[103/380     787s] lta3140 s3 n=3140 best=random_global random_global=0.841 gnn_global=0.988 knn_global=1.124 random_local=1.440 gnn_local=1.135 knn_local=1.397
+[104/380     787s] lta3140 s2 n=3140 best=knn_global random_global=1.376 gnn_global=1.030 knn_global=0.872 random_local=1.513 gnn_local=1.471 knn_local=1.419
+[105/380     846s] lta3140 s4 n=3140 best=gnn_global random_global=0.925 gnn_global=0.914 knn_global=1.051 random_local=1.597 gnn_local=1.639 knn_local=1.461
+[106/380     846s] lta3140 s5 n=3140 best=knn_global random_global=1.135 gnn_global=0.998 knn_global=0.809 random_local=1.334 gnn_local=1.513 knn_local=1.271
+[107/380     846s] lta3140 s6 n=3140 best=knn_global random_global=0.862 gnn_global=0.767 knn_global=0.715 random_local=1.156 gnn_local=1.114 knn_local=1.271
+[108/380     847s] lta3140 s7 n=3140 best=knn_global random_global=1.114 gnn_global=1.156 knn_global=0.872 random_local=1.702 gnn_local=1.576 knn_local=1.492
+[109/380     847s] lta3140 s8 n=3140 best=knn_global random_global=1.040 gnn_global=1.114 knn_global=0.662 random_local=1.419 gnn_local=1.387 knn_local=1.429
+[110/380     847s] lta3140 s9 n=3140 best=knn_global random_global=0.914 gnn_global=0.893 knn_global=0.736 random_local=1.166 gnn_local=1.461 knn_local=1.471
+[111/380     847s] lsn3119 s1 n=3119 best=knn_global random_global=1.207 gnn_global=0.955 knn_global=0.834 random_local=0.856 gnn_local=1.130 knn_local=1.514
+[112/380     847s] lsn3119 s0 n=3119 best=gnn_global random_global=0.768 gnn_global=0.735 knn_global=1.295 random_local=1.437 gnn_local=1.437 knn_local=1.942
+[113/380     906s] lsn3119 s2 n=3119 best=knn_global random_global=1.042 gnn_global=0.867 knn_global=0.746 random_local=0.922 gnn_local=1.185 knn_local=1.196
+[114/380     906s] lsn3119 s3 n=3119 best=random_global random_global=0.713 gnn_global=0.801 knn_global=1.174 random_local=1.119 gnn_local=1.339 knn_local=1.525
+[115/380     907s] lsn3119 s4 n=3119 best=knn_global random_global=1.042 gnn_global=0.845 knn_global=0.801 random_local=1.350 gnn_local=1.108 knn_local=1.262
+[116/380     907s] lsn3119 s5 n=3119 best=knn_global random_global=0.955 gnn_global=0.768 knn_global=0.735 random_local=1.646 gnn_local=1.580 knn_local=1.810
+[117/380     907s] lsn3119 s6 n=3119 best=knn_global random_global=0.702 gnn_global=0.735 knn_global=0.560 random_local=1.075 gnn_local=0.987 knn_local=1.042
+[118/380     907s] lsn3119 s7 n=3119 best=knn_global random_global=0.889 gnn_global=0.757 knn_global=0.691 random_local=1.152 gnn_local=1.745 knn_local=1.218
+[119/380     907s] lsn3119 s9 n=3119 best=knn_global random_global=1.042 gnn_global=0.779 knn_global=0.735 random_local=1.141 gnn_local=1.295 knn_local=1.437
+[120/380     907s] lsn3119 s8 n=3119 best=gnn_global random_global=0.845 gnn_global=0.680 knn_global=0.768 random_local=1.284 gnn_local=1.909 knn_local=1.437
+[121/380     967s] dke3097 s0 n=3097 best=gnn_global random_global=0.740 gnn_global=0.655 knn_global=0.892 random_local=1.224 gnn_local=0.968 knn_local=1.063
+[122/380     967s] dke3097 s1 n=3097 best=gnn_global random_global=0.721 gnn_global=0.626 knn_global=0.844 random_local=1.177 gnn_local=1.139 knn_local=1.196
+[123/380     967s] dke3097 s2 n=3097 best=random_global random_global=0.683 gnn_global=0.949 knn_global=0.911 random_local=0.977 gnn_local=1.196 knn_local=1.869
+[124/380     967s] dke3097 s3 n=3097 best=gnn_global random_global=0.844 gnn_global=0.569 knn_global=0.579 random_local=1.385 gnn_local=1.499 knn_local=1.414
+[125/380     967s] dke3097 s5 n=3097 best=knn_global random_global=0.712 gnn_global=0.769 knn_global=0.560 random_local=1.234 gnn_local=1.433 knn_local=1.347
+[126/380     967s] dke3097 s4 n=3097 best=gnn_global random_global=0.693 gnn_global=0.626 knn_global=0.731 random_local=1.252 gnn_local=1.015 knn_local=0.977
+[127/380     967s] dke3097 s6 n=3097 best=random_global random_global=0.712 gnn_global=0.901 knn_global=0.721 random_local=1.082 gnn_local=1.300 knn_local=1.139
+[128/380     967s] dke3097 s7 n=3097 best=knn_global random_global=0.863 gnn_global=0.740 knn_global=0.560 random_local=1.139 gnn_local=1.186 knn_local=1.101
+[129/380    1027s] dke3097 s8 n=3097 best=knn_global random_global=0.826 gnn_global=0.626 knn_global=0.436 random_local=0.996 gnn_local=0.977 knn_local=1.091
+[130/380    1027s] dke3097 s9 n=3097 best=knn_global random_global=0.977 gnn_global=0.854 knn_global=0.693 random_local=0.863 gnn_local=1.347 knn_local=1.234
+[131/380    1027s] pia3056 s0 n=3056 best=knn_global random_global=1.090 gnn_global=0.932 knn_global=0.569 random_local=1.562 gnn_local=1.271 knn_local=1.296
+[132/380    1027s] pia3056 s1 n=3056 best=gnn_global random_global=0.993 gnn_global=0.908 knn_global=1.090 random_local=1.163 gnn_local=1.344 knn_local=1.405
+[133/380    1027s] pia3056 s2 n=3056 best=knn_global random_global=0.993 gnn_global=0.823 knn_global=0.787 random_local=1.853 gnn_local=1.659 knn_local=1.586
+[134/380    1028s] pia3056 s3 n=3056 best=random_global random_global=1.114 gnn_global=1.259 knn_global=1.296 random_local=1.598 gnn_local=1.816 knn_local=1.829
+[135/380    1028s] pia3056 s4 n=3056 best=knn_global random_global=1.247 gnn_global=1.175 knn_global=0.932 random_local=1.356 gnn_local=1.550 knn_local=1.671
+[136/380    1028s] pia3056 s5 n=3056 best=knn_global random_global=1.368 gnn_global=0.932 knn_global=0.775 random_local=1.271 gnn_local=1.138 knn_local=1.550
+[137/380    1087s] pia3056 s6 n=3056 best=gnn_global random_global=0.920 gnn_global=0.884 knn_global=0.884 random_local=1.187 gnn_local=1.054 knn_local=1.235
+[138/380    1087s] pia3056 s7 n=3056 best=gnn_global random_global=0.908 gnn_global=0.763 knn_global=0.884 random_local=1.417 gnn_local=1.332 knn_local=1.175
+[139/380    1087s] pia3056 s8 n=3056 best=gnn_global random_global=1.078 gnn_global=0.884 knn_global=1.066 random_local=1.150 gnn_local=1.671 knn_local=1.380
+[140/380    1087s] pia3056 s9 n=3056 best=random_global random_global=0.727 gnn_global=1.005 knn_global=0.848 random_local=1.526 gnn_local=1.417 knn_local=1.320
+[141/380    1088s] xva2993 s0 n=2993 best=gnn_global random_global=1.095 gnn_global=0.895 knn_global=0.989 random_local=1.554 gnn_local=1.437 knn_local=1.625
+[142/380    1088s] xva2993 s1 n=2993 best=knn_global random_global=1.001 gnn_global=0.860 knn_global=0.789 random_local=1.154 gnn_local=1.413 knn_local=1.602
+[143/380    1088s] xva2993 s2 n=2993 best=gnn_global random_global=0.848 gnn_global=0.612 knn_global=0.836 random_local=1.460 gnn_local=1.307 knn_local=1.378
+[144/380    1088s] xva2993 s3 n=2993 best=gnn_global random_global=1.307 gnn_global=0.919 knn_global=1.060 random_local=1.001 gnn_local=1.154 knn_local=1.401
+[145/380    1147s] xva2993 s4 n=2993 best=knn_global random_global=0.895 gnn_global=1.319 knn_global=0.754 random_local=1.166 gnn_local=1.366 knn_local=1.142
+[146/380    1147s] xva2993 s5 n=2993 best=gnn_global random_global=0.989 gnn_global=0.930 knn_global=0.930 random_local=1.460 gnn_local=1.813 knn_local=1.707
+[147/380    1147s] xva2993 s6 n=2993 best=gnn_global random_global=1.095 gnn_global=0.883 knn_global=1.001 random_local=1.319 gnn_local=1.425 knn_local=1.366
+[148/380    1148s] xva2993 s7 n=2993 best=gnn_global random_global=0.930 gnn_global=0.860 knn_global=0.930 random_local=1.390 gnn_local=0.930 knn_local=1.460
+[149/380    1148s] xva2993 s8 n=2993 best=gnn_global random_global=0.848 gnn_global=0.495 knn_global=0.730 random_local=1.201 gnn_local=1.543 knn_local=1.178
+[150/380    1148s] xva2993 s9 n=2993 best=gnn_global random_global=1.213 gnn_global=0.977 knn_global=1.107 random_local=1.625 gnn_local=1.331 knn_local=1.390
+[151/380    1148s] dbj2924 s0 n=2924 best=knn_global random_global=0.958 gnn_global=1.244 knn_global=0.800 random_local=1.392 gnn_local=1.363 knn_local=1.481
+[152/380    1148s] dbj2924 s1 n=2924 best=random_global random_global=0.741 gnn_global=1.017 knn_global=0.918 random_local=1.165 gnn_local=1.106 knn_local=1.086
+[153/380    1207s] dbj2924 s2 n=2924 best=gnn_global random_global=0.879 gnn_global=0.760 knn_global=0.879 random_local=1.056 gnn_local=1.313 knn_local=1.185
+[154/380    1207s] dbj2924 s3 n=2924 best=random_global random_global=0.721 gnn_global=1.313 knn_global=0.800 random_local=1.353 gnn_local=1.471 knn_local=1.481
+[155/380    1208s] dbj2924 s4 n=2924 best=knn_global random_global=0.918 gnn_global=0.780 knn_global=0.691 random_local=1.205 gnn_local=1.155 knn_local=1.056
+[156/380    1208s] dbj2924 s5 n=2924 best=gnn_global random_global=0.948 gnn_global=0.602 knn_global=0.671 random_local=1.244 gnn_local=1.056 knn_local=1.126
+[157/380    1208s] dbj2924 s6 n=2924 best=knn_global random_global=0.662 gnn_global=0.642 knn_global=0.444 random_local=1.481 gnn_local=1.214 knn_local=1.185
+[158/380    1208s] dbj2924 s7 n=2924 best=random_global random_global=0.820 gnn_global=0.968 knn_global=0.869 random_local=1.234 gnn_local=1.313 knn_local=1.303
+[159/380    1208s] dbj2924 s8 n=2924 best=gnn_global random_global=1.047 gnn_global=0.820 knn_global=0.938 random_local=0.997 gnn_local=1.284 knn_local=1.047
+[160/380    1208s] dbj2924 s9 n=2924 best=knn_global random_global=0.701 gnn_global=0.671 knn_global=0.652 random_local=1.205 gnn_local=1.254 knn_local=1.293
+[1/380       2s] skip dkf3954__s0.json
+[2/380       2s] skip dkf3954__s1.json
+[3/380       2s] skip dkf3954__s2.json
+[4/380       2s] skip dkf3954__s3.json
+[5/380       2s] skip dkf3954__s5.json
+[6/380       2s] skip dkf3954__s4.json
+[7/380       2s] skip dkf3954__s7.json
+[8/380       2s] skip dkf3954__s6.json
+[9/380       2s] skip dkf3954__s8.json
+[10/380       2s] skip dkf3954__s9.json
+[11/380       2s] skip dkc3938__s0.json
+[12/380       3s] skip dkc3938__s1.json
+[13/380       3s] skip dkc3938__s3.json
+[14/380       3s] skip dkc3938__s2.json
+[15/380       3s] skip dkc3938__s4.json
+[16/380       3s] skip dkc3938__s5.json
+[17/380       3s] skip dkc3938__s6.json
+[18/380       3s] skip dkc3938__s7.json
+[19/380       3s] skip dkc3938__s8.json
+[20/380       3s] skip dkc3938__s9.json
+[21/380       3s] skip xua3937__s0.json
+[22/380       3s] skip xua3937__s1.json
+[23/380       3s] skip xua3937__s2.json
+[24/380       3s] skip xua3937__s3.json
+[25/380       3s] skip xua3937__s5.json
+[26/380       3s] skip xua3937__s4.json
+[27/380       3s] skip xua3937__s6.json
+[28/380       3s] skip xua3937__s7.json
+[29/380       3s] skip xua3937__s8.json
+[30/380       3s] skip xua3937__s9.json
+[31/380       3s] skip xqe3891__s0.json
+[32/380       3s] skip xqe3891__s1.json
+[33/380       3s] skip xqe3891__s2.json
+[34/380       3s] skip xqe3891__s3.json
+[35/380       3s] skip xqe3891__s4.json
+[36/380       3s] skip xqe3891__s5.json
+[37/380       3s] skip xqe3891__s6.json
+[38/380       3s] skip xqe3891__s7.json
+[39/380       3s] skip xqe3891__s8.json
+[40/380       3s] skip xqe3891__s9.json
+[41/380       3s] skip ltb3729__s0.json
+[42/380       3s] skip ltb3729__s1.json
+[43/380       3s] skip ltb3729__s2.json
+[44/380       3s] skip ltb3729__s3.json
+[45/380       3s] skip ltb3729__s4.json
+[46/380       3s] skip ltb3729__s5.json
+[47/380       3s] skip ltb3729__s6.json
+[48/380       3s] skip ltb3729__s7.json
+[49/380       3s] skip ltb3729__s8.json
+[50/380       3s] skip ltb3729__s9.json
+[51/380       3s] skip dlb3694__s0.json
+[52/380       3s] skip dlb3694__s1.json
+[53/380       3s] skip dlb3694__s2.json
+[54/380       3s] skip dlb3694__s3.json
+[55/380       3s] skip dlb3694__s4.json
+[56/380       3s] skip dlb3694__s5.json
+[57/380       3s] skip dlb3694__s6.json
+[58/380       3s] skip dlb3694__s8.json
+[59/380       3s] skip dlb3694__s9.json
+[60/380       3s] skip dlb3694__s7.json
+[61/380       3s] skip fjr3672__s0.json
+[62/380       3s] skip fjr3672__s1.json
+[63/380       3s] skip fjr3672__s2.json
+[64/380       3s] skip fjr3672__s3.json
+[65/380       3s] skip fjr3672__s4.json
+[66/380       3s] skip fjr3672__s5.json
+[67/380       3s] skip fjr3672__s6.json
+[68/380       3s] skip fjr3672__s7.json
+[69/380       3s] skip fjr3672__s8.json
+[70/380       3s] skip fjr3672__s9.json
+[71/380       3s] skip fjs3649__s0.json
+[72/380       3s] skip fjs3649__s1.json
+[73/380       3s] skip fjs3649__s2.json
+[74/380       3s] skip fjs3649__s3.json
+[75/380       3s] skip fjs3649__s4.json
+[76/380       3s] skip fjs3649__s5.json
+[77/380       3s] skip fjs3649__s6.json
+[78/380       3s] skip fjs3649__s7.json
+[79/380       3s] skip fjs3649__s8.json
+[80/380       3s] skip fjs3649__s9.json
+[81/380       3s] skip dhb3386__s0.json
+[82/380       3s] skip dhb3386__s1.json
+[83/380       3s] skip dhb3386__s2.json
+[84/380       3s] skip dhb3386__s3.json
+[85/380       3s] skip dhb3386__s4.json
+[86/380       3s] skip dhb3386__s5.json
+[87/380       3s] skip dhb3386__s6.json
+[88/380       3s] skip dhb3386__s7.json
+[89/380       3s] skip dhb3386__s8.json
+[90/380       3s] skip dhb3386__s9.json
+[91/380       3s] skip fdp3256__s1.json
+[92/380       3s] skip fdp3256__s0.json
+[93/380       3s] skip fdp3256__s2.json
+[94/380       3s] skip fdp3256__s3.json
+[95/380       3s] skip fdp3256__s4.json
+[96/380       3s] skip fdp3256__s5.json
+[97/380       3s] skip fdp3256__s6.json
+[98/380       3s] skip fdp3256__s7.json
+[99/380       3s] skip fdp3256__s8.json
+[100/380       3s] skip fdp3256__s9.json
+[101/380       3s] skip lta3140__s0.json
+[102/380       3s] skip lta3140__s1.json
+[103/380       3s] skip lta3140__s2.json
+[104/380       3s] skip lta3140__s3.json
+[105/380       3s] skip lta3140__s4.json
+[106/380       3s] skip lta3140__s5.json
+[107/380       3s] skip lta3140__s6.json
+[108/380       3s] skip lta3140__s7.json
+[109/380       3s] skip lta3140__s8.json
+[110/380       3s] skip lsn3119__s0.json
+[111/380       3s] skip lta3140__s9.json
+[112/380       3s] skip lsn3119__s1.json
+[113/380       3s] skip lsn3119__s2.json
+[114/380       3s] skip lsn3119__s3.json
+[115/380       3s] skip lsn3119__s4.json
+[116/380       3s] skip lsn3119__s5.json
+[117/380       3s] skip lsn3119__s7.json
+[118/380       3s] skip lsn3119__s6.json
+[119/380       3s] skip lsn3119__s8.json
+[120/380       3s] skip lsn3119__s9.json
+[121/380       3s] skip dke3097__s0.json
+[122/380       3s] skip dke3097__s1.json
+[123/380       3s] skip dke3097__s2.json
+[124/380       3s] skip dke3097__s3.json
+[125/380       3s] skip dke3097__s4.json
+[126/380       3s] skip dke3097__s5.json
+[127/380       3s] skip dke3097__s6.json
+[128/380       3s] skip dke3097__s7.json
+[129/380       3s] skip dke3097__s8.json
+[130/380       3s] skip pia3056__s0.json
+[131/380       3s] skip pia3056__s1.json
+[132/380       3s] skip pia3056__s2.json
+[133/380       3s] skip dke3097__s9.json
+[134/380       3s] skip pia3056__s3.json
+[135/380       3s] skip pia3056__s4.json
+[136/380       3s] skip pia3056__s5.json
+[137/380       3s] skip pia3056__s7.json
+[138/380       3s] skip pia3056__s6.json
+[139/380       3s] skip pia3056__s8.json
+[140/380       3s] skip pia3056__s9.json
+[141/380       3s] skip xva2993__s0.json
+[142/380       3s] skip xva2993__s1.json
+[143/380       3s] skip xva2993__s2.json
+[144/380       3s] skip xva2993__s3.json
+[145/380       3s] skip xva2993__s4.json
+[146/380       3s] skip xva2993__s5.json
+[147/380       3s] skip xva2993__s6.json
+[148/380       3s] skip xva2993__s7.json
+[149/380       3s] skip xva2993__s8.json
+[150/380       3s] skip xva2993__s9.json
+[151/380       3s] skip dbj2924__s0.json
+[152/380       3s] skip dbj2924__s1.json
+[153/380       3s] skip dbj2924__s2.json
+[154/380       3s] skip dbj2924__s3.json
+[155/380       3s] skip dbj2924__s4.json
+[156/380       3s] skip dbj2924__s6.json
+[157/380       3s] skip dbj2924__s5.json
+[158/380       3s] skip dbj2924__s7.json
+[159/380       3s] skip dbj2924__s8.json
+[160/380       3s] skip dbj2924__s9.json
+[161/380      63s] lsm2854 s0 n=2854 best=knn_global random_global=1.160 gnn_global=1.011 knn_global=0.686 random_local=1.173 gnn_local=1.423 knn_local=1.185
+[162/380      63s] lsm2854 s2 n=2854 best=knn_global random_global=0.636 gnn_global=0.636 knn_global=0.624 random_local=1.098 gnn_local=1.148 knn_local=1.148
+[163/380      63s] lsm2854 s1 n=2854 best=knn_global random_global=1.086 gnn_global=1.048 knn_global=0.849 random_local=1.323 gnn_local=1.198 knn_local=1.460
+[164/380      63s] lsm2854 s5 n=2854 best=knn_global random_global=0.923 gnn_global=0.686 knn_global=0.524 random_local=1.136 gnn_local=1.497 knn_local=1.547
+[165/380      63s] lsm2854 s4 n=2854 best=random_global random_global=0.836 gnn_global=0.973 knn_global=0.986 random_local=1.535 gnn_local=1.185 knn_local=1.348
+[166/380      63s] lsm2854 s3 n=2854 best=gnn_global random_global=0.736 gnn_global=0.686 knn_global=0.774 random_local=1.560 gnn_local=1.772 knn_local=1.560
+[167/380     123s] lsm2854 s7 n=2854 best=knn_global random_global=1.011 gnn_global=0.961 knn_global=0.836 random_local=1.185 gnn_local=1.447 knn_local=1.834
+[168/380     123s] lsm2854 s8 n=2854 best=knn_global random_global=0.911 gnn_global=0.836 knn_global=0.811 random_local=1.073 gnn_local=1.335 knn_local=1.011
+[169/380     123s] lsm2854 s6 n=2854 best=random_global random_global=0.824 gnn_global=1.061 knn_global=1.023 random_local=1.385 gnn_local=1.298 knn_local=1.273
+[170/380     123s] lsm2854 s9 n=2854 best=knn_global random_global=0.961 gnn_global=0.711 knn_global=0.674 random_local=1.185 gnn_local=0.911 knn_local=1.223
+[171/380     123s] irw2802 s0 n=2802 best=random_global random_global=0.594 gnn_global=0.962 knn_global=0.641 random_local=1.199 gnn_local=1.080 knn_local=1.365
+[172/380     123s] irw2802 s1 n=2802 best=random_global random_global=0.890 gnn_global=1.033 knn_global=0.974 random_local=1.342 gnn_local=1.437 knn_local=1.448
+[173/380     183s] irw2802 s4 n=2802 best=knn_global random_global=0.772 gnn_global=1.033 knn_global=0.617 random_local=1.140 gnn_local=1.365 knn_local=1.543
+[174/380     183s] irw2802 s6 n=2802 best=knn_global random_global=0.843 gnn_global=0.700 knn_global=0.617 random_local=1.472 gnn_local=1.353 knn_local=1.235
+[175/380     183s] irw2802 s3 n=2802 best=gnn_global random_global=0.772 gnn_global=0.605 knn_global=0.724 random_local=1.258 gnn_local=1.104 knn_local=1.128
+[176/380     183s] irw2802 s5 n=2802 best=random_global random_global=0.712 gnn_global=0.831 knn_global=1.057 random_local=1.472 gnn_local=1.425 knn_local=1.104
+[177/380     183s] irw2802 s2 n=2802 best=knn_global random_global=0.962 gnn_global=1.080 knn_global=0.950 random_local=1.425 gnn_local=1.009 knn_local=1.199
+[178/380     183s] irw2802 s7 n=2802 best=gnn_global random_global=0.902 gnn_global=0.332 knn_global=0.427 random_local=1.104 gnn_local=1.247 knn_local=1.009
+[179/380     243s] irw2802 s9 n=2802 best=knn_global random_global=1.080 gnn_global=0.867 knn_global=0.760 random_local=1.235 gnn_local=1.104 knn_local=0.926
+[180/380     243s] mlt2597 s3 n=2597 best=knn_global random_global=0.830 gnn_global=0.880 knn_global=0.681 random_local=1.524 gnn_local=1.437 knn_local=1.623
+[181/380     243s] mlt2597 s1 n=2597 best=gnn_global random_global=0.731 gnn_global=0.434 knn_global=0.446 random_local=0.942 gnn_local=0.966 knn_local=1.177
+[182/380     243s] mlt2597 s0 n=2597 best=gnn_global random_global=0.768 gnn_global=0.582 knn_global=1.127 random_local=0.681 gnn_local=1.152 knn_local=0.781
+[183/380     243s] irw2802 s8 n=2802 best=gnn_global random_global=0.867 gnn_global=0.712 knn_global=0.902 random_local=1.294 gnn_local=1.152 knn_local=1.413
+[184/380     243s] mlt2597 s2 n=2597 best=knn_global random_global=0.756 gnn_global=0.620 knn_global=0.607 random_local=1.239 gnn_local=1.338 knn_local=1.512
+[185/380     303s] mlt2597 s4 n=2597 best=gnn_global random_global=0.620 gnn_global=0.359 knn_global=0.644 random_local=0.929 gnn_local=1.053 knn_local=1.326
+[186/380     303s] mlt2597 s5 n=2597 best=random_global random_global=0.533 gnn_global=0.632 knn_global=0.545 random_local=1.066 gnn_local=0.855 knn_local=1.177
+[187/380     303s] mlt2597 s6 n=2597 best=knn_global random_global=0.719 gnn_global=0.694 knn_global=0.582 random_local=1.127 gnn_local=1.127 knn_local=1.239
+[188/380     303s] mlt2597 s7 n=2597 best=random_global random_global=0.657 gnn_global=0.867 knn_global=0.768 random_local=1.115 gnn_local=0.805 knn_local=1.289
+[189/380     303s] mlt2597 s9 n=2597 best=knn_global random_global=1.140 gnn_global=0.966 knn_global=0.768 random_local=1.251 gnn_local=1.735 knn_local=1.499
+[190/380     303s] mlt2597 s8 n=2597 best=knn_global random_global=0.657 gnn_global=0.644 knn_global=0.471 random_local=1.400 gnn_local=1.214 knn_local=0.929
+[191/380     364s] pds2566 s0 n=2566 best=random_global random_global=0.471 gnn_global=0.994 knn_global=0.576 random_local=0.864 gnn_local=0.864 knn_local=1.034
+[192/380     364s] pds2566 s3 n=2566 best=random_global random_global=0.654 gnn_global=0.955 knn_global=0.693 random_local=1.374 gnn_local=1.191 knn_local=1.413
+[193/380     364s] pds2566 s1 n=2566 best=knn_global random_global=0.916 gnn_global=0.929 knn_global=0.864 random_local=1.125 gnn_local=1.086 knn_local=1.243
+[194/380     364s] pds2566 s2 n=2566 best=knn_global random_global=1.191 gnn_global=1.086 knn_global=0.419 random_local=1.688 gnn_local=1.034 knn_local=1.060
+[195/380     364s] pds2566 s4 n=2566 best=gnn_global random_global=0.850 gnn_global=0.824 knn_global=0.903 random_local=1.178 gnn_local=0.903 knn_local=1.465
+[196/380     364s] pds2566 s5 n=2566 best=gnn_global random_global=0.955 gnn_global=0.628 knn_global=0.811 random_local=1.282 gnn_local=1.505 knn_local=1.230
+[197/380     424s] pds2566 s6 n=2566 best=knn_global random_global=1.047 gnn_global=0.955 knn_global=0.563 random_local=1.335 gnn_local=1.099 knn_local=1.295
+[198/380     424s] pds2566 s7 n=2566 best=random_global random_global=0.641 gnn_global=0.968 knn_global=0.667 random_local=0.877 gnn_local=1.478 knn_local=0.759
+[199/380     424s] pds2566 s8 n=2566 best=knn_global random_global=1.047 gnn_global=0.981 knn_global=0.589 random_local=1.243 gnn_local=1.505 knn_local=0.981
+[200/380     424s] pds2566 s9 n=2566 best=knn_global random_global=1.308 gnn_global=1.060 knn_global=0.667 random_local=1.348 gnn_local=1.086 knn_local=1.007
+[201/380     424s] rbw2481 s0 n=2481 best=gnn_global random_global=1.437 gnn_global=0.673 knn_global=0.958 random_local=1.126 gnn_local=1.010 knn_local=1.191
+[202/380     424s] rbw2481 s1 n=2481 best=gnn_global random_global=1.308 gnn_global=0.906 knn_global=1.100 random_local=1.398 gnn_local=1.567 knn_local=1.890
+[203/380     484s] rbw2481 s2 n=2481 best=knn_global random_global=0.932 gnn_global=0.932 knn_global=0.880 random_local=1.476 gnn_local=1.787 knn_local=1.165
+[204/380     484s] rbw2481 s4 n=2481 best=knn_global random_global=1.075 gnn_global=1.282 knn_global=0.427 random_local=1.709 gnn_local=2.201 knn_local=1.709
+[205/380     484s] rbw2481 s3 n=2481 best=random_global random_global=0.867 gnn_global=1.165 knn_global=1.398 random_local=1.631 gnn_local=1.774 knn_local=1.463
+[206/380     484s] rbw2481 s5 n=2481 best=knn_global random_global=1.334 gnn_global=1.100 knn_global=0.764 random_local=1.088 gnn_local=1.424 knn_local=1.528
+[207/380     484s] rbw2481 s6 n=2481 best=knn_global random_global=1.217 gnn_global=0.505 knn_global=0.311 random_local=0.803 gnn_local=1.346 knn_local=1.981
+[208/380     484s] rbw2481 s7 n=2481 best=knn_global random_global=1.036 gnn_global=1.372 knn_global=0.816 random_local=1.735 gnn_local=1.748 knn_local=1.683
+[209/380     544s] rbw2481 s8 n=2481 best=gnn_global random_global=1.605 gnn_global=0.660 knn_global=1.100 random_local=1.696 gnn_local=1.618 knn_local=1.748
+[210/380     544s] rbw2481 s9 n=2481 best=gnn_global random_global=1.269 gnn_global=0.686 knn_global=1.126 random_local=1.372 gnn_local=1.489 knn_local=1.631
+[211/380     544s] dea2382 s0 n=2382 best=gnn_local random_global=0.611 gnn_global=0.661 knn_global=0.699 random_local=0.823 gnn_local=0.349 knn_local=0.748
+[212/380     544s] dea2382 s2 n=2382 best=gnn_global random_global=0.536 gnn_global=0.299 knn_global=0.374 random_local=0.574 gnn_local=0.699 knn_local=0.936
+[213/380     544s] dea2382 s1 n=2382 best=gnn_global random_global=0.898 gnn_global=0.412 knn_global=0.474 random_local=0.886 gnn_local=1.035 knn_local=0.886
+[214/380     544s] dea2382 s3 n=2382 best=gnn_global random_global=0.549 gnn_global=0.399 knn_global=0.624 random_local=1.123 gnn_local=0.873 knn_local=0.861
+[215/380     604s] dea2382 s4 n=2382 best=random_global random_global=0.299 gnn_global=0.312 knn_global=0.574 random_local=0.549 gnn_local=0.823 knn_local=0.736
+[216/380     604s] dea2382 s5 n=2382 best=gnn_global random_global=0.586 gnn_global=0.324 knn_global=0.387 random_local=0.611 gnn_local=0.761 knn_local=0.848
+[217/380     604s] dea2382 s7 n=2382 best=knn_global random_global=0.798 gnn_global=0.636 knn_global=0.249 random_local=0.636 gnn_local=0.985 knn_local=0.960
+[218/380     604s] dea2382 s6 n=2382 best=gnn_global random_global=0.412 gnn_global=0.187 knn_global=0.387 random_local=0.711 gnn_local=0.536 knn_local=0.549
+[219/380     604s] dea2382 s8 n=2382 best=knn_global random_global=0.536 gnn_global=0.611 knn_global=0.499 random_local=0.848 gnn_local=0.936 knn_local=1.010
+[220/380     604s] dea2382 s9 n=2382 best=random_global random_global=0.287 gnn_global=0.574 knn_global=0.387 random_local=0.848 gnn_local=0.823 knn_local=0.861
+[221/380     664s] ley2323 s0 n=2323 best=knn_global random_global=0.383 gnn_global=0.934 knn_global=0.180 random_local=1.042 gnn_local=1.042 knn_local=0.503
+[222/380     664s] ley2323 s2 n=2323 best=knn_global random_global=0.790 gnn_global=0.467 knn_global=0.311 random_local=1.006 gnn_local=1.377 knn_local=0.994
+[223/380     664s] ley2323 s1 n=2323 best=random_global random_global=0.120 gnn_global=1.125 knn_global=0.180 random_local=0.515 gnn_local=0.407 knn_local=1.329
+[224/380     664s] ley2323 s3 n=2323 best=random_global random_global=0.156 gnn_global=1.161 knn_global=0.515 random_local=0.910 gnn_local=1.078 knn_local=0.479
+[225/380     664s] ley2323 s5 n=2323 best=gnn_global random_global=0.682 gnn_global=0.287 knn_global=0.802 random_local=1.449 gnn_local=1.557 knn_local=1.018
+[226/380     664s] ley2323 s4 n=2323 best=gnn_global random_global=0.515 gnn_global=0.108 knn_global=0.132 random_local=0.635 gnn_local=1.102 knn_local=1.209
+[227/380     724s] ley2323 s6 n=2323 best=knn_global random_global=1.401 gnn_global=0.299 knn_global=0.204 random_local=1.353 gnn_local=1.892 knn_local=1.137
+[228/380     724s] ley2323 s8 n=2323 best=random_global random_global=0.096 gnn_global=0.611 knn_global=0.347 random_local=0.946 gnn_local=0.599 knn_local=1.173
+[229/380     724s] ley2323 s7 n=2323 best=random_global random_global=0.383 gnn_global=0.503 knn_global=0.455 random_local=1.616 gnn_local=1.616 knn_local=1.688
+[230/380     725s] xpr2308 s0 n=2308 best=knn_global random_global=0.734 gnn_global=0.914 knn_global=0.651 random_local=1.316 gnn_local=0.956 knn_local=1.067
+[231/380     725s] ley2323 s9 n=2323 best=knn_global random_global=0.455 gnn_global=0.216 knn_global=0.072 random_local=0.718 gnn_local=0.874 knn_local=0.575
+[232/380     725s] xpr2308 s1 n=2308 best=random_global random_global=0.540 gnn_global=0.623 knn_global=0.734 random_local=1.274 gnn_local=0.942 knn_local=0.887
+[233/380     785s] xpr2308 s2 n=2308 best=knn_global random_global=0.582 gnn_global=0.790 knn_global=0.513 random_local=1.247 gnn_local=1.025 knn_local=1.039
+[234/380     785s] xpr2308 s4 n=2308 best=knn_global random_global=0.637 gnn_global=0.956 knn_global=0.623 random_local=1.233 gnn_local=1.108 knn_local=0.984
+[235/380     785s] xpr2308 s5 n=2308 best=knn_global random_global=1.164 gnn_global=1.025 knn_global=0.900 random_local=1.496 gnn_local=1.635 knn_local=1.316
+[236/380     785s] xpr2308 s3 n=2308 best=knn_global random_global=0.956 gnn_global=1.122 knn_global=0.679 random_local=0.873 gnn_local=1.094 knn_local=1.053
+[237/380     785s] xpr2308 s7 n=2308 best=knn_global random_global=0.984 gnn_global=0.831 knn_global=0.540 random_local=1.371 gnn_local=1.371 knn_local=1.371
+[238/380     785s] xpr2308 s6 n=2308 best=random_global random_global=0.914 gnn_global=1.205 knn_global=1.094 random_local=1.607 gnn_local=1.247 knn_local=1.385
+[239/380     845s] xqc2175 s1 n=2175 best=knn_global random_global=0.922 gnn_global=0.776 knn_global=0.630 random_local=1.332 gnn_local=1.186 knn_local=1.523
+[240/380     845s] xqc2175 s2 n=2175 best=knn_global random_global=0.703 gnn_global=0.981 knn_global=0.630 random_local=1.186 gnn_local=1.215 knn_local=1.464
+[241/380     845s] xpr2308 s8 n=2308 best=gnn_global random_global=1.205 gnn_global=0.706 knn_global=0.914 random_local=1.510 gnn_local=1.039 knn_local=1.551
+[242/380     845s] xqc2175 s0 n=2175 best=knn_global random_global=0.615 gnn_global=0.615 knn_global=0.600 random_local=1.215 gnn_local=1.303 knn_local=1.435
+[243/380     845s] xpr2308 s9 n=2308 best=gnn_global random_global=0.887 gnn_global=0.831 knn_global=1.039 random_local=1.247 gnn_local=1.302 knn_local=0.997
+[244/380     845s] xqc2175 s3 n=2175 best=gnn_global random_global=0.644 gnn_global=0.410 knn_global=0.966 random_local=0.996 gnn_local=1.669 knn_local=1.347
+[245/380     905s] xqc2175 s4 n=2175 best=knn_global random_global=0.878 gnn_global=0.966 knn_global=0.761 random_local=0.878 gnn_local=0.937 knn_local=1.083
+[246/380     905s] xqc2175 s5 n=2175 best=knn_global random_global=1.025 gnn_global=0.805 knn_global=0.542 random_local=1.083 gnn_local=1.581 knn_local=1.611
+[247/380     905s] xqc2175 s7 n=2175 best=random_global random_global=0.981 gnn_global=1.186 knn_global=1.186 random_local=1.713 gnn_local=1.171 knn_local=1.493
+[248/380     905s] xqc2175 s6 n=2175 best=gnn_global random_global=0.747 gnn_global=0.586 knn_global=0.688 random_local=1.479 gnn_local=1.376 knn_local=1.157
+[249/380     905s] xqc2175 s8 n=2175 best=gnn_global random_global=1.318 gnn_global=0.703 knn_global=0.732 random_local=1.552 gnn_local=1.567 knn_local=1.186
+[250/380     905s] xqc2175 s9 n=2175 best=random_global random_global=0.527 gnn_global=1.113 knn_global=0.747 random_local=1.596 gnn_local=1.742 knn_local=1.318
+[251/380     965s] bva2144 s1 n=2144 best=random_global random_global=0.793 gnn_global=0.999 knn_global=0.920 random_local=1.459 gnn_local=1.079 knn_local=1.317
+[252/380     965s] bva2144 s0 n=2144 best=gnn_global random_global=0.872 gnn_global=0.793 knn_global=0.920 random_local=1.523 gnn_local=1.491 knn_local=1.174
+[253/380     965s] bva2144 s3 n=2144 best=random_global random_global=0.619 gnn_global=0.698 knn_global=0.999 random_local=0.999 gnn_local=1.110 knn_local=0.872
+[254/380     965s] bva2144 s4 n=2144 best=random_global random_global=0.761 gnn_global=0.872 knn_global=0.841 random_local=1.269 gnn_local=1.221 knn_local=1.015
+[255/380     965s] bva2144 s2 n=2144 best=knn_global random_global=1.079 gnn_global=0.999 knn_global=0.761 random_local=1.539 gnn_local=1.269 knn_local=1.364
+[256/380     965s] bva2144 s5 n=2144 best=gnn_global random_global=0.936 gnn_global=0.476 knn_global=0.523 random_local=1.602 gnn_local=0.984 knn_local=1.142
+[257/380    1025s] bva2144 s6 n=2144 best=knn_global random_global=0.952 gnn_global=1.444 knn_global=0.635 random_local=1.110 gnn_local=1.285 knn_local=1.523
+[258/380    1025s] bva2144 s9 n=2144 best=knn_global random_global=1.555 gnn_global=0.888 knn_global=0.476 random_local=1.396 gnn_local=1.174 knn_local=1.428
+[259/380    1025s] bva2144 s7 n=2144 best=gnn_global random_global=0.857 gnn_global=0.666 knn_global=0.761 random_local=1.317 gnn_local=1.063 knn_local=1.285
+[260/380    1025s] bva2144 s8 n=2144 best=gnn_global random_global=1.190 gnn_global=0.730 knn_global=1.158 random_local=1.269 gnn_local=1.761 knn_local=1.618
+[261/380    1025s] dcb2086 s0 n=2086 best=random_global random_global=0.591 gnn_global=0.939 knn_global=0.955 random_local=1.348 gnn_local=1.212 knn_local=1.712
+[262/380    1025s] dcb2086 s1 n=2086 best=knn_global random_global=0.652 gnn_global=0.682 knn_global=0.485 random_local=1.136 gnn_local=1.303 knn_local=1.303
+[263/380    1085s] dcb2086 s4 n=2086 best=knn_local random_global=1.485 gnn_global=0.788 knn_global=0.727 random_local=1.561 gnn_local=1.242 knn_local=0.712
+[264/380    1085s] dcb2086 s2 n=2086 best=knn_global random_global=0.682 gnn_global=1.136 knn_global=0.682 random_local=1.227 gnn_local=1.606 knn_local=1.652
+[265/380    1085s] dcb2086 s5 n=2086 best=gnn_global random_global=1.045 gnn_global=0.288 knn_global=0.667 random_local=0.652 gnn_local=1.061 knn_local=1.045
+[266/380    1085s] dcb2086 s3 n=2086 best=random_global random_global=0.333 gnn_global=0.409 knn_global=1.136 random_local=1.424 gnn_local=1.167 knn_local=1.136
+[267/380    1085s] dcb2086 s6 n=2086 best=knn_global random_global=1.045 gnn_global=0.848 knn_global=0.697 random_local=1.576 gnn_local=1.636 knn_local=1.818
+[268/380    1085s] dcb2086 s7 n=2086 best=random_global random_global=0.621 gnn_global=0.970 knn_global=1.015 random_local=1.242 gnn_local=1.530 knn_local=0.939
+[269/380    1145s] djb2036 s1 n=2036 best=knn_global random_global=1.243 gnn_global=1.436 knn_global=0.904 random_local=0.920 gnn_local=1.339 knn_local=1.920
+[270/380    1145s] djb2036 s2 n=2036 best=knn_global random_global=0.678 gnn_global=0.694 knn_global=0.549 random_local=1.388 gnn_local=1.614 knn_local=1.920
+[271/380    1145s] dcb2086 s9 n=2086 best=knn_global random_global=0.379 gnn_global=0.348 knn_global=0.288 random_local=1.712 gnn_local=0.985 knn_local=1.379
+[272/380    1145s] dcb2086 s8 n=2086 best=knn_global random_global=1.106 gnn_global=0.818 knn_global=0.773 random_local=1.652 gnn_local=1.697 knn_local=1.242
+[273/380    1145s] djb2036 s0 n=2036 best=knn_global random_global=0.904 gnn_global=1.033 knn_global=0.855 random_local=1.291 gnn_local=1.146 knn_local=0.888
+[274/380    1146s] djb2036 s3 n=2036 best=random_global random_global=0.726 gnn_global=1.291 knn_global=1.581 random_local=1.146 gnn_local=1.936 knn_local=1.840
+[275/380    1206s] djb2036 s4 n=2036 best=random_global random_global=0.645 gnn_global=0.904 knn_global=0.662 random_local=1.533 gnn_local=1.388 knn_local=1.307
+[276/380    1206s] djb2036 s7 n=2036 best=random_global random_global=0.500 gnn_global=0.871 knn_global=0.775 random_local=1.468 gnn_local=0.871 knn_local=1.323
+[277/380    1206s] djb2036 s6 n=2036 best=knn_global random_global=0.775 gnn_global=0.920 knn_global=0.516 random_local=1.307 gnn_local=1.727 knn_local=1.178
+[278/380    1206s] djb2036 s5 n=2036 best=gnn_global random_global=1.017 gnn_global=0.678 knn_global=1.000 random_local=1.017 gnn_local=1.355 knn_local=1.162
+[279/380    1206s] djb2036 s8 n=2036 best=knn_global random_global=0.387 gnn_global=0.613 knn_global=0.387 random_local=0.629 gnn_local=1.485 knn_local=0.807
+[280/380    1206s] djb2036 s9 n=2036 best=gnn_global random_global=1.130 gnn_global=0.904 knn_global=1.033 random_local=1.598 gnn_local=1.355 knn_local=0.968
+[281/380    1266s] dkd1973 s3 n=1973 best=knn_global random_global=0.374 gnn_global=0.452 knn_global=0.249 random_local=0.779 gnn_local=0.794 knn_local=0.763
+[282/380    1266s] dkd1973 s2 n=1973 best=gnn_global random_global=0.576 gnn_global=0.125 knn_global=0.483 random_local=0.561 gnn_local=0.748 knn_local=0.561
+[283/380    1266s] dkd1973 s0 n=1973 best=knn_global random_global=0.607 gnn_global=0.670 knn_global=0.311 random_local=0.420 gnn_local=0.639 knn_local=0.327
+[284/380    1266s] dkd1973 s1 n=1973 best=knn_global random_global=0.296 gnn_global=0.716 knn_global=0.187 random_local=0.950 gnn_local=0.810 knn_local=0.498
+[285/380    1266s] dkd1973 s4 n=1973 best=knn_global random_global=0.498 gnn_global=0.607 knn_global=0.358 random_local=0.545 gnn_local=0.716 knn_local=0.919
+[286/380    1266s] dkd1973 s5 n=1973 best=gnn_global random_global=0.592 gnn_global=0.280 knn_global=0.561 random_local=0.483 gnn_local=0.639 knn_local=0.701
+[287/380    1326s] dkd1973 s6 n=1973 best=knn_local random_global=0.420 gnn_global=0.919 knn_global=0.701 random_local=0.530 gnn_local=0.639 knn_local=0.327
+[288/380    1326s] dcc1911 s1 n=1911 best=knn_global random_global=0.719 gnn_global=0.876 knn_global=0.407 random_local=0.594 gnn_local=0.860 knn_local=1.126
+[289/380    1326s] dcc1911 s0 n=1911 best=random_global random_global=0.375 gnn_global=0.797 knn_global=0.829 random_local=1.282 gnn_local=0.844 knn_local=1.173
+[290/380    1326s] dkd1973 s9 n=1973 best=random_global random_global=0.467 gnn_global=0.934 knn_global=0.592 random_local=0.825 gnn_local=0.966 knn_local=0.748
+[291/380    1326s] dkd1973 s8 n=1973 best=knn_global random_global=0.794 gnn_global=0.311 knn_global=0.280 random_local=0.576 gnn_local=0.654 knn_local=0.841
+[292/380    1326s] dkd1973 s7 n=1973 best=gnn_global random_global=0.592 gnn_global=0.358 knn_global=0.498 random_local=0.514 gnn_local=0.685 knn_local=0.888
+[293/380    1386s] dcc1911 s3 n=1911 best=random_global random_global=0.594 gnn_global=0.657 knn_global=0.782 random_local=1.251 gnn_local=0.860 knn_local=1.173
+[294/380    1386s] dcc1911 s2 n=1911 best=gnn_global random_global=0.704 gnn_global=0.641 knn_global=0.954 random_local=1.079 gnn_local=0.750 knn_local=1.032
+[295/380    1386s] dcc1911 s4 n=1911 best=random_global random_global=0.578 gnn_global=0.594 knn_global=0.578 random_local=0.797 gnn_local=0.813 knn_local=0.719
+[296/380    1386s] dcc1911 s6 n=1911 best=random_global random_global=0.266 gnn_global=0.422 knn_global=0.375 random_local=0.938 gnn_local=1.313 knn_local=0.578
+[297/380    1386s] dcc1911 s5 n=1911 best=random_global random_global=0.516 gnn_global=0.610 knn_global=0.516 random_local=0.797 gnn_local=0.907 knn_local=0.782
+[298/380    1386s] dcc1911 s7 n=1911 best=knn_global random_global=0.610 gnn_global=0.594 knn_global=0.360 random_local=0.860 gnn_local=0.735 knn_local=1.157
+[299/380    1446s] djc1785 s0 n=1785 best=gnn_global random_global=0.572 gnn_global=0.540 knn_global=0.752 random_local=0.998 gnn_local=0.834 knn_local=0.948
+[300/380    1446s] djc1785 s2 n=1785 best=gnn_global random_global=1.177 gnn_global=0.720 knn_global=1.014 random_local=1.832 gnn_local=1.521 knn_local=1.586
+[301/380    1446s] dcc1911 s8 n=1911 best=gnn_global random_global=1.141 gnn_global=0.625 knn_global=0.766 random_local=1.282 gnn_local=1.360 knn_local=1.001
+[302/380    1446s] djc1785 s3 n=1785 best=knn_global random_global=0.801 gnn_global=0.654 knn_global=0.523 random_local=0.981 gnn_local=0.769 knn_local=0.670
+[303/380    1446s] dcc1911 s9 n=1911 best=knn_global random_global=0.860 gnn_global=0.719 knn_global=0.625 random_local=0.735 gnn_local=0.829 knn_local=1.032
+[304/380    1446s] djc1785 s1 n=1785 best=knn_global random_global=0.507 gnn_global=0.572 knn_global=0.196 random_local=0.736 gnn_local=0.834 knn_local=0.981
+[305/380    1506s] djc1785 s4 n=1785 best=random_global random_global=0.392 gnn_global=0.556 knn_global=0.720 random_local=0.916 gnn_local=1.145 knn_local=0.883
+[306/380    1506s] djc1785 s5 n=1785 best=random_global random_global=0.654 gnn_global=0.834 knn_global=0.785 random_local=1.194 gnn_local=1.079 knn_local=1.161
+[307/380    1506s] djc1785 s9 n=1785 best=gnn_global random_global=0.720 gnn_global=0.409 knn_global=0.540 random_local=0.948 gnn_local=1.488 knn_local=1.161
+[308/380    1506s] djc1785 s7 n=1785 best=random_global random_global=0.556 gnn_global=0.720 knn_global=0.801 random_local=1.292 gnn_local=0.834 knn_local=1.472
+[309/380    1506s] djc1785 s6 n=1785 best=random_global random_global=0.589 gnn_global=1.030 knn_global=0.654 random_local=0.736 gnn_local=1.308 knn_local=1.177
+[310/380    1506s] djc1785 s8 n=1785 best=knn_global random_global=1.112 gnn_global=1.226 knn_global=0.654 random_local=1.357 gnn_local=1.521 knn_local=1.554
+[311/380    1566s] fnb1615 s1 n=1615 best=knn_global random_global=0.747 gnn_global=0.646 knn_global=0.626 random_local=1.372 gnn_local=1.312 knn_local=1.009
+[312/380    1566s] fnb1615 s0 n=1615 best=random_global random_global=0.646 gnn_global=0.928 knn_global=0.747 random_local=1.069 gnn_local=1.352 knn_local=1.130
+[313/380    1567s] fnb1615 s2 n=1615 best=gnn_global random_global=1.029 gnn_global=0.868 knn_global=0.989 random_local=1.655 gnn_local=1.433 knn_local=1.009
+[314/380    1567s] fnb1615 s5 n=1615 best=knn_global random_global=1.412 gnn_global=1.453 knn_global=1.170 random_local=1.695 gnn_local=1.836 knn_local=1.554
+[315/380    1567s] fnb1615 s4 n=1615 best=knn_global random_global=0.807 gnn_global=0.807 knn_global=0.605 random_local=1.433 gnn_local=1.110 knn_local=1.655
+[316/380    1567s] fnb1615 s3 n=1615 best=knn_global random_global=0.868 gnn_global=0.747 knn_global=0.666 random_local=1.069 gnn_local=1.090 knn_local=1.655
+[317/380    1626s] fnb1615 s6 n=1615 best=random_global random_global=0.747 gnn_global=0.807 knn_global=1.029 random_local=1.755 gnn_local=1.917 knn_local=1.372
+[318/380    1627s] fnb1615 s7 n=1615 best=knn_global random_global=0.969 gnn_global=0.565 knn_global=0.525 random_local=0.847 gnn_local=1.231 knn_local=1.069
+[319/380    1627s] fnb1615 s8 n=1615 best=knn_global random_global=0.767 gnn_global=0.847 knn_global=0.646 random_local=1.211 gnn_local=1.493 knn_local=1.190
+[320/380    1627s] fnb1615 s9 n=1615 best=knn_global random_global=1.009 gnn_global=1.049 knn_global=0.787 random_local=1.009 gnn_local=1.110 knn_local=1.574
+[321/380    1627s] rby1599 s1 n=1599 best=knn_global random_global=0.578 gnn_global=1.012 knn_global=0.235 random_local=1.084 gnn_local=0.705 knn_local=0.994
+[322/380    1627s] rby1599 s0 n=1599 best=knn_global random_global=1.102 gnn_global=0.795 knn_global=0.596 random_local=0.687 gnn_local=0.759 knn_local=0.904
+[323/380    1687s] rby1599 s2 n=1599 best=gnn_global random_global=0.596 gnn_global=0.452 knn_global=0.596 random_local=0.976 gnn_local=0.777 knn_local=0.705
+[324/380    1687s] rby1599 s3 n=1599 best=knn_global random_global=0.452 gnn_global=0.614 knn_global=0.398 random_local=1.030 gnn_local=1.265 knn_local=0.813
+[325/380    1687s] rby1599 s4 n=1599 best=knn_global random_global=0.488 gnn_global=0.578 knn_global=0.380 random_local=0.813 gnn_local=0.831 knn_local=0.705
+[326/380    1687s] rby1599 s5 n=1599 best=knn_global random_global=0.831 gnn_global=0.849 knn_global=0.723 random_local=1.283 gnn_local=1.410 knn_local=1.572
+[327/380    1687s] rby1599 s6 n=1599 best=knn_global random_global=0.651 gnn_global=0.524 knn_global=0.380 random_local=0.813 gnn_local=1.175 knn_local=0.777
+[328/380    1687s] rby1599 s7 n=1599 best=gnn_global random_global=1.048 gnn_global=0.307 knn_global=0.434 random_local=1.247 gnn_local=1.175 knn_local=1.157
+[329/380    1747s] rby1599 s8 n=1599 best=knn_global random_global=0.614 gnn_global=0.542 knn_global=0.542 random_local=0.922 gnn_local=0.687 knn_local=0.849
+[330/380    1747s] rby1599 s9 n=1599 best=knn_global random_global=0.904 gnn_global=0.813 knn_global=0.614 random_local=1.012 gnn_local=1.066 knn_local=1.048
+[331/380    1747s] rbv1583 s1 n=1583 best=knn_global random_global=0.835 gnn_global=0.538 knn_global=0.371 random_local=1.262 gnn_local=1.281 knn_local=1.504
+[332/380    1747s] rbv1583 s0 n=1583 best=gnn_global random_global=0.872 gnn_global=0.650 knn_global=0.668 random_local=1.188 gnn_local=1.671 knn_local=1.466
+[333/380    1747s] rbv1583 s2 n=1583 best=knn_global random_global=1.244 gnn_global=0.780 knn_global=0.427 random_local=1.095 gnn_local=0.965 knn_local=0.984
+[334/380    1747s] rbv1583 s3 n=1583 best=gnn_local random_global=0.872 gnn_global=1.151 knn_global=0.928 random_local=1.077 gnn_local=0.835 knn_local=1.207
+[335/380    1807s] rbv1583 s4 n=1583 best=gnn_global random_global=1.114 gnn_global=0.446 knn_global=0.928 random_local=1.077 gnn_local=1.151 knn_local=1.225
+[336/380    1807s] rbv1583 s5 n=1583 best=knn_global random_global=0.631 gnn_global=0.557 knn_global=0.520 random_local=1.448 gnn_local=0.984 knn_local=1.040
+[337/380    1807s] rbv1583 s6 n=1583 best=gnn_global random_global=0.872 gnn_global=0.186 knn_global=0.316 random_local=1.392 gnn_local=1.244 knn_local=0.724
+[338/380    1807s] rbv1583 s8 n=1583 best=random_global random_global=0.427 gnn_global=0.798 knn_global=0.687 random_local=1.374 gnn_local=0.835 knn_local=1.244
+[339/380    1807s] rbv1583 s7 n=1583 best=gnn_global random_global=1.002 gnn_global=0.910 knn_global=1.318 random_local=1.244 gnn_local=0.984 knn_local=1.169
+[340/380    1807s] rbv1583 s9 n=1583 best=knn_global random_global=0.575 gnn_global=0.798 knn_global=0.538 random_local=1.095 gnn_local=0.984 knn_local=1.652
+[341/380    1867s] fra1488 s0 n=1488 best=knn_global random_global=0.891 gnn_global=1.008 knn_global=0.375 random_local=0.750 gnn_local=0.915 knn_local=0.868
+[342/380    1867s] fra1488 s1 n=1488 best=knn_global random_global=0.727 gnn_global=0.821 knn_global=0.563 random_local=0.610 gnn_local=0.915 knn_local=1.079
+[343/380    1868s] fra1488 s2 n=1488 best=gnn_global random_global=1.173 gnn_global=0.704 knn_global=0.774 random_local=1.173 gnn_local=1.126 knn_local=1.008
+[344/380    1868s] fra1488 s3 n=1488 best=gnn_global random_global=0.774 gnn_global=0.750 knn_global=0.774 random_local=0.891 gnn_local=0.938 knn_local=0.985
+[345/380    1868s] fra1488 s4 n=1488 best=random_global random_global=0.539 gnn_global=0.586 knn_global=0.774 random_local=0.938 gnn_local=1.008 knn_local=0.774
+[346/380    1868s] fra1488 s5 n=1488 best=knn_local random_global=1.149 gnn_global=0.704 knn_global=0.657 random_local=1.290 gnn_local=1.149 knn_local=0.586
+[347/380    1927s] fra1488 s6 n=1488 best=knn_global random_global=0.985 gnn_global=1.032 knn_global=0.281 random_local=1.196 gnn_local=1.173 knn_local=1.266
+[348/380    1927s] fra1488 s7 n=1488 best=knn_global random_global=0.985 gnn_global=0.891 knn_global=0.422 random_local=0.727 gnn_local=0.915 knn_local=0.962
+[349/380    1928s] fra1488 s8 n=1488 best=random_global random_global=0.258 gnn_global=0.844 knn_global=0.446 random_local=0.469 gnn_local=0.797 knn_local=1.032
+[350/380    1928s] icw1483 s0 n=1483 best=knn_global random_global=0.634 gnn_global=0.883 knn_global=0.430 random_local=1.042 gnn_local=0.838 knn_local=1.064
+[351/380    1928s] fra1488 s9 n=1488 best=random_global random_global=0.399 gnn_global=0.962 knn_global=0.492 random_local=1.173 gnn_local=1.055 knn_local=0.985
+[352/380    1928s] icw1483 s1 n=1483 best=knn_global random_global=0.498 gnn_global=1.087 knn_global=0.498 random_local=1.359 gnn_local=1.178 knn_local=0.974
+[353/380    1987s] icw1483 s2 n=1483 best=knn_global random_global=0.611 gnn_global=0.838 knn_global=0.091 random_local=0.951 gnn_local=1.178 knn_local=0.951
+[354/380    1987s] icw1483 s3 n=1483 best=gnn_global random_global=0.770 gnn_global=0.543 knn_global=0.634 random_local=1.313 gnn_local=1.608 knn_local=1.132
+[355/380    1988s] icw1483 s4 n=1483 best=gnn_global random_global=0.974 gnn_global=0.430 knn_global=0.566 random_local=0.861 gnn_local=1.517 knn_local=1.495
+[356/380    1988s] icw1483 s6 n=1483 best=gnn_global random_global=0.770 gnn_global=0.340 knn_global=0.747 random_local=1.019 gnn_local=0.928 knn_local=1.268
+[357/380    1988s] icw1483 s7 n=1483 best=random_global random_global=0.385 gnn_global=0.747 knn_global=1.019 random_local=1.223 gnn_local=0.974 knn_local=1.019
+[358/380    1988s] icw1483 s5 n=1483 best=gnn_global random_global=1.064 gnn_global=0.657 knn_global=0.793 random_local=1.359 gnn_local=1.427 knn_local=1.381
+[359/380    2047s] icw1483 s8 n=1483 best=random_global random_global=0.294 gnn_global=0.294 knn_global=0.657 random_local=1.064 gnn_local=1.200 knn_local=1.585
+[360/380    2047s] icw1483 s9 n=1483 best=knn_local random_global=0.838 gnn_global=0.770 knn_global=0.589 random_local=0.611 gnn_local=1.313 knn_local=0.543
+[361/380    2048s] dja1436 s0 n=1436 best=knn_global random_global=0.609 gnn_global=0.438 knn_global=0.418 random_local=1.389 gnn_local=1.046 knn_local=1.484
+[362/380    2048s] dja1436 s3 n=1436 best=gnn_global random_global=0.932 gnn_global=0.552 knn_global=0.856 random_local=0.913 gnn_local=1.255 knn_local=1.179
+[363/380    2048s] dja1436 s2 n=1436 best=random_global random_global=0.171 gnn_global=0.361 knn_global=0.571 random_local=1.636 gnn_local=1.389 knn_local=1.313
+[364/380    2048s] dja1436 s1 n=1436 best=knn_global random_global=1.027 gnn_global=0.856 knn_global=0.266 random_local=1.598 gnn_local=1.484 knn_local=1.274
+[365/380    2108s] dja1436 s5 n=1436 best=knn_global random_global=0.818 gnn_global=0.476 knn_global=0.438 random_local=1.255 gnn_local=1.008 knn_local=0.894
+[366/380    2108s] dja1436 s4 n=1436 best=random_global random_global=0.323 gnn_global=0.761 knn_global=0.818 random_local=0.552 gnn_local=0.780 knn_local=0.761
+[367/380    2108s] dja1436 s6 n=1436 best=knn_global random_global=0.761 gnn_global=0.818 knn_global=0.438 random_local=0.685 gnn_local=0.913 knn_local=1.122
+[368/380    2108s] dja1436 s8 n=1436 best=knn_global random_global=1.160 gnn_global=0.418 knn_global=0.418 random_local=1.160 gnn_local=0.704 knn_local=1.084
+[369/380    2108s] dja1436 s7 n=1436 best=random_global random_global=0.342 gnn_global=0.761 knn_global=0.590 random_local=0.628 gnn_local=0.875 knn_local=1.122
+[370/380    2108s] dja1436 s9 n=1436 best=knn_global random_global=0.818 gnn_global=0.761 knn_global=0.361 random_local=0.723 gnn_local=1.255 knn_local=0.818
+[371/380    2168s] dka1376 s0 n=1376 best=knn_global random_global=0.836 gnn_global=0.793 knn_global=0.622 random_local=1.479 gnn_local=1.243 knn_local=1.586
+[372/380    2168s] dka1376 s1 n=1376 best=random_global random_global=0.729 gnn_global=0.943 knn_global=0.857 random_local=1.522 gnn_local=1.136 knn_local=1.414
+[373/380    2168s] dka1376 s2 n=1376 best=knn_global random_global=1.029 gnn_global=0.579 knn_global=0.236 random_local=0.900 gnn_local=1.200 knn_local=1.179
+[374/380    2168s] dka1376 s3 n=1376 best=random_global random_global=0.129 gnn_global=0.300 knn_global=0.214 random_local=0.793 gnn_local=1.414 knn_local=0.943
+[375/380    2168s] dka1376 s4 n=1376 best=knn_global random_global=0.879 gnn_global=1.307 knn_global=0.729 random_local=1.093 gnn_local=1.479 knn_local=1.243
+[376/380    2169s] dka1376 s5 n=1376 best=knn_global random_global=1.093 gnn_global=0.493 knn_global=0.364 random_local=1.436 gnn_local=1.264 knn_local=1.050
+[377/380    2228s] dka1376 s6 n=1376 best=random_global random_global=0.236 gnn_global=0.772 knn_global=0.879 random_local=0.879 gnn_local=1.029 knn_local=1.457
+[378/380    2228s] dka1376 s7 n=1376 best=knn_global random_global=0.922 gnn_global=0.836 knn_global=0.686 random_local=1.222 gnn_local=1.007 knn_local=1.114
+[379/380    2229s] dka1376 s8 n=1376 best=knn_global random_global=1.007 gnn_global=0.664 knn_global=0.493 random_local=1.757 gnn_local=1.522 knn_local=1.543
+[380/380    2229s] dka1376 s9 n=1376 best=random_global random_global=0.579 gnn_global=0.707 knn_global=1.114 random_local=0.814 gnn_local=0.643 knn_local=1.157
+lobal=0.572 knn_global=0.572 random_local=0.916 gnn_local=1.112 knn_local=0.818
+[306/380      64s] skip djc1785__s8.json
+[307/380      64s] skip djc1785__s9.json
+[308/380     124s] djc1785 s5 n=1785 best=random_global random_global=0.654 gnn_global=0.720 knn_global=0.785 random_local=1.243 gnn_local=1.177 knn_local=1.145
+[309/380     124s] djc1785 s6 n=1785 best=knn_global random_global=0.572 gnn_global=0.703 knn_global=0.507 random_local=0.736 gnn_local=1.226 knn_local=1.145
+[310/380     124s] djc1785 s7 n=1785 best=random_global random_global=0.556 gnn_global=0.572 knn_global=0.670 random_local=1.292 gnn_local=0.998 knn_local=0.965
+[311/380     125s] fnb1615 s0 n=1615 best=random_global random_global=0.646 gnn_global=0.908 knn_global=0.726 random_local=1.069 gnn_local=1.715 knn_local=1.332
+[312/380     125s] skip fnb1615__s4.json
+[313/380     125s] skip fnb1615__s5.json
+[314/380     184s] fnb1615 s2 n=1615 best=gnn_global random_global=0.989 gnn_global=0.626 knn_global=0.686 random_local=1.655 gnn_local=1.493 knn_local=1.554
+[315/380     184s] fnb1615 s1 n=1615 best=gnn_local random_global=0.747 gnn_global=0.888 knn_global=0.847 random_local=1.453 gnn_local=0.585 knn_local=1.312
+[316/380     184s] fnb1615 s3 n=1615 best=gnn_global random_global=0.908 gnn_global=0.686 knn_global=0.928 random_local=1.069 gnn_local=1.190 knn_local=1.352
+[317/380     185s] fnb1615 s6 n=1615 best=knn_global random_global=0.747 gnn_global=1.029 knn_global=0.706 random_local=1.755 gnn_local=1.554 knn_local=1.231
+[318/380     185s] skip rby1599__s0.json
+[319/380     185s] skip rby1599__s1.json
+[320/380     244s] fnb1615 s7 n=1615 best=gnn_global random_global=0.969 gnn_global=0.666 knn_global=0.868 random_local=0.847 gnn_local=1.211 knn_local=0.989
+[321/380     244s] fnb1615 s8 n=1615 best=knn_global random_global=0.787 gnn_global=0.827 knn_global=0.706 random_local=1.211 gnn_local=1.473 knn_local=0.767
+[322/380     244s] fnb1615 s9 n=1615 best=gnn_global random_global=1.009 gnn_global=0.726 knn_global=0.807 random_local=1.009 gnn_local=1.412 knn_local=1.917
+[323/380     245s] rby1599 s2 n=1599 best=knn_global random_global=0.596 gnn_global=0.596 knn_global=0.542 random_local=0.976 gnn_local=0.741 knn_local=0.795
+[324/380     245s] skip rby1599__s6.json
+[325/380     245s] skip rby1599__s7.json
+[326/380     304s] rby1599 s3 n=1599 best=random_global random_global=0.452 gnn_global=0.651 knn_global=0.633 random_local=1.030 gnn_local=1.590 knn_local=1.121
+[327/380     304s] rby1599 s4 n=1599 best=random_global random_global=0.488 gnn_global=0.633 knn_global=0.488 random_local=0.976 gnn_local=0.741 knn_local=0.868
+[328/380     305s] rby1599 s5 n=1599 best=knn_global random_global=0.705 gnn_global=0.831 knn_global=0.560 random_local=1.283 gnn_local=1.247 knn_local=1.229
+[329/380     305s] rby1599 s8 n=1599 best=gnn_global random_global=0.614 gnn_global=0.416 knn_global=0.434 random_local=0.922 gnn_local=0.795 knn_local=0.687
+[330/380     305s] skip rbv1583__s2.json
+[331/380     364s] rby1599 s9 n=1599 best=gnn_global random_global=0.904 gnn_global=0.651 knn_global=0.705 random_local=1.012 gnn_local=1.030 knn_local=0.741
+[332/380     365s] rbv1583 s0 n=1583 best=knn_global random_global=0.872 gnn_global=0.705 knn_global=0.483 random_local=1.188 gnn_local=0.891 knn_local=1.077
+[333/380     365s] rbv1583 s1 n=1583 best=gnn_global random_global=0.835 gnn_global=0.501 knn_global=0.557 random_local=1.262 gnn_local=1.299 knn_local=1.429
+[334/380     365s] rbv1583 s3 n=1583 best=random_global random_global=0.464 gnn_global=0.501 knn_global=0.817 random_local=1.077 gnn_local=0.910 knn_local=1.411
+[335/380     365s] skip rbv1583__s7.json
+[336/380     365s] skip rbv1583__s8.json
+[337/380     365s] skip rbv1583__s9.json
+[338/380     425s] rbv1583 s4 n=1583 best=gnn_global random_global=0.798 gnn_global=0.557 knn_global=0.631 random_local=1.077 gnn_local=1.151 knn_local=1.318
+[339/380     425s] rbv1583 s5 n=1583 best=knn_global random_global=0.613 gnn_global=0.575 knn_global=0.520 random_local=1.485 gnn_local=1.596 knn_local=1.002
+[340/380     425s] rbv1583 s6 n=1583 best=knn_global random_global=0.872 gnn_global=0.464 knn_global=0.408 random_local=1.392 gnn_local=0.910 knn_local=0.835
+[341/380     425s] fra1488 s0 n=1488 best=random_local random_global=0.891 gnn_global=0.915 knn_global=0.774 random_local=0.750 gnn_local=0.915 knn_local=0.844
+[342/380     485s] fra1488 s1 n=1488 best=gnn_global random_global=0.727 gnn_global=0.352 knn_global=0.352 random_local=0.633 gnn_local=1.102 knn_local=1.126
+[343/380     485s] skip fra1488__s5.json
+[344/380     485s] fra1488 s2 n=1488 best=knn_global random_global=1.173 gnn_global=0.704 knn_global=0.563 random_local=1.173 gnn_local=1.055 knn_local=1.008
+[345/380     485s] skip fra1488__s7.json
+[346/380     485s] fra1488 s3 n=1488 best=knn_global random_global=0.774 gnn_global=0.891 knn_global=0.680 random_local=0.891 gnn_local=0.938 knn_local=0.938
+[347/380     485s] fra1488 s4 n=1488 best=knn_global random_global=0.539 gnn_global=0.610 knn_global=0.446 random_local=0.938 gnn_local=1.008 knn_local=0.704
+[348/380     545s] fra1488 s6 n=1488 best=knn_global random_global=0.985 gnn_global=1.079 knn_global=0.516 random_local=1.196 gnn_local=1.313 knn_local=0.797
+[349/380     545s] skip icw1483__s1.json
+[350/380     545s] fra1488 s8 n=1488 best=random_global random_global=0.258 gnn_global=0.704 knn_global=0.727 random_local=0.422 gnn_local=0.868 knn_local=0.985
+[351/380     545s] skip icw1483__s3.json
+[352/380     545s] fra1488 s9 n=1488 best=knn_global random_global=0.399 gnn_global=0.750 knn_global=0.281 random_local=1.173 gnn_local=1.032 knn_local=1.196
+[353/380     545s] icw1483 s0 n=1483 best=knn_global random_global=0.566 gnn_global=0.657 knn_global=0.249 random_local=1.042 gnn_local=0.702 knn_local=1.223
+[354/380     605s] icw1483 s2 n=1483 best=gnn_global random_global=0.611 gnn_global=0.408 knn_global=0.747 random_local=0.951 gnn_local=0.543 knn_local=0.996
+[355/380     605s] skip icw1483__s7.json
+[356/380     605s] icw1483 s4 n=1483 best=knn_global random_global=0.974 gnn_global=0.362 knn_global=0.272 random_local=0.861 gnn_local=1.223 knn_local=1.132
+[357/380     605s] skip icw1483__s9.json
+[358/380     605s] icw1483 s5 n=1483 best=gnn_global random_global=1.064 gnn_global=0.883 knn_global=0.883 random_local=1.359 gnn_local=1.223 knn_local=1.857
+[359/380     606s] icw1483 s6 n=1483 best=knn_global random_global=0.770 gnn_global=0.476 knn_global=0.181 random_local=0.928 gnn_local=0.725 knn_local=0.430
+[360/380     665s] icw1483 s8 n=1483 best=random_global random_global=0.294 gnn_global=0.294 knn_global=0.430 random_local=1.064 gnn_local=1.359 knn_local=1.449
+[361/380     665s] skip dja1436__s3.json
+[362/380     665s] dja1436 s0 n=1436 best=random_global random_global=0.609 gnn_global=0.628 knn_global=1.027 random_local=1.389 gnn_local=1.294 knn_local=0.723
+[363/380     665s] skip dja1436__s5.json
+[364/380     666s] dja1436 s1 n=1436 best=gnn_global random_global=0.875 gnn_global=0.399 knn_global=0.761 random_local=1.503 gnn_local=1.693 knn_local=1.579
+[365/380     666s] dja1436 s2 n=1436 best=random_global random_global=0.171 gnn_global=0.476 knn_global=0.514 random_local=1.636 gnn_local=1.274 knn_local=0.951
+[366/380     725s] dja1436 s4 n=1436 best=random_global random_global=0.323 gnn_global=0.342 knn_global=0.399 random_local=0.552 gnn_local=0.742 knn_local=1.160
+[367/380     725s] skip dja1436__s9.json
+[368/380     726s] dja1436 s6 n=1436 best=gnn_global random_global=0.761 gnn_global=0.590 knn_global=0.685 random_local=0.723 gnn_local=0.970 knn_local=0.970
+[369/380     726s] skip dka1376__s1.json
+[370/380     726s] dja1436 s7 n=1436 best=random_global random_global=0.342 gnn_global=0.609 knn_global=0.647 random_local=0.628 gnn_local=0.875 knn_local=1.313
+[371/380     726s] dja1436 s8 n=1436 best=gnn_global random_global=0.742 gnn_global=0.152 knn_global=0.932 random_local=1.160 gnn_local=0.666 knn_local=0.970
+[372/380     785s] dka1376 s0 n=1376 best=gnn_global random_global=0.836 gnn_global=0.729 knn_global=0.772 random_local=1.479 gnn_local=1.136 knn_local=1.522
+[373/380     785s] skip dka1376__s5.json
+[374/380     786s] dka1376 s2 n=1376 best=knn_global random_global=0.793 gnn_global=0.493 knn_global=0.300 random_local=0.900 gnn_local=1.264 knn_local=1.093
+[375/380     786s] skip dka1376__s7.json
+[376/380     786s] dka1376 s3 n=1376 best=random_global random_global=0.129 gnn_global=0.300 knn_global=0.557 random_local=0.643 gnn_local=1.093 knn_local=0.643
+[377/380     786s] dka1376 s4 n=1376 best=knn_global random_global=0.814 gnn_global=1.029 knn_global=0.557 random_local=1.029 gnn_local=1.479 knn_local=1.307
+[378/380     845s] dka1376 s6 n=1376 best=random_global random_global=0.236 gnn_global=0.836 knn_global=0.707 random_local=0.879 gnn_local=1.565 knn_local=1.093
+[379/380     846s] dka1376 s8 n=1376 best=knn_global random_global=1.007 gnn_global=0.986 knn_global=0.493 random_local=1.757 gnn_local=1.522 knn_local=1.372
+[380/380     846s] dka1376 s9 n=1376 best=gnn_global random_global=0.579 gnn_global=0.364 knn_global=0.964 random_local=0.814 gnn_local=0.686 knn_local=1.093

@@ -1,0 +1,38 @@
+% Şekil: CRINE-ILS iskeleti ve iki GNN'nin farklı görevleri (Yöntem).
+% Ana belge preamble gereksinimi: \usetikzlibrary{arrows.meta}
+% Renk iyiRenk main.tex preamble'inda tanimli (figure-style.md kural 7).
+% Veri icermez (sema); kaynak: evidence/software_manifest.md (Yöntem bölümü).
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+  font=\small,
+  box/.style={draw, rounded corners=2pt, align=center, text width=3.6cm, inner sep=5pt, fill=blue!4},
+  mdl/.style={draw, rounded corners=2pt, align=center, text width=3.9cm, inner sep=5pt, fill=black!6},
+  dec/.style={draw, align=center, text width=3.9cm, inner sep=5pt, fill=orange!10},
+  arr/.style={-{Stealth[length=2.4mm]}, line width=1.1pt},
+  lbl/.style={font=\scriptsize\itshape, text=black!70},
+]
+% --- modeller (sol; hedef kutulariyla ayni yükseklikte, düz baglantilar) ---
+\node[mdl] (lkhgnn) at (0,2.7) {\textbf{LKH-GNN}\\ \scriptsize edge-in-tour probability $\hat p_e$\\ \scriptsize (trained on LKH-3 near-optimal tours)};
+\node[mdl] (crinegnn) at (0,4.6) {\textbf{CRINE-GNN}\\ \scriptsize expansion gain ranking\\ \scriptsize (counterfactual residual improvement)};
+% --- ana iskelet ---
+\node[box] (polish) at (6.4,6.0) {\textbf{Polish start tour}\\ \scriptsize bounded 2-opt / Or-opt};
+\node[box] (expand) at (6.4,4.6) {\textbf{CRINE expansion}\\ \scriptsize 8 anchors, neighborhood grow + repair};
+\node[box] (kick) at (6.4,2.7) {\textbf{Guided double-bridge kick}\\ \scriptsize strategy pool (10 variants / focused set)};
+\node[box] (repolish) at (6.4,1.2) {\textbf{Re-polish candidate}};
+\node[dec] (accept) at (11.4,1.2) {\textbf{Accept iff}\\ \scriptsize $C(T') < C(T)-10^{-9}$};
+\node[box] (inc) at (11.4,2.7) {\textbf{Incumbent update}\\ \scriptsize else keep incumbent};
+% --- ana akis ---
+\draw[arr] (polish) -- (expand);
+\draw[arr] (expand) -- (kick);
+\draw[arr] (kick) -- (repolish);
+\draw[arr] (repolish) -- (accept);
+\draw[arr] (accept) -- (inc);
+% --- döngü: incumbent -> yeni kick (sagdan asagiya, alttan döner) ---
+\draw[arr] (inc.east) -- (14.2,2.7) -- (14.2,0.2) -- (3.8,0.2) -- (3.8,2.45) -- (4.6,2.45);
+\node[lbl, anchor=south west] at (6.6,0.28) {stagnation / budget left};
+% --- model görev baglantilari (düz) ---
+\draw[arr, iyiRenk] (lkhgnn.east) -- (kick.west);
+\node[lbl, anchor=south west] at (2.1,2.88) {kick targets};
+\draw[arr, black!60] (crinegnn.east) -- (expand.west);
+\node[lbl, anchor=south west] at (2.3,4.78) {anchor ranking};
+\end{tikzpicture}}

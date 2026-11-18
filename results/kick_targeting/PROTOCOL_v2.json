@@ -1,0 +1,106 @@
+{
+ "title": "PROTOCOL_v2 - Confirmatory test on an untouched set: does kick targeting need learning?",
+ "frozen_at": "2026-11-17 08:17:51 (Europe/Istanbul), before any holdout2 run",
+ "external_timestamp": "OSF upload by the author before the first holdout2 run (URL recorded in PROTOCOL_DEVIATIONS.log)",
+ "relation_to_PROTOCOL_v1": "PROTOCOL.json (2026-11-15) governed the primary campaign; this protocol is a new, separate confirmatory study on a disjoint instance set. All choices below were made on development sets only (vlsi_old, synth_1000, vlsi_primary); holdout2 has never been run.",
+ "claim_under_test": "Kick targeting improves a fast ILS over uniform kicks; a training-free O(1) geometric proxy is not inferior to learned scorers (GNN, gain-trained MLP); in-run online learning of the scorer hurts.",
+ "code_and_data_sha256": {
+  "fast_ils.py": "cf90c1e5013c22b13c0c410228700f846a7e3878d6fafb143b347e3a4377f039",
+  "kick_targeting_experiment.py": "c9e6fc871f61537b03290691e4444cb4eb6140131ec20b9f24fbc4b21f38d7be",
+  "test_fast_ils.py": "dfd4e2503737d08a6696f24d9e383f3f6e7ccbcf132011a34eed39af1cc08c98",
+  "v2_targeting_experiment.py": "b6f25ada54993e737a96f41d8a2e39b380efa2f64b837a7fd3b2deb17a80b72e",
+  "holdout2_suite.py": "c81ac57a23877c4ba7eef98ff4c341bb7f1201a24366fedbbe1c9a47fec3c6e9",
+  "v2_analysis.py": "da10728f0cc38add92720bae41ae40e467f78f3e7006690d109d43d3b7f152aa",
+  "cheap_scorer.py": "2ed0b18e3bf16db2c9540032b0f50dc1f3644ca71f5d0cc61c534d801be1b739",
+  "online_targeting.py": "950aaf714c95ed80127b671b30b89f5e2f7e7551a864bc87f9ddcc54eadf0612",
+  "gnn_trained.py": "a3597f0017586913cb2aa6c3e2d0002aaecde3ea910748636a2e4310dbc2b9bc",
+  "models/gnn_trained.npz": "2a164b7bcfcadceee2a4a70956eae4bce8ef0cf7f9d9cef1ab43d34f13908e64",
+  "models/cheap_scorer.npz": "223b6ad80e50b6b538f12058f07d574bfdbc45de2856fb32e6237c84610538cd",
+  "models/cheap_gain_scorer.npz": "53515e32762db4a58b16de74b9ed8279d341903da546f2d3c4ec09bee6144270",
+  "models/online_prior.npz": "66734291aa6662d924c7041890786e00b628267fb72a0dadfa252847bb6963af",
+  "data_holdout2/catalog.json": "346d97462caf67e26ecdcdf68292f675a49d89cf2ad6d80c1ee874dce8d20157",
+  "results/kick_targeting/run_v2_holdout2.ps1": "b1c71a749a1172fb74e951d171480cead2c2ba606c4e783f2efa8ffbbe8d6e6b"
+ },
+ "engine": "unchanged fast_ils.py (2-opt + Or-opt, 10-NN candidates, don't-look bits, better-only acceptance, global double-bridge kicks)",
+ "machine": "Intel Core i5-9300H (4 cores / 8 threads), Windows 11 x64, Python 3.13, numba; 4 worker processes (one per physical core); all strategies of an (instance, seed) run sequentially in the same worker, paired",
+ "holdout_set": {
+  "definition": "holdout2_suite.instances(): data_holdout2/catalog.json (sha above), synthetic seed 20261116",
+  "n_instances": 54,
+  "composition": "6 Waterloo VLSI (bgd4396, frv4410, bgf4475, fqm5087, bnd7168, ida8197), 3 National (eg7146, ar9152, gr9882), 3 TSPLIB (pcb3038, fl3795, fnl4461; used in Phase 1 but in no v2 development run), 42 synthetic (14 uniform, 14 clustered, 14 mixed; n 1500-4000)",
+  "reference": "published optimum (real instances) / LKH-3 default parameters, 60 s (synthetic)"
+ },
+ "strategies": [
+  "random_global",
+  "knn_global@0.04:0.75",
+  "excess_global@0.06:0.5",
+  "gnn_global@0.04:0.5",
+  "gain_global",
+  "cheap_global",
+  "linprior_global",
+  "onlinewarm_global"
+ ],
+ "strategy_definitions": {
+  "random_global": "uniform global double-bridge",
+  "knn_global@0.04:0.75": "pool = m = max(12, int(0.04 n)) tour edges with the worst mutual 24-NN rank; each cut w.p. 0.75 on a pool edge",
+  "excess_global@0.06:0.5": "training-free excess-length proxy d(u,v) - (dref(u)+dref(v))/2, dref = mean distance to the 1st and 2nd nearest neighbour; m = max(12, int(0.06 n)); prob 0.5",
+  "gnn_global@0.04:0.5": "frozen LKH-trained GNN (models/gnn_trained.npz), m lowest-probability edges; m = max(12, int(0.04 n)); prob 0.5",
+  "gain_global": "gain-trained O(1) MLP (models/cheap_gain_scorer.npz), default rule 0.06 / 0.75",
+  "cheap_global": "membership-trained O(1) MLP (models/cheap_scorer.npz), default rule 0.06 / 0.75",
+  "linprior_global": "static linear gain prior (models/online_prior.npz), no learning, default rule",
+  "onlinewarm_global": "same linear model warm-started from the prior, updated online by Thompson-sampling ridge regression on the signed per-kick reward (online_targeting.py: lam 50, nu 0.5, refresh 2000 kicks), default rule"
+ },
+ "pool_rule_tuning": "grid {0.02,0.04,0.06,0.10} x {0.5,0.75,0.9} for knn / excess / gnn on vlsi_primary + synth_1000 (3 seeds, 10 s; tags dev_grid_*). Selection rule written before the grid results: minimise the equal-weight mean over both sets of the per-instance mean gap; keep 0.06/0.75 if within 0.01 pt of the best. None of the chosen rules differed significantly from the default on the development sets (Wilcoxon p >= 0.36); rules with fraction 0.02 were clearly worse. Untuned signals use the default rule.",
+ "budget_seconds": 10,
+ "seeds": 10,
+ "workers": 4,
+ "seed_scheme": "start tour seed 7919*(seed+1)+n, identical for all strategies; kick RNG seed 104729+1009*seed (common random numbers); strategy order rotated by seed",
+ "metric": "gap (%) to the reference at 10 s; mean over the 10 seeds within an instance; the instance is the unit of inference (n = 54)",
+ "alpha": 0.05,
+ "multiplicity": "fixed-sequence (hierarchical) testing in the listed order: a hypothesis is tested at alpha = 0.05 only if every earlier one was rejected; this controls the family-wise error rate. Hypotheses not reached are reported as 'not tested'.",
+ "confirmatory_hypotheses": [
+  {
+   "id": "V1",
+   "a": "onlinewarm_global",
+   "b": "linprior_global",
+   "test": "superiority",
+   "direction": "b_better",
+   "statement": "online learning hurts: the online-updated scorer is worse than the same scorer kept static (two-sided Wilcoxon signed-rank; success = p < 0.05 and mean(a-b) > 0)"
+  },
+  {
+   "id": "V2",
+   "a": "excess_global@0.06:0.5",
+   "b": "random_global",
+   "test": "superiority",
+   "direction": "a_better",
+   "statement": "targeting with the training-free proxy beats uniform kicks (two-sided Wilcoxon; success = p < 0.05 and mean(a-b) < 0)"
+  },
+  {
+   "id": "V3",
+   "a": "excess_global@0.06:0.5",
+   "b": "gnn_global@0.04:0.5",
+   "test": "noninferiority",
+   "margin": 0.05,
+   "statement": "the training-free proxy is not inferior to the GNN by more than 0.05 gap points (one-sided Wilcoxon of d - 0.05 < 0)"
+  },
+  {
+   "id": "V4",
+   "a": "excess_global@0.06:0.5",
+   "b": "gain_global",
+   "test": "noninferiority",
+   "margin": 0.05,
+   "statement": "the training-free proxy is not inferior to the gain-trained MLP by more than 0.05 gap points (one-sided Wilcoxon of d - 0.05 < 0)"
+  }
+ ],
+ "margin_justification": "0.05 gap points at 10 s is below the smallest targeting effect observed on development sets (knn/excess vs random, about 0.07); the earlier +-0.025 margin was infeasible at n = 54 (per-instance sd of differences 0.09-0.13 with 5 seeds).",
+ "power": "development sd of per-instance differences: excess-knn 0.131, gnn-knn 0.091 (5 seeds). With 10 seeds and n = 54, SE about 0.012-0.018; V1 (development effect +0.13 to +0.21) and V2 (-0.07) have > 80% power; V3/V4 have > 80% power if the true difference is <= 0.",
+ "analysis_command": "py -3.13 v2_analysis.py confirm --tag holdout2_10s --out results/kick_targeting/holdout2_10s_confirm.json",
+ "run_command": "results/kick_targeting/run_v2_holdout2.ps1",
+ "secondary_exploratory": [
+  "knn vs random, excess vs knn, gnn vs knn, gain vs cheap, excess vs gnn superiority (two-sided Wilcoxon, Holm within this family, labelled exploratory)",
+  "per-stratum results (real vs synthetic; VLSI / National / TSPLIB / uniform / clustered / mixed)",
+  "anytime checkpoints from trace_gap_pct",
+  "kicks per second, model-time share"
+ ],
+ "exclusions": "none; crashes or invalid tours are reported, not dropped; an instance with a missing strategy run is re-run, never dropped",
+ "deviations": "any deviation is appended to PROTOCOL_DEVIATIONS.log with a timestamp before the affected analysis"
+}

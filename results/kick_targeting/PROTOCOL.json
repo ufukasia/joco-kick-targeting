@@ -1,0 +1,39 @@
+{
+  "title": "Equal-wall-clock kick targeting on a fast 2-opt/Or-opt ILS testbed",
+  "frozen_at": "2026-11-15 (before any primary run; SHA-256 of this file logged in PROTOCOL.sha256 and in the paper)",
+  "code": ["fast_ils.py", "kick_targeting_experiment.py", "test_fast_ils.py"],
+  "engine": "2-opt + Or-opt(1..3, both orientations), 10-NN candidate lists, don't-look-bit queue, better-only acceptance, numba-compiled; JIT compilation excluded by warm-up",
+  "strategies": {
+    "random_global": "uniform global double-bridge (operator of the original CRINE-ILS study)",
+    "gnn_global": "global double-bridge, each cut w.p. 0.75 on one of m=max(12,int(0.06n)) lowest-probability tour edges of the frozen LKH-GNN",
+    "knn_global": "same rule, pool = m tour edges with worst mutual 24-NN rank (training-free proxy)",
+    "random_local": "segment double-bridge inside a window of 50 tour positions",
+    "gnn_local": "segment double-bridge whose first cut is (w.p. 0.75) a GNN pool edge",
+    "knn_local": "segment double-bridge whose first cut is (w.p. 0.75) a kNN-proxy pool edge"
+  },
+  "pool_refresh": "after the incumbent changed, subject to model/proxy time <= 10% of elapsed time; all model time is charged to the budget",
+  "start_tour": "nearest neighbour from seed-chosen city + full 2-opt/Or-opt; identical for all strategies of an (instance, seed); not charged",
+  "common_random_numbers": "identical kick RNG seed for all strategies of an (instance, seed); strategy order rotated by seed",
+  "budget_seconds": 10,
+  "workers": 8,
+  "primary_set": "38 Waterloo VLSI instances with n<=4000 never used in any earlier experiment of this project (dka1376 ... dkf3954)",
+  "seeds_primary": 10,
+  "metric": "percentage gap to the known optimum at 10 s, averaged over seeds within instance; instance is the unit of inference",
+  "primary_hypotheses": {
+    "H1": "gnn_global vs random_global",
+    "H2": "gnn_local vs random_local",
+    "H3": "gnn_global vs knn_global",
+    "H4": "gnn_local vs knn_local"
+  },
+  "primary_test": "two-sided Wilcoxon signed-rank on per-instance mean gap differences; Holm correction over H1-H4; alpha 0.05",
+  "equivalence": "TOST on per-instance differences with margin +-0.10 percentage points (half of the effect claimed in the earlier draft), paired t on instance means, alpha 0.05 each side; reported for H1-H4",
+  "secondary": [
+    "anytime checkpoints 0.1,0.25,0.5,1,2,5,10 s",
+    "20 previously used VLSI instances (n<=4000), 10 seeds",
+    "72-instance TSPLIB scale suite, 5 seeds",
+    "size strata n<2500 / n>=2500 in the primary set",
+    "kick geometry: random_local vs random_global",
+    "kicks per second, model overhead, stale-cut rate"
+  ],
+  "exclusions": "none; any crash or invalid tour is reported, not dropped"
+}

@@ -1,0 +1,17 @@
+% OTOMATIK URETIM — evidence/scripts/build_tables.py
+% Kaynak: results/tsplib_circuit_regimes.json
+\begin{table}[!htbp]
+ \centering\small\setlength{\tabcolsep}{3pt}
+ \caption{Sonradan seçilmiş TSPLIB devre ve ızgara alt-kümelerinde keşifsel suspicious--random farkları. Dört test Holm düzeltmelidir; sonuçlar bağımsız doğrulama değildir. Kick/0: iki yöntemde kick-aktif / iki yöntemde sıfır-kick problem sayısı.}
+ \label{tab:circuit-regimes}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc}
+\toprule
+Rejim & $n$ & $\Delta$ & G/B/M & Ham $p$ & Holm-$p$ & Kick/0 \\
+\midrule
+Devre-delme, tümü & 23 & -0,21 & 10/6/7 & 0,4925 & 0,4925 & 17/6 \\
+Devre-delme, $\leq999$ & 10 & +0,32 & 8/0/2 & 0,0488 & 0,1953 & 10/0 \\
+Devre-delme, $\geq1000$ & 13 & -0,62 & 2/6/5 & 0,1562 & 0,375 & 7/6 \\
+Rattled grid & 4 & +0,42 & 4/0/0 & 0,125 & 0,375 & 4/0 \\
+\bottomrule
+\end{tabular*}
+\end{table}

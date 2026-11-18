@@ -1,0 +1,4 @@
+method mean_diff ci_lo ci_hi classification
+susp 0.25602 0.06632 0.46273 inconclusive
+sreac 0.25247 0.07426 0.44491 inconclusive
+fband 0.14049 0.04263 0.27072 inconclusive

@@ -1,0 +1,29 @@
+{
+  "trained": "2026-07-10 12:17:00",
+  "trainer": "gnn_train_torch.py (torch 2.11.0+cu128, cuda, NVIDIA GeForce RTX 4060 Ti)",
+  "data_dir": "C:\\Users\\ufuka\\OneDrive - Ostim Teknik Universitesi\\Masa\u00fcst\u00fc\\tsplib\\gnn_train_data_lkh",
+  "n_instances": 120,
+  "n_train_graphs": 954,
+  "n_val_graphs": 126,
+  "epochs": 150,
+  "best_epoch": 99,
+  "lr": 0.003,
+  "seed": 0,
+  "batch_size": 32,
+  "node_weight": 1.0,
+  "edge_weight": 1.0,
+  "val_metrics": {
+    "loss": 0.8637,
+    "node_acc": 0.9328,
+    "edge_acc": 0.8216,
+    "suspicious_decile_ratio": 0.4207
+  },
+  "train_metrics": {
+    "loss": 0.7857,
+    "node_acc": 0.9287,
+    "edge_acc": 0.8484,
+    "suspicious_decile_ratio": 0.3224
+  },
+  "labels": "exact ground truth: edge membership in the LKH-3 (near-)optimal tour of each synthetic instance (gnn_generate_data.py --labels lkh)",
+  "train_wall_s": 83.8
+}

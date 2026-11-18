@@ -1,0 +1,168 @@
+xqf131    n=  131 start_local_opt  wrong=0.206 AUC gnn=0.843 knn=0.771 rel=0.717 len=0.587 | prec gnn=0.833 knn=0.417 | rho(g,k)=0.83 overlap=0.33
+xqf131    n=  131 ils_2s           wrong=0.176 AUC gnn=0.767 knn=0.723 rel=0.670 len=0.526 | prec gnn=0.417 knn=0.500 | rho(g,k)=0.79 overlap=0.58
+xqg237    n=  237 start_local_opt  wrong=0.203 AUC gnn=0.828 knn=0.781 rel=0.763 len=0.704 | prec gnn=0.786 knn=0.786 | rho(g,k)=0.77 overlap=0.71
+xqg237    n=  237 ils_2s           wrong=0.097 AUC gnn=0.745 knn=0.726 rel=0.722 len=0.636 | prec gnn=0.429 knn=0.357 | rho(g,k)=0.80 overlap=0.71
+pma343    n=  343 start_local_opt  wrong=0.190 AUC gnn=0.843 knn=0.812 rel=0.774 len=0.771 | prec gnn=0.850 knn=0.750 | rho(g,k)=0.77 overlap=0.85
+pma343    n=  343 ils_2s           wrong=0.134 AUC gnn=0.819 knn=0.786 rel=0.743 len=0.718 | prec gnn=0.550 knn=0.550 | rho(g,k)=0.78 overlap=0.70
+pka379    n=  379 start_local_opt  wrong=0.243 AUC gnn=0.902 knn=0.840 rel=0.843 len=0.775 | prec gnn=0.909 knn=0.727 | rho(g,k)=0.74 overlap=0.64
+pka379    n=  379 ils_2s           wrong=0.135 AUC gnn=0.830 knn=0.775 rel=0.767 len=0.716 | prec gnn=0.455 knn=0.364 | rho(g,k)=0.79 overlap=0.68
+bcl380    n=  380 start_local_opt  wrong=0.184 AUC gnn=0.901 knn=0.892 rel=0.830 len=0.852 | prec gnn=0.909 knn=0.864 | rho(g,k)=0.80 overlap=0.64
+bcl380    n=  380 ils_2s           wrong=0.100 AUC gnn=0.864 knn=0.811 rel=0.753 len=0.777 | prec gnn=0.409 knn=0.364 | rho(g,k)=0.84 overlap=0.55
+pbl395    n=  395 start_local_opt  wrong=0.213 AUC gnn=0.868 knn=0.837 rel=0.789 len=0.758 | prec gnn=0.870 knn=0.826 | rho(g,k)=0.81 overlap=0.57
+pbl395    n=  395 ils_2s           wrong=0.154 AUC gnn=0.849 knn=0.787 rel=0.751 len=0.668 | prec gnn=0.609 knn=0.435 | rho(g,k)=0.81 overlap=0.57
+pbk411    n=  411 start_local_opt  wrong=0.204 AUC gnn=0.844 knn=0.836 rel=0.802 len=0.787 | prec gnn=0.875 knn=1.000 | rho(g,k)=0.80 overlap=0.75
+pbk411    n=  411 ils_2s           wrong=0.080 AUC gnn=0.676 knn=0.696 rel=0.661 len=0.572 | prec gnn=0.125 knn=0.083 | rho(g,k)=0.80 overlap=0.50
+pbn423    n=  423 start_local_opt  wrong=0.222 AUC gnn=0.860 knn=0.836 rel=0.812 len=0.786 | prec gnn=0.840 knn=0.840 | rho(g,k)=0.83 overlap=0.64
+pbn423    n=  423 ils_2s           wrong=0.189 AUC gnn=0.841 knn=0.824 rel=0.811 len=0.764 | prec gnn=0.720 knn=0.800 | rho(g,k)=0.83 overlap=0.56
+pbm436    n=  436 start_local_opt  wrong=0.174 AUC gnn=0.917 knn=0.840 rel=0.790 len=0.802 | prec gnn=0.846 knn=0.654 | rho(g,k)=0.78 overlap=0.62
+pbm436    n=  436 ils_2s           wrong=0.050 AUC gnn=0.748 knn=0.721 rel=0.646 len=0.611 | prec gnn=0.231 knn=0.192 | rho(g,k)=0.80 overlap=0.62
+xql662    n=  662 start_local_opt  wrong=0.227 AUC gnn=0.883 knn=0.863 rel=0.820 len=0.783 | prec gnn=0.846 knn=0.897 | rho(g,k)=0.81 overlap=0.69
+xql662    n=  662 ils_2s           wrong=0.175 AUC gnn=0.874 knn=0.840 rel=0.786 len=0.767 | prec gnn=0.821 knn=0.692 | rho(g,k)=0.81 overlap=0.59
+rbx711    n=  711 start_local_opt  wrong=0.200 AUC gnn=0.860 knn=0.813 rel=0.756 len=0.728 | prec gnn=0.762 knn=0.786 | rho(g,k)=0.83 overlap=0.71
+rbx711    n=  711 ils_2s           wrong=0.120 AUC gnn=0.817 knn=0.769 rel=0.702 len=0.654 | prec gnn=0.524 knn=0.524 | rho(g,k)=0.82 overlap=0.71
+rbu737    n=  737 start_local_opt  wrong=0.229 AUC gnn=0.830 knn=0.791 rel=0.752 len=0.725 | prec gnn=0.841 knn=0.682 | rho(g,k)=0.84 overlap=0.57
+rbu737    n=  737 ils_2s           wrong=0.204 AUC gnn=0.836 knn=0.793 rel=0.752 len=0.734 | prec gnn=0.750 knn=0.705 | rho(g,k)=0.84 overlap=0.59
+dkg813    n=  813 start_local_opt  wrong=0.187 AUC gnn=0.876 knn=0.830 rel=0.800 len=0.759 | prec gnn=0.812 knn=0.750 | rho(g,k)=0.72 overlap=0.50
+dkg813    n=  813 ils_2s           wrong=0.134 AUC gnn=0.851 knn=0.787 rel=0.752 len=0.746 | prec gnn=0.500 knn=0.479 | rho(g,k)=0.73 overlap=0.54
+lim963    n=  963 start_local_opt  wrong=0.236 AUC gnn=0.852 knn=0.839 rel=0.820 len=0.811 | prec gnn=0.877 knn=0.842 | rho(g,k)=0.75 overlap=0.67
+lim963    n=  963 ils_2s           wrong=0.161 AUC gnn=0.828 knn=0.805 rel=0.804 len=0.773 | prec gnn=0.561 knn=0.649 | rho(g,k)=0.78 overlap=0.56
+pbd984    n=  984 start_local_opt  wrong=0.203 AUC gnn=0.871 knn=0.846 rel=0.824 len=0.791 | prec gnn=0.797 knn=0.831 | rho(g,k)=0.78 overlap=0.73
+pbd984    n=  984 ils_2s           wrong=0.134 AUC gnn=0.851 knn=0.834 rel=0.823 len=0.748 | prec gnn=0.576 knn=0.525 | rho(g,k)=0.82 overlap=0.69
+xit1083   n= 1083 start_local_opt  wrong=0.204 AUC gnn=0.889 knn=0.839 rel=0.807 len=0.794 | prec gnn=0.875 knn=0.906 | rho(g,k)=0.73 overlap=0.70
+xit1083   n= 1083 ils_2s           wrong=0.148 AUC gnn=0.855 knn=0.801 rel=0.770 len=0.732 | prec gnn=0.672 knn=0.609 | rho(g,k)=0.77 overlap=0.66
+dka1376   n= 1376 start_local_opt  wrong=0.174 AUC gnn=0.882 knn=0.858 rel=0.818 len=0.784 | prec gnn=0.829 knn=0.780 | rho(g,k)=0.76 overlap=0.65
+dka1376   n= 1376 ils_2s           wrong=0.120 AUC gnn=0.870 knn=0.845 rel=0.809 len=0.794 | prec gnn=0.610 knn=0.549 | rho(g,k)=0.81 overlap=0.66
+dca1389   n= 1389 start_local_opt  wrong=0.199 AUC gnn=0.892 knn=0.845 rel=0.795 len=0.785 | prec gnn=0.867 knn=0.843 | rho(g,k)=0.74 overlap=0.60
+dca1389   n= 1389 ils_2s           wrong=0.141 AUC gnn=0.837 knn=0.809 rel=0.777 len=0.766 | prec gnn=0.566 knn=0.651 | rho(g,k)=0.79 overlap=0.64
+dja1436   n= 1436 start_local_opt  wrong=0.209 AUC gnn=0.893 knn=0.846 rel=0.805 len=0.774 | prec gnn=0.919 knn=0.849 | rho(g,k)=0.71 overlap=0.70
+dja1436   n= 1436 ils_2s           wrong=0.167 AUC gnn=0.878 knn=0.832 rel=0.791 len=0.746 | prec gnn=0.756 knn=0.686 | rho(g,k)=0.80 overlap=0.59
+icw1483   n= 1483 start_local_opt  wrong=0.199 AUC gnn=0.893 knn=0.873 rel=0.849 len=0.796 | prec gnn=0.898 knn=0.852 | rho(g,k)=0.77 overlap=0.69
+icw1483   n= 1483 ils_2s           wrong=0.167 AUC gnn=0.868 knn=0.847 rel=0.823 len=0.761 | prec gnn=0.795 knn=0.750 | rho(g,k)=0.81 overlap=0.68
+fra1488   n= 1488 start_local_opt  wrong=0.222 AUC gnn=0.897 knn=0.867 rel=0.844 len=0.810 | prec gnn=0.843 knn=0.831 | rho(g,k)=0.80 overlap=0.58
+fra1488   n= 1488 ils_2s           wrong=0.183 AUC gnn=0.861 knn=0.832 rel=0.823 len=0.761 | prec gnn=0.697 knn=0.674 | rho(g,k)=0.81 overlap=0.63
+rbv1583   n= 1583 start_local_opt  wrong=0.232 AUC gnn=0.902 knn=0.876 rel=0.836 len=0.782 | prec gnn=0.840 knn=0.798 | rho(g,k)=0.82 overlap=0.68
+rbv1583   n= 1583 ils_2s           wrong=0.169 AUC gnn=0.870 knn=0.846 rel=0.790 len=0.747 | prec gnn=0.787 knn=0.660 | rho(g,k)=0.85 overlap=0.69
+rby1599   n= 1599 start_local_opt  wrong=0.214 AUC gnn=0.890 knn=0.875 rel=0.830 len=0.763 | prec gnn=0.832 knn=0.821 | rho(g,k)=0.85 overlap=0.57
+rby1599   n= 1599 ils_2s           wrong=0.176 AUC gnn=0.863 knn=0.844 rel=0.802 len=0.741 | prec gnn=0.695 knn=0.695 | rho(g,k)=0.85 overlap=0.60
+fnb1615   n= 1615 start_local_opt  wrong=0.224 AUC gnn=0.887 knn=0.844 rel=0.808 len=0.813 | prec gnn=0.865 knn=0.760 | rho(g,k)=0.82 overlap=0.75
+fnb1615   n= 1615 ils_2s           wrong=0.165 AUC gnn=0.824 knn=0.800 rel=0.765 len=0.759 | prec gnn=0.604 knn=0.583 | rho(g,k)=0.82 overlap=0.70
+djc1785   n= 1785 start_local_opt  wrong=0.228 AUC gnn=0.891 knn=0.852 rel=0.826 len=0.779 | prec gnn=0.916 knn=0.888 | rho(g,k)=0.78 overlap=0.68
+djc1785   n= 1785 ils_2s           wrong=0.161 AUC gnn=0.832 knn=0.808 rel=0.789 len=0.729 | prec gnn=0.710 knn=0.607 | rho(g,k)=0.80 overlap=0.63
+dcc1911   n= 1911 start_local_opt  wrong=0.210 AUC gnn=0.867 knn=0.852 rel=0.817 len=0.763 | prec gnn=0.868 knn=0.842 | rho(g,k)=0.76 overlap=0.78
+dcc1911   n= 1911 ils_2s           wrong=0.148 AUC gnn=0.856 knn=0.807 rel=0.778 len=0.726 | prec gnn=0.640 knn=0.588 | rho(g,k)=0.80 overlap=0.64
+dkd1973   n= 1973 start_local_opt  wrong=0.237 AUC gnn=0.877 knn=0.859 rel=0.846 len=0.809 | prec gnn=0.873 knn=0.881 | rho(g,k)=0.76 overlap=0.59
+dkd1973   n= 1973 ils_2s           wrong=0.175 AUC gnn=0.850 knn=0.822 rel=0.798 len=0.782 | prec gnn=0.712 knn=0.678 | rho(g,k)=0.81 overlap=0.55
+djb2036   n= 2036 start_local_opt  wrong=0.219 AUC gnn=0.873 knn=0.868 rel=0.819 len=0.804 | prec gnn=0.861 knn=0.877 | rho(g,k)=0.72 overlap=0.61
+djb2036   n= 2036 ils_2s           wrong=0.153 AUC gnn=0.863 knn=0.852 rel=0.802 len=0.777 | prec gnn=0.664 knn=0.713 | rho(g,k)=0.80 overlap=0.56
+dcb2086   n= 2086 start_local_opt  wrong=0.190 AUC gnn=0.906 knn=0.867 rel=0.822 len=0.787 | prec gnn=0.920 knn=0.824 | rho(g,k)=0.77 overlap=0.70
+dcb2086   n= 2086 ils_2s           wrong=0.153 AUC gnn=0.874 knn=0.846 rel=0.799 len=0.775 | prec gnn=0.656 knn=0.624 | rho(g,k)=0.79 overlap=0.66
+bva2144   n= 2144 start_local_opt  wrong=0.217 AUC gnn=0.875 knn=0.851 rel=0.817 len=0.783 | prec gnn=0.891 knn=0.867 | rho(g,k)=0.76 overlap=0.59
+bva2144   n= 2144 ils_2s           wrong=0.163 AUC gnn=0.855 knn=0.820 rel=0.786 len=0.747 | prec gnn=0.688 knn=0.594 | rho(g,k)=0.81 overlap=0.55
+xqc2175   n= 2175 start_local_opt  wrong=0.205 AUC gnn=0.891 knn=0.864 rel=0.825 len=0.799 | prec gnn=0.885 knn=0.862 | rho(g,k)=0.81 overlap=0.68
+xqc2175   n= 2175 ils_2s           wrong=0.146 AUC gnn=0.864 knn=0.817 rel=0.786 len=0.746 | prec gnn=0.662 knn=0.608 | rho(g,k)=0.81 overlap=0.56
+bck2217   n= 2217 start_local_opt  wrong=0.207 AUC gnn=0.898 knn=0.876 rel=0.833 len=0.800 | prec gnn=0.865 knn=0.842 | rho(g,k)=0.70 overlap=0.65
+bck2217   n= 2217 ils_2s           wrong=0.182 AUC gnn=0.891 knn=0.864 rel=0.817 len=0.777 | prec gnn=0.767 knn=0.714 | rho(g,k)=0.80 overlap=0.61
+xpr2308   n= 2308 start_local_opt  wrong=0.183 AUC gnn=0.885 knn=0.848 rel=0.810 len=0.804 | prec gnn=0.754 knn=0.819 | rho(g,k)=0.74 overlap=0.64
+xpr2308   n= 2308 ils_2s           wrong=0.155 AUC gnn=0.865 knn=0.821 rel=0.783 len=0.783 | prec gnn=0.652 knn=0.623 | rho(g,k)=0.79 overlap=0.59
+ley2323   n= 2323 start_local_opt  wrong=0.143 AUC gnn=0.843 knn=0.877 rel=0.826 len=0.859 | prec gnn=0.748 knn=0.791 | rho(g,k)=0.60 overlap=0.63
+ley2323   n= 2323 ils_2s           wrong=0.097 AUC gnn=0.881 knn=0.834 rel=0.786 len=0.825 | prec gnn=0.547 knn=0.547 | rho(g,k)=0.81 overlap=0.60
+dea2382   n= 2382 start_local_opt  wrong=0.190 AUC gnn=0.880 knn=0.848 rel=0.791 len=0.772 | prec gnn=0.859 knn=0.817 | rho(g,k)=0.67 overlap=0.72
+dea2382   n= 2382 ils_2s           wrong=0.174 AUC gnn=0.878 knn=0.841 rel=0.779 len=0.761 | prec gnn=0.761 knn=0.704 | rho(g,k)=0.80 overlap=0.66
+rbw2481   n= 2481 start_local_opt  wrong=0.173 AUC gnn=0.905 knn=0.882 rel=0.828 len=0.815 | prec gnn=0.824 knn=0.858 | rho(g,k)=0.68 overlap=0.72
+rbw2481   n= 2481 ils_2s           wrong=0.119 AUC gnn=0.890 knn=0.857 rel=0.810 len=0.776 | prec gnn=0.669 knn=0.628 | rho(g,k)=0.78 overlap=0.72
+pds2566   n= 2566 start_local_opt  wrong=0.194 AUC gnn=0.888 knn=0.856 rel=0.818 len=0.801 | prec gnn=0.810 knn=0.810 | rho(g,k)=0.74 overlap=0.64
+pds2566   n= 2566 ils_2s           wrong=0.147 AUC gnn=0.872 knn=0.844 rel=0.802 len=0.783 | prec gnn=0.634 knn=0.621 | rho(g,k)=0.78 overlap=0.63
+mlt2597   n= 2597 start_local_opt  wrong=0.171 AUC gnn=0.910 knn=0.879 rel=0.830 len=0.808 | prec gnn=0.800 knn=0.806 | rho(g,k)=0.77 overlap=0.62
+mlt2597   n= 2597 ils_2s           wrong=0.126 AUC gnn=0.896 knn=0.854 rel=0.804 len=0.799 | prec gnn=0.684 knn=0.581 | rho(g,k)=0.78 overlap=0.59
+bch2762   n= 2762 start_local_opt  wrong=0.196 AUC gnn=0.900 knn=0.861 rel=0.819 len=0.792 | prec gnn=0.848 knn=0.824 | rho(g,k)=0.77 overlap=0.65
+bch2762   n= 2762 ils_2s           wrong=0.156 AUC gnn=0.874 knn=0.845 rel=0.800 len=0.773 | prec gnn=0.697 knn=0.630 | rho(g,k)=0.80 overlap=0.62
+irw2802   n= 2802 start_local_opt  wrong=0.171 AUC gnn=0.890 knn=0.872 rel=0.847 len=0.831 | prec gnn=0.845 knn=0.780 | rho(g,k)=0.71 overlap=0.64
+irw2802   n= 2802 ils_2s           wrong=0.119 AUC gnn=0.879 knn=0.846 rel=0.812 len=0.802 | prec gnn=0.661 knn=0.583 | rho(g,k)=0.77 overlap=0.61
+lsm2854   n= 2854 start_local_opt  wrong=0.221 AUC gnn=0.894 knn=0.866 rel=0.836 len=0.802 | prec gnn=0.871 knn=0.848 | rho(g,k)=0.79 overlap=0.67
+lsm2854   n= 2854 ils_2s           wrong=0.170 AUC gnn=0.869 knn=0.846 rel=0.816 len=0.779 | prec gnn=0.667 knn=0.632 | rho(g,k)=0.80 overlap=0.56
+dbj2924   n= 2924 start_local_opt  wrong=0.199 AUC gnn=0.890 knn=0.873 rel=0.830 len=0.819 | prec gnn=0.829 knn=0.823 | rho(g,k)=0.68 overlap=0.65
+dbj2924   n= 2924 ils_2s           wrong=0.159 AUC gnn=0.891 knn=0.857 rel=0.811 len=0.770 | prec gnn=0.703 knn=0.680 | rho(g,k)=0.79 overlap=0.61
+xva2993   n= 2993 start_local_opt  wrong=0.212 AUC gnn=0.858 knn=0.848 rel=0.823 len=0.802 | prec gnn=0.860 knn=0.832 | rho(g,k)=0.74 overlap=0.68
+xva2993   n= 2993 ils_2s           wrong=0.172 AUC gnn=0.847 knn=0.833 rel=0.806 len=0.781 | prec gnn=0.654 knn=0.676 | rho(g,k)=0.80 overlap=0.59
+pia3056   n= 3056 start_local_opt  wrong=0.201 AUC gnn=0.898 knn=0.866 rel=0.839 len=0.814 | prec gnn=0.902 knn=0.831 | rho(g,k)=0.80 overlap=0.66
+pia3056   n= 3056 ils_2s           wrong=0.164 AUC gnn=0.887 knn=0.855 rel=0.824 len=0.807 | prec gnn=0.749 knn=0.716 | rho(g,k)=0.81 overlap=0.66
+dke3097   n= 3097 start_local_opt  wrong=0.183 AUC gnn=0.867 knn=0.852 rel=0.811 len=0.788 | prec gnn=0.854 knn=0.795 | rho(g,k)=0.70 overlap=0.66
+dke3097   n= 3097 ils_2s           wrong=0.167 AUC gnn=0.881 knn=0.847 rel=0.795 len=0.778 | prec gnn=0.773 knn=0.730 | rho(g,k)=0.77 overlap=0.61
+lsn3119   n= 3119 start_local_opt  wrong=0.220 AUC gnn=0.873 knn=0.852 rel=0.816 len=0.791 | prec gnn=0.866 knn=0.850 | rho(g,k)=0.76 overlap=0.63
+lsn3119   n= 3119 ils_2s           wrong=0.161 AUC gnn=0.854 knn=0.825 rel=0.792 len=0.761 | prec gnn=0.727 knn=0.631 | rho(g,k)=0.81 overlap=0.60
+lta3140   n= 3140 start_local_opt  wrong=0.213 AUC gnn=0.889 knn=0.857 rel=0.830 len=0.817 | prec gnn=0.851 knn=0.830 | rho(g,k)=0.80 overlap=0.71
+lta3140   n= 3140 ils_2s           wrong=0.160 AUC gnn=0.873 knn=0.838 rel=0.809 len=0.795 | prec gnn=0.665 knn=0.638 | rho(g,k)=0.80 overlap=0.65
+fdp3256   n= 3256 start_local_opt  wrong=0.232 AUC gnn=0.872 knn=0.854 rel=0.824 len=0.773 | prec gnn=0.887 knn=0.897 | rho(g,k)=0.75 overlap=0.72
+fdp3256   n= 3256 ils_2s           wrong=0.190 AUC gnn=0.871 knn=0.829 rel=0.795 len=0.733 | prec gnn=0.769 knn=0.677 | rho(g,k)=0.81 overlap=0.68
+beg3293   n= 3293 start_local_opt  wrong=0.168 AUC gnn=0.891 knn=0.865 rel=0.819 len=0.817 | prec gnn=0.863 knn=0.807 | rho(g,k)=0.71 overlap=0.66
+beg3293   n= 3293 ils_2s           wrong=0.135 AUC gnn=0.887 knn=0.850 rel=0.798 len=0.784 | prec gnn=0.650 knn=0.635 | rho(g,k)=0.78 overlap=0.62
+dhb3386   n= 3386 start_local_opt  wrong=0.184 AUC gnn=0.869 knn=0.841 rel=0.802 len=0.788 | prec gnn=0.828 knn=0.833 | rho(g,k)=0.73 overlap=0.63
+dhb3386   n= 3386 ils_2s           wrong=0.165 AUC gnn=0.869 knn=0.825 rel=0.783 len=0.765 | prec gnn=0.778 knn=0.729 | rho(g,k)=0.79 overlap=0.62
+fjs3649   n= 3649 start_local_opt  wrong=0.248 AUC gnn=0.849 knn=0.874 rel=0.860 len=0.804 | prec gnn=0.817 knn=0.858 | rho(g,k)=0.69 overlap=0.61
+fjs3649   n= 3649 ils_2s           wrong=0.207 AUC gnn=0.880 knn=0.854 rel=0.838 len=0.785 | prec gnn=0.775 knn=0.702 | rho(g,k)=0.84 overlap=0.61
+fjr3672   n= 3672 start_local_opt  wrong=0.259 AUC gnn=0.857 knn=0.872 rel=0.846 len=0.801 | prec gnn=0.836 knn=0.832 | rho(g,k)=0.69 overlap=0.60
+fjr3672   n= 3672 ils_2s           wrong=0.222 AUC gnn=0.878 knn=0.842 rel=0.824 len=0.763 | prec gnn=0.809 knn=0.718 | rho(g,k)=0.82 overlap=0.63
+dlb3694   n= 3694 start_local_opt  wrong=0.217 AUC gnn=0.886 knn=0.861 rel=0.838 len=0.778 | prec gnn=0.869 knn=0.864 | rho(g,k)=0.82 overlap=0.70
+dlb3694   n= 3694 ils_2s           wrong=0.171 AUC gnn=0.864 knn=0.832 rel=0.808 len=0.752 | prec gnn=0.683 knn=0.661 | rho(g,k)=0.84 overlap=0.61
+ltb3729   n= 3729 start_local_opt  wrong=0.205 AUC gnn=0.853 knn=0.853 rel=0.816 len=0.807 | prec gnn=0.848 knn=0.865 | rho(g,k)=0.69 overlap=0.64
+ltb3729   n= 3729 ils_2s           wrong=0.171 AUC gnn=0.872 knn=0.837 rel=0.795 len=0.782 | prec gnn=0.713 knn=0.682 | rho(g,k)=0.81 overlap=0.61
+xqe3891   n= 3891 start_local_opt  wrong=0.190 AUC gnn=0.880 knn=0.859 rel=0.817 len=0.822 | prec gnn=0.850 knn=0.833 | rho(g,k)=0.69 overlap=0.61
+xqe3891   n= 3891 ils_2s           wrong=0.157 AUC gnn=0.875 knn=0.830 rel=0.785 len=0.803 | prec gnn=0.712 knn=0.682 | rho(g,k)=0.79 overlap=0.58
+xua3937   n= 3937 start_local_opt  wrong=0.192 AUC gnn=0.901 knn=0.862 rel=0.836 len=0.843 | prec gnn=0.907 knn=0.860 | rho(g,k)=0.71 overlap=0.67
+xua3937   n= 3937 ils_2s           wrong=0.152 AUC gnn=0.877 knn=0.828 rel=0.801 len=0.815 | prec gnn=0.669 knn=0.636 | rho(g,k)=0.76 overlap=0.60
+dkc3938   n= 3938 start_local_opt  wrong=0.199 AUC gnn=0.858 knn=0.859 rel=0.816 len=0.800 | prec gnn=0.822 knn=0.809 | rho(g,k)=0.61 overlap=0.58
+dkc3938   n= 3938 ils_2s           wrong=0.147 AUC gnn=0.877 knn=0.831 rel=0.786 len=0.757 | prec gnn=0.648 knn=0.619 | rho(g,k)=0.79 overlap=0.57
+dkf3954   n= 3954 start_local_opt  wrong=0.221 AUC gnn=0.875 knn=0.864 rel=0.825 len=0.794 | prec gnn=0.857 knn=0.852 | rho(g,k)=0.77 overlap=0.68
+dkf3954   n= 3954 ils_2s           wrong=0.171 AUC gnn=0.860 knn=0.835 rel=0.791 len=0.760 | prec gnn=0.688 knn=0.650 | rho(g,k)=0.82 overlap=0.61
+{
+ "start_local_opt": {
+  "n_instances": 58,
+  "base_rate_wrong": 0.20508786984208366,
+  "auc_gnn": 0.8783484594842368,
+  "auc_knn": 0.8524358338102777,
+  "auc_rellen": 0.8162669408982149,
+  "auc_length": 0.7894498065883088,
+  "prec_gnn": 0.8517786814965539,
+  "prec_knn": 0.8207144803271704,
+  "prec_rellen": 0.676367047460532,
+  "prec_length": 0.640857670787295,
+  "spearman_gnn_knn": 0.7538377652170546,
+  "spearman_gnn_rellen": 0.6830370432723215,
+  "pool_overlap_gnn_knn": 0.6524573972549274,
+  "auc_gnn_minus_knn": {
+   "mean": 0.02591262567395913,
+   "gnn_higher": 53,
+   "wilcoxon_p": 2.218211412798568e-09
+  },
+  "prec_gnn_minus_knn": {
+   "mean": 0.031064201169383465,
+   "gnn_higher": 40,
+   "wilcoxon_p": 0.000556495139452959
+  }
+ },
+ "ils_2s": {
+  "n_instances": 58,
+  "base_rate_wrong": 0.1533197237222271,
+  "auc_gnn": 0.8543538110471982,
+  "auc_knn": 0.8207607849038384,
+  "auc_rellen": 0.7841142258247037,
+  "auc_length": 0.7508215161450351,
+  "prec_gnn": 0.6464212766225191,
+  "prec_knn": 0.6070900677948502,
+  "prec_rellen": 0.4814892770771552,
+  "prec_length": 0.43040165874716346,
+  "spearman_gnn_knn": 0.8019561413165042,
+  "spearman_gnn_rellen": 0.7373871340033759,
+  "pool_overlap_gnn_knn": 0.6172094917625396,
+  "auc_gnn_minus_knn": {
+   "mean": 0.03359302614335989,
+   "gnn_higher": 57,
+   "wilcoxon_p": 5.052442334638218e-11
+  },
+  "prec_gnn_minus_knn": {
+   "mean": 0.039331208827669016,
+   "gnn_higher": 48,
+   "wilcoxon_p": 3.2573454153407065e-06
+  }
+ }
+}

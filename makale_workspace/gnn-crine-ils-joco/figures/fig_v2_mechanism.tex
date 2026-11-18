@@ -1,0 +1,14 @@
+% v2: problem bazinda yanlis-kenar ayirt etme AUC'u ve havuz kesinligi, GNN'e karsi kNN (2 sn ILS turlari).
+% Veri: figures/data/v2_mechanism_ils.dat (build_v2.py <- mechanism_summary.json). Figur ici metin Ingilizce.
+\begin{tikzpicture}
+\begin{groupplot}[group style={columns=2, horizontal sep=46pt}, width=0.5\textwidth, height=5.2cm,
+  tick label style={font=\scriptsize}, label style={font=\small}, title style={font=\small, yshift=-1ex}]
+\nextgroupplot[title={(a) Wrong-edge AUC}, xlabel={kNN AUC}, ylabel={GNN AUC}, xmin=0.5, xmax=1, ymin=0.5, ymax=1]
+\addplot[black!40, domain=0.5:1, samples=2] {x};
+\addplot[only marks, mark=*, mark size=1.6pt, iyiRenk] table[x=auc_knn, y=auc_gnn] {figures/data/v2_mechanism_ils.dat};
+\node[anchor=north west, font=\scriptsize, fill=white, inner sep=1pt, text=black!60] at (axis description cs:0.03,0.97) {above diagonal: GNN better};
+\nextgroupplot[title={(b) Kick-pool precision}, xlabel={kNN pool precision}, ylabel={GNN pool precision}, xmin=0, xmax=1, ymin=0, ymax=1]
+\addplot[black!40, domain=0:1, samples=2] {x};
+\addplot[only marks, mark=*, mark size=1.6pt, iyiRenk] table[x=prec_knn, y=prec_gnn] {figures/data/v2_mechanism_ils.dat};
+\end{groupplot}
+\end{tikzpicture}

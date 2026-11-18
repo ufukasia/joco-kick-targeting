@@ -1,0 +1,122 @@
+%% Springer Nature sn-jnl şablonu (P-005) — Journal of Combinatorial Optimization.
+%% Yazar–yıl kaynakça: sınıf seçeneği sn-basic (sn-basic.bst, paper/ içinde).
+%% Derleme (TeX Live, paper/ içinden): xelatex main; bibtex main; xelatex main; xelatex main
+%% "pdflatex" seçeneği yalnız sınıfın breakurl yüklemesini kapatır; motor XeLaTeX'tir (fontspec).
+\documentclass[pdflatex,sn-basic]{sn-jnl}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage[turkish,shorthands=off]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs,array,tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{groupplots}
+\pgfplotstableset{search path={.,..,../..}}
+\usetikzlibrary{arrows.meta}
+\definecolor{iyiRenk}{RGB}{0,84,159}
+\definecolor{kotuRenk}{RGB}{178,24,43}
+\newcommand{\iyi}[1]{\textcolor{iyiRenk}{\textbf{#1}}}
+\newcommand{\kotu}[1]{\textcolor{kotuRenk}{\textit{#1}}}
+\usepackage{xurl}
+\providecommand{\doi}[1]{\url{https://doi.org/#1}}
+\emergencystretch=2em
+\def\keywordname{Anahtar Kelimeler}
+\makeatletter\def\input@path{{../}{./}}\makeatother
+
+\raggedbottom
+\setlength\maxdepth{2pt}
+
+\begin{document}
+
+\title[Vuruş hedeflemede öğrenme gerekli mi?]{Vuruşları Hedeflemek İçin Öğrenmek Gerekir mi? Hızlı
+İteratif Yerel Aramada Eğitimsiz Kenar Uzunluğu Vekillerinin Ön-Kayıtlı Sınaması}
+
+%% Sorumlu yazar e-postası yazar onayıyla girilecek (notes/editor-flags.md).
+\author*[1]{\fnm{Ufuk} \sur{ASIL}}\email{ufuk.asil@ostimteknik.edu.tr}
+\affil*[1]{\orgname{Ostim Technical University},
+  \orgaddress{\street{OSTİM, 100. Yıl Bulvarı, 55/F}, \postcode{06374},
+  \city{Ankara}, \country{Türkiye}}}
+
+\input{../sections/ozet.tex}
+
+\maketitle
+
+\input{../sections/giris.tex}
+\input{../sections/ilgili_calismalar.tex}
+\input{../sections/yontem.tex}
+\input{../sections/deneysel_kurulum.tex}
+\input{../sections/bulgular.tex}
+\input{../sections/tartisma.tex}
+\input{../sections/sonuc.tex}
+
+\backmatter
+
+\bmhead{Teşekkür}
+Yok.
+
+\section*{Beyanlar}
+
+\bmhead{Fon desteği}
+Yazar, bu çalışma için herhangi bir kurumdan fon desteği almamıştır.
+
+\bmhead{Çıkar çatışması}
+Yazarın bu makalenin içeriğiyle ilgili finansal ya da finansal olmayan bir çıkar çatışması
+yoktur.
+
+\bmhead{Etik onay}
+Çalışmada insan ya da hayvan katılımcı ve kişisel veri kullanılmamıştır.
+
+\bmhead{Yazar katkıları}
+Çalışmanın kavramsallaştırılması, yazılım, deneyler, analiz ve yazım Ufuk ASIL tarafından
+yürütülmüştür.
+
+\bmhead{Yapay zekâ kullanımı}
+Bu çalışmada yapay zekâ kodlama asistanları (Kimi Code ve Claude, Anthropic) kod inceleme, test
+ortamının ve deney betiklerinin yazımı, koşuların yürütülmesi, istatistiksel analiz, literatür
+desteği ve Türkçe taslak üretiminde kullanılmıştır. Bütün sayısal sonuçlar kayıtlı koşu
+dosyalarından betiklerle üretilmiştir. Bilimsel içerik ve son metnin sorumluluğu yazara aittir;
+yapay zekâ yazar olarak gösterilmemiştir. % TODO-YAZAR-ONAYI
+
+\bmhead{Veri erişilebilirliği}
+Kullanılan Waterloo VLSI, National ve TSPLIB örnekleri kamuya açıktır; sentetik ve holdout2
+problemleri aşağıdaki betiklerle yeniden üretilir. Ön-kayıt protokolleri, ham koşu kayıtları ve
+özetler, kodla birlikte kalıcı bir açık arşivde (DOI: \texttt{[ARŞİV-DOI]}) erişime
+açılacaktır. % TODO-YAZAR-ONAYI
+Ön-kayıt \path{results/kick_targeting/PROTOCOL.json} (SHA-256 \path{PROTOCOL.sha256}), sapma kaydı
+\path{PROTOCOL_DEVIATIONS.log}; her (problem, tohum) koşusu \path{results/kick_targeting/<set>/}
+altında ayrı bir JSON dosyasıdır. Aşama~3'ün doğrulayıcı protokolü
+\path{results/kick_targeting/PROTOCOL_v2.json}, SHA-256 özeti \path{PROTOCOL_v2.sha256} ve
+OpenTimestamps kanıtı \path{PROTOCOL_v2.json.ots} (Bitcoin blok 976258) ile birlikte
+paylaşılır. % E584, E585
+Holdout2 seti \path{holdout2_suite.py} ile üretilir (\path{data_holdout2/catalog.json}). Keşifsel
+ham kenar uzunluğu kolunun koşuları \path{results/kick_targeting/holdout2_length_10s/} altında,
+özeti \path{results/kick_targeting/holdout2_length_10s_analysis.json} dosyasındadır; çevrimiçi
+ödül mekanizması özeti \path{results/kick_targeting/online_reward_mechanism.json} dosyasındadır.
+
+\bmhead{Kod erişilebilirliği}
+Kod, veriyle aynı arşivde paylaşılacaktır. % TODO-YAZAR-ONAYI
+Test ortamı \path{fast_ils.py} (birim testleri \path{test_fast_ils.py}); deney sürücüsü
+\path{kick_targeting_experiment.py}; analizler \path{kick_targeting_analysis.py} ve
+\path{kick_mechanism_analysis.py}; LKH-3 koşuları \path{lkh_runner.py}; sentetik setler
+\path{make_synth_suite.py}; keşifsel deneyler \path{kick_oracle_experiment.py},
+\path{cheap_scorer.py}, \path{cheap_targeting_experiment.py}, \path{cheap_mechanism.py} ve
+\path{pool_composition.py}, analizleri \path{kick_oracle_analysis.py} ve \path{cheap_analysis.py}.
+Aşama~3'ün koşu betiği \path{run_v2_holdout2.ps1}, deney sürücüsü
+\path{v2_targeting_experiment.py}, çevrimiçi skorlayıcı \path{online_targeting.py}; analizler
+\path{v2_analysis.py} ve \path{analysis_online_mechanism.py}. Ham kenar uzunluğu kolu
+\path{v3_extra_experiment.py} ile, \path{results/kick_targeting/run_v3_length.ps1} betiğiyle
+koşulur ve \path{results/kick_targeting/analysis_length_arm.py} ile çözümlenir. Çevrimiçi ödül
+mekanizması \path{test_online_reward.py} ile ölçülür ve \path{analysis_online_reward.py} ile
+özetlenir. Aşama~1 kodu (\path{adaptive_ils.py}) ve sonuçları \path{results/} altında
+korunmuştur. Kanıt defteri \path{evidence/scripts/build_v2_evidence.py} ve
+\path{evidence/scripts/build_v3.py} (ikincil Holm ailesi dahil) ile, denetimi
+\path{spotcheck_v3.py} ile; tablo ve şekiller \path{evidence/scripts/build_v2.py} ve
+\path{build_v3.py} ile yeniden üretilir.
+
+\bibliography{references}
+
+\end{document}

@@ -1,0 +1,102 @@
+== vlsi_primary_10s: 38 instances, 380 records; start gap 9.183%
+  knn_global     gap=0.7554% med=0.7737  kicks/s=4082 model=1.2% stale=0.00212429583511111
+  gnn_global     gap=0.8045% med=0.8361  kicks/s=4047 model=6.0% stale=0.04379838685938006
+  random_global  gap=0.8566% med=0.8498  kicks/s=7402 model=0.0% stale=None
+  random_local   gap=1.2189% med=1.2493  kicks/s=12495 model=0.0% stale=None
+  knn_local      gap=1.2233% med=1.2491  kicks/s=10930 model=0.9% stale=0.0015809814471990833
+  gnn_local      gap=1.2376% med=1.2356  kicks/s=10519 model=5.1% stale=0.02925520006558604
+  H1                                 gnn_global-random_global: d=-0.0521 CI[-0.077,-0.029] A/T/B=29/0/9 p=0.0001 holm=0.0004 tost=0.0002
+  H2                                 gnn_local-random_local: d=+0.0187 CI[-0.010,+0.047] A/T/B=15/0/23 p=0.1657 holm=0.3053 tost=0.0000
+  H3                                 gnn_global-knn_global: d=+0.0491 CI[+0.020,+0.077] A/T/B=9/0/29 p=0.0013 holm=0.0039 tost=0.0007
+  H4                                 gnn_local-knn_local: d=+0.0142 CI[-0.008,+0.035] A/T/B=14/0/24 p=0.1526 holm=0.3053 tost=0.0000
+  S1_knn_global_vs_random_global     knn_global-random_global: d=-0.1011 CI[-0.126,-0.077] A/T/B=34/0/4 p=0.0000 tost=0.5349
+  S2_knn_local_vs_random_local       knn_local-random_local: d=+0.0045 CI[-0.025,+0.034] A/T/B=20/0/18 p=0.8522 tost=0.0000
+  S3_random_local_vs_random_global   random_local-random_global: d=+0.3623 CI[+0.321,+0.402] A/T/B=1/0/37 p=0.0000 tost=1.0000
+  t=  0.1 gnn_global=5.070 gnn_local=4.483 knn_global=4.481 knn_local=3.623 random_global=4.398 random_local=3.859
+  t= 0.25 gnn_global=3.025 gnn_local=2.823 knn_global=2.840 knn_local=2.566 random_global=2.891 random_local=2.665
+  t=  0.5 gnn_global=2.103 gnn_local=2.166 knn_global=1.988 knn_local=2.063 random_global=2.081 random_local=2.111
+  t=  1.0 gnn_global=1.543 gnn_local=1.776 knn_global=1.475 knn_local=1.704 random_global=1.598 random_local=1.772
+  t=  2.0 gnn_global=1.202 gnn_local=1.543 knn_global=1.147 knn_local=1.497 random_global=1.279 random_local=1.544
+  t=  5.0 gnn_global=0.942 gnn_local=1.347 knn_global=0.880 knn_local=1.318 random_global=1.001 random_local=1.335
+  t= 10.0 gnn_global=0.804 gnn_local=1.238 knn_global=0.755 knn_local=1.223 random_global=0.857 random_local=1.219
+== vlsi_old_10s: 20 instances, 200 records; start gap 7.160%
+  knn_global     gap=0.3336% med=0.2840  kicks/s=9393 model=0.3% stale=0.0007968759851985775
+  gnn_global     gap=0.3765% med=0.3466  kicks/s=10068 model=1.5% stale=0.010437435037596591
+  random_global  gap=0.3903% med=0.3291  kicks/s=15460 model=0.0% stale=None
+  knn_local      gap=0.6355% med=0.6022  kicks/s=19092 model=0.2% stale=0.0006710375058954515
+  gnn_local      gap=0.6932% med=0.7283  kicks/s=19223 model=1.2% stale=0.007977462849933163
+  random_local   gap=0.6985% med=0.6172  kicks/s=21439 model=0.0% stale=None
+  H1                                 gnn_global-random_global: d=-0.0138 CI[-0.055,+0.025] A/T/B=10/1/9 p=0.7680 holm=1.0000 tost=0.0003
+  H2                                 gnn_local-random_local: d=-0.0053 CI[-0.046,+0.029] A/T/B=9/0/11 p=0.8983 holm=1.0000 tost=0.0001
+  H3                                 gnn_global-knn_global: d=+0.0429 CI[+0.004,+0.076] A/T/B=5/0/15 p=0.0073 holm=0.0292 tost=0.0033
+  H4                                 gnn_local-knn_local: d=+0.0577 CI[+0.011,+0.104] A/T/B=7/0/13 p=0.0532 holm=0.1595 tost=0.0517
+  S1_knn_global_vs_random_global     knn_global-random_global: d=-0.0567 CI[-0.102,-0.016] A/T/B=13/1/6 p=0.0230 tost=0.0355
+  S2_knn_local_vs_random_local       knn_local-random_local: d=-0.0630 CI[-0.110,-0.015] A/T/B=13/0/7 p=0.0153 tost=0.0763
+  S3_random_local_vs_random_global   random_local-random_global: d=+0.3082 CI[+0.219,+0.400] A/T/B=1/1/18 p=0.0000 tost=0.9998
+  t=  0.1 gnn_global=1.562 gnn_local=1.626 knn_global=1.355 knn_local=1.449 random_global=1.460 random_local=1.531
+  t= 0.25 gnn_global=1.013 gnn_local=1.181 knn_global=0.911 knn_local=1.163 random_global=1.046 random_local=1.198
+  t=  0.5 gnn_global=0.780 gnn_local=0.996 knn_global=0.697 knn_local=0.964 random_global=0.799 random_local=1.026
+  t=  1.0 gnn_global=0.620 gnn_local=0.875 knn_global=0.548 knn_local=0.851 random_global=0.659 random_local=0.902
+  t=  2.0 gnn_global=0.508 gnn_local=0.802 knn_global=0.460 knn_local=0.776 random_global=0.550 random_local=0.822
+  t=  5.0 gnn_global=0.423 gnn_local=0.731 knn_global=0.382 knn_local=0.687 random_global=0.440 random_local=0.734
+  t= 10.0 gnn_global=0.377 gnn_local=0.693 knn_global=0.334 knn_local=0.635 random_global=0.390 random_local=0.698
+== tsplib72_10s: 72 instances, 360 records; start gap 5.670%
+  random_global  gap=0.2500% med=0.1418  kicks/s=15703 model=0.0% stale=None
+  knn_global     gap=0.2550% med=0.1140  kicks/s=10747 model=0.2% stale=0.0006399824296978111
+  gnn_global     gap=0.2577% med=0.1328  kicks/s=11639 model=0.8% stale=0.0051104559415937004
+  random_local   gap=0.6812% med=0.2474  kicks/s=19815 model=0.0% stale=None
+  gnn_local      gap=0.7390% med=0.2598  kicks/s=18097 model=0.7% stale=0.004836480304848688
+  knn_local      gap=0.7949% med=0.2582  kicks/s=17917 model=0.1% stale=0.0005542299465559995
+  H1                                 gnn_global-random_global: d=+0.0077 CI[-0.027,+0.049] A/T/B=22/26/24 p=0.8371 holm=1.0000 tost=0.0000
+  H2                                 gnn_local-random_local: d=+0.0578 CI[-0.047,+0.162] A/T/B=14/26/32 p=0.0040 holm=0.0159 tost=0.2146
+  H3                                 gnn_global-knn_global: d=+0.0027 CI[-0.034,+0.039] A/T/B=22/25/25 p=0.6787 holm=1.0000 tost=0.0000
+  H4                                 gnn_local-knn_local: d=-0.0559 CI[-0.184,+0.041] A/T/B=19/21/32 p=0.2125 holm=0.6376 tost=0.2293
+  S1_knn_global_vs_random_global     knn_global-random_global: d=+0.0050 CI[-0.033,+0.049] A/T/B=31/28/13 p=0.1912 tost=0.0000
+  S2_knn_local_vs_random_local       knn_local-random_local: d=+0.1137 CI[+0.036,+0.205] A/T/B=17/23/32 p=0.0243 tost=0.6203
+  S3_random_local_vs_random_global   random_local-random_global: d=+0.4312 CI[+0.200,+0.722] A/T/B=5/24/43 p=0.0000 tost=0.9911
+  t=  0.1 gnn_global=1.079 gnn_local=1.403 knn_global=0.933 knn_local=1.387 random_global=1.072 random_local=1.292
+  t= 0.25 gnn_global=0.698 gnn_local=1.172 knn_global=0.615 knn_local=1.170 random_global=0.724 random_local=1.049
+  t=  0.5 gnn_global=0.523 gnn_local=1.049 knn_global=0.481 knn_local=1.024 random_global=0.541 random_local=0.928
+  t=  1.0 gnn_global=0.427 gnn_local=0.945 knn_global=0.387 knn_local=0.937 random_global=0.429 random_local=0.838
+  t=  2.0 gnn_global=0.357 gnn_local=0.877 knn_global=0.332 knn_local=0.890 random_global=0.337 random_local=0.784
+  t=  5.0 gnn_global=0.295 gnn_local=0.803 knn_global=0.284 knn_local=0.842 random_global=0.284 random_local=0.711
+  t= 10.0 gnn_global=0.258 gnn_local=0.739 knn_global=0.255 knn_local=0.795 random_global=0.250 random_local=0.681
+== synth_holdout_1s: 100 instances, 500 records; start gap 4.076%
+  random_global  gap=0.0239% med=0.0000  kicks/s=20237 model=0.0% stale=None
+  knn_global     gap=0.0264% med=0.0000  kicks/s=14947 model=0.2% stale=0.004297098070444746
+  random_local   gap=0.0337% med=0.0000  kicks/s=22248 model=0.0% stale=None
+  gnn_local      gap=0.0356% med=0.0000  kicks/s=20902 model=0.7% stale=0.02008665084782933
+  gnn_global     gap=0.0406% med=0.0000  kicks/s=16251 model=0.7% stale=0.022734361600389188
+  knn_local      gap=0.0471% med=0.0000  kicks/s=20330 model=0.2% stale=0.003609810587536563
+  H1                                 gnn_global-random_global: d=+0.0167 CI[+0.004,+0.031] A/T/B=9/70/21 p=0.0104 holm=0.0418 tost=0.0000
+  H2                                 gnn_local-random_local: d=+0.0019 CI[-0.013,+0.016] A/T/B=13/70/17 p=0.5158 holm=0.5158 tost=0.0000
+  H3                                 gnn_global-knn_global: d=+0.0142 CI[-0.000,+0.031] A/T/B=10/68/22 p=0.0589 holm=0.1648 tost=0.0000
+  H4                                 gnn_local-knn_local: d=-0.0116 CI[-0.026,+0.000] A/T/B=23/70/7 p=0.0549 holm=0.1648 tost=0.0000
+  S1_knn_global_vs_random_global     knn_global-random_global: d=+0.0025 CI[-0.009,+0.015] A/T/B=10/76/14 p=0.9664 tost=0.0000
+  S2_knn_local_vs_random_local       knn_local-random_local: d=+0.0134 CI[+0.001,+0.027] A/T/B=9/66/25 p=0.0227 tost=0.0000
+  S3_random_local_vs_random_global   random_local-random_global: d=+0.0099 CI[-0.008,+0.028] A/T/B=12/70/18 p=0.1403 tost=0.0000
+  t=  0.1 gnn_global=0.076 gnn_local=0.090 knn_global=0.066 knn_local=0.098 random_global=0.081 random_local=0.103
+  t= 0.25 gnn_global=0.053 gnn_local=0.066 knn_global=0.043 knn_local=0.069 random_global=0.049 random_local=0.058
+  t=  0.5 gnn_global=0.047 gnn_local=0.054 knn_global=0.030 knn_local=0.054 random_global=0.030 random_local=0.050
+  t=  1.0 gnn_global=0.041 gnn_local=0.036 knn_global=0.026 knn_local=0.047 random_global=0.024 random_local=0.034
+== synth_1000_10s: 40 instances, 200 records; start gap 6.962%
+  knn_global     gap=0.3407% med=0.2731  kicks/s=5905 model=0.3% stale=0.0009964155495370906
+  gnn_global     gap=0.3628% med=0.2683  kicks/s=6164 model=1.7% stale=0.014228033084255695
+  random_global  gap=0.3815% med=0.2697  kicks/s=10269 model=0.0% stale=None
+  random_local   gap=0.7837% med=0.5791  kicks/s=16546 model=0.0% stale=None
+  knn_local      gap=0.8356% med=0.6432  kicks/s=14631 model=0.3% stale=0.0007796702042432416
+  gnn_local      gap=0.9295% med=0.6381  kicks/s=14767 model=1.4% stale=0.00937105116036996
+  H1                                 gnn_global-random_global: d=-0.0187 CI[-0.056,+0.016] A/T/B=18/0/22 p=0.5900 holm=0.6795 tost=0.0001
+  H2                                 gnn_local-random_local: d=+0.1458 CI[+0.064,+0.243] A/T/B=12/0/28 p=0.0005 holm=0.0022 tost=0.8365
+  H3                                 gnn_global-knn_global: d=+0.0221 CI[-0.012,+0.058] A/T/B=16/0/24 p=0.2535 holm=0.6795 tost=0.0001
+  H4                                 gnn_local-knn_local: d=+0.0940 CI[-0.009,+0.227] A/T/B=15/0/25 p=0.2265 holm=0.6795 tost=0.4609
+  S1_knn_global_vs_random_global     knn_global-random_global: d=-0.0408 CI[-0.095,+0.009] A/T/B=20/0/20 p=0.3754 tost=0.0172
+  S2_knn_local_vs_random_local       knn_local-random_local: d=+0.0518 CI[-0.072,+0.166] A/T/B=15/0/25 p=0.0892 tost=0.2154
+  S3_random_local_vs_random_global   random_local-random_global: d=+0.4022 CI[+0.278,+0.556] A/T/B=0/0/40 p=0.0000 tost=0.9999
+  t=  0.1 gnn_global=1.773 gnn_local=2.124 knn_global=1.632 knn_local=1.922 random_global=1.896 random_local=1.871
+  t= 0.25 gnn_global=1.141 gnn_local=1.574 knn_global=1.072 knn_local=1.512 random_global=1.196 random_local=1.437
+  t=  0.5 gnn_global=0.813 gnn_local=1.361 knn_global=0.803 knn_local=1.270 random_global=0.915 random_local=1.258
+  t=  1.0 gnn_global=0.638 gnn_local=1.186 knn_global=0.601 knn_local=1.108 random_global=0.715 random_local=1.096
+  t=  2.0 gnn_global=0.507 gnn_local=1.085 knn_global=0.492 knn_local=0.994 random_global=0.557 random_local=0.973
+  t=  5.0 gnn_global=0.418 gnn_local=0.981 knn_global=0.404 knn_local=0.892 random_global=0.429 random_local=0.857
+  t= 10.0 gnn_global=0.363 gnn_local=0.930 knn_global=0.341 knn_local=0.836 random_global=0.382 random_local=0.784

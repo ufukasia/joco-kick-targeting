@@ -1,0 +1,40 @@
+{
+  "status": "DRAFT - not frozen. Copy to PROTOCOL_v2.json, fill every TBD, write its SHA-256 to PROTOCOL_v2.sha256 and upload both to OSF before the first holdout2 run.",
+  "title": "Confirmatory test of gain-aligned kick targeting on an untouched set (PROTOCOL_v2)",
+  "frozen_at": "TBD",
+  "external_timestamp": "TBD (OSF registration URL / DOI)",
+  "code": ["fast_ils.py", "kick_targeting_experiment.py", "v2_targeting_experiment.py", "holdout2_suite.py",
+           "v2_analysis.py", "cheap_scorer.py", "online_targeting.py"],
+  "code_sha256": "TBD (one line per file)",
+  "engine": "unchanged fast_ils.py (2-opt + Or-opt, 10-NN candidates, don't-look bits, better-only acceptance)",
+  "machine": "Intel Core i5-9300H (4C/8T), 16 GB, Windows 11 x64, Python 3.13; all compared strategies run in the same session, paired",
+  "holdout_set": {
+    "definition": "holdout2_suite.py catalog (data_holdout2/catalog.json), seed 20261116",
+    "strata": ["vlsi6", "national3", "tsplib3 (Phase-1-used, kick-inactive there)", "synth_uniform", "synth_clustered", "synth_mixed"],
+    "n_instances": 54,
+    "reference": "published optimum (real) / LKH-3 defaults 60 s (synthetic)"
+  },
+  "strategies": {
+    "random_global": "uniform global double-bridge",
+    "knn_global": "primary-campaign kNN rank proxy, pool rule TBD (tuned on development sets)",
+    "excess_global": "training-free excess-length proxy, pool rule TBD (tuned on development sets)",
+    "cheap_global": "membership-trained cheap MLP (models/cheap_scorer.npz), pool rule TBD",
+    "gain_global": "gain-trained cheap MLP (models/cheap_gain_scorer.npz), pool rule TBD",
+    "online_global": "TBD (online_targeting.py; parameters fixed on development sets)"
+  },
+  "pool_rule_tuning": "each signal's (pool fraction, target probability) chosen on vlsi_old + synth_1000 only from the grid {0.02,0.04,0.06,0.10} x {0.5,0.75,0.9}; chosen values recorded here before freezing",
+  "budget_seconds": 10,
+  "seeds": 10,
+  "workers": 4,
+  "metric": "gap (%) to the reference at 10 s, mean over seeds within instance; instance is the unit of inference",
+  "hypotheses_fixed_sequence": {
+    "note": "fixed-sequence (hierarchical) testing at alpha = 0.05: each hypothesis is tested only if all previous ones were rejected; this controls the family-wise error rate without Holm splitting",
+    "H7": "online_global vs best untrained proxy (knn_global or excess_global, whichever is better on the development sets - TBD): two-sided Wilcoxon; success = mean difference < 0 and p < 0.05",
+    "H5": "gain_global vs cheap_global: two-sided Wilcoxon",
+    "H8": "pool composition: mean excess length of wrong pool edges, knn > cheap (paired Wilcoxon over instances, on 2 s random-ILS incumbents)",
+    "H6": "gain_global vs knn_global: TOST with margin +-0.025 gap points"
+  },
+  "power_analysis": "TBD from v2_analysis.py power on vlsi_primary_10s (gnn_global:knn_global); target 80% power at delta = 0.04 for H7",
+  "secondary": ["per-stratum results (real / synthetic, n < 5000 / n >= 5000)", "anytime checkpoints", "kicks per second, model share, stale cuts"],
+  "exclusions": "none; crashes and invalid tours are reported, not dropped"
+}

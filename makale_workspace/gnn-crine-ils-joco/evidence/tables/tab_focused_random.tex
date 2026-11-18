@@ -1,0 +1,20 @@
+% OTOMATIK URETIM — evidence/scripts/build_tables.py
+% Kaynaklar: results/focused_synthetic_100_summary.json, results/focused_tsplib_9x10_summary.json, results/focused_world_10x10_summary.json
+\begin{table}[!htbp]
+ \centering\small
+ \setlength{\tabcolsep}{4pt}% tek tablo svjour3'te 6.66 pt tastigindan yerel daraltma
+ \caption{Focused yöntemler: üç kümede ortalama kalite, random'a farkı ve Holm-$p$; birimler Tablo~\ref{tab:ten-strategy} ile aynı. Mavi kalın: anlamlı yararlı.}
+ \label{tab:focused-random}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccccccccc}
+\toprule
+Strateji & \multicolumn{3}{c}{Sent-100}  & \multicolumn{3}{c}{TSPLIB-9}  & \multicolumn{3}{c}{World-10}  \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+ & Kalite & $\Delta$R & $p$ & Kalite & $\Delta$R & $p$ & Kalite & $\Delta$R & $p$ \\
+\midrule
+Susp.-reactive & 25,14 & \iyi{+0,13} & 0,0024 & -8,25 & +0,25 & 0,0938 & -16,31 & +0,15 & 0,6094 \\
+Focused-bandit & 25,14 & \iyi{+0,13} & 0,0024 & -8,36 & +0,14 & 0,0938 & -16,35 & +0,10 & 0,6094 \\
+Suspicious & 25,13 & \iyi{+0,12} & 0,0024 & -8,25 & +0,26 & 0,0938 & -16,31 & +0,14 & 0,6094 \\
+Random & 25,01 & --- & --- & -8,50 & --- & --- & -16,46 & --- & --- \\
+\bottomrule
+\end{tabular*}
+\end{table}

@@ -1,0 +1,20 @@
+% OTOMATIK URETIM — evidence/scripts/build_tables.py
+% Kaynaklar: results/entropy_holdout_100_t1_summary.json, results/entropy_fusion_holdout_100_summary.json, results/entropy_tsplib_9x10_summary.json, results/entropy_fusion_tsplib_9x10_summary.json, results/entropy_fusion_validation_40_summary.json, results/elite_entropy_validation_40_summary.json
+\begin{table}[!htbp]
+ \centering\small
+ \setlength{\tabcolsep}{4pt}
+ \caption{Eski iskelet deneylerinde ortalama kalite (sentetik: iyileşme; gerçek: $-$gap); yeni CRINE-ILS ile birleştirilmez.}
+ \label{tab:entropy-legacy}
+\begin{tabularx}{\textwidth}{@{\extracolsep{\fill}}>{\raggedright\arraybackslash}Xccccccc}
+\toprule
+Deney & Random & Suspicious & Entropy & Hybrid25 & Hybrid50 & Hybrid75 & Elite-entropy \\
+\midrule
+Sent-100 $\times$ 3, 1 sn & 24,31 & 24,51 & 24,33 & -- & -- & -- & -- \\
+Sent-100 $\times$ 3, 1 sn (füzyon) & 23,57 & 23,70 & 23,60 & -- & 23,64 & -- & -- \\
+TSPLIB-9 $\times$ 10, 5 sn & -8,15 & -8,10 & -8,14 & -- & -- & -- & -- \\
+TSPLIB-9 $\times$ 10, 5 sn (füzyon) & -8,62 & -8,56 & -8,59 & -- & -8,59 & -- & -- \\
+Val-40 $\times$ 3, 0,5 sn (füzyon) & 23,35 & 23,72 & 23,57 & 23,59 & 23,59 & 23,58 & -- \\
+Val-40 $\times$ 3, 0,5 sn (elit) & 23,25 & 23,71 & 23,57 & -- & -- & -- & 23,27 \\
+\bottomrule
+\end{tabularx}
+\end{table}

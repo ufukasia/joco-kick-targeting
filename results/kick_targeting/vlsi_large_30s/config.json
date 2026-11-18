@@ -1,0 +1,33 @@
+{
+ "suite": "vlsi_large",
+ "seeds": 3,
+ "budget": 30.0,
+ "strategies": [
+  "random_global",
+  "knn_global",
+  "gnn_global",
+  "cheap_global",
+  "random_local",
+  "knn_local"
+ ],
+ "instances": [
+  "bgb4355",
+  "xqd4966",
+  "fea5557",
+  "xsc6880",
+  "lap7454",
+  "dga9698",
+  "xmc10150",
+  "xrb14233",
+  "pjh17845",
+  "fnc19402",
+  "lsb22777",
+  "bbz25234",
+  "fyg28534",
+  "pbh30440",
+  "bby34656",
+  "ics39603"
+ ],
+ "workers": 4,
+ "exploratory": true
+}

@@ -1,0 +1,66 @@
+\section{İlgili Çalışmalar}\label{sec:ilgili-calismalar}
+
+\subsection{ILS ve vuruşun yeri}
+Double-bridge vuruşu \citet{martin_1992_largestep}'in büyük adımlı Markov zincirleriyle yaygınlaşmış,
+\citet{lourenco_2010_ils} ise ILS'yi yerel arama, pertürbasyon ve kabul kuralından oluşan bir çatı
+olarak sistematikleştirmiştir. Hızlı 2-opt ve Or-opt uygulamalarının aday listeleri ve bakma
+bitleri (don't-look bits) \citep{bentley_1992_fast} ile pertürbasyon sayısının çözüm kalitesindeki
+belirleyici rolü \citep{johnson_1997_case} bu çatının pratik temelidir. \citet{applegate_2003_clk}
+büyük örneklerde vuruşu turun küçük bir bölgesine sınırlamanın (segment, rastgele yürüyüş,
+geometrik vuruşlar) önemini gösterir. LKH \citep{helsgaun_2000_lkh} ve LKH-3 \citep{helsgaun_2017_lkh3}
+bu çizginin en güçlü çözücüleridir. Bu çalışmalar vuruşun \emph{nerede} yapılacağını çoğunlukla
+rastgele ya da yerellik kuralıyla belirler. Double-bridge seçiminin rastgele yerine yanlı
+yapılmasının yararı ILS çatısında daha önce tartışılmıştır \citep{lourenco_2010_ils}; bizim
+katkımız, aynı motoru sabit tutup yanlılığın kaynağını öğrenilmiş ve eğitimsiz skorlar arasında eş
+bütçede karşılaştırmaktır.
+
+\subsection{Uzun kenar bilgisiyle yönlendirme}
+GLS, yerel optimumdaki kenarları $c_e/(1+p_e)$ fayda ölçütüyle cezalandırır: uzun ve az
+cezalandırılmış kenarlar önce hedeflenir \citep{voudouris_1999_gls}. Bilgi güdümlü yerel arama (knowledge-guided local search, KGLS) aynı fikri araç rotalamada pertürbasyon aşamasına taşır: bir veri madenciliği çalışmasından türetilen rota genişliği ve kenar uzunluğu ölçütlerine göre ``kötü'' kenarları cezalandırır ve yerel aramayı bu kenarlardan başlatır. Yazarlar bu yönlendirmenin rastgele cezalandırmadan daha iyi sonuç verdiğini, ancak etkisinin yerel arama operatörlerinin seçiminden küçük kaldığını bildirir \citep{arnold_2019_kgls}. Basit
+çözüm ve örnek ölçütlerinin iyi ve kötü çözümleri ayırt edebildiği de gösterilmiştir
+\citep{arnold_2019_vrpgood}. LKH'nin alfa-yakınlık aday kümeleri ise bir kenarın değerini, o kenar zorunlu kılındığında en küçük 1-ağacın uzunluğundaki artışla ölçer \citep{helsgaun_2000_lkh}. Fazla-uzunluk vekilimiz yeni bir ilke
+değildir; GLS'nin uzun kenar fikrinin, kenar başına $O(1)$ maliyetle double-bridge hedeflemesine
+aktarılmasıdır. Katkımız bu basit aktarımın öğrenilmiş skorlara karşı ön-kayıtlı olarak sınanmasıdır.
+
+\subsection{Öğrenilmiş arama rehberliği}
+Uçtan uca inşa yöntemleri turu doğrudan üretir \citep{bello_2017_nco, dai_2017_s2v, kool_2019_attention, kwon_2020_pomo};
+iyileştirme yöntemleri hamle seçimini öğrenir \citep{wu_2022_improvement}. Daha güçlü sonuçlar
+veren kol, öğrenilmiş bileşeni klasik bir aramanın içine koyar. \citet{hudson_2022_gnngls} GNN'nin
+kenar pişmanlık tahminlerini GLS cezalarına bağlar; \citet{sui_2024_neuralgls} bu fikri geliştirir.
+NeuroLKH aday kümelerini \citep{xin_2021_neurolkh}, \citet{zheng_2023_rlkh} aynı kararları takviye
+öğrenmesiyle öğrenir. Isı haritası yöntemleri kenar olasılıklarını aramaya taşır \citep{fu_2021_generalize, qiu_2022_dimes, sun_2023_difusco}; hiyerarşik ayrıştırma ise öğrenilmiş politikaları çok büyük örneklere ölçekler \citep{pan_2023_htsp}. Taramalar bu yöntemleri öğrenmenin çözücüdeki rolüne (uçtan uca, iyileştirme, klasik sezgiselle melez) ya da metasezgiselin hangi bileşenine (başlatma, operatör seçimi, parametre ayarı) katıldığına göre sınıflar \citep{bengio_2021_mlco, karimimamaghan_2022_mlmeta, sui_2025_survey}; eğitim dağılımı dışına
+genellemenin zor olduğu da bilinir \citep{joshi_2020_generalization}. Bizim GNN, üyelik-MLP ve
+kazanç-MLP skorlayıcılarımız bu ailenin vuruş hedeflemedeki temsilcileridir. Farkımız, bunları
+aynı bilgiden türetilen eğitimsiz vekillerle eş duvar-saatinde karşılaştırmamızdır.
+
+\subsection{Basit tabanlara karşı sınama}
+Birkaç çalışma, öğrenilmiş bileşenin katkısını eğitimsiz bir tabana karşı ayrıştırmanın neden
+gerekli olduğunu göstermiştir. Maksimum bağımsız küme (maximum independent set, MIS) için GNN güdümlü ağaç aramasında
+GNN çıktısı rastgele değerlerle değiştirildiğinde başarım benzer kalmıştır \citep{bother_2022_wrong};
+modern GNN'lerin aynı problemde klasik açgözlü algoritmanın gerisinde kaldığı da bildirilmiştir
+\citep{angelini_2023_gnngreedy}. Bu sonuçlar MIS'e aittir ve burada yalnız benzetme olarak anılır.
+TSP'de \citet{xia_2024_rethinking}, uzaklıktan türetilen basit bir ısı haritasının öğrenilmiş ısı
+haritalarıyla rekabet ettiğini gösterir. Rotalama için önerilen hesaplamalı test kılavuzu güçlü
+klasik tabanlar ve adil zaman raporu ister \citep{accorsi_2022_guidelines}. Çalışmamız bu deseni
+ILS vuruş hedeflemesine, dokunulmamış bir sette ve ön-kayıtlı testlerle taşır.
+
+\subsection{Uyarlanabilir operatör seçiminde kredi ataması}
+Reaktif arama, parametreleri arama geçmişinden uyarlar \citep{battiti_2009_reactive}. Uyarlanabilir
+operatör seçimi (adaptive operator selection, AOS) çok kollu haydut çerçevesini kullanır
+\citep{auer_2002_ucb, dacosta_2008_aos}; uyarlanabilir geniş komşuluk araması da operatörleri geçmiş
+başarımlarına göre seçer \citep{ropke_2006_alns}. Bu alanda başarım hem seçim kuralına \citep{thierens_2005_pursuit} hem de operatöre verilen kredinin nasıl tanımlandığına bağlıdır \citep{fialho_2010_aos}. Ortalama ödül nadir ama büyük
+iyileşmeleri bastırabilir; uç değerlere dayalı kredi bu nedenle önerilmiştir \citep{fialho_2008_extreme}.
+Çevrimiçi vuruş skorlayıcımız bu sınıftandır. Bulgumuz, vuruş başına ortalama ödülün bu motorda
+son kaliteyle hizalanmadığını ölçen bir örnektir; çevrimiçi öğrenmenin genel olarak zararlı olduğu
+iddiası değildir.
+
+\subsection{Deneysel yöntembilim}
+Sezgisel testinin yarışma yerine kontrollü ve hipotez güdümlü bir deney olması gerektiği uzun
+süredir savunulur \citep{hooker_1995_testing}. Deneysel algoritma çalışmalarında örnek seçimi,
+tekrarlanabilirlik ve raporlama kuralları \citet{johnson_2002_guide}, \citet{mcgeoch_2012_guide} ve
+\citet{bartzbeielstein_2020_benchmarking} tarafından derlenmiştir. Ön-kayıt, doğrulayıcı tahmini
+sonradan yapılan açıklamadan ayırır \citep{nosek_2018_prereg}. Çok problemli karşılaştırmada örneği
+birim alan Wilcoxon testi ve Holm düzeltmesi yerleşik uygulamadır
+\citep{demsar_2006_comparisons, wilcoxon_1945, holm_1979}. ``Fark yok'' iddiası ise önceden belirlenmiş
+bir sınırla kurulan tek yönlü testler ister \citep{schuirmann_1987_tost, lakens_2017_equivalence}.
+Protokolümüz bu öğeleri, geliştirme ve doğrulama setlerini ayıran iki aşamalı bir zincirde birleştirir.

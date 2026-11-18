@@ -1,0 +1,87 @@
+\section{Tartışma}\label{sec:tartisma}
+
+\paragraph{Ucuz bir vekil neden önde kalır?}
+Üç açıklama bu sonuçla uyumludur; payları ablasyonla ayrıştırılmadı. Birincisi hedef uyumu
+hipotezidir. Double-bridge
+vuruşunun getirisi, kırılan kenarın yerine daha kısa bağlantılar kurulabilmesine bağlıdır;
+uzun bir kenar, özellikle uç noktalarının komşu ölçeğine göre uzunsa, tam da bu kazancı vaat eder. Üyelik
+olasılığı ise ``bu kenar optimal turda mı?'' sorusunu yanıtlar ve havuzu, düzeltildiğinde az
+kazandıran hatalarla doldurabilir. Aşama~2 bu hipotezi destekler, holdout2 ise tekrarlamaz: GNN ile
+kNN ve kazanç-MLP ile üyelik-MLP ayrışmadı (ikisinde de $p_{\mathrm{Holm}}=1{,}0$;
+Bölüm~\ref{sec:bulgular-asama2}). % E605, E606
+İkincisi maliyettir: skor
+sabit zamanlıdır ve bütçenin neredeyse tamamı vuruşa ve yerel aramaya kalır. Üçüncüsü tazeliktir:
+ucuz skor her tur değişiminde yeniden hesaplanabildiği için kesimler güncel tura düşer. İlke yeni
+değildir. GLS ceza hedefini kenar maliyetine göre
+seçerek uzun kenarları önceliklendirir \citep{voudouris_1999_gls}; rotalamada istenmeyen kenar özniteliklerinden türetilen bilginin pertürbasyonu yönlendirebildiği de gösterilmiştir
+\citep{arnold_2019_kgls}. Desen, basit tabanların öğrenilmiş rehberlerle rekabet ettiği önceki
+gözlemlerle aynı yöndedir \citep{xia_2024_rethinking, bother_2022_wrong}.
+
+\paragraph{Hangi eğitimsiz sinyal?}
+Eğitimsiz olmak tek başına yetmez. kNN sırası holdout2'de rastgeleden anlamlı ayrışmadı ve karışık
+problemlerde ondan kötüydü (betimsel); fazla-uzunluk ise kNN'yi 54 problemin 43'ünde geçti (keşifsel). % E604
+kNN bir kenarın komşuluk \emph{sırasını}, fazla-uzunluk ise kenarın \emph{büyüklüğünü} ölçer; iki
+kolun havuz kuralları da farklı olduğundan bu kıyas sinyal türünü yalıtmaz. % E750, E751
+Keşifsel ham uzunluk kolu, ``önce en basit vekile karşı sına'' ilkesini kendi vekilimize uygular ve büyüklük
+bilgisinin yeterli olduğunu düşündürür: yerel ölçek düzeltmesi olmadan en uzun kenarları hedeflemek
+de rastgeleye karşı benzer kazanç sağladı ve vekilden ortalamada ayrışmadı (fark $+0{,}009$ puan,
+\%95 GA $[-0{,}032;\,+0{,}053]$). % E965, E972
+Olası açıklama: bir kenarı kırmanın kazancı kendi uzunluğuyla doğrudan ilişkilidir;
+komşuluk sırası ise yoğunluğu değişen nokta kümelerinde bu büyüklük bilgisini kaybeder. İki
+uzunluk havuzunun örtüşmesi ölçülmedi.
+Uygulayıcı için sonuç daha da sadedir: bu motorda ve 10~sn'de, komşu listesi gerektirmeyen ham kenar
+uzunlukları iyi bir başlangıç noktasıdır. Yerel ölçek düzeltmesi ortalamada kazanç eklemedi; katman
+farkları küçük örneklemli ve betimseldir (ulusal alt kümede 3 problem). Kümeli örneklerin bu
+düzeltmeden yararlanabileceği sınanmaya değer bir hipotezdir. % E973, E976
+
+\paragraph{Hedefleme nerede işe yarar?}
+Kazanç kümeli ve gerçek problemlerde toplanır, uniform problemlerde küçük kalır: hedefleme bir
+``kötü kenar'' sinyaline dayanır ve bu sinyal ancak kenar uzunlukları heterojen olduğunda bilgi
+taşır. Yalnız uniform örneklerden oluşan bir kıyas kümesi bu yüzden hedeflemenin değerini
+olduğundan küçük gösterir.
+
+\paragraph{Çevrimiçi öğrenme ve ödül tasarımı.}
+Çevrimiçi model başarısız bir öğrenici değildir; kendisine verilen amacı yükseltir. Sorun amaçtadır:
+vuruşların çoğu turu iyileştirmediğinde vuruş başına ortalama ödül, yerel aramanın onardığı nötr
+vuruşu ödüllendirir (Bölüm~\ref{sec:bulgular-mekanizma}). Uyarlamalı operatör seçimi literatürü, kredi atamasının seçim başarımını etkilediğini \citep{fialho_2010_aos} ve nadir ama büyük iyileşmeleri öne çıkaran uç-değer kredisinin ortalama krediye göre avantajlı olabileceğini \citep{fialho_2008_extreme} öne sürer. Geliştirme setindeki ölçümümüz (12 problem, keşifsel) bunun bir örneğidir. Tasarım dersi şudur: seyrek
+iyileşmeli aramalarda ödül, ortalama maliyet değişimi yerine kabul edilen iyileşmelere dayanmalı ve
+öğrenicinin kendi ödülü son kaliteyle birlikte izlenmelidir. Bu, çevrimiçi öğrenmenin genel olarak
+zararlı olduğu anlamına gelmez.
+
+\paragraph{Uygulayıcı için öneriler.}
+\begin{itemize}
+\item Vuruşları en uzun tur kenarlarına yönlendirin (ham ya da uç noktaların yakın-komşu ölçeğine
+göre düzeltilmiş uzunluk); skor sabit zamanlıdır, eğitim ve çözücü etiketi gerektirmez.
+\item Havuzu tur kenarlarının \%4--6'sı kadar, hedefleme olasılığını $0{,}5$--$0{,}75$ aralığında
+tutun; yalnız küçük havuz ile çok yüksek olasılığın birleşiminden kaçının. % E750, E751, E752
+\item En büyük kazancı kümeli ve gerçek (VLSI ve ulusal) örneklerde bekleyin; GNN'ye karşı fark
+kısa bütçelerde en büyüktür.
+\item Öğrenilmiş bir hedefleme skorunu bu vekile karşı, model süresi bütçeye dahil ve eşit
+duvar-saatinde sınayın; AUC gibi kestirim ölçütleri arama faydasının yerine geçmez.
+\item Arama içinde öğrenme kullanacaksanız ödülü seyrek iyileşmelere göre tasarlayın ve
+ağırlıkların iyi bir statik ön-bilgiden ne kadar saptığını izleyin.
+\end{itemize}
+
+\subsection{Sınırlılıklar}\label{sec:tartisma-sinir}
+
+Bulgular tek bir motora, 2-opt/Or-opt tabanlı hızlı ILS'e aittir. Lin--Kernighan (LK) düzeyindeki bir yerel arama
+uzun yanlış kenarların bir kısmını kendiliğinden onarıp hedeflemenin marjinal değerini
+değiştirebilir; karşılaştırmayı LKH-3 içinde ikinci bir motorda tekrarlamadık. Ön-kayıtlı iddialar 10~sn bütçe ve $n=1.689$--$9.882$ aralığıyla sınırlıdır. % E597, E598
+Vekilin GNN'ye karşı avantajı bütçe uzadıkça daraldığından, daha uzun bütçelerde kapanabilir;
+Aşama~2'nin keşifsel 60~sn koşusunda GNN ile kNN de ayrışmamıştı ($p=0{,}35$). % E902
+Uniform katmanda hedefleme kazancı anlamlı değildir ve kümeli bir problemde (h2c13) GNN vekilden
+iyidir. GNN, $n\le400$ sentetik örneklerde eğitilmiş küçük ve tek bir modeldir ve çok büyük
+test problemlerine boyut genellemesi yapmak zorundadır; hedef boyutta eğitilmiş ya da yayımlanmış
+daha büyük bir model farklı sonuç verebilir. V4'te vekil geliştirmede seçilen havuz kuralıyla,
+kazanç-MLP varsayılan kuralla koşuldu; vekil için seçilen ve varsayılan kural
+arasındaki fark geliştirmede anlamlı değildi ($p=0{,}36$). % E751
+Ham uzunluk kolu protokol sonrasında, keşifsel olarak ve kolların sabit sırayla koşulduğu tek
+oturumda eklendi; vekille farkının güven aralığı 0,05 puanlık sınırı dışlamadığından iki sinyalin
+eşdeğerliği gösterilmiş değildir. % E972
+Bu oturumda vekilin vuruş hızı ana oturumdan yüksekti (2.773'e karşı 2.288/sn; rastgele kolda 3.269
+ve 3.252), olası neden ana oturumdaki eş zamanlı model yüküdür; kolların kıyası oturum içinde
+eşleşik kalır. % E987, E705, E986, E697
+Dış zaman damgası OSF yerine OpenTimestamps ile alındı ve bu sapma holdout2 koşusundan önce kayda
+geçirildi (Bölüm~\ref{sec:deney-dondurma}). % E585
+V1--V4 dışındaki bütün karşılaştırmalar (katmanlar, ikincil çiftler, mekanizma sayaçları, ağırlık
+kayması) keşifseldir; GNN, kNN ve kazanç-MLP'ye karşı ``daha iyi'' ifadeleri bu statüdedir.

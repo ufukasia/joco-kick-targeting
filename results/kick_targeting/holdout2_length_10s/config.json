@@ -1,0 +1,15 @@
+{
+ "suite": "holdout2",
+ "seeds": 10,
+ "budget": 10.0,
+ "strategies": [
+  "random_global",
+  "excess_global@0.06:0.5",
+  "length_global@0.06:0.5"
+ ],
+ "workers": 4,
+ "confirmatory": false,
+ "note": "exploratory post-protocol (review \u00d64)",
+ "machine": "MONSTER",
+ "started": "2026-11-17 18:54:10"
+}

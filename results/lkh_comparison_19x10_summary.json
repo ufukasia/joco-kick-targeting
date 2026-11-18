@@ -1,0 +1,1167 @@
+{
+  "experiment": "suspicious_crine_ils_vs_lkh3_repeated_budgets",
+  "protocol": "independent repeated budgets; not a single-run internal anytime trace",
+  "inference_unit": "instance; seeds are averaged within each instance",
+  "multiplicity": "Holm across the suite-by-budget LKH-3 versus suspicious comparisons",
+  "quality_direction": "negative BKS gap; higher is better",
+  "analyses": [
+    {
+      "suite": "tsplib",
+      "budget": 1.0,
+      "n_complete_instances": 9,
+      "incomplete_instances": [],
+      "aggregate": {
+        "suspicious": {
+          "mean_quality": -10.347067497807583,
+          "mean_gap_pct": 10.347067497807583,
+          "mean_elapsed_s": 2.0063036744453715,
+          "target_gap_success": {
+            "0.1": 0.1,
+            "1.0": 0.1111111111111111,
+            "5.0": 0.12222222222222223
+          }
+        },
+        "lkh3": {
+          "mean_quality": -0.6022926950602868,
+          "mean_gap_pct": 0.6022926950602868,
+          "mean_elapsed_s": 43.67444444444445,
+          "target_gap_success": {
+            "0.1": 0.5666666666666667,
+            "1.0": 0.8888888888888888,
+            "5.0": 0.9444444444444444
+          }
+        }
+      },
+      "lkh3_minus_suspicious": {
+        "comparison": "lkh3_minus_suspicious",
+        "method": "lkh3",
+        "opponent": "suspicious",
+        "n_instances": 9,
+        "n_nonzero": 9,
+        "mean_quality_difference": 9.744774802747296,
+        "median_quality_difference": 10.662993109341281,
+        "wins": 9,
+        "ties": 0,
+        "losses": 0,
+        "wilcoxon_statistic": 0.0,
+        "p_raw": 0.00390625,
+        "rank_biserial": 1.0,
+        "bootstrap_95_ci": [
+          6.406425761280061,
+          12.823741420736356
+        ],
+        "p_holm": 0.015625,
+        "significant_0_05": true,
+        "classification": "significant_benefit"
+      },
+      "per_instance": [
+        {
+          "instance": "kroA100",
+          "n": 100,
+          "suspicious": {
+            "quality": -0.050277229583685745,
+            "cost": 21292.7,
+            "elapsed": 1.033369820000371,
+            "target_gap_success": {
+              "0.1": 0.9,
+              "1.0": 1.0,
+              "5.0": 1.0
+            },
+            "kicks": 18.3
+          },
+          "lkh3": {
+            "quality": 0.0,
+            "cost": 21282.0,
+            "elapsed": 0.1,
+            "target_gap_success": {
+              "0.1": 1.0,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "rat783",
+          "n": 783,
+          "suspicious": {
+            "quality": -8.627072450601862,
+            "cost": 9565.7,
+            "elapsed": 1.292367970001942,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.5
+          },
+          "lkh3": {
+            "quality": 0.0,
+            "cost": 8806.0,
+            "elapsed": 1.7,
+            "target_gap_success": {
+              "0.1": 1.0,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "ali535",
+          "n": 535,
+          "suspicious": {
+            "quality": -5.431466561217933,
+            "cost": 213298.4,
+            "elapsed": 1.306544610002311,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.1
+            },
+            "kicks": 1.5
+          },
+          "lkh3": {
+            "quality": -0.01433443724976521,
+            "cost": 202339.0,
+            "elapsed": 1.46,
+            "target_gap_success": {
+              "0.1": 1.0,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "gr666",
+          "n": 666,
+          "suspicious": {
+            "quality": -6.103961842382404,
+            "cost": 312325.5,
+            "elapsed": 1.4784122699988074,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 1.0
+          },
+          "lkh3": {
+            "quality": -0.03206979256551547,
+            "cost": 294452.4,
+            "elapsed": 1.67,
+            "target_gap_success": {
+              "0.1": 1.0,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "pcb3038",
+          "n": 3038,
+          "suspicious": {
+            "quality": -11.579299025375107,
+            "cost": 153638.0,
+            "elapsed": 2.1153512599979876,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -0.13595363632402283,
+            "cost": 137881.2,
+            "elapsed": 16.33,
+            "target_gap_success": {
+              "0.1": 0.1,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "fl3795",
+          "n": 3795,
+          "suspicious": {
+            "quality": -19.025441401362436,
+            "cost": 34246.0,
+            "elapsed": 2.567327030004526,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -4.502989017099958,
+            "cost": 30067.6,
+            "elapsed": 26.020000000000003,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.5
+            }
+          }
+        },
+        {
+          "instance": "fnl4461",
+          "n": 4461,
+          "suspicious": {
+            "quality": -10.71941106230076,
+            "cost": 202136.0,
+            "elapsed": 3.1914299399984882,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -0.05641795295947767,
+            "cost": 182669.0,
+            "elapsed": 38.32,
+            "target_gap_success": {
+              "0.1": 1.0,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "rl5915",
+          "n": 5915,
+          "suspicious": {
+            "quality": -16.538468339433802,
+            "cost": 659060.0,
+            "elapsed": 2.416250030003721,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -0.46543949923080996,
+            "cost": 568162.2,
+            "elapsed": 48.32000000000001,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "usa13509",
+          "n": 13509,
+          "suspicious": {
+            "quality": -15.048209568010261,
+            "cost": 22989921.5,
+            "elapsed": 2.655680140000186,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -0.21342992011303288,
+            "cost": 20025508.4,
+            "elapsed": 259.15,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "suite": "tsplib",
+      "budget": 5.0,
+      "n_complete_instances": 9,
+      "incomplete_instances": [],
+      "aggregate": {
+        "suspicious": {
+          "mean_quality": -8.246453253385209,
+          "mean_gap_pct": 8.246453253385209,
+          "mean_elapsed_s": 6.88948614444477,
+          "target_gap_success": {
+            "0.1": 0.1111111111111111,
+            "1.0": 0.1111111111111111,
+            "5.0": 0.23333333333333334
+          }
+        },
+        "lkh3": {
+          "mean_quality": -0.4199042368631811,
+          "mean_gap_pct": 0.4199042368631811,
+          "mean_elapsed_s": 56.43222222222223,
+          "target_gap_success": {
+            "0.1": 0.6888888888888889,
+            "1.0": 0.8999999999999999,
+            "5.0": 0.9888888888888889
+          }
+        }
+      },
+      "lkh3_minus_suspicious": {
+        "comparison": "lkh3_minus_suspicious",
+        "method": "lkh3",
+        "opponent": "suspicious",
+        "n_instances": 9,
+        "n_nonzero": 8,
+        "mean_quality_difference": 7.826549016522029,
+        "median_quality_difference": 8.04914387125752,
+        "wins": 8,
+        "ties": 1,
+        "losses": 0,
+        "wilcoxon_statistic": 0.0,
+        "p_raw": 0.0078125,
+        "rank_biserial": 1.0,
+        "bootstrap_95_ci": [
+          5.135461463218833,
+          10.472014354311057
+        ],
+        "p_holm": 0.015625,
+        "significant_0_05": true,
+        "classification": "significant_benefit"
+      },
+      "per_instance": [
+        {
+          "instance": "kroA100",
+          "n": 100,
+          "suspicious": {
+            "quality": 0.0,
+            "cost": 21282.0,
+            "elapsed": 5.021913270003279,
+            "target_gap_success": {
+              "0.1": 1.0,
+              "1.0": 1.0,
+              "5.0": 1.0
+            },
+            "kicks": 90.1
+          },
+          "lkh3": {
+            "quality": 0.0,
+            "cost": 21282.0,
+            "elapsed": 0.1,
+            "target_gap_success": {
+              "0.1": 1.0,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "rat783",
+          "n": 783,
+          "suspicious": {
+            "quality": -6.6897569838746325,
+            "cost": 9395.1,
+            "elapsed": 5.426368799997727,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 6.6
+          },
+          "lkh3": {
+            "quality": 0.0,
+            "cost": 8806.0,
+            "elapsed": 2.81,
+            "target_gap_success": {
+              "0.1": 1.0,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "ali535",
+          "n": 535,
+          "suspicious": {
+            "quality": -4.5437694627057486,
+            "cost": 211502.5,
+            "elapsed": 5.4034922199993165,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.8
+            },
+            "kicks": 8.8
+          },
+          "lkh3": {
+            "quality": -0.01433443724976521,
+            "cost": 202339.0,
+            "elapsed": 4.999999999999999,
+            "target_gap_success": {
+              "0.1": 1.0,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "gr666",
+          "n": 666,
+          "suspicious": {
+            "quality": -5.323449676924017,
+            "cost": 310028.0,
+            "elapsed": 5.334887160004291,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.3
+            },
+            "kicks": 6.9
+          },
+          "lkh3": {
+            "quality": -0.024052344424136594,
+            "cost": 294428.8,
+            "elapsed": 5.23,
+            "target_gap_success": {
+              "0.1": 1.0,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "pcb3038",
+          "n": 3038,
+          "suspicious": {
+            "quality": -8.858047554722791,
+            "cost": 149891.0,
+            "elapsed": 7.741019389999565,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -0.046262001249146666,
+            "cost": 137757.7,
+            "elapsed": 19.889999999999997,
+            "target_gap_success": {
+              "0.1": 0.9,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "fl3795",
+          "n": 3795,
+          "suspicious": {
+            "quality": -17.892395384401503,
+            "cost": 33920.0,
+            "elapsed": 8.788255620002747,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -3.317808980953705,
+            "cost": 29726.6,
+            "elapsed": 28.119999999999997,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.1,
+              "5.0": 0.9
+            }
+          }
+        },
+        {
+          "instance": "fnl4461",
+          "n": 4461,
+          "suspicious": {
+            "quality": -8.05823647338497,
+            "cost": 197277.6,
+            "elapsed": 7.91974818000017,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -0.0090926021274498,
+            "cost": 182582.6,
+            "elapsed": 37.519999999999996,
+            "target_gap_success": {
+              "0.1": 1.0,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "rl5915",
+          "n": 5915,
+          "suspicious": {
+            "quality": -11.157480593425635,
+            "cost": 628628.9,
+            "elapsed": 7.822657310000795,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -0.1933584425229431,
+            "cost": 566623.5,
+            "elapsed": 46.330000000000005,
+            "target_gap_success": {
+              "0.1": 0.3,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "usa13509",
+          "n": 13509,
+          "suspicious": {
+            "quality": -11.694943151027587,
+            "cost": 22319843.0,
+            "elapsed": 8.547033349995036,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -0.17422932324148413,
+            "cost": 20017675.0,
+            "elapsed": 362.89000000000004,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "suite": "world",
+      "budget": 1.0,
+      "n_complete_instances": 10,
+      "incomplete_instances": [],
+      "aggregate": {
+        "suspicious": {
+          "mean_quality": -24.36794783074302,
+          "mean_gap_pct": 24.36794783074302,
+          "mean_elapsed_s": 2.8612296389993572,
+          "target_gap_success": {
+            "0.1": 0.1,
+            "1.0": 0.1,
+            "5.0": 0.1
+          }
+        },
+        "lkh3": {
+          "mean_quality": -1.4679740932844996,
+          "mean_gap_pct": 1.4679740932844996,
+          "mean_elapsed_s": 190.08200000000002,
+          "target_gap_success": {
+            "0.1": 0.1,
+            "1.0": 0.8,
+            "5.0": 0.9
+          }
+        }
+      },
+      "lkh3_minus_suspicious": {
+        "comparison": "lkh3_minus_suspicious",
+        "method": "lkh3",
+        "opponent": "suspicious",
+        "n_instances": 10,
+        "n_nonzero": 9,
+        "mean_quality_difference": 22.899973737458524,
+        "median_quality_difference": 24.131179250318773,
+        "wins": 9,
+        "ties": 1,
+        "losses": 0,
+        "wilcoxon_statistic": 0.0,
+        "p_raw": 0.00390625,
+        "rank_biserial": 1.0,
+        "bootstrap_95_ci": [
+          16.79168497817175,
+          27.85582851343928
+        ],
+        "p_holm": 0.015625,
+        "significant_0_05": true,
+        "classification": "significant_benefit"
+      },
+      "per_instance": [
+        {
+          "instance": "wi29",
+          "n": 29,
+          "suspicious": {
+            "quality": 0.0,
+            "cost": 27603.0,
+            "elapsed": 1.0054601899988485,
+            "target_gap_success": {
+              "0.1": 1.0,
+              "1.0": 1.0,
+              "5.0": 1.0
+            },
+            "kicks": 87.8
+          },
+          "lkh3": {
+            "quality": 0.0,
+            "cost": 27603.0,
+            "elapsed": 0.06,
+            "target_gap_success": {
+              "0.1": 1.0,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "tz6117",
+          "n": 6117,
+          "suspicious": {
+            "quality": -24.196312303973976,
+            "cost": 490225.2,
+            "elapsed": 2.359709799998382,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -0.25017860852558027,
+            "cost": 395705.5,
+            "elapsed": 67.45,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "ym7663",
+          "n": 7663,
+          "suspicious": {
+            "quality": -28.372021786382675,
+            "cost": 305928.5,
+            "elapsed": 2.4057096000018645,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -0.5990416005773895,
+            "cost": 239741.6,
+            "elapsed": 101.07,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.9,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "pm8079",
+          "n": 8079,
+          "suspicious": {
+            "quality": -26.750946846023247,
+            "cost": 145579.8,
+            "elapsed": 3.9191997099973377,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -2.434722040834095,
+            "cost": 117651.4,
+            "elapsed": 121.53,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.2,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "ei8246",
+          "n": 8246,
+          "suspicious": {
+            "quality": -20.66119871368912,
+            "cost": 248768.4,
+            "elapsed": 2.437847230002808,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -0.18508907654325776,
+            "cost": 206552.6,
+            "elapsed": 115.05999999999999,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "ja9847",
+          "n": 9847,
+          "suspicious": {
+            "quality": -36.74610305656971,
+            "cost": 672686.9,
+            "elapsed": 2.8548765400017144,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -0.6539221505761053,
+            "cost": 495140.8,
+            "elapsed": 164.58,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.9,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "kz9976",
+          "n": 9976,
+          "suspicious": {
+            "quality": -28.374422369361536,
+            "cost": 1363183.6,
+            "elapsed": 2.4251068400000806,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -0.26981366085276975,
+            "cost": 1064746.1,
+            "elapsed": 163.48999999999998,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "fi10639",
+          "n": 10639,
+          "suspicious": {
+            "quality": -22.3602618115871,
+            "cost": 636918.2,
+            "elapsed": 3.088112499998533,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -0.18852048020563775,
+            "cost": 521508.3,
+            "elapsed": 221.38000000000002,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "mo14185",
+          "n": 14185,
+          "suspicious": {
+            "quality": -28.103220341759148,
+            "cost": 547483.7,
+            "elapsed": 2.2002759399969363,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -0.20766208757139482,
+            "cost": 428264.5,
+            "elapsed": 563.5699999999999,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "ho14473",
+          "n": 14473,
+          "suspicious": {
+            "quality": -28.114991078083705,
+            "cost": 226881.4,
+            "elapsed": 5.915998039997066,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -9.890791227158765,
+            "cost": 194607.8,
+            "elapsed": 382.63000000000005,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "suite": "world",
+      "budget": 5.0,
+      "n_complete_instances": 10,
+      "incomplete_instances": [],
+      "aggregate": {
+        "suspicious": {
+          "mean_quality": -16.643201746971307,
+          "mean_gap_pct": 16.643201746971307,
+          "mean_elapsed_s": 8.575418484000402,
+          "target_gap_success": {
+            "0.1": 0.1,
+            "1.0": 0.1,
+            "5.0": 0.1
+          }
+        },
+        "lkh3": {
+          "mean_quality": -0.8763314882581547,
+          "mean_gap_pct": 0.8763314882581547,
+          "mean_elapsed_s": 190.46400000000003,
+          "target_gap_success": {
+            "0.1": 0.26,
+            "1.0": 0.8800000000000001,
+            "5.0": 0.9099999999999999
+          }
+        }
+      },
+      "lkh3_minus_suspicious": {
+        "comparison": "lkh3_minus_suspicious",
+        "method": "lkh3",
+        "opponent": "suspicious",
+        "n_instances": 10,
+        "n_nonzero": 9,
+        "mean_quality_difference": 15.766870258713155,
+        "median_quality_difference": 16.54707401232202,
+        "wins": 9,
+        "ties": 1,
+        "losses": 0,
+        "wilcoxon_statistic": 0.0,
+        "p_raw": 0.00390625,
+        "rank_biserial": 1.0,
+        "bootstrap_95_ci": [
+          11.549837789859259,
+          19.362146313577565
+        ],
+        "p_holm": 0.015625,
+        "significant_0_05": true,
+        "classification": "significant_benefit"
+      },
+      "per_instance": [
+        {
+          "instance": "wi29",
+          "n": 29,
+          "suspicious": {
+            "quality": 0.0,
+            "cost": 27603.0,
+            "elapsed": 5.004930470000545,
+            "target_gap_success": {
+              "0.1": 1.0,
+              "1.0": 1.0,
+              "5.0": 1.0
+            },
+            "kicks": 462.3
+          },
+          "lkh3": {
+            "quality": 0.0,
+            "cost": 27603.0,
+            "elapsed": 0.09,
+            "target_gap_success": {
+              "0.1": 1.0,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "tz6117",
+          "n": 6117,
+          "suspicious": {
+            "quality": -15.408367492741656,
+            "cost": 455537.6,
+            "elapsed": 8.580570790001365,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -0.1330570179216555,
+            "cost": 395243.2,
+            "elapsed": 65.89,
+            "target_gap_success": {
+              "0.1": 0.1,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "ym7663",
+          "n": 7663,
+          "suspicious": {
+            "quality": -15.015525734954721,
+            "cost": 274098.1,
+            "elapsed": 10.549423369999568,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -0.18085383149961815,
+            "cost": 238745.0,
+            "elapsed": 109.42,
+            "target_gap_success": {
+              "0.1": 0.3,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "pm8079",
+          "n": 8079,
+          "suspicious": {
+            "quality": -18.813460450132773,
+            "cost": 136463.2,
+            "elapsed": 10.00224431999959,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -0.6876496452048235,
+            "cost": 115644.8,
+            "elapsed": 117.37,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.8,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "ei8246",
+          "n": 8246,
+          "suspicious": {
+            "quality": -12.72172128960911,
+            "cost": 232399.5,
+            "elapsed": 9.888532969997323,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -0.10180869278414521,
+            "cost": 206380.9,
+            "elapsed": 118.38000000000002,
+            "target_gap_success": {
+              "0.1": 0.7,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "ja9847",
+          "n": 9847,
+          "suspicious": {
+            "quality": -26.864983208788345,
+            "cost": 624079.3,
+            "elapsed": 8.42806024000165,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -0.5314642099186052,
+            "cost": 494538.4,
+            "elapsed": 178.68,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "kz9976",
+          "n": 9976,
+          "suspicious": {
+            "quality": -19.758720609936518,
+            "cost": 1271695.1,
+            "elapsed": 8.54590471000265,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -0.13283974381310146,
+            "cost": 1063291.6,
+            "elapsed": 169.88,
+            "target_gap_success": {
+              "0.1": 0.4,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "fi10639",
+          "n": 10639,
+          "suspicious": {
+            "quality": -16.6043452116797,
+            "cost": 606957.1,
+            "elapsed": 8.249812259999453,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -0.15103923523659676,
+            "cost": 521313.2,
+            "elapsed": 275.90000000000003,
+            "target_gap_success": {
+              "0.1": 0.1,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "mo14185",
+          "n": 14185,
+          "suspicious": {
+            "quality": -17.936669497890623,
+            "cost": 504034.2,
+            "elapsed": 8.466787579999073,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -0.17722058042430922,
+            "cost": 428134.4,
+            "elapsed": 429.86,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 1.0,
+              "5.0": 1.0
+            }
+          }
+        },
+        {
+          "instance": "ho14473",
+          "n": 14473,
+          "suspicious": {
+            "quality": -23.30822397397963,
+            "cost": 218369.0,
+            "elapsed": 8.037918130002799,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.0
+            },
+            "kicks": 0.0
+          },
+          "lkh3": {
+            "quality": -6.667381925778692,
+            "cost": 188899.4,
+            "elapsed": 439.16999999999996,
+            "target_gap_success": {
+              "0.1": 0.0,
+              "1.0": 0.0,
+              "5.0": 0.1
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

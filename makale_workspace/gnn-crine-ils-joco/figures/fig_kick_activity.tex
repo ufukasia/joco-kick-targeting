@@ -1,0 +1,50 @@
+% Şekil: 5 sn nominal butcede problem boyutu karsisinda (a) ortalama tamamlanan kick sayisi,
+% (b) ortalama gerceklesen sure; 4 focused yontem, 9 TSPLIB + 10 World problemi.
+% Ana belge preamble gereksinimi: \usepackage{pgfplots}, \pgfplotsset{compat=1.18},
+%   \usepgfplotslibrary{groupplots}; renk iyiRenk (figure-style.md kural 7).
+% Veri: figures/data/fig_kick_activity_{kicks,elapsed}.dat <= results/focused_{tsplib_9x10,world_10x10}_summary.json
+% (per_instance; tohum ortalamalari). Sifir degerler ymin=-4 ile eksen cizgisinin ustunde gorunur.
+\begin{tikzpicture}
+\begin{groupplot}[
+  group style={rows=2, columns=1, vertical sep=18pt,
+               xlabels at=edge bottom, xticklabels at=edge bottom},
+  width=\textwidth, height=5.2cm,
+  xmode=log, xlabel={Problem size $n$ [cities, log scale]},
+  x label style={font=\small},
+  tick label style={font=\small},
+  legend style={at={(0.98,0.97)}, anchor=north east, font=\scriptsize, draw=black!40, fill=white, fill opacity=0.9, text opacity=1},
+]
+\nextgroupplot[
+  ylabel={Mean completed kicks}, ylabel style={font=\small},
+  ymin=-4, ymax=95,
+]
+\addplot[only marks, mark=square*, mark size=1.8pt, draw=black!70]
+  table [x=n, y=random] {figures/data/fig_kick_activity_kicks.dat};
+\addlegendentry{Random}
+\addplot[only marks, mark=*, mark size=2.2pt, draw=iyiRenk]
+  table [x=n, y=suspicious] {figures/data/fig_kick_activity_kicks.dat};
+\addlegendentry{Suspicious (proposed)}
+\addplot[only marks, mark=triangle*, mark size=2.2pt, draw=orange!85!black]
+  table [x=n, y=suspicious_reactive] {figures/data/fig_kick_activity_kicks.dat};
+\addlegendentry{Susp.-reactive}
+\addplot[only marks, mark=diamond*, mark size=2.2pt, draw=teal!70!black]
+  table [x=n, y=focused_bandit] {figures/data/fig_kick_activity_kicks.dat};
+\addlegendentry{Focused-bandit}
+\node[font=\scriptsize\itshape, text=black!70, align=left, anchor=south east]
+  at (rel axis cs:0.98,0.03) {9 of 10 World instances: 0 kicks\\ for all four methods};
+\nextgroupplot[
+  ylabel={Mean elapsed [s]}, ylabel style={font=\small},
+  ymin=4, ymax=12.5,
+]
+\addplot[only marks, mark=square*, mark size=1.8pt, draw=black!70]
+  table [x=n, y=random] {figures/data/fig_kick_activity_elapsed.dat};
+\addplot[only marks, mark=*, mark size=2.2pt, draw=iyiRenk]
+  table [x=n, y=suspicious] {figures/data/fig_kick_activity_elapsed.dat};
+\addplot[only marks, mark=triangle*, mark size=2.2pt, draw=orange!85!black]
+  table [x=n, y=suspicious_reactive] {figures/data/fig_kick_activity_elapsed.dat};
+\addplot[only marks, mark=diamond*, mark size=2.2pt, draw=teal!70!black]
+  table [x=n, y=focused_bandit] {figures/data/fig_kick_activity_elapsed.dat};
+\draw[kotuRenk, dashed, line width=0.8pt] (axis cs:20,5) -- (axis cs:20000,5);
+\node[font=\scriptsize\itshape, text=kotuRenk, anchor=south west] at (axis cs:22,5.1) {nominal budget: 5 s};
+\end{groupplot}
+\end{tikzpicture}

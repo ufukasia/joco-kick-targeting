@@ -1,0 +1,293 @@
+{
+  "metric": "negative_gap_pct",
+  "n_complete_instances": 9,
+  "quality_direction": "higher is better; TSPLIB quality is negative gap",
+  "aggregate": {
+    "random": {
+      "mean_quality": -8.62236076470691,
+      "median_quality": -8.237565296388826,
+      "mean_cost": 2673010.088888889,
+      "mean_elapsed_s": 7.3217527044443464
+    },
+    "suspicious": {
+      "mean_quality": -8.558594619202633,
+      "median_quality": -7.8639563933681575,
+      "mean_cost": 2672920.9888888886,
+      "mean_elapsed_s": 7.384497642222494
+    },
+    "entropy": {
+      "mean_quality": -8.59370342679619,
+      "median_quality": -8.084260731319555,
+      "mean_cost": 2672968.044444444,
+      "mean_elapsed_s": 7.317964942222414
+    },
+    "hybrid50": {
+      "mean_quality": -8.592452113757208,
+      "median_quality": -7.957074721780603,
+      "mean_cost": 2672998.177777778,
+      "mean_elapsed_s": 7.3021511899999
+    }
+  },
+  "comparisons": [
+    {
+      "comparison": "hybrid50_minus_random",
+      "n_instances": 9,
+      "n_nonzero": 4,
+      "mean_quality_difference": 0.02990865094970233,
+      "median_quality_difference": 0.0,
+      "wins": 3,
+      "ties": 5,
+      "losses": 1,
+      "wilcoxon_statistic": 3.0,
+      "p_raw": 0.625,
+      "p_holm": 1.0,
+      "significant_0_05": false
+    },
+    {
+      "comparison": "hybrid50_minus_suspicious",
+      "n_instances": 9,
+      "n_nonzero": 4,
+      "mean_quality_difference": -0.03385749455457389,
+      "median_quality_difference": 0.0,
+      "wins": 1,
+      "ties": 5,
+      "losses": 3,
+      "wilcoxon_statistic": 1.0,
+      "p_raw": 0.25,
+      "p_holm": 0.75,
+      "significant_0_05": false
+    },
+    {
+      "comparison": "hybrid50_minus_entropy",
+      "n_instances": 9,
+      "n_nonzero": 4,
+      "mean_quality_difference": 0.001251313038979888,
+      "median_quality_difference": 0.0,
+      "wins": 1,
+      "ties": 5,
+      "losses": 3,
+      "wilcoxon_statistic": 4.0,
+      "p_raw": 0.875,
+      "p_holm": 1.0,
+      "significant_0_05": false
+    }
+  ],
+  "per_instance": [
+    {
+      "instance": "kroA100",
+      "kind": null,
+      "random": {
+        "quality": -0.05638567803777841,
+        "cost": 21294.0,
+        "elapsed": 5.045724050000354
+      },
+      "suspicious": {
+        "quality": -0.08175923315477869,
+        "cost": 21299.4,
+        "elapsed": 5.041419909999968
+      },
+      "entropy": {
+        "quality": -0.021614509914481723,
+        "cost": 21286.6,
+        "elapsed": 5.034383309999976
+      },
+      "hybrid50": {
+        "quality": -0.03806033267550042,
+        "cost": 21290.1,
+        "elapsed": 5.053179239999736
+      }
+    },
+    {
+      "instance": "rat783",
+      "kind": null,
+      "random": {
+        "quality": -8.237565296388826,
+        "cost": 9531.4,
+        "elapsed": 6.032129520000308
+      },
+      "suspicious": {
+        "quality": -7.8639563933681575,
+        "cost": 9498.5,
+        "elapsed": 6.206494230000317
+      },
+      "entropy": {
+        "quality": -8.084260731319555,
+        "cost": 9517.9,
+        "elapsed": 6.070032529999662
+      },
+      "hybrid50": {
+        "quality": -7.957074721780603,
+        "cost": 9506.7,
+        "elapsed": 5.939784320000035
+      }
+    },
+    {
+      "instance": "ali535",
+      "kind": null,
+      "random": {
+        "quality": -5.209480500222432,
+        "cost": 212849.3,
+        "elapsed": 5.620796629998585
+      },
+      "suspicious": {
+        "quality": -5.329148336710988,
+        "cost": 213091.4,
+        "elapsed": 5.684192350000012
+      },
+      "entropy": {
+        "quality": -5.374524244970589,
+        "cost": 213183.2,
+        "elapsed": 5.572547910000139
+      },
+      "hybrid50": {
+        "quality": -5.38964954772379,
+        "cost": 213213.8,
+        "elapsed": 5.432635760000631
+      }
+    },
+    {
+      "instance": "gr666",
+      "kind": null,
+      "random": {
+        "quality": -7.07441278986812,
+        "cost": 315182.1,
+        "elapsed": 5.477040030000717
+      },
+      "suspicious": {
+        "quality": -6.729084991744746,
+        "cost": 314165.6,
+        "elapsed": 6.044195100000434
+      },
+      "entropy": {
+        "quality": -6.839528737116029,
+        "cost": 314490.7,
+        "elapsed": 5.5694779299999935
+      },
+      "hybrid50": {
+        "quality": -6.923881803789942,
+        "cost": 314739.0,
+        "elapsed": 5.621558649999497
+      }
+    },
+    {
+      "instance": "pcb3038",
+      "kind": null,
+      "random": {
+        "quality": -8.959722282742892,
+        "cost": 150031.0,
+        "elapsed": 8.524242249999952
+      },
+      "suspicious": {
+        "quality": -8.959722282742892,
+        "cost": 150031.0,
+        "elapsed": 8.444241009999677
+      },
+      "entropy": {
+        "quality": -8.959722282742892,
+        "cost": 150031.0,
+        "elapsed": 8.537126980001267
+      },
+      "hybrid50": {
+        "quality": -8.959722282742892,
+        "cost": 150031.0,
+        "elapsed": 8.548711780000303
+      }
+    },
+    {
+      "instance": "fl3795",
+      "kind": null,
+      "random": {
+        "quality": -16.446545252328654,
+        "cost": 33504.0,
+        "elapsed": 7.644245440000304
+      },
+      "suspicious": {
+        "quality": -16.446545252328654,
+        "cost": 33504.0,
+        "elapsed": 7.615059520000068
+      },
+      "entropy": {
+        "quality": -16.446545252328654,
+        "cost": 33504.0,
+        "elapsed": 7.60756106000008
+      },
+      "hybrid50": {
+        "quality": -16.446545252328654,
+        "cost": 33504.0,
+        "elapsed": 7.633651549999558
+      }
+    },
+    {
+      "instance": "fnl4461",
+      "kind": null,
+      "random": {
+        "quality": -7.225879955742033,
+        "cost": 195758.0,
+        "elapsed": 9.93660428000003
+      },
+      "suspicious": {
+        "quality": -7.225879955742033,
+        "cost": 195758.0,
+        "elapsed": 9.862009990000297
+      },
+      "entropy": {
+        "quality": -7.225879955742033,
+        "cost": 195758.0,
+        "elapsed": 9.916547679999713
+      },
+      "hybrid50": {
+        "quality": -7.225879955742033,
+        "cost": 195758.0,
+        "elapsed": 9.917116379999788
+      }
+    },
+    {
+      "instance": "rl5915",
+      "kind": null,
+      "random": {
+        "quality": -11.863207964210563,
+        "cost": 632620.0,
+        "elapsed": 8.379248699999517
+      },
+      "suspicious": {
+        "quality": -11.863207964210563,
+        "cost": 632620.0,
+        "elapsed": 8.373425720000887
+      },
+      "entropy": {
+        "quality": -11.863207964210563,
+        "cost": 632620.0,
+        "elapsed": 8.339328140000362
+      },
+      "hybrid50": {
+        "quality": -11.863207964210563,
+        "cost": 632620.0,
+        "elapsed": 8.349774479999905
+      }
+    },
+    {
+      "instance": "usa13509",
+      "kind": null,
+      "random": {
+        "quality": -12.528047162820895,
+        "cost": 22486321.0,
+        "elapsed": 9.23574343999935
+      },
+      "suspicious": {
+        "quality": -12.528047162820895,
+        "cost": 22486321.0,
+        "elapsed": 9.18944095000079
+      },
+      "entropy": {
+        "quality": -12.528047162820895,
+        "cost": 22486321.0,
+        "elapsed": 9.214678940000521
+      },
+      "hybrid50": {
+        "quality": -12.528047162820895,
+        "cost": 22486321.0,
+        "elapsed": 9.222948549999638
+      }
+    }
+  ]
+}

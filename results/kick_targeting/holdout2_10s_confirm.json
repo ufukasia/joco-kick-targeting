@@ -1,0 +1,50 @@
+[
+ {
+  "id": "V1",
+  "a": "onlinewarm_global",
+  "b": "linprior_global",
+  "test": "superiority",
+  "n_inst": 54,
+  "mean": 0.2912225733289756,
+  "p": 1.6256984569330967e-10,
+  "criterion_met": true,
+  "tested": true,
+  "rejected": true
+ },
+ {
+  "id": "V2",
+  "a": "excess_global@0.06:0.5",
+  "b": "random_global",
+  "test": "superiority",
+  "n_inst": 54,
+  "mean": -0.17158611931439083,
+  "p": 3.6891878478181663e-07,
+  "criterion_met": true,
+  "tested": true,
+  "rejected": true
+ },
+ {
+  "id": "V3",
+  "a": "excess_global@0.06:0.5",
+  "b": "gnn_global@0.04:0.5",
+  "test": "noninferiority",
+  "n_inst": 54,
+  "mean": -0.11865164451380547,
+  "p": 7.901566635789987e-09,
+  "criterion_met": true,
+  "tested": true,
+  "rejected": true
+ },
+ {
+  "id": "V4",
+  "a": "excess_global@0.06:0.5",
+  "b": "gain_global",
+  "test": "noninferiority",
+  "n_inst": 54,
+  "mean": -0.08262697790853253,
+  "p": 1.7627297834596026e-07,
+  "criterion_met": true,
+  "tested": true,
+  "rejected": true
+ }
+]
