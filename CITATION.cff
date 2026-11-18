@@ -9,3 +9,5 @@ license: MIT
 version: "1.0.0"
 date-released: "2026-11-18"
 keywords: [traveling salesman problem, iterated local search, kick targeting, preregistration]
+doi: "10.5281/zenodo.24347381"
+repository-code: "https://github.com/ufukasia/joco-kick-targeting"

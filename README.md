@@ -1,5 +1,7 @@
 # Do you need to learn where to kick? Kick targeting in fast ILS for the TSP
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24347381.svg)](https://doi.org/10.5281/zenodo.24347381)
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/hero_dark.svg">
   <img alt="Final gap vs random kicks for seven kick-targeting signals on 54 held-out instances: the untrained excess-length proxy is best (−0.17 points, better on 44/54); trained GNN and MLPs give smaller gains; the online learner is worse than random (+0.21)." src="docs/hero_light.svg" width="100%">
@@ -143,4 +145,4 @@ are the natural next tests.
 ## License and citation
 
 Code: MIT (`LICENSE`). Third-party benchmark instances keep their original terms. See
-`CITATION.cff`; a Zenodo DOI is attached to each release.
+`CITATION.cff`. Archived on Zenodo: [10.5281/zenodo.24347381](https://doi.org/10.5281/zenodo.24347381) (all versions; v1.0.1 = [10.5281/zenodo.24347382](https://doi.org/10.5281/zenodo.24347382)).
