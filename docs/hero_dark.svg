@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="450" viewBox="0 0 860 450" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" role="img">
+<title>Kick targeting vs random</title>
+<rect width="100%" height="100%" rx="8" fill="#1a1a19"/>
+<text x="24.0" y="38.0" font-size="19" font-weight="700" fill="#f0efec" text-anchor="start">An untrained edge-length signal matches trained models — learning online hurts</text>
+<text x="24.0" y="62.0" font-size="13" font-weight="400" fill="#c3c2b7" text-anchor="start">Final tour gap vs random kicks, 54 held-out TSP instances × 10 seeds, 10 s each (mean, 95% bootstrap CI). Left of 0 = better.</text>
+<line x1="300.0" y1="102.0" x2="300.0" y2="363.0" stroke="#2c2c2a" stroke-width="1"/>
+<text x="300.0" y="379.0" font-size="11" font-weight="400" fill="#898781" text-anchor="middle">−0.30</text>
+<line x1="356.7" y1="102.0" x2="356.7" y2="363.0" stroke="#2c2c2a" stroke-width="1"/>
+<text x="356.7" y="379.0" font-size="11" font-weight="400" fill="#898781" text-anchor="middle">−0.20</text>
+<line x1="413.3" y1="102.0" x2="413.3" y2="363.0" stroke="#2c2c2a" stroke-width="1"/>
+<text x="413.3" y="379.0" font-size="11" font-weight="400" fill="#898781" text-anchor="middle">−0.10</text>
+<line x1="470.0" y1="102.0" x2="470.0" y2="363.0" stroke="#2c2c2a" stroke-width="1"/>
+<text x="470.0" y="379.0" font-size="11" font-weight="400" fill="#898781" text-anchor="middle">0</text>
+<line x1="526.7" y1="102.0" x2="526.7" y2="363.0" stroke="#2c2c2a" stroke-width="1"/>
+<text x="526.7" y="379.0" font-size="11" font-weight="400" fill="#898781" text-anchor="middle">+0.10</text>
+<line x1="583.3" y1="102.0" x2="583.3" y2="363.0" stroke="#2c2c2a" stroke-width="1"/>
+<text x="583.3" y="379.0" font-size="11" font-weight="400" fill="#898781" text-anchor="middle">+0.20</text>
+<line x1="640.0" y1="102.0" x2="640.0" y2="363.0" stroke="#2c2c2a" stroke-width="1"/>
+<text x="640.0" y="379.0" font-size="11" font-weight="400" fill="#898781" text-anchor="middle">+0.30</text>
+<line x1="470.0" y1="98.0" x2="470.0" y2="363.0" stroke="#383835" stroke-width="1.5"/>
+<text x="286.0" y="112.5" font-size="13" font-weight="600" fill="#f0efec" text-anchor="end">Excess-length proxy (untrained)</text>
+<line x1="325.2" y1="108.0" x2="414.6" y2="108.0" stroke="#3987e5" stroke-width="2"/>
+<circle cx="372.8" cy="108.0" r="6" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
+<text x="652.0" y="112.5" font-size="13" font-weight="600" fill="#f0efec" text-anchor="start">−0.17</text>
+<text x="700.0" y="112.5" font-size="11" font-weight="400" fill="#898781" text-anchor="start">better on 44/54</text>
+<text x="286.0" y="150.5" font-size="13" font-weight="400" fill="#c3c2b7" text-anchor="end">MLP trained on kick gain</text>
+<line x1="383.8" y1="146.0" x2="449.0" y2="146.0" stroke="#6b6a65" stroke-width="2"/>
+<circle cx="419.6" cy="146.0" r="6" fill="#6b6a65" stroke="#1a1a19" stroke-width="2"/>
+<text x="652.0" y="150.5" font-size="13" font-weight="400" fill="#f0efec" text-anchor="start">−0.09</text>
+<text x="700.0" y="150.5" font-size="11" font-weight="400" fill="#898781" text-anchor="start">better on 36/54</text>
+<text x="286.0" y="188.5" font-size="13" font-weight="400" fill="#c3c2b7" text-anchor="end">MLP trained on edge membership</text>
+<line x1="398.0" y1="184.0" x2="445.3" y2="184.0" stroke="#6b6a65" stroke-width="2"/>
+<circle cx="422.9" cy="184.0" r="6" fill="#6b6a65" stroke="#1a1a19" stroke-width="2"/>
+<text x="652.0" y="188.5" font-size="13" font-weight="400" fill="#f0efec" text-anchor="start">−0.08</text>
+<text x="700.0" y="188.5" font-size="11" font-weight="400" fill="#898781" text-anchor="start">better on 35/54</text>
+<text x="286.0" y="226.5" font-size="13" font-weight="400" fill="#c3c2b7" text-anchor="end">Static linear prior</text>
+<line x1="381.2" y1="222.0" x2="455.0" y2="222.0" stroke="#6b6a65" stroke-width="2"/>
+<circle cx="423.5" cy="222.0" r="6" fill="#6b6a65" stroke="#1a1a19" stroke-width="2"/>
+<text x="652.0" y="226.5" font-size="13" font-weight="400" fill="#f0efec" text-anchor="start">−0.08</text>
+<text x="700.0" y="226.5" font-size="11" font-weight="400" fill="#898781" text-anchor="start">better on 34/54</text>
+<text x="286.0" y="264.5" font-size="13" font-weight="400" fill="#c3c2b7" text-anchor="end">kNN rank (untrained)</text>
+<line x1="385.7" y1="260.0" x2="459.7" y2="260.0" stroke="#6b6a65" stroke-width="2"/>
+<circle cx="425.4" cy="260.0" r="6" fill="#6b6a65" stroke="#1a1a19" stroke-width="2"/>
+<text x="652.0" y="264.5" font-size="13" font-weight="400" fill="#f0efec" text-anchor="start">−0.08</text>
+<text x="700.0" y="264.5" font-size="11" font-weight="400" fill="#898781" text-anchor="start">better on 31/54</text>
+<text x="286.0" y="302.5" font-size="13" font-weight="400" fill="#c3c2b7" text-anchor="end">GNN trained on LKH-3 tours</text>
+<line x1="424.6" y1="298.0" x2="455.0" y2="298.0" stroke="#6b6a65" stroke-width="2"/>
+<circle cx="440.0" cy="298.0" r="6" fill="#6b6a65" stroke="#1a1a19" stroke-width="2"/>
+<text x="652.0" y="302.5" font-size="13" font-weight="400" fill="#f0efec" text-anchor="start">−0.05</text>
+<text x="700.0" y="302.5" font-size="11" font-weight="400" fill="#898781" text-anchor="start">better on 37/54</text>
+<text x="286.0" y="340.5" font-size="13" font-weight="600" fill="#f0efec" text-anchor="end">Online learner (in-run)</text>
+<line x1="554.7" y1="336.0" x2="623.7" y2="336.0" stroke="#d95926" stroke-width="2"/>
+<circle cx="588.6" cy="336.0" r="6" fill="#d95926" stroke="#1a1a19" stroke-width="2"/>
+<text x="652.0" y="340.5" font-size="13" font-weight="600" fill="#f0efec" text-anchor="start">+0.21</text>
+<text x="700.0" y="340.5" font-size="11" font-weight="400" fill="#898781" text-anchor="start">better on 4/54</text>
+<text x="385.0" y="404.0" font-size="12" font-weight="600" fill="#3987e5" text-anchor="middle">← lower gap than random</text>
+<text x="555.0" y="404.0" font-size="12" font-weight="600" fill="#d95926" text-anchor="middle">higher gap than random →</text>
+<text x="24.0" y="436.0" font-size="11" font-weight="400" fill="#898781" text-anchor="start">Preregistered (PROTOCOL_v2, SHA-256 + OpenTimestamps): proxy &lt; random, proxy non-inferior to GNN and gain-MLP (margin 0.05), online &gt; static — all four confirmed.</text>
+</svg>

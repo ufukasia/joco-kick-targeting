@@ -30,7 +30,7 @@ ENTRY = [
     "entropy_fusion_experiment", "lkh_comparison_experiment", "prepare_tsplib_scale_suite",
     "circuit_regime_analysis", "real_regime_analysis", "paper_result_sanity", "merge_focused_experiments",
 ]
-EXTRA_FILES = ["make_release.py"]
+EXTRA_FILES = ["make_release.py", "readme_figures.py"]
 DATA_DIRS = ["data", "data_holdout2", "data_synth_fast", "data_tsplib_scale", "data_vlsi", "data_world",
              "gnn_train_data_lkh"]
 MODELS = ["gnn_trained", "cheap_scorer", "cheap_gain_scorer", "online_prior"]
