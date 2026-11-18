@@ -1,0 +1,9 @@
+{
+  "title": "Kick targeting in fast iterated local search: code, data and preregistered run records",
+  "upload_type": "software",
+  "description": "Reproduction package for the paper 'Vuruşları Hedeflemek İçin Öğrenmek Gerekir mi? Hızlı İteratif Yerel Aramada Eğitimsiz Kenar Uzunluğu Vekillerinin Ön-Kayıtlı Sınaması' (submitted to Journal of Combinatorial Optimization): fast 2-opt/Or-opt ILS engine, kick-targeting signals (random, kNN, excess-length and raw-length proxies, LKH-trained GNN, MLPs, online Thompson-ridge), preregistration files (PROTOCOL_v2.json with SHA-256 and OpenTimestamps proof, Bitcoin block 976258), all per-run JSON records, analysis scripts and paper sources.",
+  "creators": [{"name": "ASIL, Ufuk", "affiliation": "Ostim Technical University"}],
+  "license": "MIT",
+  "keywords": ["traveling salesman problem", "iterated local search", "kick targeting", "graph neural network", "preregistration"],
+  "access_right": "open"
+}

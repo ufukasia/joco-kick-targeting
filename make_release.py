@@ -93,6 +93,8 @@ def main():
         cp(ROOT / f"{m}.py", OUT / f"{m}.py")
     for f in EXTRA_FILES:
         cp(ROOT / f, OUT / f)
+    for f in (ROOT / "release_meta").iterdir():   # README, LICENSE, CITATION.cff, .zenodo.json, ...
+        cp(f, OUT / f.name)
     for d in DATA_DIRS:
         cp(ROOT / d, OUT / d)
     for m in MODELS:
