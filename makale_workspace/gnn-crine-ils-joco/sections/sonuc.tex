@@ -14,6 +14,9 @@ uzun kenarları hedeflemek de rastgeleye karşı benzer bir kazanç sağladı ve
 ayrışmadı ($+0{,}009$ puan); bu, yararın bu motorda doğrudan kenar uzunluğu bilgisinden geldiğini
 düşündürür ve en basit vekile karşı sınama ilkesinin kendi önerimize de yararla uygulanabildiğini
 gösterir. % E965, E972
+Koşulardan önce kaydedilen keşifsel bloklar bu tabloyu genişletir: hedefli global vuruş, klasik
+rastgele segment vuruşundan 1,04 puan iyidir; vekilin rastgeleye ve GNN'ye karşı avantajı 60~sn'de
+daralarak sürer; geliştirmede seçilen havuz kuralının çevresindeki plato holdout2'de de görülür. % E1047, E1077, E1078, E1091
 
 Koşu içi çevrimiçi öğrenme ise kendi ödülünü artırırken son kaliteyi düşürdü: vuruş başına ortalama
 ödül, yerel aramanın onardığı nötr vuruşları ödüllendirir. Seyrek iyileşmeli aramalarda ödül tasarımı
@@ -21,7 +24,7 @@ bu nedenle öncelikli bir sorudur. Yöntemsel ders de aynı yöndedir: öğrenil
 rastgele tabana değil, en basit kazanca hizalı eğitimsiz vekile karşı ve eşit duvar-saatinde
 değerlendirilmelidir.
 
-Sonraki adımlar, karşılaştırmanın LK/LKH düzeyindeki yerel aramalarda, daha uzun bütçelerde ve daha
-büyük, yayımlanmış öğrenilmiş modellerle tekrarı; ham ve ölçekle düzeltilmiş uzunluğun ön-kayıtlı bir
+Sonraki adımlar, karşılaştırmanın LK/LKH düzeyindeki yerel aramalarda, dakikalar mertebesini aşan
+bütçelerde ve daha büyük, yayımlanmış öğrenilmiş modellerle tekrarı; ham ve ölçekle düzeltilmiş uzunluğun ön-kayıtlı bir
 eşdeğerlik testiyle karşılaştırılması ve seyrek iyileşmelere göre tasarlanmış ödüllerle çevrimiçi
 hedeflemenin yeniden sınanmasıdır.

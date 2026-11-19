@@ -6,8 +6,8 @@ authors:
     given-names: Ufuk
     affiliation: "Ostim Technical University, Ankara, Türkiye"
 license: MIT
-version: "1.0.0"
-date-released: "2026-11-18"
+version: "1.1.0"
+date-released: "2026-11-19"
 keywords: [traveling salesman problem, iterated local search, kick targeting, preregistration]
 doi: "10.5281/zenodo.24347381"
 repository-code: "https://github.com/ufukasia/joco-kick-targeting"

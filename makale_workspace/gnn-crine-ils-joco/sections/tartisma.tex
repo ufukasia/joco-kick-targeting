@@ -37,7 +37,9 @@ düzeltmeden yararlanabileceği sınanmaya değer bir hipotezdir. % E973, E976
 \paragraph{Hedefleme nerede işe yarar?}
 Kazanç kümeli ve gerçek problemlerde toplanır, uniform problemlerde küçük kalır: hedefleme bir
 ``kötü kenar'' sinyaline dayanır ve bu sinyal ancak kenar uzunlukları heterojen olduğunda bilgi
-taşır. Yalnız uniform örneklerden oluşan bir kıyas kümesi bu yüzden hedeflemenin değerini
+taşır. Katman etiketinden bağımsız kümelenme göstergesi de bunu destekler: kazanç, en yakın komşu
+uzaklığının değişim katsayısıyla birlikte büyür ($\rho=-0{,}56$). % E1038
+Yalnız uniform örneklerden oluşan bir kıyas kümesi bu yüzden hedeflemenin değerini
 olduğundan küçük gösterir.
 
 \paragraph{Çevrimiçi öğrenme ve ödül tasarımı.}
@@ -51,9 +53,11 @@ zararlı olduğu anlamına gelmez.
 \paragraph{Uygulayıcı için öneriler.}
 \begin{itemize}
 \item Vuruşları en uzun tur kenarlarına yönlendirin (ham ya da uç noktaların yakın-komşu ölçeğine
-göre düzeltilmiş uzunluk); skor sabit zamanlıdır, eğitim ve çözücü etiketi gerektirmez.
+göre düzeltilmiş uzunluk); skor sabit zamanlıdır, eğitim ve çözücü etiketi gerektirmez. Bu tür
+motorlarda hedefli global double-bridge, rastgele segment vuruşundan belirgin biçimde iyidir. % E1047
 \item Havuzu tur kenarlarının \%4--6'sı kadar, hedefleme olasılığını $0{,}5$--$0{,}75$ aralığında
-tutun; yalnız küçük havuz ile çok yüksek olasılığın birleşiminden kaçının. % E750, E751, E752
+tutun; yalnız küçük havuz ile çok yüksek olasılığın birleşiminden kaçının. Bu plato holdout2'de de
+görüldü. % E750, E751, E752, E1091
 \item En büyük kazancı kümeli ve gerçek (VLSI ve ulusal) örneklerde bekleyin; GNN'ye karşı fark
 kısa bütçelerde en büyüktür.
 \item Öğrenilmiş bir hedefleme skorunu bu vekile karşı, model süresi bütçeye dahil ve eşit
@@ -67,8 +71,12 @@ ağırlıkların iyi bir statik ön-bilgiden ne kadar saptığını izleyin.
 Bulgular tek bir motora, 2-opt/Or-opt tabanlı hızlı ILS'e aittir. Lin--Kernighan (LK) düzeyindeki bir yerel arama
 uzun yanlış kenarların bir kısmını kendiliğinden onarıp hedeflemenin marjinal değerini
 değiştirebilir; karşılaştırmayı LKH-3 içinde ikinci bir motorda tekrarlamadık. Ön-kayıtlı iddialar 10~sn bütçe ve $n=1.689$--$9.882$ aralığıyla sınırlıdır. % E597, E598
-Vekilin GNN'ye karşı avantajı bütçe uzadıkça daraldığından, daha uzun bütçelerde kapanabilir;
-Aşama~2'nin keşifsel 60~sn koşusunda GNN ile kNN de ayrışmamıştı ($p=0{,}35$). % E902
+Vekilin GNN'ye karşı avantajı bütçe uzadıkça daralır; keşifsel 60~sn bloğunda hâlâ sıfırın altındadır
+($-0{,}078$ puan, GA üst sınırı $-0{,}008$), ama 5 tohumla ölçüldü ve daha uzun bütçelerde kapanabilir. % E1078
+Segment vuruşu yalnız $W=50$ penceresiyle ve bu motorda sınandı; LK tabanlı motorlardaki değeri
+ayrı bir sorudur. Keşifsel oturumlar arasında vuruş hızları farklıdır (yerel vuruş oturumunda rastgele
+global kol 2.225, ana oturumda 3.252 vuruş/sn); bu yüzden karşılaştırmalar yalnız oturum içinde
+yapıldı. % E1057, E697
 Uniform katmanda hedefleme kazancı anlamlı değildir ve kümeli bir problemde (h2c13) GNN vekilden
 iyidir. GNN, $n\le400$ sentetik örneklerde eğitilmiş küçük ve tek bir modeldir ve çok büyük
 test problemlerine boyut genellemesi yapmak zorundadır; hedef boyutta eğitilmiş ya da yayımlanmış

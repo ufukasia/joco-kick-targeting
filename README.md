@@ -13,7 +13,7 @@ as well as a GNN trained on LKH-3 tours, in a preregistered test on 54 held-out 
 | | |
 |---|---|
 | **Takeaway for practitioners** | Rank tour edges by length (or by length minus the local neighbour scale) and draw kick cut points from the top 6%. This costs O(1) per edge and needs no model. |
-| **Evidence** | Preregistered protocol, frozen with SHA-256 and timestamped on Bitcoin (OpenTimestamps, block 976258) before the run. 54 untouched instances × 10 seeds × 8 strategies. All four hypotheses confirmed. |
+| **Evidence** | Preregistered protocol, frozen with SHA-256 and timestamped on Bitcoin (OpenTimestamps, block 976258) before the run. 54 untouched instances × 10 seeds × 8 strategies. All four hypotheses confirmed. A second registered block (segment kick, 60 s budget, pool rule) checks robustness. |
 | **Lesson** | Learning *during* the run backfired: the learner optimised a myopic reward and drifted to harmless kicks. |
 | **Paper** | Ufuk ASIL, *Vuruşları Hedeflemek İçin Öğrenmek Gerekir mi? Hızlı İteratif Yerel Aramada Eğitimsiz Kenar Uzunluğu Vekillerinin Ön-Kayıtlı Sınaması*, submitted to *Journal of Combinatorial Optimization*. |
 
@@ -76,7 +76,24 @@ once. The learner does exactly that: its weights reverse relative to the prior, 
 The design lesson is that a reward for sparse-improvement search should be tied to *accepted
 improvements*, and that a learner's own reward must be monitored together with final quality.
 
-## 5. How the evidence was protected
+## 5. Robustness checks, registered before running
+
+After the confirmatory test, three more sessions were frozen in `PROTOCOL_v3_exploratory.json` (SHA-256 +
+OpenTimestamps) *before* they were run. They are exploratory and cannot change V1–V4.
+
+| Question | Result (54 held-out instances) |
+|---|---|
+| Is a targeted kick better than the classic **segment** (local double-bridge) kick? | Yes: targeted global kick −1.04 points vs random segment kick (51/54, p_Holm = 1e−9). In this engine the segment kick is worse than the random global kick (+0.78). |
+| Does the advantage survive a **6× longer budget** (60 s)? | It narrows but stays: −0.07 vs random (p_Holm = 8e−4), −0.08 vs GNN (p_Holm = 0.03; CI upper bound −0.008). |
+| Was the pool rule over-tuned on development data? | No: 3 of 4 neighbouring rules also beat random clearly; only *small pool + always target* hurts, as on the development grid. |
+| When does targeting help? | The more clustered the instance (CV of nearest-neighbour distance), the larger the gain (Spearman ρ = −0.56); no relation with n. |
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/budget_dark.svg">
+  <img alt="Exploratory 60 s session: the proxy's advantage over random shrinks from −0.24 points at 10 s to −0.07 at 60 s, and over the GNN from −0.15 to −0.08; all confidence intervals stay below zero." src="docs/budget_light.svg" width="100%">
+</picture>
+
+## 6. How the evidence was protected
 
 1. **Development:** all choices (signals, pool rule `frac`/`prob`, margin) were made on development
    sets only (`results/kick_targeting/dev_*`).
@@ -90,7 +107,8 @@ improvements*, and that a learner's own reward must be monitored together with f
    with the frozen command. Fixed-sequence testing: V1 online > static, V2 proxy < random,
    V3/V4 proxy non-inferior to GNN / gain-MLP. All rejected H0.
 5. **Exploratory work** (the raw-length arm, mechanism analyses, Hodges–Lehmann estimates) is logged as
-   such and never changes the confirmatory decisions.
+   such and never changes the confirmatory decisions. The robustness block of section 5 has its own frozen
+   protocol (`PROTOCOL_v3_exploratory.json`, `.sha256`, `.ots`); its interruption and restart are logged too.
 
 ```bash
 cd results/kick_targeting
@@ -100,7 +118,7 @@ pip install opentimestamps-client && ots verify PROTOCOL_v2.json.ots
 
 Git stores every file byte-for-byte (`.gitattributes`), so the registered hashes hold in a fresh clone.
 
-## 6. Reproduce
+## 7. Reproduce
 
 ```bash
 python -m pip install -r requirements.txt               # Python 3.13, numpy, scipy, numba
@@ -111,7 +129,8 @@ python readme_figures.py                                # the figures above (wri
 ```
 
 To re-run the experiments (about 4.5 h on 4 cores), use `results/kick_targeting/run_v2_holdout2.ps1`
-and `results/kick_targeting/run_v3_length.ps1`. The budget is wall-clock time, so other hardware gives
+and `results/kick_targeting/run_v3_length.ps1`; the robustness block (about 7.5 h) is
+`results/kick_targeting/run_v4_robustness.ps1`, analysed by `results/kick_targeting/analysis_v4_robustness.py`. The budget is wall-clock time, so other hardware gives
 close but not identical gaps.
 
 To rebuild the paper's numbers, tables and PDF, run
@@ -127,6 +146,7 @@ which names its source file and field.
 | `fast_ils.py`, `test_fast_ils.py` | ILS engine with targeted double-bridge kicks |
 | `v2_targeting_experiment.py`, `v2_analysis.py` | Stage 3 driver and preregistered analysis |
 | `v3_extra_experiment.py`, `results/kick_targeting/analysis_length_arm.py` | raw-length arm |
+| `v4_robustness_experiment.py`, `results/kick_targeting/analysis_v4_robustness.py` | robustness block (segment kick, 60 s, pool rule) |
 | `online_targeting.py`, `analysis_online_*.py`, `test_online_reward.py` | online learner and its mechanism |
 | `gnn_trained.py`, `cheap_scorer.py`, `models/`, `gnn_train_torch.py` | trained scorers and training code |
 | `kick_targeting_experiment.py` | Stage 2 (PROTOCOL v1, 38 VLSI instances) |
@@ -139,11 +159,12 @@ which names its source file and field.
 
 ## Scope and limits
 
-Results hold for this engine (2-opt + Or-opt), a 10 s budget and n up to about 10k. The GNN is a single
+Confirmatory results hold for this engine (2-opt + Or-opt), a 10 s budget and n up to about 10k; the
+exploratory block extends the budget to 60 s and adds the segment kick (window W = 50). The GNN is a single
 small model trained on n ≤ 400. LK/LKH-level local search, longer budgets and larger published models
 are the natural next tests.
 
 ## License and citation
 
 Code: MIT (`LICENSE`). Third-party benchmark instances keep their original terms. See
-`CITATION.cff`. Archived on Zenodo: [10.5281/zenodo.24347381](https://doi.org/10.5281/zenodo.24347381) (all versions; v1.0.1 = [10.5281/zenodo.24347382](https://doi.org/10.5281/zenodo.24347382)).
+`CITATION.cff`. Archived on Zenodo: [10.5281/zenodo.24347381](https://doi.org/10.5281/zenodo.24347381) (concept DOI, resolves to the latest version).

@@ -72,3 +72,20 @@ GNN$-$kNN, kazanç-MLP$-$üyelik-MLP, fazla-uzunluk$-$GNN) ve Holm ile düzeltil
 Kayıtlı analiz betiği `:' içeren strateji adlarını ayrıştıramadığından aile, aynı istatistik
 işlevlerini çağıran ayrı bir betikle (\path{build_v3.py}) hesaplandı. Güven aralıkları 10.000
 tekrarlı bootstrap'la bulunur.
+
+\subsection{Protokol sonrası keşifsel sağlamlık blokları}\label{sec:deney-saglamlik}
+
+Doğrulayıcı testten sonra, olası üç itirazı sınamak için üç oturum daha koşuldu. Oturumlar, kolları,
+karşılaştırma aileleri ve analiz betiği koşulardan önce ayrı bir dosyada
+(\path{PROTOCOL_v3_exploratory.json}) SHA-256 özetiyle donduruldu ve OpenTimestamps'e gönderildi.
+Üçü de keşifseldir ve V1--V4 kararlarını değiştirmez. Motor, holdout2 problemleri, başlangıç turları
+ve vuruş tohumları ana koşuyla aynıdır; oturumlar dört işçiyle ve sırayla koşuldu.
+(a)~\emph{Klasik yerel vuruş:} \citet{applegate_2003_clk} tarzı segment double-bridge (diğer iki
+kesim ilk kesimden sonraki $W=50$ konum içinde) rastgele, fazla-uzunluk ve ham uzunluk hedeflemesiyle;
+aynı oturumda rastgele ve fazla-uzunluk global kolları da koşuldu (10~sn, 10 tohum).
+(b)~\emph{Uzun bütçe:} rastgele, fazla-uzunluk ve GNN, 60~sn ve 5 tohumla; 10, 20 ve 30~sn
+değerleri aynı koşuların ara noktalarıdır.
+(c)~\emph{Havuz kuralı:} geliştirmede seçilen fazla-uzunluk kuralının ($f=0{,}06$, $p=0{,}5$) dört
+komşusu ($f\in\{0{,}03;0{,}12\}$, $p\in\{0{,}25;1{,}0\}$) holdout2'de, rastgele ve seçilen kuralla
+birlikte (10~sn, 10 tohum).
+Her blok kendi içinde Holm ile düzeltilir; (b)'de aile her zaman noktasıdır.

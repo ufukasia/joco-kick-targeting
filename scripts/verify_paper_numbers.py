@@ -43,7 +43,31 @@ CHECKS = [  # (evidence id, description, recomputation from raw per-run JSON fil
     ("E965", "raw length - random (exploratory)", lambda: A.paired("holdout2_length_10s", LEN, RND)["mean"]),
     ("E972", "raw length - excess proxy (exploratory)", lambda: A.paired("holdout2_length_10s", LEN, EXC)["mean"]),
     ("E979", "excess proxy - random, length session", lambda: A.paired("holdout2_length_10s", EXC, RND)["mean"]),
+    # exploratory robustness block (PROTOCOL_v3_exploratory.json)
+    ("E991", "GNN - random at 0.1 s (anytime, confirmatory runs)", lambda: A.paired("holdout2_10s", GNN, RND, "0.1")["mean"]),
+    ("E1047", "targeted global kick - random segment kick", lambda: A.paired("holdout2_local_10s", EXC, "random_local")["mean"]),
+    ("E1051", "random segment kick - random global kick", lambda: A.paired("holdout2_local_10s", "random_local", RND)["mean"]),
+    ("E1077", "excess proxy - random at 60 s", lambda: A.paired("holdout2_60s", EXC, RND)["mean"]),
+    ("E1078", "excess proxy - GNN at 60 s", lambda: A.paired("holdout2_60s", EXC, GNN)["mean"]),
+    ("E1091", "pool rule f=0.03, p=1 - selected rule", lambda: A.paired("holdout2_rule_10s", "excess_global@0.03:1.0", EXC)["mean"]),
+    ("E1038", "Spearman: clustering index vs (excess - random)", lambda: structure_rho()),
 ]
+
+
+def structure_rho():
+    from scipy import stats
+    import fast_ils as F
+    import v2_targeting_experiment as V
+    data, _ = A.per_instance("holdout2_10s")
+    cv, d = [], []
+    for nm, path, _b in V.instances("holdout2"):
+        xs, ys, kind = V.load_xy(Path(path))
+        knn = F.build_knn(xs, ys, kind, 2)
+        idx = np.arange(len(xs), dtype=np.int32)
+        d1 = F._edge_lengths(idx, np.ascontiguousarray(knn[:, 0], dtype=np.int32), xs, ys, kind)
+        cv.append(d1.std() / d1.mean())
+        d.append(data[nm][EXC] - data[nm][RND])
+    return float(stats.spearmanr(cv, d)[0])
 
 
 def main():
@@ -62,7 +86,7 @@ def main():
     for tex in list((WS / "sections").glob("*.tex")) + [WS / "paper" / "main.tex"]:
         for line in tex.read_text(encoding="utf-8").splitlines():
             if "%" in line:
-                ids |= set(re.findall(r"\b([EV]\d{3})\b", line.split("%", 1)[1]))
+                ids |= set(re.findall(r"\b([EV]\d{3,4})\b", line.split("%", 1)[1]))
     missing = sorted(i for i in ids if i not in EV)
     bad += bool(missing)
     print(f"[{'OK ' if not missing else 'BAD'}] {len(ids)} evidence ids cited in the paper; missing from ledger: {missing}")

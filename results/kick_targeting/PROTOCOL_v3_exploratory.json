@@ -1,0 +1,102 @@
+{
+ "name": "PROTOCOL_v3_exploratory",
+ "frozen_at_local": "2026-11-18 23:38:54",
+ "status": "EXPLORATORY. Post-confirmatory robustness block. Registered before sessions S1-S3 were run. Nothing here can change the confirmatory decisions of PROTOCOL_v2 (V1-V4, all rejected).",
+ "motivation": "Anticipated reviewer questions: (1) classic local/segment kick (Applegate et al. 2003) as baseline; (2,3) dependence on the time budget; (4) sensitivity to the development-chosen pool rule; (5) when does targeting help (instance structure).",
+ "common": {
+  "suite": "holdout2 (54 instances, data_holdout2/catalog.json)",
+  "engine": "fast_ils.py 2-opt + Or-opt, unchanged",
+  "workers": 4,
+  "sessions_run_sequentially": true,
+  "start_tour_and_kick_seeds": "as in PROTOCOL_v2 (seed s -> same start tour and kick RNG for every arm)",
+  "unit": "instance (gap averaged over seeds)",
+  "statistics": "paired mean difference in percentage points, 10000-sample bootstrap 95% CI (seed 0), Wilcoxon signed-rank, Holm within each family, Hodges-Lehmann estimate, alpha 0.05",
+  "driver": "v4_robustness_experiment.py (reuses the hash-registered v2_targeting_experiment.task; raw length = scorer swap as in v3_extra_experiment.py)",
+  "runner": "results/kick_targeting/run_v4_robustness.ps1",
+  "analysis_command": "py -3.13 results/kick_targeting/analysis_v4_robustness.py"
+ },
+ "items": {
+  "1_S1_local": {
+   "tag": "holdout2_local_10s",
+   "budget_s": 10,
+   "seeds": 10,
+   "arms": [
+    "random_global",
+    "excess_global@0.06:0.5",
+    "random_local",
+    "excess_local@0.06:0.5",
+    "length_local@0.06:0.5"
+   ],
+   "local_geometry": "first cut anywhere (or from the pool with prob p), the other two within W=50 tour positions",
+   "family": [
+    "excess_global@0.06:0.5 - random_local (primary question: does the targeted global kick beat the classic segment kick?)",
+    "excess_local@0.06:0.5 - random_local",
+    "length_local@0.06:0.5 - random_local",
+    "excess_local@0.06:0.5 - excess_global@0.06:0.5",
+    "random_local - random_global"
+   ]
+  },
+  "2_anytime": {
+   "data": "existing holdout2_10s runs (PROTOCOL_v2 confirmatory run, trace checkpoints 0.1..10 s)",
+   "analysis": "each of the 7 targeting strategies - random_global at every checkpoint (bootstrap CI, Wilcoxon), descriptive only",
+   "note": "uses already-observed data; computed while preparing this protocol, therefore descriptive, not predictive"
+  },
+  "3_S2_60s": {
+   "tag": "holdout2_60s",
+   "budget_s": 60,
+   "seeds": 5,
+   "arms": [
+    "random_global",
+    "excess_global@0.06:0.5",
+    "gnn_global@0.04:0.5"
+   ],
+   "family_per_checkpoint": [
+    "excess - random",
+    "excess - gnn"
+   ],
+   "checkpoints_s": [
+    10,
+    20,
+    30,
+    60
+   ],
+   "extra": "TOST non-inferiority excess vs gnn at 60 s with the PROTOCOL_v2 margin 0.05 (descriptive)"
+  },
+  "4_S3_rule": {
+   "tag": "holdout2_rule_10s",
+   "budget_s": 10,
+   "seeds": 10,
+   "arms": [
+    "random_global",
+    "excess_global@0.06:0.5",
+    "excess_global@0.03:0.25",
+    "excess_global@0.03:1.0",
+    "excess_global@0.12:0.25",
+    "excess_global@0.12:1.0"
+   ],
+   "family": [
+    "each of the 4 off-centre rules - random_global",
+    "each of the 4 off-centre rules - excess_global@0.06:0.5"
+   ]
+  },
+  "5_structure": {
+   "data": "existing holdout2_10s runs + instance coordinates",
+   "index": "coefficient of variation of the nearest-neighbour distance (cv_nn)",
+   "analysis": "Spearman cv_nn vs per-instance (excess - random) and (excess - gnn); Spearman log n vs (excess - random)",
+   "note": "uses already-observed data; computed while preparing this protocol, therefore descriptive"
+  }
+ },
+ "reporting": "All items are reported in the paper as exploratory, whatever their direction; null or adverse results are reported as scope limits.",
+ "code_and_data_sha256": {
+  "fast_ils.py": "cf90c1e5013c22b13c0c410228700f846a7e3878d6fafb143b347e3a4377f039",
+  "v2_targeting_experiment.py": "b6f25ada54993e737a96f41d8a2e39b380efa2f64b837a7fd3b2deb17a80b72e",
+  "v3_extra_experiment.py": "f880da24ea86f9e6b3b5d7566d348b6bf86c0cc03c3c67d8a7cd01382c4712f1",
+  "v4_robustness_experiment.py": "babbbbee991236f711de849f315f5dac26f3f3aae6094f49b6c2c09d49ddd0f5",
+  "v2_analysis.py": "da10728f0cc38add92720bae41ae40e467f78f3e7006690d109d43d3b7f152aa",
+  "kick_targeting_experiment.py": "c9e6fc871f61537b03290691e4444cb4eb6140131ec20b9f24fbc4b21f38d7be",
+  "models/gnn_trained.npz": "2a164b7bcfcadceee2a4a70956eae4bce8ef0cf7f9d9cef1ab43d34f13908e64",
+  "data_holdout2/catalog.json": "346d97462caf67e26ecdcdf68292f675a49d89cf2ad6d80c1ee874dce8d20157",
+  "results/kick_targeting/analysis_v4_robustness.py": "9f8cb2173cb0965ab803655a19c0c3d96380e257c0660e70769fa7d571ddd107",
+  "results/kick_targeting/run_v4_robustness.ps1": "651e4b9f3e14b97ea75a462e99191ed2e40ef369e1b216e71fce16278edd7d64"
+ }
+}

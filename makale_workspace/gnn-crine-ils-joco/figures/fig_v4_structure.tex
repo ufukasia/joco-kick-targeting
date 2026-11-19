@@ -1,0 +1,21 @@
+% Problem yapisi ve hedefleme kazanci -- OTOMATIK URETIM: evidence/scripts/build_v4.py
+% Veri: figures/data/v4_structure.dat (v4_robustness_analysis.json T_structure.rows)
+\begin{tikzpicture}
+\begin{axis}[width=\textwidth, height=5.6cm, xmode=log, log basis x=10, xmin=0.25, xmax=2.5, ymax=0.9,
+  xtick={0.3,0.5,0.75,1,1.5,2}, xticklabels={0.3,0.5,0.75,1,1.5,2},
+  xlabel={Clustering index: CV of nearest-neighbour distance (log scale)},
+  ylabel={Excess $-$ random [gap points]}, tick label style={font=\scriptsize}, label style={font=\small},
+  ymajorgrids, grid style={black!10},
+  legend style={font=\scriptsize, draw=black!40, fill=white, at={(0.01,0.03)}, anchor=south west, legend columns=4}]
+\addplot[black!50, thin, forget plot] coordinates {(0.25,0) (2.5,0)};
+\addplot[only marks, mark=x, mark size=1.8pt, black!45] table[x=cv, y=d_rand, restrict expr to domain={\thisrow{guni}}{1:1}] {figures/data/v4_structure.dat};
+\addlegendentry{Uniform}
+\addplot[only marks, mark=square*, mark size=1.3pt, black!70] table[x=cv, y=d_rand, restrict expr to domain={\thisrow{gmix}}{1:1}] {figures/data/v4_structure.dat};
+\addlegendentry{Mixed}
+\addplot[only marks, mark=*, mark size=1.5pt, iyiRenk] table[x=cv, y=d_rand, restrict expr to domain={\thisrow{gclu}}{1:1}] {figures/data/v4_structure.dat};
+\addlegendentry{Clustered}
+\addplot[only marks, mark=triangle*, mark size=1.9pt, kotuRenk] table[x=cv, y=d_rand, restrict expr to domain={\thisrow{greal}}{1:1}] {figures/data/v4_structure.dat};
+\addlegendentry{Real}
+\node[anchor=north west, font=\scriptsize, fill=white, inner sep=2pt] at (rel axis cs:0.01,0.97) {Spearman $\rho=-0.56$, $p=9.8\times10^{-6}$};
+\end{axis}
+\end{tikzpicture}

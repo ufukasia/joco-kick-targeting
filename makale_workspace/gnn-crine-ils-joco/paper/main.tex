@@ -96,6 +96,10 @@ Holdout2 seti \path{holdout2_suite.py} ile üretilir (\path{data_holdout2/catalo
 ham kenar uzunluğu kolunun koşuları \path{results/kick_targeting/holdout2_length_10s/} altında,
 özeti \path{results/kick_targeting/holdout2_length_10s_analysis.json} dosyasındadır; çevrimiçi
 ödül mekanizması özeti \path{results/kick_targeting/online_reward_mechanism.json} dosyasındadır.
+Protokol sonrası keşifsel sağlamlık bloklarının ön-kaydı \path{results/kick_targeting/PROTOCOL_v3_exploratory.json}
+(SHA-256 \path{PROTOCOL_v3_exploratory.sha256}, OpenTimestamps kanıtı \path{PROTOCOL_v3_exploratory.json.ots}),
+koşuları \path{holdout2_local_10s/}, \path{holdout2_60s/} ve \path{holdout2_rule_10s/} altında, özeti
+\path{results/kick_targeting/v4_robustness_analysis.json} dosyasındadır.
 
 \bmhead{Kod erişilebilirliği}
 Kod ve veriler \url{https://github.com/ufukasia/joco-kick-targeting} adresinde açıktır; kalıcı
@@ -113,7 +117,11 @@ Aşama~3'ün koşu betiği \path{run_v2_holdout2.ps1}, deney sürücüsü
 \path{v3_extra_experiment.py} ile, \path{results/kick_targeting/run_v3_length.ps1} betiğiyle
 koşulur ve \path{results/kick_targeting/analysis_length_arm.py} ile çözümlenir. Çevrimiçi ödül
 mekanizması \path{test_online_reward.py} ile ölçülür ve \path{analysis_online_reward.py} ile
-özetlenir. Aşama~1 kodu (\path{adaptive_ils.py}) ve sonuçları \path{results/} altında
+özetlenir. Keşifsel sağlamlık blokları \path{v4_robustness_experiment.py} ile,
+\path{results/kick_targeting/run_v4_robustness.ps1} betiğiyle koşulur ve
+\path{results/kick_targeting/analysis_v4_robustness.py} ile çözümlenir; kanıt kayıtları
+\path{evidence/scripts/build_v4.py} ile üretilir. Makaledeki başlıca sayılar
+\path{scripts/verify_paper_numbers.py} ile ham koşulardan yeniden hesaplanıp kanıt defteriyle karşılaştırılır. Aşama~1 kodu (\path{adaptive_ils.py}) ve sonuçları \path{results/} altında
 korunmuştur. Kanıt defteri \path{evidence/scripts/build_v2_evidence.py} ve
 \path{evidence/scripts/build_v3.py} (ikincil Holm ailesi dahil) ile, denetimi
 \path{spotcheck_v3.py} ile; tablo ve şekiller \path{evidence/scripts/build_v2.py} ve

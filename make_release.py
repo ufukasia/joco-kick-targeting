@@ -19,7 +19,7 @@ WS = "makale_workspace/gnn-crine-ils-joco"
 ENTRY = [
     # stage 2/3 engine, drivers, analyses
     "fast_ils", "kick_targeting_experiment", "test_fast_ils", "v2_targeting_experiment", "holdout2_suite",
-    "v2_analysis", "cheap_scorer", "online_targeting", "gnn_trained", "v3_extra_experiment",
+    "v2_analysis", "cheap_scorer", "online_targeting", "gnn_trained", "v3_extra_experiment", "v4_robustness_experiment",
     "analysis_online_mechanism", "analysis_online_reward", "test_online_reward", "kick_targeting_analysis",
     "kick_mechanism_analysis", "cheap_analysis", "cheap_mechanism", "cheap_targeting_experiment",
     "pool_composition", "make_synth_suite", "kick_oracle_analysis", "kick_oracle_experiment",
@@ -117,9 +117,12 @@ def main():
     for k, v in v1.items():
         if isinstance(v, dict) and k.endswith("sha256"):
             reg.update({f"v1:{a}": b for a, b in v.items()})
+    p3 = OUT / "results/kick_targeting/PROTOCOL_v3_exploratory.json"
+    if p3.exists():   # exploratory robustness block: analysis script + runner are frozen too
+        reg.update({f"v3:{a}": b for a, b in json.loads(p3.read_text(encoding="utf-8"))["code_and_data_sha256"].items()})
     bad = []
     for f, h in (reg.items() if isinstance(reg, dict) else []):
-        q = OUT / f.removeprefix("v1:")
+        q = OUT / f.removeprefix("v1:").removeprefix("v3:")
         if not q.exists() or hashlib.sha256(q.read_bytes()).hexdigest() != h:
             bad.append(f)
     size = sum(p.stat().st_size for p in OUT.rglob("*") if p.is_file() and ".git" not in p.parts)

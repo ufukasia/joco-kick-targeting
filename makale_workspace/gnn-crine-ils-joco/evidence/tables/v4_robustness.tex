@@ -1,0 +1,36 @@
+% OTOMATIK URETIM -- evidence/scripts/build_v4.py (elle duzenleme)
+\begin{table}[!htbp]
+\centering\small\setlength{\tabcolsep}{3pt}
+\caption{Keşifsel sağlamlık blokları (holdout2, protokol sonrası; PROTOCOL\_v3\_exploratory koşulardan önce kaydedildi). Fark: problem başı ortalama gap farkı [puan], negatif değer ilk terim lehinedir. Önde: ilk terimin daha düşük gap verdiği problem sayısı. $p_{\mathrm{Holm}}$: blok (b'de her zaman noktası) içinde Holm düzeltmeli Wilcoxon; renk $p_{\mathrm{Holm}}<0{,}05$ ve GA'nın sıfırı dışladığını gösterir.}
+\label{tab:v4-robustness}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc}
+\toprule
+Karşılaştırma & Fark & \%95 GA & Önde & $p_{\mathrm{Holm}}$ \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{(a) Klasik yerel (segment) vuruş --- 10~sn, 10 tohum}} \\
+Fazla-uzunluk (global) $-$ rastgele yerel & \iyi{$-$1{,}038} & [$-$1{,}447; $-$0{,}688] & 51/54 & $1{,}3\times10^{-9}$ \\
+Fazla-uzunluk (yerel) $-$ rastgele yerel & +0{,}037 & [$-$0{,}028; +0{,}117] & 32/54 & 1{,}000 \\
+Ham uzunluk (yerel) $-$ rastgele yerel & $-$0{,}014 & [$-$0{,}079; +0{,}049] & 28/54 & 1{,}000 \\
+Fazla-uzunluk: yerel $-$ global & \kotu{+1{,}074} & [+0{,}707; +1{,}505] & 2/54 & $2{,}9\times10^{-9}$ \\
+Rastgele: yerel $-$ global & \kotu{+0{,}784} & [+0{,}462; +1{,}155] & 7/54 & $3{,}5\times10^{-6}$ \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{(b) Uzun bütçe --- 60~sn, 5 tohum (aynı koşuların ara noktaları)}} \\
+Fazla-uzunluk $-$ rastgele, 10~sn & \iyi{$-$0{,}242} & [$-$0{,}337; $-$0{,}154] & 50/54 & $1{,}3\times10^{-8}$ \\
+Fazla-uzunluk $-$ GNN, 10~sn & \iyi{$-$0{,}149} & [$-$0{,}249; $-$0{,}067] & 41/54 & $7{,}6\times10^{-5}$ \\
+Fazla-uzunluk $-$ rastgele, 30~sn & \iyi{$-$0{,}108} & [$-$0{,}165; $-$0{,}051] & 41/54 & $1{,}4\times10^{-5}$ \\
+Fazla-uzunluk $-$ GNN, 30~sn & \iyi{$-$0{,}092} & [$-$0{,}185; $-$0{,}022] & 37/54 & 0{,}008 \\
+Fazla-uzunluk $-$ rastgele, 60~sn & \iyi{$-$0{,}071} & [$-$0{,}116; $-$0{,}024] & 40/54 & $7{,}7\times10^{-4}$ \\
+Fazla-uzunluk $-$ GNN, 60~sn & \iyi{$-$0{,}078} & [$-$0{,}172; $-$0{,}008] & 35/54 & 0{,}030 \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{(c) Havuz kuralı holdout2'de --- 10~sn, 10 tohum}} \\
+$f=0{,}03$, $p=0{,}25$ $-$ rastgele & \iyi{$-$0{,}221} & [$-$0{,}291; $-$0{,}157] & 50/54 & $1{,}3\times10^{-8}$ \\
+$f=0{,}03$, $p=1{,}00$ $-$ rastgele & +0{,}059 & [$-$0{,}038; +0{,}146] & 11/54 & 0{,}007 \\
+$f=0{,}12$, $p=0{,}25$ $-$ rastgele & \iyi{$-$0{,}178} & [$-$0{,}236; $-$0{,}127] & 50/54 & $8{,}9\times10^{-9}$ \\
+$f=0{,}12$, $p=1{,}00$ $-$ rastgele & \iyi{$-$0{,}202} & [$-$0{,}278; $-$0{,}136] & 49/54 & $3{,}2\times10^{-8}$ \\
+$f=0{,}03$, $p=0{,}25$ $-$ seçilen kural & +0{,}034 & [$-$0{,}001; +0{,}074] & 21/54 & 0{,}159 \\
+$f=0{,}03$, $p=1{,}00$ $-$ seçilen kural & \kotu{+0{,}313} & [+0{,}262; +0{,}360] & 2/54 & $2{,}2\times10^{-8}$ \\
+$f=0{,}12$, $p=0{,}25$ $-$ seçilen kural & \kotu{+0{,}076} & [+0{,}036; +0{,}122] & 19/54 & 0{,}005 \\
+$f=0{,}12$, $p=1{,}00$ $-$ seçilen kural & \kotu{+0{,}052} & [+0{,}027; +0{,}079] & 14/54 & $4{,}7\times10^{-4}$ \\
+\bottomrule
+\end{tabular*}
+\end{table}

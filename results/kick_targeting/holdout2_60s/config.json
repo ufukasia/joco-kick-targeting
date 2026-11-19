@@ -1,0 +1,15 @@
+{
+ "suite": "holdout2",
+ "seeds": 5,
+ "budget": 60.0,
+ "strategies": [
+  "random_global",
+  "excess_global@0.06:0.5",
+  "gnn_global@0.04:0.5"
+ ],
+ "workers": 4,
+ "confirmatory": false,
+ "note": "exploratory post-protocol robustness session (PROTOCOL_v3_exploratory.json)",
+ "machine": "MONSTER",
+ "started": "2026-11-19 02:12:00"
+}

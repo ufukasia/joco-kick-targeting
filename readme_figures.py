@@ -185,10 +185,29 @@ def fig_online(t):
     return svg
 
 
+def fig_budget(t):
+    v = json.loads((R / "v4_robustness_analysis.json").read_text(encoding="utf-8"))["S2_60s"]
+    rows = []
+    for other, lab0, col in [(RND, "Proxy − random", "blue"), (GNN, "Proxy − GNN", "blue")]:
+        for cp in ("10.0", "30.0", "60.0"):
+            r = next(c for c in v[cp]["contrasts"] if c["pair"] == f"{EXC} - {other}")
+            rows.append((f"{lab0}, {cp[:-2]} s", r["mean"], r["ci95"][0], r["ci95"][1], col,
+                         f"{r['wins_first']}/54 · p_Holm {r['p_holm']:.1g}"))
+    svg = Svg(860, 392, t)
+    svg.text(24, 38, "With a 6× longer budget the advantage narrows but stays below zero", 19, "ink", weight=700)
+    svg.text(24, 62, "Exploratory 60 s session (54 held-out instances × 5 seeds); 10 s and 30 s are checkpoints of the same runs. "
+                     "Left of 0 = proxy better.", 13, "ink2")
+    ci_rows(svg, rows, 300, 640, 108, 38, -0.35, 0.05, 270, [-0.3, -0.2, -0.1, 0])
+    svg.text(24, 380, "Registered before running (PROTOCOL_v3_exploratory.json, SHA-256 + OpenTimestamps). "
+                      "Does not change the confirmatory V1–V4 decisions.", 11, "muted")
+    return svg
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     figs = {"hero": (fig_hero, "Kick targeting vs random"), "per_instance": (fig_per_instance, "Proxy vs GNN per instance"),
-            "length_arm": (fig_length, "Raw edge length arm"), "online": (fig_online, "Online learning mechanism")}
+            "length_arm": (fig_length, "Raw edge length arm"), "online": (fig_online, "Online learning mechanism"),
+            "budget": (fig_budget, "Advantage at longer budgets")}
     for name, (fn, title) in figs.items():
         for mode, t in THEMES.items():
             fn(t).save(OUT / f"{name}_{mode}.svg", title)

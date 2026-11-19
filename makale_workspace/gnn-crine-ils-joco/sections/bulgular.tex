@@ -43,6 +43,24 @@ problemlerde $0{,}039$ puan kötüdür (düzeltmesiz, betimsel) ve tüm sette ra
 Öğrenilmiş üç skor (GNN, kazanç-MLP, üyelik-MLP) tüm sette rastgeleden iyidir ama vekilin gerisinde
 kalır; çevrimiçi model her katmanda en kötüdür. % E611, E612, E613, E615
 
+Yapıya bağımlılık, katman etiketinden bağımsız bir ölçüyle de görülür (keşifsel). Her problem için
+en yakın komşu uzaklığının değişim katsayısını (CV) bir kümelenme göstergesi olarak kullandık. Bu
+değer uniform problemlerde $0{,}51$ ile $0{,}55$ arasındadır, kümeli ve ulusal problemlerde daha
+büyüktür. % E1041, E1043, E1045
+Vekilin rastgeleye göre kazancı CV arttıkça büyür (Spearman $\rho=-0{,}56$, $p=9{,}8\times10^{-6}$;
+Şekil~\ref{fig:v4-structure}). GNN'ye karşı farkta ilişki aynı yöndedir ama daha zayıftır
+($\rho=-0{,}38$, $p=0{,}005$); problem boyutuyla ilişki yoktur ($\rho=-0{,}10$, $p=0{,}46$). % E1038, E1039, E1040
+Ölçü, doğrulayıcı koşunun mevcut verisi üzerinde hesaplandığı için betimseldir. Uygulayıcı için
+sonucu şudur: hedeflemeden en çok, kenar uzunluklarının düzensiz olduğu kümeli ve gerçek problemlerde
+yararlanılır; bu ölçü koşudan önce, koordinatlardan ucuzca hesaplanabilir.
+
+\begin{figure}[!htbp]
+\centering
+\input{../figures/fig_v4_structure.tex}
+\caption{Problem yapısı ve hedefleme kazancı (holdout2, 10~sn, keşifsel): yatay eksen en yakın komşu uzaklığının değişim katsayısı, dikey eksen fazla-uzunluk vekilinin rastgeleye göre problem başı gap farkı (negatif = vekil iyi).}
+\label{fig:v4-structure}
+\end{figure}
+
 \input{../evidence/tables/v3_strategies.tex}
 
 \paragraph{Vaka incelemesi.}
@@ -116,6 +134,11 @@ $0{,}75$ ve üzerindeyken geride kalır; olasılık $0{,}9$'da üç sinyal de ra
 Vekilin GNN'ye karşı avantajı erken dönemde büyüktür ve bütçe uzadıkça daralır: fark 0,1~sn'de
 $-0{,}44$, 1~sn'de $-0{,}25$, 10~sn'de $-0{,}12$ puandır. % E684, E690, E696
 Rastgeleye karşı fark daha kararlıdır (aynı noktalarda $-0{,}17$, $-0{,}28$, $-0{,}17$). % E683, E689, E695
+Erken dönemdeki GNN farkının kaynağı model maliyetidir: GNN 0,1~sn'de rastgeleden bile
+$0{,}277$ puan kötüdür ve rastgeleden ancak 5~sn'den sonra ayrışır ($-0{,}060$
+puan, düzeltmesiz $p=0{,}001$). % E991, E1026
+Çevrimiçi modelin zararı 1~sn'de en büyüktür ($+0{,}369$ puan) ve bütçe uzadıkça azalarak
+10~sn'de $+0{,}209$ puana iner (keşifsel, doğrulayıcı koşunun ara noktaları). % E1016, E1037
 
 Protokol sonrasında keşifsel bir ham uzunluk kolu (Bölüm~\ref{sec:yontem-sinyal}), rastgele ve
 fazla-uzunluk kollarıyla aynı oturumda ve aynı ayarlarla koşuldu. Ham uzunluk rastgeleye
@@ -127,6 +150,47 @@ $-0{,}197$ puandır (V2: $-0{,}172$). % E979, E600
 Ölçek düzeltmesi kümeli problemlerde ortalamada vekil lehine ($0{,}089$ puan; ham kol 14 problemin
 6'sında önde), üç ulusal problemde ham uzunluk lehine ($0{,}239$ puan) sonuç verdi; diğer alt
 kümelerde farklar $0{,}05$ puanın altındaydı (betimsel). % E976, E973, E974, E975, E977, E978
+
+\subsection{Keşifsel sağlamlık blokları}\label{sec:bulgular-saglamlik}
+
+Tablo~\ref{tab:v4-robustness}, koşulardan önce kaydedilen üç keşifsel bloğun sonuçlarını verir
+(Bölüm~\ref{sec:deney-saglamlik}).
+
+\paragraph{Klasik yerel vuruş.}
+Hedefli global vuruş, rastgele segment vuruşundan ortalama $1{,}038$ puan düşük gap verir (51/54,
+$p_{\mathrm{Holm}}=1{,}3\times10^{-9}$). Fark çarpıktır: en büyük katkı kümeli problemlerden gelir
+($-3{,}10$ puan), Hodges--Lehmann kestirimi $-0{,}535$ puandır. % E1047
+Bu motorda ve bütçede segment geometrisi, rastgele kesimlerle de globalden kötüdür ($+0{,}784$ puan,
+7/54); yalnız üç ulusal problemde yerel geometri öndedir. % E1051
+Segment vuruşu saniyede yaklaşık iki buçuk kat fazla vuruş yapar (5.898'e karşı 2.225), ama kabul
+oranı \%0,55'tir (global \%1,41). % E1059, E1057
+Yerel geometride hedeflemenin ölçülebilir etkisi yoktur (fazla-uzunluk $+0{,}037$, ham uzunluk
+$-0{,}014$ puan; ikisinde de $p_{\mathrm{Holm}}=1{,}0$). Burada havuzdan yalnız ilk kesim seçilir,
+diğer ikisi pencere içinde rastgeledir. % E1048, E1049
+Pencere ($W=50$) holdout2'de ayarlanmadı. Bu sonuç, segment vuruşunun LK tabanlı motorlarda ve çok
+büyük problemlerdeki değerini \citep{applegate_2003_clk} değil, bu motordaki göreli konumunu gösterir.
+
+\paragraph{Uzun bütçe.}
+60~sn'de (5 tohum) vekil hem rastgeleden ($-0{,}071$ puan, 40/54, $p_{\mathrm{Holm}}=7{,}7\times10^{-4}$)
+hem GNN'den ($-0{,}078$ puan, 35/54, $p_{\mathrm{Holm}}=0{,}030$) düşük gap verir. % E1077, E1078
+Avantaj bütçe uzadıkça daralır: rastgeleye karşı 10, 30 ve 60~sn'de $-0{,}242$, $-0{,}108$ ve
+$-0{,}071$; GNN'ye karşı $-0{,}149$, $-0{,}092$ ve $-0{,}078$ puandır. % E1062, E1072, E1077, E1063, E1073, E1078
+GNN'ye karşı farkın \%95 GA'sı 60~sn'de de sıfırın altındadır ($[-0{,}172;\,-0{,}008]$); V3'ün
+0,05 puanlık kötü-değil sonucu bu bütçede de geçerlidir. % E1078
+Mutlak gap'ler de küçüldüğü için göreli kazanç daha yavaş azalır: vekil, rastgelenin gap'ini 10~sn'de
+\%21 (\%1,139'dan \%0,897'ye), 60~sn'de \%11 (\%0,649'dan \%0,578'e) düşürür. % E1064, E1065, E1079, E1080
+
+\paragraph{Havuz kuralı.}
+Geliştirmede seçilen kuralın dört komşusundan üçü holdout2'de de rastgeleden açıkça iyidir
+($-0{,}178$ ile $-0{,}221$ puan arası, 49--50/54). % E1086, E1088, E1089
+Tek istisna, küçük havuzun her kesimde hedeflendiği birleşimdir ($f=0{,}03$, $p=1$): bu ayar
+54 problemin yalnız 11'inde rastgeleden iyidir ve seçilen kuraldan $0{,}313$ puan geridedir. % E1087, E1091
+Seçilen kural, komşularından ya iyidir ya da onlardan ayrışmaz ($+0{,}034$ ile $+0{,}076$ puan;
+$f=0{,}03$, $p=0{,}25$ ile fark anlamlı değil). % E1090, E1092, E1093
+Bu örüntü geliştirme ızgarasıyla aynıdır (Şekil~\ref{fig:v3-pool-grid}): geniş bir plato ve tek
+zararlı bölge olarak küçük havuz ile çok yüksek hedefleme olasılığının birleşimi.
+
+\input{../evidence/tables/v4_robustness.tex}
 
 \subsection{Aşama 2: kestirim doğruluğu arama faydası değildir}\label{sec:bulgular-asama2}
 
