@@ -1,9 +1,22 @@
 {
   "title": "Kick targeting in fast iterated local search: code, data and preregistered run records",
   "upload_type": "software",
-  "description": "Reproduction package for the paper 'Vuruşları Hedeflemek İçin Öğrenmek Gerekir mi? Hızlı İteratif Yerel Aramada Eğitimsiz Kenar Uzunluğu Vekillerinin Ön-Kayıtlı Sınaması' (submitted to Journal of Combinatorial Optimization): fast 2-opt/Or-opt ILS engine, kick-targeting signals (random, kNN, excess-length and raw-length proxies, LKH-trained GNN, MLPs, online Thompson-ridge), preregistration files (PROTOCOL_v2.json with SHA-256 and OpenTimestamps proof, Bitcoin block 976258), all per-run JSON records, analysis scripts and paper sources.",
-  "creators": [{"name": "ASIL, Ufuk", "affiliation": "Ostim Technical University"}],
+  "description": "Reproduction package for the paper 'Vuruşları Hedeflemek İçin Öğrenmek Gerekir mi? Hızlı İteratif Yerel Aramada Eğitimsiz Kenar Uzunluğu Vekillerinin Ön-Kayıtlı Sınaması' (submitted to Journal of Combinatorial Optimization): fast 2-opt/Or-opt ILS engine, kick-targeting signals (random, kNN, excess-length and raw-length proxies, LKH-trained GNN, MLPs, online Thompson-ridge), preregistration files (PROTOCOL_v2.json with SHA-256 and OpenTimestamps proof, Bitcoin block 976258), registered exploratory blocks (PROTOCOL_v3_exploratory.json; PROTOCOL_v4_exploratory.json, Bitcoin block 976592) including comparisons with the published NeuroLKH SGN edge scores, equal-kick and online-credit sessions, and an LKH-3.0.13 kick-targeting patch (patch only; third-party code is not redistributed), all per-run JSON records, analysis scripts and paper sources.",
+  "creators": [
+    {
+      "name": "ASIL, Ufuk",
+      "affiliation": "Ostim Technical University"
+    }
+  ],
   "license": "MIT",
-  "keywords": ["traveling salesman problem", "iterated local search", "kick targeting", "graph neural network", "preregistration"],
+  "keywords": [
+    "traveling salesman problem",
+    "iterated local search",
+    "kick targeting",
+    "graph neural network",
+    "preregistration",
+    "NeuroLKH",
+    "LKH-3"
+  ],
   "access_right": "open"
 }

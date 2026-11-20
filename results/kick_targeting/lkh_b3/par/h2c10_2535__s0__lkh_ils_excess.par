@@ -1,0 +1,9 @@
+PROBLEM_FILE = /work/data_holdout2/h2c10_2535.tsp
+CANDIDATE_FILE = /work/results/kick_targeting/lkh_b3/cand/h2c10_2535.cand
+PI_FILE = /work/results/kick_targeting/lkh_b3/cand/h2c10_2535.pi
+RUNS = 1
+TRACE_LEVEL = 1
+SEED = 1
+TIME_LIMIT = 10
+KICK_TYPE = 4
+KICKS = 1

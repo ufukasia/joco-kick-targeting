@@ -1,4 +1,3 @@
-% OTOMATIK URETIM -- evidence/scripts/build_v3.py (elle duzenleme)
 \begin{table}[!htbp]
 \centering\small\setlength{\tabcolsep}{3pt}
 \caption{Mekanizma ve verimlilik, holdout2 (540 koşu/strateji). Model: skor süresinin duvar-saatine oranı; Bayat: turda artık olmayan havuz kenarına düşen kesimler. Renk: sütunun en iyi/en kötüsü.}
@@ -7,23 +6,23 @@
 \toprule
 Strateji & Vuruş/sn & Kabul [\%] & Model [\%] & Bayat [\%] & Gap [\%] \\
 \midrule
-Rastgele & 3252 & 1{,}05 & 0{,}00 & 0{,}00 & 1{,}094 \\ % E697,E698,E699,E700
-kNN (0,04/0,75) & 1640 & 1{,}88 & 2{,}83 & 0{,}18 & 1{,}015 \\ % E701,E702,E703,E704
-Fazla-uzunluk (0,06/0,5) & 2288 & 1{,}41 & \iyi{0{,}65} & \iyi{0{,}05} & \iyi{0{,}922} \\ % E705,E706,E707,E708
-GNN (0,04/0,5) & 1991 & 1{,}67 & \kotu{8{,}77} & \kotu{7{,}65} & 1{,}041 \\ % E709,E710,E711,E712
-Kazanç-MLP & 1736 & 1{,}80 & 4{,}86 & 0{,}65 & 1{,}005 \\ % E713,E714,E715,E716
-Üyelik-MLP & 1737 & 1{,}86 & 4{,}73 & 0{,}65 & 1{,}011 \\ % E717,E718,E719,E720
-Sabit doğrusal & 1751 & 1{,}81 & 4{,}22 & 0{,}40 & 1{,}012 \\ % E721,E722,E723,E724
-Çevrimiçi (ılık) & 4357 & 0{,}75 & 4{,}30 & 0{,}07 & \kotu{1{,}303} \\ % E725,E726,E727,E728
+Rastgele & 3.252 & 1{,}05 & 0{,}00 & 0{,}00 & 1{,}094 \\
+kNN (0,04/0,75) & 1.640 & 1{,}88 & 2{,}83 & 0{,}18 & 1{,}015 \\
+Fazla-uzunluk (0,06/0,5) & 2.288 & 1{,}41 & \iyi{0{,}65} & \iyi{0{,}05} & \iyi{0{,}922} \\
+GNN (0,04/0,5) & 1.991 & 1{,}67 & \kotu{8{,}77} & \kotu{7{,}65} & 1{,}041 \\
+Kazanç-MLP & 1.736 & 1{,}80 & 4{,}86 & 0{,}65 & 1{,}005 \\
+Üyelik-MLP & 1.737 & 1{,}86 & 4{,}73 & 0{,}65 & 1{,}011 \\
+Sabit doğrusal & 1.751 & 1{,}81 & 4{,}22 & 0{,}40 & 1{,}012 \\
+Çevrimiçi (ılık) & 4.357 & 0{,}75 & 4{,}30 & 0{,}07 & \kotu{1{,}303} \\
 \midrule
 \multicolumn{6}{l}{\textit{Çevrimiçi ağırlık kayması (54 problem, tohum 0): ortalama / medyan / [Q1; Q3]}} \\
-\quad Uzunluk: tüm tur kenarları & 0{,}623 & 0{,}609 & \multicolumn{2}{c}{[0{,}602; 0{,}653]} & \\ % E729
-\quad Uzunluk: ön-bilgi havuzu & 1{,}654 & 1{,}431 & \multicolumn{2}{c}{[1{,}296; 1{,}954]} & \\ % E730
-\quad Uzunluk: fazla-uz. havuzu & 1{,}614 & 1{,}388 & \multicolumn{2}{c}{[1{,}264; 1{,}918]} & \\ % E731
-\quad Uzunluk: öğrenilmiş havuz & 0{,}482 & 0{,}487 & \multicolumn{2}{c}{[0{,}445; 0{,}527]} & \\ % E732
-\quad Örtüşme: ön-bilgi $\cap$ fazla-uz. & 0{,}664 & 0{,}647 & \multicolumn{2}{c}{[0{,}581; 0{,}762]} & \\ % E733
-\quad Örtüşme: öğrenilmiş $\cap$ fazla-uz. & 0{,}008 & 0{,}001 & \multicolumn{2}{c}{[0{,}000; 0{,}010]} & \\ % E734
-\quad $\cos(w_0, w_{\text{son}})$ & $-$0{,}518 & $-$0{,}605 & \multicolumn{2}{c}{[$-$0{,}733; $-$0{,}311]} & \\ % E736
+\quad Uzunluk: tüm tur kenarları & 0{,}623 & 0{,}609 & \multicolumn{2}{c}{[0{,}602; 0{,}653]} & \\
+\quad Uzunluk: ön-bilgi havuzu & 1{,}654 & 1{,}431 & \multicolumn{2}{c}{[1{,}296; 1{,}954]} & \\
+\quad Uzunluk: fazla-uz. havuzu & 1{,}614 & 1{,}388 & \multicolumn{2}{c}{[1{,}264; 1{,}918]} & \\
+\quad Uzunluk: öğrenilmiş havuz & 0{,}482 & 0{,}487 & \multicolumn{2}{c}{[0{,}445; 0{,}527]} & \\
+\quad Örtüşme: ön-bilgi $\cap$ fazla-uz. & 0{,}664 & 0{,}647 & \multicolumn{2}{c}{[0{,}581; 0{,}762]} & \\
+\quad Örtüşme: öğrenilmiş $\cap$ fazla-uz. & 0{,}008 & 0{,}001 & \multicolumn{2}{c}{[0{,}000; 0{,}010]} & \\
+\quad $\cos(w_0, w_{\text{son}})$ & $-$0{,}518 & $-$0{,}605 & \multicolumn{2}{c}{[$-$0{,}733; $-$0{,}311]} & \\
 \bottomrule
 \end{tabular*}
 \end{table}

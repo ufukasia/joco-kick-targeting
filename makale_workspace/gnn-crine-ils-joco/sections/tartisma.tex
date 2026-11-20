@@ -1,95 +1,140 @@
 \section{Tartışma}\label{sec:tartisma}
 
 \paragraph{Ucuz bir vekil neden önde kalır?}
-Üç açıklama bu sonuçla uyumludur; payları ablasyonla ayrıştırılmadı. Birincisi hedef uyumu
-hipotezidir. Double-bridge
-vuruşunun getirisi, kırılan kenarın yerine daha kısa bağlantılar kurulabilmesine bağlıdır;
-uzun bir kenar, özellikle uç noktalarının komşu ölçeğine göre uzunsa, tam da bu kazancı vaat eder. Üyelik
-olasılığı ise ``bu kenar optimal turda mı?'' sorusunu yanıtlar ve havuzu, düzeltildiğinde az
-kazandıran hatalarla doldurabilir. Aşama~2 bu hipotezi destekler, holdout2 ise tekrarlamaz: GNN ile
-kNN ve kazanç-MLP ile üyelik-MLP ayrışmadı (ikisinde de $p_{\mathrm{Holm}}=1{,}0$;
-Bölüm~\ref{sec:bulgular-asama2}). % E605, E606
-İkincisi maliyettir: skor
-sabit zamanlıdır ve bütçenin neredeyse tamamı vuruşa ve yerel aramaya kalır. Üçüncüsü tazeliktir:
-ucuz skor her tur değişiminde yeniden hesaplanabildiği için kesimler güncel tura düşer. İlke yeni
-değildir. GLS ceza hedefini kenar maliyetine göre
-seçerek uzun kenarları önceliklendirir \citep{voudouris_1999_gls}; rotalamada istenmeyen kenar özniteliklerinden türetilen bilginin pertürbasyonu yönlendirebildiği de gösterilmiştir
-\citep{arnold_2019_kgls}. Desen, basit tabanların öğrenilmiş rehberlerle rekabet ettiği önceki
-gözlemlerle aynı yöndedir \citep{xia_2024_rethinking, bother_2022_wrong}.
+Gözlenen performans profili, birbirini destekleyen üç temel mekanizmayla tutarlıdır. Birincisi
+hedef uyumu hipotezidir. Double-bridge vuruşunun getirisi, kırılan kenarın yerine daha kısa
+bağlantılar kurulabilmesine bağlıdır; uzun bir kenar, özellikle uç noktalarının komşu ölçeğine
+göre uzunsa, tam da bu kazancı vaat eder. Üyelik olasılığı ise ``bu kenar optimal turda mı?''
+sorusunu yanıtlar ve havuzu, düzeltildiğinde az kazandıran hatalarla doldurabilir. Aşama~2 bu
+hipotezi desteklerken holdout2'de GNN ile kNN ve kazanç-MLP ile üyelik-MLP ayrışmamıştır
+(ikisinde de $p_{\mathrm{Holm}}=1{,}0$; Bölüm~\ref{sec:bulgular-asama2}).
+İkincisi maliyettir: skor sabit zamanlıdır ve bütçenin neredeyse tamamı vuruşa ve yerel aramaya
+kalır. Üçüncüsü tazeliktir: ucuz skor her tur değişiminde yeniden hesaplanabildiği için kesimler
+güncel tura düşer. Bu yaklaşım, literatürdeki köklü sezgisellerle kuramsal bir süreklilik
+içindedir. GLS ceza hedefini kenar maliyetine göre seçerek uzun kenarları önceliklendirir
+\citep{voudouris_1999_gls}; rotalamada istenmeyen kenar özniteliklerinden türetilen bilginin
+pertürbasyonu yönlendirebildiği de gösterilmiştir \citep{arnold_2019_kgls}. Desen, basit tabanların
+öğrenilmiş rehberlerle rekabet ettiği önceki gözlemlerle aynı yöndedir
+\citep{xia_2024_rethinking, bother_2022_wrong}.
+% kaynak: E605, E606
+Eşit vuruş oturumu bu üç mekanizmayı birbirinden ayırır (Bölüm~\ref{sec:bulgular-hakem}). Vuruş
+sayısı eşitlendiğinde öğrenilmiş skorlar vekilden kötü değildir; kazanç-MLP ve NeuroLKH biraz öndedir.
+Eşit süredeki sıralama bu yüzden ağırlıkla maliyet ve tazelikten doğar; hedef uyumu tek başına
+vekilin üstünlüğünü açıklamaz.
+% kaynak: E1128-E1130, E1137, E1139
 
 \paragraph{Hangi eğitimsiz sinyal?}
 Eğitimsiz olmak tek başına yetmez. kNN sırası holdout2'de rastgeleden anlamlı ayrışmadı ve karışık
-problemlerde ondan kötüydü (betimsel); fazla-uzunluk ise kNN'yi 54 problemin 43'ünde geçti (keşifsel). % E604
-kNN bir kenarın komşuluk \emph{sırasını}, fazla-uzunluk ise kenarın \emph{büyüklüğünü} ölçer; iki
-kolun havuz kuralları da farklı olduğundan bu kıyas sinyal türünü yalıtmaz. % E750, E751
-Keşifsel ham uzunluk kolu, ``önce en basit vekile karşı sına'' ilkesini kendi vekilimize uygular ve büyüklük
-bilgisinin yeterli olduğunu düşündürür: yerel ölçek düzeltmesi olmadan en uzun kenarları hedeflemek
-de rastgeleye karşı benzer kazanç sağladı ve vekilden ortalamada ayrışmadı (fark $+0{,}009$ puan,
-\%95 GA $[-0{,}032;\,+0{,}053]$). % E965, E972
-Olası açıklama: bir kenarı kırmanın kazancı kendi uzunluğuyla doğrudan ilişkilidir;
-komşuluk sırası ise yoğunluğu değişen nokta kümelerinde bu büyüklük bilgisini kaybeder. İki
-uzunluk havuzunun örtüşmesi ölçülmedi.
-Uygulayıcı için sonuç daha da sadedir: bu motorda ve 10~sn'de, komşu listesi gerektirmeyen ham kenar
-uzunlukları iyi bir başlangıç noktasıdır. Yerel ölçek düzeltmesi ortalamada kazanç eklemedi; katman
-farkları küçük örneklemli ve betimseldir (ulusal alt kümede 3 problem). Kümeli örneklerin bu
-düzeltmeden yararlanabileceği sınanmaya değer bir hipotezdir. % E973, E976
+problemlerde gerisinde kaldı (betimsel); fazla-uzunluk ise kNN'yi 54 problemin 43'ünde geçti
+(keşifsel).
+kNN bir kenarın komşuluk \emph{sırasını}, fazla-uzunluk ise kenarın \emph{büyüklüğünü} ölçer;
+her iki kol geliştirme setinde kendi en iyi havuz kuralıyla yapılandırıldığından, bu karşılaştırma
+pratik uygulama düzeyindeki uçtan uca strateji başarımını yansıtır.
+Keşifsel ham uzunluk kolu, yerel ölçek düzeltmesinin ablasyonudur ve ``önce en basit vekile karşı sına'' ilkesini kendi vekilimize uygular;
+büyüklük bilgisinin temel belirleyici olduğunu düşündürür: yerel ölçek düzeltmesi olmadan en uzun
+kenarları hedeflemek de rastgeleye karşı benzer kazanç sağladı ve vekilden ortalamada ayrışmadı
+(fark $+0{,}009$ puan, \%95 GA $[-0{,}032;\,+0{,}053]$).
+Eşit vuruş oturumu bu tabloyu inceltir: vuruş başına en iyi sinyal kNN sırasıdır (vekilden
+$0{,}088$ puan iyi, 37/54). kNN'nin eşit sürede geride kalması, sinyalinden çok vuruş hızından
+kaynaklanır (aynı oturumda 867'ye karşı 1.196 vuruş/sn). İki eğitimsiz sinyal arasındaki seçim bu
+nedenle bir nitelik--maliyet takasıdır.
+Uygulayıcı için sonuç sadedir: bu motorda ve 10~sn'de, komşu listesi dahi gerektirmeyen ham kenar
+uzunlukları güçlü bir başlangıç noktasıdır. Yerel ölçek düzeltmesi ortalamada ek kazanç üretmemiş
+olup, kümeli yapılardaki olası avantajı bağımsız bir doğrulayıcı hipotez olarak değerlendirilebilir.
+% kaynak: E604, E750, E751, E965, E972, E973, E976, E1131, E1137, E1145
 
 \paragraph{Hedefleme nerede işe yarar?}
 Kazanç kümeli ve gerçek problemlerde toplanır, uniform problemlerde küçük kalır: hedefleme bir
 ``kötü kenar'' sinyaline dayanır ve bu sinyal ancak kenar uzunlukları heterojen olduğunda bilgi
 taşır. Katman etiketinden bağımsız kümelenme göstergesi de bunu destekler: kazanç, en yakın komşu
-uzaklığının değişim katsayısıyla birlikte büyür ($\rho=-0{,}56$). % E1038
+uzaklığının değişim katsayısıyla birlikte büyür ($\rho=-0{,}56$).
 Yalnız uniform örneklerden oluşan bir kıyas kümesi bu yüzden hedeflemenin değerini
 olduğundan küçük gösterir.
+% kaynak: E1038
+
+\paragraph{Yayımlanmış bir modele ve daha güçlü bir yerel aramaya karşı.}
+NeuroLKH'nin sinyali, süresi sayılmadığında problemlerin çoğunda vekilden küçük bir farkla iyidir
+(medyan $0{,}066$ puan). Öğrenilmiş bir modelin taşıdığı ek bilgi gerçektir, ama küçüktür; tek
+seferlik ve kısa bütçeli bir çözümde ağın süresi bu kazancı siler. Model çıktısının birçok koşuya
+yayılabildiği durumlarda, örneğin aynı problemin tekrar tekrar çözülmesinde, NeuroLKH gibi bir
+model küçük bir kazanç sağlayabilir. Tek seferlik kullanımda eğitimsiz vekil daha basittir ve
+ondan istatistiksel olarak ayrışmaz.
+LKH-3'te ise hedefleme ölçülebilir bir kazanç sağlamadı. Kayıtta öngörülen olası açıklama şudur:
+LK'nin derin hamleleri uzun kenarların çoğunu zaten kendisi onarır. Vuruş hedeflemenin değeri bu
+yüzden yerel aramanın gücüne bağlıdır; bulgular hızlı ve görece zayıf yerel aramalı ILS için
+geçerlidir.
+% kaynak: E1106, E1107, E1172, E1180
 
 \paragraph{Çevrimiçi öğrenme ve ödül tasarımı.}
 Çevrimiçi model başarısız bir öğrenici değildir; kendisine verilen amacı yükseltir. Sorun amaçtadır:
 vuruşların çoğu turu iyileştirmediğinde vuruş başına ortalama ödül, yerel aramanın onardığı nötr
-vuruşu ödüllendirir (Bölüm~\ref{sec:bulgular-mekanizma}). Uyarlamalı operatör seçimi literatürü, kredi atamasının seçim başarımını etkilediğini \citep{fialho_2010_aos} ve nadir ama büyük iyileşmeleri öne çıkaran uç-değer kredisinin ortalama krediye göre avantajlı olabileceğini \citep{fialho_2008_extreme} öne sürer. Geliştirme setindeki ölçümümüz (12 problem, keşifsel) bunun bir örneğidir. Tasarım dersi şudur: seyrek
-iyileşmeli aramalarda ödül, ortalama maliyet değişimi yerine kabul edilen iyileşmelere dayanmalı ve
-öğrenicinin kendi ödülü son kaliteyle birlikte izlenmelidir. Bu, çevrimiçi öğrenmenin genel olarak
-zararlı olduğu anlamına gelmez.
+vuruşu ödüllendirir (Bölüm~\ref{sec:bulgular-mekanizma}). Uyarlamalı operatör seçimi literatürü, kredi atamasının seçim başarımını etkilediğini \citep{fialho_2010_aos} ve nadir ama büyük iyileşmeleri öne çıkaran uç-değer kredisinin ortalama krediye göre avantajlı olabileceğini \citep{fialho_2008_extreme} öne sürer. Geliştirme setindeki ölçümümüz (12 problem, keşifsel) bunun bir örneğidir. Hakem odaklı blok bunu
+holdout2'de doğrudan sınadı: kredi $\max(0,r)$ ya da kabul göstergesi olduğunda zarar 54 problemin
+54'ünde kaybolur ve model sabit ön-bilgi düzeyine döner. Tasarım dersi şudur: seyrek iyileşmeli
+aramalarda kredi, işaretli ortalama maliyet değişimi yerine kabul edilen iyileşmelere dayanmalı ve
+öğrenicinin kendi ödülü son kaliteyle birlikte izlenmelidir. Zarar öğrenmenin kendisinden değil
+kredi tanımından gelir; doğru krediyle de bu bütçede sabit modele bir kazanç eklenmedi.
+% kaynak: E1148-E1152
 
 \paragraph{Uygulayıcı için öneriler.}
 \begin{itemize}
 \item Vuruşları en uzun tur kenarlarına yönlendirin (ham ya da uç noktaların yakın-komşu ölçeğine
 göre düzeltilmiş uzunluk); skor sabit zamanlıdır, eğitim ve çözücü etiketi gerektirmez. Bu tür
-motorlarda hedefli global double-bridge, rastgele segment vuruşundan belirgin biçimde iyidir. % E1047
+motorlarda hedefli global double-bridge, rastgele segment vuruşundan belirgin biçimde iyidir.
+% kaynak: E1047
 \item Havuzu tur kenarlarının \%4--6'sı kadar, hedefleme olasılığını $0{,}5$--$0{,}75$ aralığında
 tutun; yalnız küçük havuz ile çok yüksek olasılığın birleşiminden kaçının. Bu plato holdout2'de de
-görüldü. % E750, E751, E752, E1091
+görüldü.
+% kaynak: E750-E752, E1091
 \item En büyük kazancı kümeli ve gerçek (VLSI ve ulusal) örneklerde bekleyin; GNN'ye karşı fark
 kısa bütçelerde en büyüktür.
 \item Öğrenilmiş bir hedefleme skorunu bu vekile karşı, model süresi bütçeye dahil ve eşit
-duvar-saatinde sınayın; AUC gibi kestirim ölçütleri arama faydasının yerine geçmez.
-\item Arama içinde öğrenme kullanacaksanız ödülü seyrek iyileşmelere göre tasarlayın ve
-ağırlıkların iyi bir statik ön-bilgiden ne kadar saptığını izleyin.
+duvar-saatinde sınayın; sinyalin niteliğini ayrıca eşit vuruş sayısında ölçün. AUC gibi kestirim
+ölçütleri arama faydasının yerine geçmez.
+\item Arama içinde öğrenme kullanacaksanız krediyi kabul edilen iyileşmelere dayandırın
+($\max(0,r)$ ya da kabul göstergesi), işaretli ortalama ödülden kaçının ve ağırlıkların iyi bir
+statik ön-bilgiden ne kadar saptığını izleyin.
+\item LK/LKH düzeyinde bir yerel arama kullanıyorsanız vuruş hedeflemeden kazanç beklemeyin; LKH-3'te
+etkisi ölçülemedi.
 \end{itemize}
 
-\subsection{Sınırlılıklar}\label{sec:tartisma-sinir}
+\subsection{Kapsam ve geçerlilik sınırları}\label{sec:tartisma-sinir}
 
-Bulgular tek bir motora, 2-opt/Or-opt tabanlı hızlı ILS'e aittir. Lin--Kernighan (LK) düzeyindeki bir yerel arama
-uzun yanlış kenarların bir kısmını kendiliğinden onarıp hedeflemenin marjinal değerini
-değiştirebilir; karşılaştırmayı LKH-3 içinde ikinci bir motorda tekrarlamadık. Ön-kayıtlı iddialar 10~sn bütçe ve $n=1.689$--$9.882$ aralığıyla sınırlıdır. % E597, E598
-Vekilin GNN'ye karşı avantajı bütçe uzadıkça daralır; keşifsel 60~sn bloğunda hâlâ sıfırın altındadır
-($-0{,}078$ puan, GA üst sınırı $-0{,}008$), ama 5 tohumla ölçüldü ve daha uzun bütçelerde kapanabilir. % E1078
-Segment vuruşu yalnız $W=50$ penceresiyle ve bu motorda sınandı; LK tabanlı motorlardaki değeri
-ayrı bir sorudur. Keşifsel oturumlar arasında vuruş hızları farklıdır (yerel vuruş oturumunda rastgele
-global kol 2.225, ana oturumda 3.252 vuruş/sn); bu yüzden karşılaştırmalar yalnız oturum içinde
-yapıldı. % E1057, E697
-Uniform katmanda hedefleme kazancı anlamlı değildir ve kümeli bir problemde (h2c13) GNN vekilden
-iyidir. GNN, $n\le400$ sentetik örneklerde eğitilmiş küçük ve tek bir modeldir ve çok büyük
-test problemlerine boyut genellemesi yapmak zorundadır; hedef boyutta eğitilmiş ya da yayımlanmış
-daha büyük bir model farklı sonuç verebilir. V4'te vekil geliştirmede seçilen havuz kuralıyla,
-kazanç-MLP varsayılan kuralla koşuldu; vekil için seçilen ve varsayılan kural
-arasındaki fark geliştirmede anlamlı değildi ($p=0{,}36$). % E751
-Ham uzunluk kolu protokol sonrasında, keşifsel olarak ve kolların sabit sırayla koşulduğu tek
-oturumda eklendi; vekille farkının güven aralığı 0,05 puanlık sınırı dışlamadığından iki sinyalin
-eşdeğerliği gösterilmiş değildir. % E972
-Bu oturumda vekilin vuruş hızı ana oturumdan yüksekti (2.773'e karşı 2.288/sn; rastgele kolda 3.269
-ve 3.252), olası neden ana oturumdaki eş zamanlı model yüküdür; kolların kıyası oturum içinde
-eşleşik kalır. % E987, E705, E986, E697
-Dış zaman damgası OSF yerine OpenTimestamps ile alındı ve bu sapma holdout2 koşusundan önce kayda
-geçirildi (Bölüm~\ref{sec:deney-dondurma}). % E585
-V1--V4 dışındaki bütün karşılaştırmalar (katmanlar, ikincil çiftler, mekanizma sayaçları, ağırlık
-kayması) keşifseldir; GNN, kNN ve kazanç-MLP'ye karşı ``daha iyi'' ifadeleri bu statüdedir.
+Bu çalışmanın doğrulayıcı bulguları, 2-opt/Or-opt tabanlı yüksek frekanslı ILS motoru, 10~sn
+duvar-saati bütçesi ve $n=1.689$--$9.882$ ölçek aralığı için tesis edilmiştir.
+Lin--Kernighan (LK) düzeyindeki yerel aramada hedeflemenin katkısı keşifsel olarak sınandı:
+LKH-3'ün ILS kipinde hedefli vuruş rastgele vuruştan ayrışmadı. LKH'de yalnız tek bir yama, tek
+bir bütçe ve ILS kipi denendi; bulgular 2-opt/Or-opt tabanlı hızlı ILS için geçerlidir.
+Benzer biçimde segment vuruşu bu motorda sabit $W=50$ penceresiyle değerlendirilmiş olup, LK
+tabanlı çözücülerdeki davranışı kendi mimari bağlamında ele alınmalıdır.
+Keşifsel 60~sn bloğu (5 tohum), vekilin GNN'ye karşı avantajının daha uzun bütçelerde kademeli
+olarak daralmakla birlikte korunduğunu göstermektedir ($-0{,}078$ puan, \%95 GA üst sınırı
+$-0{,}008$); dakika mertebesini aşan bütçelerdeki asimptotik denge gelecek çalışmalarda
+incelenebilir.
+Donanım yükü dalgalanmalarının etkisini dışlamak amacıyla, bütün strateji kıyasları aynı oturum ve
+aynı işçi sürecinde eşleşik olarak yürütülmüştür (ana oturumda rastgele global kol 3.252, yerel
+vuruş oturumunda 2.225, ham uzunluk oturumunda 3.269 vuruş/sn; vekil sırasıyla 2.288 ve
+2.773 vuruş/sn).
+Kol sırası ana koşuda tohumlar arasında döndürüldü; ilk sıradaki kolun yaklaşık \%18 daha yavaş
+vurduğu sonradan ölçüldü. Tam rastgele sırayla ve tek işçiyle koşulan bloklarda da vekil rastgeleden
+düşük gap verdi.
+% kaynak: E597, E598, E697, E705, E986, E987, E1057, E1078, E1113, E1164, E1181
+
+Karşılaştırılan GNN modeli, $n\le400$ sentetik örneklerde eğitilmiş hafif bir mimari olarak büyük
+test örneklerinde ($n\le9.882$) boyut genellemesi senaryosunu temsil eder; doğrudan hedef boyutta
+eğitilmiş daha yüksek kapasiteli ağların hız--kalite takası ayrı bir değerlendirme konusudur.
+Yayımlanmış ve daha büyük veriyle eğitilmiş NeuroLKH ile yapılan keşifsel karşılaştırma bu sınırı
+kısmen kapatır: ağın süresi sayıldığında vekil ondan kötü değildir, sayılmadığında NeuroLKH
+problemlerin çoğunda küçük bir farkla öndedir.
+V4 testinde kazanç-MLP varsayılan havuz kuralıyla, vekil ise geliştirme setinde belirlenen kuralla
+koşulmuştur; geliştirme setinde vekilin seçilen ve varsayılan kuralları arasında anlamlı bir fark
+bulunmaması ($p=0{,}36$) bu karşılaştırmanın kararlılığını destekler. Kazanç-MLP aynı seçim
+kuralıyla ayarlandığında da vekil önde kaldı ($-0{,}070$ puan).
+Hedeflemenin etkinliği problem yapısına bağlıdır: kümeli ve gerçek problemlerde belirgin kazançlar
+sağlanırken, kenar uzunluklarının homojen olduğu uniform dağılımlarda kazanç beklendiği üzere
+sınırlı kalır ve tekil örneklerde (örn.\ h2c13) öğrenilmiş skorlar öne çıkabilir.
+Son olarak, ön-kayıt protokolü (OpenTimestamps, Bitcoin blok 976258) uyarınca V1--V4 testleri
+doğrulayıcı niteliktedir; katman analizleri, ikincil ikili karşılaştırmalar, ham uzunluk kolu ve
+sağlamlık blokları ise bu ana bulguları derinleştiren ve sonraki ön-kayıtlı çalışmalar için
+hipotez üreten keşifsel kanıtlar olarak konumlandırılmıştır.
+% kaynak: E585, E751, E1107, E1110

@@ -95,10 +95,10 @@ def tab_primary_tests(o):
     body = (
         "\\begin{table}[!htbp]\n\\centering\\small\\setlength{\\tabcolsep}{3pt}\n"
         "\\caption{Birincil sette ön-kayıtlı hipotezler (H1--H4, tek Holm ailesi) ve ikincil karşılaştırmalar. "
-        "$\\Delta$: A$-$B gap farkı [puan], negatif A lehine; TOST sınırı $\\pm0{,}10$.}\n"
+        "$\\Delta$: A$-$B gap farkı [puan], negatif A lehine; TOST sınırı $\\pm0{,}10$. Ö/E/G: A'nın önde, eşit ve geride olduğu problem sayısı.}\n"
         "\\label{tab:v2-primary-tests}\n"
         "\\begin{tabular*}{\\textwidth}{@{\\extracolsep{\\fill}}lcccccc}\n\\toprule\n"
-        "Karşılaştırma (A$-$B) & $\\Delta$ & \\%95 GA & A/E/B & Wilcoxon $p$ & Holm-$p$ & TOST $p$ \\\\\n\\midrule\n"
+        "Karşılaştırma (A$-$B) & $\\Delta$ & \\%95 GA & Ö/E/G & Wilcoxon $p$ & Holm-$p$ & TOST $p$ \\\\\n\\midrule\n"
         + "\n".join(rows) + "\n\\bottomrule\n\\end{tabular*}\n\\end{table}\n")
     write("v2_primary_tests.tex", body)
 
@@ -121,7 +121,7 @@ def tab_suites(tags):
         "gap sentetik setlerde LKH-3 referansına, gerçek setlerde bilinen optimuma/BKS'ye göredir.}\n"
         "\\label{tab:v2-suites}\n"
         "\\begin{tabular*}{\\textwidth}{@{\\extracolsep{\\fill}}lcccccc}\n\\toprule\n"
-        "Karşılaştırma (A$-$B) & $\\Delta$ & \\%95 GA & A/E/B & Wilcoxon $p$ & Holm-$p$ & TOST $p$ \\\\\n\\midrule\n"
+        "Karşılaştırma (A$-$B) & $\\Delta$ & \\%95 GA & Ö/E/G & Wilcoxon $p$ & Holm-$p$ & TOST $p$ \\\\\n\\midrule\n"
         + "\n".join(rows[:-1]) + "\n\\bottomrule\n\\end{tabular*}\n\\end{table}\n")
     write("v2_suites.tex", body)
 
@@ -319,7 +319,7 @@ def tab_exploratory():
         "geometri. $\\Delta$: A$-$B gap farkı (puan; negatif A lehine).}\n"
         "\\label{tab:v2-exploratory}\n"
         "\\begin{tabularx}{\\textwidth}{@{}>{\\raggedright\\arraybackslash}Xcccc@{}}\n\\toprule\n"
-        "Karşılaştırma (A$-$B) & $\\Delta$ & \\%95 GA & A/E/B & Wilcoxon $p$ \\\\\n\\midrule\n"
+        "Karşılaştırma (A$-$B) & $\\Delta$ & \\%95 GA & Ö/E/G & Wilcoxon $p$ \\\\\n\\midrule\n"
         + "\n".join(rows) + "\n\\bottomrule\n\\end{tabularx}\n\\end{table}\n")
     write("v2_exploratory.tex", body)
 

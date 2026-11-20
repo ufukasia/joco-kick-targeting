@@ -1,0 +1,9 @@
+PROBLEM_FILE = /work/data_vlsi/dka1376.tsp
+CANDIDATE_FILE = /work/results/kick_targeting/lkh_b3_check/dka.cand
+PI_FILE = /work/results/kick_targeting/lkh_b3_check/dka.pi
+RUNS = 1
+SEED = 3
+MAX_TRIALS = 300
+KICK_TYPE = 4
+KICKS = 1
+TRACE_LEVEL = 1

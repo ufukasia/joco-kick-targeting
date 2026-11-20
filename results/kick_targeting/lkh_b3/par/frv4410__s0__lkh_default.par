@@ -1,0 +1,7 @@
+PROBLEM_FILE = /work/data_holdout2/frv4410.tsp
+CANDIDATE_FILE = /work/results/kick_targeting/lkh_b3/cand/frv4410.cand
+PI_FILE = /work/results/kick_targeting/lkh_b3/cand/frv4410.pi
+RUNS = 1
+TRACE_LEVEL = 1
+SEED = 1
+TIME_LIMIT = 10

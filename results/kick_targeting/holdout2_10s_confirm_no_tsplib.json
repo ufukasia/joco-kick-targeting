@@ -1,0 +1,46 @@
+[
+ {
+  "id": "V1",
+  "a": "onlinewarm_global",
+  "b": "linprior_global",
+  "test": "superiority",
+  "n_inst": 51,
+  "mean": 0.29502402191008753,
+  "p": 5.145276051717656e-10,
+  "criterion_met": true,
+  "rejected": true
+ },
+ {
+  "id": "V2",
+  "a": "excess_global@0.06:0.5",
+  "b": "random_global",
+  "test": "superiority",
+  "n_inst": 51,
+  "mean": -0.1656654263527807,
+  "p": 7.452277712828576e-07,
+  "criterion_met": true,
+  "rejected": true
+ },
+ {
+  "id": "V3",
+  "a": "excess_global@0.06:0.5",
+  "b": "gnn_global@0.04:0.5",
+  "test": "noninferiority",
+  "n_inst": 51,
+  "mean": -0.11437135602502829,
+  "p": 2.715179044039287e-08,
+  "criterion_met": true,
+  "rejected": true
+ },
+ {
+  "id": "V4",
+  "a": "excess_global@0.06:0.5",
+  "b": "gain_global",
+  "test": "noninferiority",
+  "n_inst": 51,
+  "mean": -0.08429102739929256,
+  "p": 5.462436669829666e-07,
+  "criterion_met": true,
+  "rejected": true
+ }
+]

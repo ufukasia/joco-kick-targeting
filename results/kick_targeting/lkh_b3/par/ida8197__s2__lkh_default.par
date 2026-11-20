@@ -1,0 +1,7 @@
+PROBLEM_FILE = /work/data_holdout2/ida8197.tsp
+CANDIDATE_FILE = /work/results/kick_targeting/lkh_b3/cand/ida8197.cand
+PI_FILE = /work/results/kick_targeting/lkh_b3/cand/ida8197.pi
+RUNS = 1
+TRACE_LEVEL = 1
+SEED = 3
+TIME_LIMIT = 10

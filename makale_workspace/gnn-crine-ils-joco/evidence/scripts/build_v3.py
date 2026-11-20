@@ -448,10 +448,10 @@ def tab_confirm(conf_rows, sec_rows):
     body = (
         "\\begin{table}[!htbp]\n\\centering\\small\\setlength{\\tabcolsep}{3pt}\n"
         "\\caption{Doğrulayıcı test (PROTOCOL\\_v2, holdout2: 54 problem, 10 tohum, 10~sn). $\\Delta$: A$-$B gap farkı "
-        "[puan], negatif A lehine; kötü-değil sınırı 0{,}05. Renk: anlamlı fark.}\n"
+        "[puan], negatif A lehine; kötü-değil sınırı 0{,}05. Renk: anlamlı fark. Ö/E/G: A'nın önde, eşit ve geride olduğu problem sayısı.}\n"
         "\\label{tab:v3-confirm}\n"
         "\\begin{tabularx}{\\textwidth}{@{}l>{\\raggedright\\arraybackslash}Xlccccl@{}}\n\\toprule\n"
-        "ID & Karşılaştırma (A$-$B) & Test & $\\Delta$ & \\%95 GA & A/E/B & $p$ & Karar \\\\\n\\midrule\n"
+        "ID & Karşılaştırma (A$-$B) & Test & $\\Delta$ & \\%95 GA & Ö/E/G & $p$ & Karar \\\\\n\\midrule\n"
         + "\n".join(rows) + "\n\\bottomrule\n\\end{tabularx}\n\\end{table}\n")
     write_tab("v3_confirm.tex", body)
 
@@ -480,16 +480,16 @@ def tab_strategies(res):
     body = (
         "\\begin{table}[!htbp]\n\\centering\\small\\setlength{\\tabcolsep}{3pt}\n"
         "\\caption{Holdout2'de sekiz strateji, katman bazında: ortalama gap ve rastgeleye eşlenik fark $\\Delta$. "
-        "Renk: gap sütununda katmanın en iyi/en kötüsü, $\\Delta$'da katman içi Holm düzeltmeli $p<0{,}05$; $p$ sütunu düzeltmesizdir.}\n"
+        "Renk: gap sütununda katmanın en iyi/en kötüsü, $\\Delta$'da katman içi Holm düzeltmeli $p<0{,}05$; $p$ sütunu düzeltmesizdir. Ö/E/G: stratejinin rastgeleden önde, eşit ve geride olduğu problem sayısı.}\n"
         "\\label{tab:v3-strategies}\n"
         "\\begin{tabular*}{\\textwidth}{@{\\extracolsep{\\fill}}lccccc@{}}\n\\toprule\n"
-        "Strateji & Gap [\\%] & $\\Delta$ [puan] & \\%95 GA & K/B/K & $p$ \\\\\n\\midrule\n"
+        "Strateji & Gap [\\%] & $\\Delta$ [puan] & \\%95 GA & Ö/E/G & $p$ \\\\\n\\midrule\n"
         + "\n".join(rows[:-1]) + "\n\\bottomrule\n\\end{tabular*}\n\\end{table}\n")
     write_tab("v3_strategies.tex", body)
 
 
 def tab_mechanism(mv, ds, strat_res):
-    cols = [("kicks_per_s", None, lambda v: f"{v:.0f}"), ("accept_rate", None, lambda v: tr(100 * v, 2)),
+    cols = [("kicks_per_s", None, lambda v: f"{v:,.0f}".replace(",", ".")), ("accept_rate", None, lambda v: tr(100 * v, 2)),
             ("model_share", "dusuk", lambda v: tr(100 * v, 2)), ("stale_share", "dusuk", lambda v: tr(100 * v, 2))]
     cells = {s: {} for s in S8}
     for m, yon, fmt in cols:
@@ -638,7 +638,7 @@ def tab_development(D):
         "5 tohum, 10~sn. Alt: havuz kuralı ızgarası; renk: seçilen / en kötü hücre.}\n"
         "\\label{tab:v3-development}\n"
         "\\begin{tabularx}{\\textwidth}{@{}>{\\raggedright\\arraybackslash}Xlcccc@{}}\n\\toprule\n"
-        "Karşılaştırma (A$-$B) & Set (n) & $\\Delta$ [puan] & \\%95 GA & A/E/B & $p$ \\\\\n\\midrule\n"
+        "Karşılaştırma (A$-$B) & Set (n) & $\\Delta$ [puan] & \\%95 GA & Ö/E/G & $p$ \\\\\n\\midrule\n"
         + "\n".join(rows) + "\n\\bottomrule\n\\end{tabularx}\n\\end{table}\n")
     write_tab("v3_development.tex", body)
     # figur verisi: her sinyal icin frac x prob

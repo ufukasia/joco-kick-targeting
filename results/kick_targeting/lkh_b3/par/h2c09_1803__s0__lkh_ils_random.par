@@ -1,0 +1,9 @@
+PROBLEM_FILE = /work/data_holdout2/h2c09_1803.tsp
+CANDIDATE_FILE = /work/results/kick_targeting/lkh_b3/cand/h2c09_1803.cand
+PI_FILE = /work/results/kick_targeting/lkh_b3/cand/h2c09_1803.pi
+RUNS = 1
+TRACE_LEVEL = 1
+SEED = 1
+TIME_LIMIT = 10
+KICK_TYPE = 4
+KICKS = 1

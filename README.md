@@ -63,7 +63,7 @@ A follow-up arm (exploratory, run after the confirmatory test) targets the longe
 local-scale correction. It reaches the same level as the excess proxy. This suggests the signal is the
 edge length itself. Absence of a difference is not proof of equivalence: the 95% CI is [−0.03, +0.05].
 
-## 4. Why online learning hurts
+## 4. Why online learning hurts, and how to fix it
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/online_dark.svg">
@@ -75,6 +75,9 @@ search, so the cheapest way to raise the reward is to cut short edges that local
 once. The learner does exactly that: its weights reverse relative to the prior, with cosine −0.62.
 The design lesson is that a reward for sparse-improvement search should be tied to *accepted
 improvements*, and that a learner's own reward must be monitored together with final quality.
+A registered follow-up (section 6) tested exactly this on the held-out set. With credit `max(0, r)` or
+`1[accepted]` the harm disappears on 54 of 54 instances, and the learner matches the static prior; it
+does not beat it.
 
 ## 5. Robustness checks, registered before running
 
@@ -93,7 +96,28 @@ OpenTimestamps) *before* they were run. They are exploratory and cannot change V
   <img alt="Exploratory 60 s session: the proxy's advantage over random shrinks from −0.24 points at 10 s to −0.07 at 60 s, and over the GNN from −0.15 to −0.08; all confidence intervals stay below zero." src="docs/budget_light.svg" width="100%">
 </picture>
 
-## 6. How the evidence was protected
+## 6. Reviewer-driven checks: a published model, equal kicks, LKH-3
+
+Five more sessions were frozen in `PROTOCOL_v4_exploratory.json` (SHA-256 + OpenTimestamps) before they
+were run. The competitors are the authors' own code: NeuroLKH (official repository and pretrained model,
+unchanged) and LKH-3.0.13 with a one-file kick patch (see `third_party/README.md`). Gain-MLP and NeuroLKH
+were tuned on the same development grid with the same selection rule as the proxy. All results are
+exploratory and cannot change V1–V4.
+
+| Question | Result (54 held-out instances; negative = first term better) |
+|---|---|
+| Does the proxy keep up with a **published learned model** (NeuroLKH)? | GPU time charged to the 10 s budget: proxy −0.098, not significant (p_Holm = 0.58). Not charged: means equal (+0.009), but NeuroLKH is ahead on 37/54 instances (median 0.066 points, p_Holm = 0.034). |
+| Is the proxy's lead a **cost effect**? (20 000 kicks each, model time not counted) | Yes. Every signal beats random by 0.22–0.30 points; the proxy ties the GNN (−0.004), gain-MLP and NeuroLKH are slightly ahead (not significant), and the untrained kNN rank is best per kick (+0.088 vs proxy, p_Holm = 0.011). |
+| Does tuning the gain-MLP change V4? | No: tuned vs default −0.013; proxy vs tuned −0.070 (p_Holm = 0.026). |
+| Is the online learner's harm caused by its **credit**? | Yes: `max(0, r)` and `1[accepted]` remove it (−0.39 and −0.34 vs signed reward, 54/54). |
+| Does the result depend on **arm order or parallel workers**? | One worker, random order: proxy still below random (−0.093, CI below zero; 2 seeds, not significant after Holm). The first arm in a batch kicks about 18% slower; the confirmatory run rotated the order across seeds. |
+| Does targeting help inside **LKH-3**? | No: targeted vs random kick +0.001 (30/54, p_Holm = 0.59). The findings hold for fast 2-opt/Or-opt ILS, not for LK-level search. |
+
+The first LKH run had an execution defect (CRLF line ends in the task list kept the targeted arm from
+starting). All three arms were re-run with the registered files unchanged; the defect and the fix are in
+`PROTOCOL_DEVIATIONS.log`.
+
+## 7. How the evidence was protected
 
 1. **Development:** all choices (signals, pool rule `frac`/`prob`, margin) were made on development
    sets only (`results/kick_targeting/dev_*`).
@@ -109,6 +133,7 @@ OpenTimestamps) *before* they were run. They are exploratory and cannot change V
 5. **Exploratory work** (the raw-length arm, mechanism analyses, Hodges–Lehmann estimates) is logged as
    such and never changes the confirmatory decisions. The robustness block of section 5 has its own frozen
    protocol (`PROTOCOL_v3_exploratory.json`, `.sha256`, `.ots`); its interruption and restart are logged too.
+   The same holds for the reviewer-driven block of section 6 (`PROTOCOL_v4_exploratory.json`).
 
 ```bash
 cd results/kick_targeting
@@ -118,7 +143,7 @@ pip install opentimestamps-client && ots verify PROTOCOL_v2.json.ots
 
 Git stores every file byte-for-byte (`.gitattributes`), so the registered hashes hold in a fresh clone.
 
-## 7. Reproduce
+## 8. Reproduce
 
 ```bash
 python -m pip install -r requirements.txt               # Python 3.13, numpy, scipy, numba
@@ -130,14 +155,16 @@ python readme_figures.py                                # the figures above (wri
 
 To re-run the experiments (about 4.5 h on 4 cores), use `results/kick_targeting/run_v2_holdout2.ps1`
 and `results/kick_targeting/run_v3_length.ps1`; the robustness block (about 7.5 h) is
-`results/kick_targeting/run_v4_robustness.ps1`, analysed by `results/kick_targeting/analysis_v4_robustness.py`. The budget is wall-clock time, so other hardware gives
-close but not identical gaps.
+`results/kick_targeting/run_v4_robustness.ps1`, analysed by `results/kick_targeting/analysis_v4_robustness.py`.
+The reviewer-driven block (about 15 h on 4 cores, Docker for LKH-3) is `results/kick_targeting/run_v5.ps1`, analysed by
+`results/kick_targeting/analysis_v5.py`; NeuroLKH scores can be reused from `results/kick_targeting/neurolkh_scores/`
+without a GPU. The budget is wall-clock time, so other hardware gives close but not identical gaps.
 
 To rebuild the paper's numbers, tables and PDF, run
-`python makale_workspace/gnn-crine-ils-joco/evidence/scripts/build_v3.py`, then
+`python makale_workspace/gnn-crine-ils-joco/evidence/scripts/build_v3.py` (and `build_v4.py`, `build_v5.py`), then
 `xelatex main && bibtex main && xelatex main && xelatex main` in `makale_workspace/gnn-crine-ils-joco/paper/`.
-Every number in the text carries a `% E…` comment pointing to a record in `evidence/evidence.json`,
-which names its source file and field.
+Every paragraph carries a `% kaynak: E…` comment listing the records in `evidence/evidence.json` behind its
+numbers; each record names its source file and field.
 
 ## Repository layout
 
@@ -148,6 +175,8 @@ which names its source file and field.
 | `v3_extra_experiment.py`, `results/kick_targeting/analysis_length_arm.py` | raw-length arm |
 | `v4_robustness_experiment.py`, `results/kick_targeting/analysis_v4_robustness.py` | robustness block (segment kick, 60 s, pool rule) |
 | `online_targeting.py`, `analysis_online_*.py`, `test_online_reward.py` | online learner and its mechanism |
+| `v5_experiment.py`, `online_credit.py`, `results/kick_targeting/analysis_v5.py` | reviewer-driven block (equal kicks, credit variants, NeuroLKH arm) |
+| `neurolkh_prep.py`, `neurolkh_infer.py`, `lkh_b3_experiment.py`, `third_party/` | NeuroLKH input/inference, LKH-3 driver and kick patch |
 | `gnn_trained.py`, `cheap_scorer.py`, `models/`, `gnn_train_torch.py` | trained scorers and training code |
 | `kick_targeting_experiment.py` | Stage 2 (PROTOCOL v1, 38 VLSI instances) |
 | `holdout2_suite.py`, `data_holdout2/` | the 54-instance confirmatory set |
@@ -160,9 +189,10 @@ which names its source file and field.
 ## Scope and limits
 
 Confirmatory results hold for this engine (2-opt + Or-opt), a 10 s budget and n up to about 10k; the
-exploratory block extends the budget to 60 s and adds the segment kick (window W = 50). The GNN is a single
-small model trained on n ≤ 400. LK/LKH-level local search, longer budgets and larger published models
-are the natural next tests.
+exploratory blocks extend the budget to 60 s, add the segment kick (window W = 50), a published learned
+model (NeuroLKH) and LKH-3. Inside LKH-3 targeting had no measurable effect, so the findings are specific to
+fast ILS with a comparatively weak local search. Budgets of minutes and a confirmatory test of proxy vs
+kNN rank vs NeuroLKH are the natural next steps.
 
 ## License and citation
 

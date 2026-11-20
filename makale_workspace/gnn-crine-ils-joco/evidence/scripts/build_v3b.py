@@ -109,7 +109,7 @@ def tab_reward(C, R):
             row("Havuz kenar uzunluğu / medyan", "pool_len_ratio_mean", 1, 2),
             "\\midrule",
             row("Son gap [\\%]", "gap_pct", 1, 3),
-            f"Vuruş / koşu & {kk['onlinewarm']:.0f} & {kk['linprior']:.0f} & -- & -- \\\\",
+            f"Vuruş / koşu & {kk['onlinewarm']:,.0f} & {kk['linprior']:,.0f} & -- & -- \\\\".replace(",", "."),
             f"Kabul / koşu & {tr(ac['onlinewarm'], 1)} & {tr(ac['linprior'], 1)} & -- & -- \\\\"]
     body = (
         "\\begin{table}[!htbp]\n\\centering\\small\\setlength{\\tabcolsep}{3pt}\n"

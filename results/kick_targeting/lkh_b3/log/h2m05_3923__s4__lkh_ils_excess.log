@@ -1,0 +1,96 @@
+PARAMETER_FILE = /work/results/kick_targeting/lkh_b3/par/h2m05_3923__s4__lkh_ils_excess.par
+Reading PROBLEM_FILE: "/work/data_holdout2/h2m05_3923.tsp" ... done
+ASCENT_CANDIDATES = 50
+BACKBONE_TRIALS = 0
+BACKTRACKING = NO
+# BWTSP =
+CANDIDATE_FILE = /work/results/kick_targeting/lkh_b3/cand/h2m05_3923.cand
+CANDIDATE_SET_TYPE = ALPHA
+# DISTANCE =
+# DEPOT =
+# EDGE_FILE =
+EXCESS = 0.000254907
+EXTERNAL_SALESMEN = 0
+EXTRA_CANDIDATES = 0 
+EXTRA_CANDIDATE_SET_TYPE = QUADRANT
+GAIN23 = YES
+GAIN_CRITERION = YES
+INITIAL_PERIOD = 1961
+INITIAL_STEP_SIZE = 1
+INITIAL_TOUR_ALGORITHM = WALK
+# INITIAL_TOUR_FILE = 
+INITIAL_TOUR_FRACTION = 1.000
+# INPUT_TOUR_FILE = 
+K = 0
+KICK_TYPE = 4
+KICKS = 1
+# MAX_BREADTH =
+MAKESPAN = NO
+MAX_CANDIDATES = 5 
+MAX_SWAPS = 3923
+MAX_TRIALS = 3923
+# MERGE_TOUR_FILE =
+MOVE_TYPE = 5 
+# MTSP_MIN_SIZE =
+# MTSP_MAX_SIZE =
+# MTSP_OBJECTIVE =
+# MTSP_SOLUTION_FILE = 
+# NONSEQUENTIAL_MOVE_TYPE = 5
+# OPTIMUM =
+# OUTPUT_TOUR_FILE = 
+PATCHING_A = 1 
+PATCHING_C = 0 
+PI_FILE = /work/results/kick_targeting/lkh_b3/cand/h2m05_3923.pi
+POPMUSIC_INITIAL_TOUR = NO
+POPMUSIC_MAX_NEIGHBORS = 5
+POPMUSIC_SAMPLE_SIZE = 10
+POPMUSIC_SOLUTIONS = 50
+POPMUSIC_TRIALS = 1
+# POPULATION_SIZE = 0
+PRECISION = 100
+# PROBABILITY =
+PROBLEM_FILE = /work/data_holdout2/h2m05_3923.tsp
+RECOMBINATION = IPT
+RESTRICTED_SEARCH = YES
+RUNS = 1
+SALESMEN = 1
+SCALE = 1
+SEED = 5
+# SINTEF_SOLUTION_FILE = 
+STOP_AT_OPTIMUM = YES
+SUBGRADIENT = YES
+# SUBPROBLEM_SIZE =
+# SUBPROBLEM_TOUR_FILE = 
+SUBSEQUENT_MOVE_TYPE = 5 
+SUBSEQUENT_PATCHING = YES
+TIME_LIMIT = 10.0
+# TOTAL_TIME_LIMIT =
+# TOUR_FILE = 
+TRACE_LEVEL = 1
+VEHICLES = 1
+
+Reading PI_FILE: "/work/results/kick_targeting/lkh_b3/cand/h2m05_3923.pi" ... done
+Reading CANDIDATE_FILE: "/work/results/kick_targeting/lkh_b3/cand/h2m05_3923.cand" ... done
+Cand.min = 3, Cand.avg = 5.0, Cand.max = 5
+Preprocessing time = 0.11 sec.
+* 1: Cost = 40461703, Time = 1.66 sec.
+* 27: Cost = 40461222, Time = 2.06 sec.
+* 66: Cost = 40460232, Time = 2.82 sec.
+* 70: Cost = 40459714, Time = 2.95 sec.
+* 88: Cost = 40457695, Time = 3.65 sec.
+* 417: Cost = 40456490, Time = 5.46 sec.
+* 474: Cost = 40454321, Time = 6.17 sec.
+* 615: Cost = 40453008, Time = 7.73 sec.
+* 633: Cost = 40449357, Time = 8.05 sec.
+* 680: Cost = 40447695, Time = 8.41 sec.
+* 775: Cost = 40446039, Time = 9.15 sec.
+*** Time limit exceeded ***
+Run 1: Cost = 40446039, Time = 10.01 sec.
+
+Successes/Runs = 0/1 
+Cost.min = 40446039, Cost.avg = 40446039.00, Cost.max = 40446039
+Gap.min = 0.0000%, Gap.avg = 0.0000%, Gap.max = 0.0000%
+Trials.min = 846, Trials.avg = 846.0, Trials.max = 846
+Time.min = 10.01 sec., Time.avg = 10.01 sec., Time.max = 10.01 sec.
+Time.total = 10.37 sec.
+

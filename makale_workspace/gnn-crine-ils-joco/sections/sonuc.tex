@@ -7,24 +7,33 @@ düzeltilmiş) yönlendirmek, bu motor ve 10~sn bütçede rastgele vuruştan gel
 setlerinde tutarlı biçimde iyidir; sınanan öğrenilmiş skorlar karşısında bunun için model eğitmek
 gerekmedi. Bu eğitimsiz vekil, LKH-3 turlarıyla eğitilmiş GNN'ye ve kazanç hedefli MLP'ye karşı
 kötü-değil testlerini geçti, doğrulama setinde ortalama gap'i \%1,094'ten \%0,922'ye indirdi ve
-keşifsel karşılaştırmalarda öğrenilmiş skorların önünde kaldı. % E608, E610
-Bu sonuç üç özellikle tutarlıdır: kazanca hizalı hedef, ihmal edilebilir hesap maliyeti ve her an
-güncel havuz; bunların payları ayrıştırılmadı. Keşifsel bir kolda yerel ölçek düzeltmesi olmadan en
+keşifsel karşılaştırmalarda öğrenilmiş skorların önünde kaldı.
+Bu başarım üç tamamlayıcı özellikle tutarlıdır: kazanca hizalı hedefleme, ihmal edilebilir
+hesaplama maliyeti ve sürekli güncel havuz yapısı. Keşifsel bir kolda yerel ölçek düzeltmesi olmadan en
 uzun kenarları hedeflemek de rastgeleye karşı benzer bir kazanç sağladı ve vekilden ortalamada
 ayrışmadı ($+0{,}009$ puan); bu, yararın bu motorda doğrudan kenar uzunluğu bilgisinden geldiğini
 düşündürür ve en basit vekile karşı sınama ilkesinin kendi önerimize de yararla uygulanabildiğini
-gösterir. % E965, E972
+gösterir.
 Koşulardan önce kaydedilen keşifsel bloklar bu tabloyu genişletir: hedefli global vuruş, klasik
 rastgele segment vuruşundan 1,04 puan iyidir; vekilin rastgeleye ve GNN'ye karşı avantajı 60~sn'de
-daralarak sürer; geliştirmede seçilen havuz kuralının çevresindeki plato holdout2'de de görülür. % E1047, E1077, E1078, E1091
+daralarak sürer; geliştirmede seçilen havuz kuralının çevresindeki plato holdout2'de de görülür.
+Hakem odaklı bloklar tabloyu netleştirir. Yayımlanmış NeuroLKH modeli, süresi bütçeden düşüldüğünde
+vekilden ayrışmaz; süresi sayılmadığında problemlerin çoğunda küçük bir farkla öndedir. Vuruş sayısı
+eşitlendiğinde öğrenilmiş skorlar vekilden kötü değildir ve vuruş başına en iyi sinyal eğitimsiz kNN
+sırasıdır. Yani eşit süredeki sıralamayı sinyalin niteliğinden çok maliyeti belirler; vuruş başına en iyi
+sinyal de, model süresi sayıldığında eşit sürede en düşük ortalama gap'i veren sinyal de eğitimsizdir. LKH-3'te ise hedefleme ölçülebilir bir kazanç getirmedi; bulgular hızlı,
+2-opt/Or-opt tabanlı ILS için geçerlidir.
+% kaynak: E608, E610, E965, E972, E1047, E1077, E1078, E1091, E1106, E1107, E1128-E1131, E1172
 
-Koşu içi çevrimiçi öğrenme ise kendi ödülünü artırırken son kaliteyi düşürdü: vuruş başına ortalama
-ödül, yerel aramanın onardığı nötr vuruşları ödüllendirir. Seyrek iyileşmeli aramalarda ödül tasarımı
-bu nedenle öncelikli bir sorudur. Yöntemsel ders de aynı yöndedir: öğrenilmiş bir arama bileşeni
+Koşu içi çevrimiçi öğrenme ise işaretli ödülle kendi ödülünü artırırken son kaliteyi düşürdü: vuruş
+başına ortalama ödül, yerel aramanın onardığı nötr vuruşları ödüllendirir. Kredi kabul edilen
+iyileşmelere dayandırıldığında bu zarar kayboldu, ama sabit modele bir kazanç da eklenmedi. Seyrek
+iyileşmeli aramalarda kredi tasarımı bu nedenle öncelikli bir sorudur.
+% kaynak: E1150-E1152 Yöntemsel ders de aynı yöndedir: öğrenilmiş bir arama bileşeni
 rastgele tabana değil, en basit kazanca hizalı eğitimsiz vekile karşı ve eşit duvar-saatinde
 değerlendirilmelidir.
 
-Sonraki adımlar, karşılaştırmanın LK/LKH düzeyindeki yerel aramalarda, dakikalar mertebesini aşan
-bütçelerde ve daha büyük, yayımlanmış öğrenilmiş modellerle tekrarı; ham ve ölçekle düzeltilmiş uzunluğun ön-kayıtlı bir
-eşdeğerlik testiyle karşılaştırılması ve seyrek iyileşmelere göre tasarlanmış ödüllerle çevrimiçi
-hedeflemenin yeniden sınanmasıdır.
+Sonraki adımlar, karşılaştırmanın dakikalar mertebesini aşan bütçelerde tekrarı; vekil, kNN sırası
+ve NeuroLKH arasındaki farkların ön-kayıtlı bir doğrulayıcı testle sınanması; ham ve ölçekle
+düzeltilmiş uzunluğun ön-kayıtlı bir eşdeğerlik testiyle karşılaştırılması ve LK düzeyindeki
+aramalarda hedeflemenin neden etkisiz kaldığının incelenmesidir.

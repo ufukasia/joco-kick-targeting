@@ -1,0 +1,125 @@
+{
+ "title": "PROTOCOL_v4_exploratory -- reviewer-driven blocks B1-B6 (exploratory, post-confirmation)",
+ "written": "2026-11-19 16:44:20 +0300",
+ "status": "Exploratory.  Registered before any run of these sessions.  The confirmatory decisions (PROTOCOL_v2, V1-V4) are not changed by anything in this block.",
+ "known_before_registration": [
+  "holdout2 results of random / excess / GNN / gain-MLP / online arms from the PROTOCOL_v2 and PROTOCOL_v3_exploratory sessions (published in the paper)",
+  "No NeuroLKH arm, no tuned gain-MLP rule, no equal-kick session, no credit variant and no LKH run has been executed on holdout2.  The NeuroLKH forward pass was computed for all instances (inputs only, no search outcome).  The LKH patch equivalence test and the driver smoke tests used the development instance dka1376 only."
+ ],
+ "competitor_code": {
+  "NeuroLKH": {
+   "repo": "https://github.com/liangxinedu/NeuroLKH",
+   "commit": "32ab884c2fe6548ca4011eeb181af70fbfedc72b",
+   "model": "pretrained/neurolkh_m.pt (authors' model for TSPLIB: uniform+clustered+mixed training)",
+   "use": "SGN edge probabilities as the kick-targeting signal inside the same fast ILS; input graph built exactly as in the authors' tsplib_test.py (neurolkh_prep.py selftest: identical to their dense code); forward pass on GPU (GTX 1050), median of 3 timed passes; tour edge score = max(p(u->v), p(v->u)), 0 if neither is a 20-NN edge",
+   "cost": "neurolkh: forward time deducted from the 10 s budget; neurolkhfree: not deducted (treated like the per-instance neighbour lists of every signal)"
+  },
+  "LKH-3": {
+   "version": "3.0.13",
+   "sources": [
+    "https://github.com/HuaYuXiao/LKH-3 (used)",
+    "https://github.com/Seth9976/LKH-3.0.13 (cross-check)"
+   ],
+   "note": "official site unreachable from this machine; kick-related files byte-identical in both copies; built with gcc 12.2 (Debian bookworm) in Docker; patch = SRC/KSwapKick.c only, inactive without LKH_KICK_DREF; patched binary without the variable reproduced the official binary exactly on dka1376 (300 trials, KICK_TYPE 4)"
+  }
+ },
+ "sessions": {
+  "G (B4 tuning)": "v5_experiment.py --mode time --budget 10 --seeds 3 --workers 4 on vlsi_primary (dev5_grid_vlsi_primary_10s) and synth_1000 (dev5_grid_synth1000_10s); arms {gain, neurolkh}_global@f:p, f in {0.02,0.04,0.06,0.10}, p in {0.5,0.75,0.9}",
+  "selection": "select_v5_rules.py: same rule as PROTOCOL_v2 development -- minimise the equal-weight mean over both sets of the per-instance mean gap; keep 0.06/0.75 if within 0.01 pt of the best",
+  "S2 (B2+B4)": "holdout2_v5_equal_10s: equal time 10 s, 10 seeds, 4 workers, random arm order; random, excess@0.06:0.5, gnn@0.04:0.5, gain (default), gain@selected (if different), neurolkh@selected, neurolkhfree@selected",
+  "S3 (B5)": "holdout2_v5_credit_10s: equal time 10 s, 10 seeds; random, linprior, onlinewarm (signed reward), onlinepos (max(0,r)), onlinesucc (1[accepted]); warm start w0 for all online arms",
+  "S1 (B1)": "holdout2_v5_kicks20k: exactly 20 000 kicks per arm, pool refreshed after every accepted kick, model time not charged, 5 seeds; random, excess@0.06:0.5, knn@0.04:0.75, gnn@0.04:0.5, gain@selected, neurolkh@selected",
+  "S4 (B6)": "holdout2_v5_single_10s: 1 worker, seeds 0-1, random arm order; random, excess@0.06:0.5, gnn@0.04:0.5.  Random arm order is also used in S1-S3 (crc32 of 'instance|seed')",
+  "S5 (B3)": "holdout2_lkh_10s: LKH-3, TIME_LIMIT 10 s search time, RUNS 1, 5 seeds, cached candidates/pi, 4 parallel processes in one container, shuffled task order; lkh_default, lkh_ils_random (KICK_TYPE 4, KICKS 1), lkh_ils_excess (patched, f 0.06, p 0.5)"
+ },
+ "runner": "results/kick_targeting/run_v5.ps1 (steps logged to v5.done)",
+ "analysis": {
+  "command": "py -3.13 results/kick_targeting/analysis_v5.py  (run once, after all sessions)",
+  "unit": "instance (gap averaged over seeds); paired difference, bootstrap 95% CI (10 000, seed 0), two-sided Wilcoxon, Hodges-Lehmann, Holm within family",
+  "families": {
+   "S2": [
+    "excess-neurolkh",
+    "excess-neurolkhfree",
+    "neurolkh-random",
+    "neurolkhfree-random",
+    "excess-gain@sel",
+    "gain@sel-gain(default)",
+    "excess-gnn",
+    "excess-random"
+   ],
+   "S1": [
+    "excess-gnn",
+    "excess-gain@sel",
+    "excess-neurolkh",
+    "excess-knn",
+    "gnn-random",
+    "gain@sel-random",
+    "neurolkh-random",
+    "excess-random"
+   ],
+   "S3": [
+    "onlinepos-linprior",
+    "onlinesucc-linprior",
+    "onlinewarm-linprior",
+    "onlinepos-onlinewarm",
+    "onlinesucc-onlinewarm",
+    "linprior-random"
+   ],
+   "S4": [
+    "excess-random",
+    "excess-gnn"
+   ],
+   "S5": [
+    "lkh_ils_excess-lkh_ils_random (primary)",
+    "lkh_ils_random-lkh_default",
+    "lkh_ils_excess-lkh_default"
+   ]
+  },
+  "descriptive": "kick rates, acceptance, model share, elapsed time per arm; S2 kick rate by execution position",
+  "non_inferiority": "read from the bootstrap CI upper bound against +0.05 pt where stated"
+ },
+ "expectations_not_tests": [
+  "B1: if the proxy keeps its lead over GNN / gain-MLP / NeuroLKH at equal kick counts, the lead is not only a cost effect; if it vanishes, cost explains it",
+  "B3: a stronger local search may repair long edges itself and shrink the effect of targeting"
+ ],
+ "code_and_data_sha256": {
+  "fast_ils.py": "cf90c1e5013c22b13c0c410228700f846a7e3878d6fafb143b347e3a4377f039",
+  "v2_targeting_experiment.py": "b6f25ada54993e737a96f41d8a2e39b380efa2f64b837a7fd3b2deb17a80b72e",
+  "online_targeting.py": "950aaf714c95ed80127b671b30b89f5e2f7e7551a864bc87f9ddcc54eadf0612",
+  "cheap_scorer.py": "2ed0b18e3bf16db2c9540032b0f50dc1f3644ca71f5d0cc61c534d801be1b739",
+  "kick_targeting_experiment.py": "c9e6fc871f61537b03290691e4444cb4eb6140131ec20b9f24fbc4b21f38d7be",
+  "holdout2_suite.py": "c81ac57a23877c4ba7eef98ff4c341bb7f1201a24366fedbbe1c9a47fec3c6e9",
+  "v2_analysis.py": "da10728f0cc38add92720bae41ae40e467f78f3e7006690d109d43d3b7f152aa",
+  "v5_experiment.py": "ac277aa68e72be41e9dae6c50b24622e76e6dd9ae1eb9a7511a2aa0e0ded557d",
+  "online_credit.py": "4a217f643b2cafbeda1bc010119bf805a33f012d91a0d91d36d5dcddd625220f",
+  "neurolkh_prep.py": "29339c228ac73ad4fc29ee766ad163707a38c1bce5dc0f980806f8627199a66d",
+  "neurolkh_infer.py": "345cda50344c483183d0a8426c09e3a08caaf33fdaec7c65bd78188199d7e865",
+  "lkh_b3_experiment.py": "e250e230b1fb7eb49722a48d5e6cb39e122a98abb92a6a0b08b21c26ec4f1d30",
+  "results/kick_targeting/select_v5_rules.py": "000f4553142987fb0e212fbe98807358439eea09ba9409d3d547416c75fd7c5d",
+  "results/kick_targeting/analysis_v5.py": "dd8535edbde02d703f43d7dab5a7a37d85da2bf6ea17643f0f8d4a3b3d498c14",
+  "results/kick_targeting/analysis_v4_robustness.py": "9f8cb2173cb0965ab803655a19c0c3d96380e257c0660e70769fa7d571ddd107",
+  "results/kick_targeting/run_v5.ps1": "5ab24beb96ed7c37464a814beb7ab376909987340accd6cefe178e53e229713d",
+  "models/gnn_trained.npz": "2a164b7bcfcadceee2a4a70956eae4bce8ef0cf7f9d9cef1ab43d34f13908e64",
+  "models/cheap_scorer.npz": "223b6ad80e50b6b538f12058f07d574bfdbc45de2856fb32e6237c84610538cd",
+  "models/cheap_gain_scorer.npz": "53515e32762db4a58b16de74b9ed8279d341903da546f2d3c4ec09bee6144270",
+  "models/online_prior.npz": "66734291aa6662d924c7041890786e00b628267fb72a0dadfa252847bb6963af",
+  "data_holdout2/catalog.json": "346d97462caf67e26ecdcdf68292f675a49d89cf2ad6d80c1ee874dce8d20157",
+  "third_party/NeuroLKH/pretrained/neurolkh_m.pt": "223bbb272e797cbe302cddccc58a165b90d57c4aa2c3cb0f182c34706757caf9",
+  "third_party/NeuroLKH/net/sgcn_model.py": "6c60adbd6b54c87a1ccb1c2ef1388a2fe3cb2f4393b4524e2bae83c7044c0ce3",
+  "third_party/NeuroLKH/net/sgcn_layers.py": "f4db94860d743da32e8f81c29cde3463ea813fa70b9744a90f59c316f3cf09a1",
+  "third_party/LKH3_official/SRC/KSwapKick.c": "398e629f4c900d023436a036e2b8aa42dc8baba83f8611b3662e1fda783d9c40",
+  "third_party/LKH3_targeted/SRC/KSwapKick.c": "a1e74c46b9466ae5594652912e76453e170c3426cf95288993b46a2cf4670a5a",
+  "third_party/LKH3_official/LKH": "5c3d891ca57cf7ef6601012f5933411db9e5d7e8ad9bb80040161a2f923130dd",
+  "third_party/LKH3_targeted/LKH": "34968a30ce9d5bcd0ec34a812a542b601b7a3b617ba45eec91a5248822d33c0b",
+  "results/kick_targeting/lkh_b3/tasks.txt": "2e2cc24b4426cb18908ba9161e891a446fb37ba98e53a987ea5cb76d78e10b0a",
+  "results/kick_targeting/lkh_b3/cand_tasks.txt": "2aa06065f543295bc93f020256b29bb80fb1c142df777e935e0a0ae07e117e0e",
+  "results/kick_targeting/lkh_b3/run_task.sh": "9aa836662ee0318c03c77c59584c457d0ef7353e28895f080bf4dc1b69e4d10d",
+  "results/kick_targeting/lkh_b3/run_all.sh": "8d7d240ef57d4b2a2961f0d8adf4e6cb224f55957c7e0de1b6c5e6ad8e55d3f8"
+ },
+ "aggregate_sha256": {
+  "neurolkh_scores/*.neurolkh_m.npz": "aca29645bf6f01c7e48aedc4678cd8a9f40418aef49f1b89b509b32589ff19c4",
+  "neurolkh_scores/*.graph.npz": "c00ebc21c787de0ae6ad7e6bffb5a8cdf0e13b59c0c21b0f5e42a9d5677d9e75",
+  "lkh_b3/par/*.par": "9c4db0c0b8ab834e2ea7eaaf5cc0bd5440cf8eb6242902a9fe6cf252a48be4c2",
+  "lkh_b3/dref/*.txt": "dc80d0ba228941fb2af1c21e038bb33b3f7e338825edd033db55127624d1e505"
+ }
+}

@@ -1,0 +1,7 @@
+PROBLEM_FILE = /work/data_holdout2/h2u04_3539.tsp
+CANDIDATE_FILE = /work/results/kick_targeting/lkh_b3/cand/h2u04_3539.cand
+PI_FILE = /work/results/kick_targeting/lkh_b3/cand/h2u04_3539.pi
+RUNS = 1
+TRACE_LEVEL = 1
+SEED = 5
+TIME_LIMIT = 10

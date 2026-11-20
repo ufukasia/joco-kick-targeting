@@ -1,0 +1,9 @@
+PROBLEM_FILE = /work/data_holdout2/bgf4475.tsp
+CANDIDATE_FILE = /work/results/kick_targeting/lkh_b3/cand/bgf4475.cand
+PI_FILE = /work/results/kick_targeting/lkh_b3/cand/bgf4475.pi
+RUNS = 1
+TRACE_LEVEL = 1
+SEED = 1
+TIME_LIMIT = 10
+KICK_TYPE = 4
+KICKS = 1

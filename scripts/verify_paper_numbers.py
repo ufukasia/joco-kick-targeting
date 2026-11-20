@@ -51,7 +51,46 @@ CHECKS = [  # (evidence id, description, recomputation from raw per-run JSON fil
     ("E1078", "excess proxy - GNN at 60 s", lambda: A.paired("holdout2_60s", EXC, GNN)["mean"]),
     ("E1091", "pool rule f=0.03, p=1 - selected rule", lambda: A.paired("holdout2_rule_10s", "excess_global@0.03:1.0", EXC)["mean"]),
     ("E1038", "Spearman: clustering index vs (excess - random)", lambda: structure_rho()),
+    # sensitivity: V1-V4 without the three TSPLIB instances used in Phase 1 (51 instances)
+    ("E1100", "V1 without TSPLIB3", lambda: mean_without_tsplib(ON, LIN)),
+    ("E1101", "V2 without TSPLIB3", lambda: mean_without_tsplib(EXC, RND)),
+    ("E1102", "V3 without TSPLIB3", lambda: mean_without_tsplib(EXC, GNN)),
+    ("E1103", "V4 without TSPLIB3", lambda: mean_without_tsplib(EXC, GAIN)),
 ]
+TSPLIB3 = {"pcb3038", "fl3795", "fnl4461"}
+
+# reviewer-driven exploratory block (PROTOCOL_v4_exploratory.json); ids resolved from evidence/v5_ids.json
+V5_IDS = WS / "evidence" / "v5_ids.json"
+if V5_IDS.exists():
+    _ids = json.loads(V5_IDS.read_text(encoding="utf-8"))
+    _sel = json.loads((ROOT / "results/kick_targeting/v5_selected_rules.json").read_text(encoding="utf-8"))
+    _nl = "neurolkh_global@" + _sel["neurolkh"]["selected"]
+    _nlf = _nl.replace("neurolkh_", "neurolkhfree_")
+    _ga = GAIN if _sel["gain"]["selected"] == "0.06:0.75" else "gain_global@" + _sel["gain"]["selected"]
+    for _t, _a, _b, _d in [
+        ("holdout2_v5_equal_10s", EXC, _nl, "S2 excess - NeuroLKH (forward time charged)"),
+        ("holdout2_v5_equal_10s", EXC, _nlf, "S2 excess - NeuroLKH (not charged)"),
+        ("holdout2_v5_equal_10s", EXC, _ga, "S2 excess - tuned gain-MLP"),
+        ("holdout2_v5_equal_10s", EXC, RND, "S2 excess - random"),
+        ("holdout2_v5_kicks20k", EXC, _nl, "S1 excess - NeuroLKH (20 000 kicks)"),
+        ("holdout2_v5_kicks20k", EXC, GNN, "S1 excess - GNN (20 000 kicks)"),
+        ("holdout2_v5_kicks20k", EXC, RND, "S1 excess - random (20 000 kicks)"),
+        ("holdout2_v5_credit_10s", "onlinepos_global", LIN, "S3 online max(0,r) - static prior"),
+        ("holdout2_v5_credit_10s", "onlinesucc_global", LIN, "S3 online 1[accepted] - static prior"),
+        ("holdout2_v5_single_10s", EXC, RND, "S4 excess - random (one worker)"),
+        ("holdout2_lkh_10s", "lkh_ils_excess", "lkh_ils_random", "S5 LKH-3 targeted - random kick"),
+        ("holdout2_lkh_10s", "lkh_ils_random", "lkh_default", "S5 LKH-3 ILS random - default"),
+    ]:
+        _k = f"v5.{_t and {'holdout2_v5_equal_10s': 'S2', 'holdout2_v5_kicks20k': 'S1', 'holdout2_v5_credit_10s': 'S3', 'holdout2_v5_single_10s': 'S4', 'holdout2_lkh_10s': 'S5'}[_t]}.{_a}-{_b}"
+        if _k in _ids:
+            CHECKS.append((_ids[_k], _d, (lambda t=_t, a=_a, b=_b: A.paired(t, a, b)["mean"])))
+
+
+def mean_without_tsplib(a, b):
+    data, _ = A.per_instance("holdout2_10s")
+    d = [data[k][a] - data[k][b] for k in data if k not in TSPLIB3]
+    assert len(d) == 51
+    return float(np.mean(d))
 
 
 def structure_rho():

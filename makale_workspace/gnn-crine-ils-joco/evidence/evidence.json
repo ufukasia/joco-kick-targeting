@@ -26423,6 +26423,2839 @@
     "asama": 3,
     "not_": "kesifsel, protokol sonrasi (PROTOCOL_v3_exploratory.json)"
    }
+  },
+  {
+   "id": "E1100",
+   "metrik": "dogrulayici_fark_ortalama_51",
+   "yontem": "onlinewarm_global - linprior_global",
+   "veri_seti": "holdout2_10s, TSPLIB3 haric (51 problem; kesifsel duyarlilik)",
+   "deger": 0.29502402191008753,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/holdout2_10s_confirm_no_tsplib.json",
+   "kaynak_konum": "[id=V1].mean",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_sens_tsplib",
+    "anahtar": "sens.no_tsplib.V1",
+    "p": 5.145276051717656e-10,
+    "test": "superiority",
+    "rejected": true,
+    "n_inst": 51
+   }
+  },
+  {
+   "id": "E1101",
+   "metrik": "dogrulayici_fark_ortalama_51",
+   "yontem": "excess_global@0.06:0.5 - random_global",
+   "veri_seti": "holdout2_10s, TSPLIB3 haric (51 problem; kesifsel duyarlilik)",
+   "deger": -0.1656654263527807,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/holdout2_10s_confirm_no_tsplib.json",
+   "kaynak_konum": "[id=V2].mean",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_sens_tsplib",
+    "anahtar": "sens.no_tsplib.V2",
+    "p": 7.452277712828576e-07,
+    "test": "superiority",
+    "rejected": true,
+    "n_inst": 51
+   }
+  },
+  {
+   "id": "E1102",
+   "metrik": "dogrulayici_fark_ortalama_51",
+   "yontem": "excess_global@0.06:0.5 - gnn_global@0.04:0.5",
+   "veri_seti": "holdout2_10s, TSPLIB3 haric (51 problem; kesifsel duyarlilik)",
+   "deger": -0.11437135602502829,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/holdout2_10s_confirm_no_tsplib.json",
+   "kaynak_konum": "[id=V3].mean",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_sens_tsplib",
+    "anahtar": "sens.no_tsplib.V3",
+    "p": 2.715179044039287e-08,
+    "test": "noninferiority",
+    "rejected": true,
+    "n_inst": 51
+   }
+  },
+  {
+   "id": "E1103",
+   "metrik": "dogrulayici_fark_ortalama_51",
+   "yontem": "excess_global@0.06:0.5 - gain_global",
+   "veri_seti": "holdout2_10s, TSPLIB3 haric (51 problem; kesifsel duyarlilik)",
+   "deger": -0.08429102739929256,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/holdout2_10s_confirm_no_tsplib.json",
+   "kaynak_konum": "[id=V4].mean",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_sens_tsplib",
+    "anahtar": "sens.no_tsplib.V4",
+    "p": 5.462436669829666e-07,
+    "test": "noninferiority",
+    "rejected": true,
+    "n_inst": 51
+   }
+  },
+  {
+   "id": "E1104",
+   "metrik": "secilen_kural_ortalama_gap",
+   "yontem": "gain@0.04:0.5",
+   "veri_seti": "vlsi_primary + synth_1000",
+   "deger": 0.6027751628001412,
+   "birim": "%",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "selected_rules['gain']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.sel.gain",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "selected": "0.04:0.5",
+    "best": "0.04:0.5",
+    "default_gap": 0.6333044528199607
+   }
+  },
+  {
+   "id": "E1105",
+   "metrik": "secilen_kural_ortalama_gap",
+   "yontem": "neurolkh@0.10:0.75",
+   "veri_seti": "vlsi_primary + synth_1000",
+   "deger": 0.5915247178801621,
+   "birim": "%",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "selected_rules['neurolkh']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.sel.neurolkh",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "selected": "0.10:0.75",
+    "best": "0.10:0.75",
+    "default_gap": 0.6080848839310371
+   }
+  },
+  {
+   "id": "E1106",
+   "metrik": "fark_ortalama",
+   "yontem": "excess_global@0.06:0.5 - neurolkh_global@0.10:0.75",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn, esit sure)",
+   "deger": -0.09794615789930718,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S2_equal_time['contrasts'][0]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S2.excess_global@0.06:0.5-neurolkh_global@0.10:0.75",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 0.5669294454339099,
+    "p_holm": 0.5830777955931317,
+    "ci95": [
+     -0.2095117674947964,
+     -0.008299287607612909
+    ],
+    "hl": 0.012628687097708147,
+    "median": 0.03341361975986512,
+    "wins_first": 20,
+    "ties": 0,
+    "wins_second": 34,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": -1.422581571893715,
+      "wins_first": 3
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": -0.1623082568023682,
+      "wins_first": 11
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": 0.06164255719638415,
+      "wins_first": 1
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": 0.046414069844867664,
+      "wins_first": 1
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": -0.08453269162231929,
+      "wins_first": 1
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": -0.0013711532264755188,
+      "wins_first": 3
+     }
+    }
+   }
+  },
+  {
+   "id": "E1107",
+   "metrik": "fark_ortalama",
+   "yontem": "excess_global@0.06:0.5 - neurolkhfree_global@0.10:0.75",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn, esit sure)",
+   "deger": 0.008517150376048202,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S2_equal_time['contrasts'][1]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S2.excess_global@0.06:0.5-neurolkhfree_global@0.10:0.75",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 0.01122198784124478,
+    "p_holm": 0.03366596352373434,
+    "ci95": [
+     -0.06695844440806145,
+     0.06889747801726545
+    ],
+    "hl": 0.06006995821758088,
+    "median": 0.06622421472055562,
+    "wins_first": 17,
+    "ties": 0,
+    "wins_second": 37,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": -0.8374689081579674,
+      "wins_first": 3
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": 0.02896899845743383,
+      "wins_first": 6
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": 0.09200484832760948,
+      "wins_first": 1
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": 0.06465810114973973,
+      "wins_first": 3
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": 0.06264917289286383,
+      "wins_first": 1
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": 0.030923009169158522,
+      "wins_first": 3
+     }
+    }
+   }
+  },
+  {
+   "id": "E1108",
+   "metrik": "fark_ortalama",
+   "yontem": "neurolkh_global@0.10:0.75 - random_global",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn, esit sure)",
+   "deger": -0.05182247892307473,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S2_equal_time['contrasts'][2]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S2.neurolkh_global@0.10:0.75-random_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 0.00045036375620008005,
+    "p_holm": 0.0022518187810004003,
+    "ci95": [
+     -0.11711496058387875,
+     0.022270956258228652
+    ],
+    "hl": -0.07712729118027628,
+    "median": -0.07256877831807307,
+    "wins_first": 41,
+    "ties": 0,
+    "wins_second": 13,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": 0.7955696784093274,
+      "wins_first": 0
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": -0.15796690311795278,
+      "wins_first": 10
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": -0.08901998537407725,
+      "wins_first": 14
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": -0.07908832560004615,
+      "wins_first": 12
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": -0.05939523511655046,
+      "wins_first": 2
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": -0.07364736573921637,
+      "wins_first": 3
+     }
+    }
+   }
+  },
+  {
+   "id": "E1109",
+   "metrik": "fark_ortalama",
+   "yontem": "neurolkhfree_global@0.10:0.75 - random_global",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn, esit sure)",
+   "deger": -0.1582857871984301,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S2_equal_time['contrasts'][3]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S2.neurolkhfree_global@0.10:0.75-random_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 9.605661672326765e-08,
+    "p_holm": 7.684529337861412e-07,
+    "ci95": [
+     -0.2144791797899711,
+     -0.10683385105840396
+    ],
+    "hl": -0.13360540604468163,
+    "median": -0.13768729190473084,
+    "wins_first": 47,
+    "ties": 0,
+    "wins_second": 7,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": 0.21045701467357958,
+      "wins_first": 0
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": -0.3492441583777549,
+      "wins_first": 12
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": -0.11938227650530257,
+      "wins_first": 13
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": -0.09733235690491823,
+      "wins_first": 14
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": -0.20657709963173357,
+      "wins_first": 3
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": -0.10594152813485042,
+      "wins_first": 5
+     }
+    }
+   }
+  },
+  {
+   "id": "E1110",
+   "metrik": "fark_ortalama",
+   "yontem": "excess_global@0.06:0.5 - gain_global@0.04:0.5",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn, esit sure)",
+   "deger": -0.06958483836481681,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S2_equal_time['contrasts'][4]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S2.excess_global@0.06:0.5-gain_global@0.04:0.5",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 0.006427539559582266,
+    "p_holm": 0.025710158238329065,
+    "ci95": [
+     -0.12794143900002658,
+     -0.018043722708425535
+    ],
+    "hl": -0.038938050221974385,
+    "median": -0.03202055696076889,
+    "wins_first": 35,
+    "ties": 0,
+    "wins_second": 19,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": -0.6310521756581999,
+      "wins_first": 3
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": -0.09315044998538083,
+      "wins_first": 9
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": -0.011916926930339716,
+      "wins_first": 9
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": -0.038948770653108776,
+      "wins_first": 10
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": 0.025123093091886168,
+      "wins_first": 1
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": 0.012738673660407337,
+      "wins_first": 3
+     }
+    }
+   }
+  },
+  {
+   "id": "E1111",
+   "metrik": "fark_ortalama",
+   "yontem": "gain_global@0.04:0.5 - gain_global",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn, esit sure)",
+   "deger": -0.013120591404336699,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S2_equal_time['contrasts'][5]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S2.gain_global@0.04:0.5-gain_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 0.29153889779656583,
+    "p_holm": 0.5830777955931317,
+    "ci95": [
+     -0.05772556919119081,
+     0.03237536488112543
+    ],
+    "hl": -0.012573777931763508,
+    "median": -0.014920208299886106,
+    "wins_first": 31,
+    "ties": 0,
+    "wins_second": 23,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": -0.057295516952449464,
+      "wins_first": 2
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": -0.00439284750307548,
+      "wins_first": 8
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": -0.0170902285142226,
+      "wins_first": 8
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": 0.004050909778196935,
+      "wins_first": 7
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": -0.03195192914529773,
+      "wins_first": 2
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": -0.03278654503225403,
+      "wins_first": 4
+     }
+    }
+   }
+  },
+  {
+   "id": "E1112",
+   "metrik": "fark_ortalama",
+   "yontem": "excess_global@0.06:0.5 - gnn_global@0.04:0.5",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn, esit sure)",
+   "deger": -0.11896900913347995,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S2_equal_time['contrasts'][6]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S2.excess_global@0.06:0.5-gnn_global@0.04:0.5",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 0.00014387427605097028,
+    "p_holm": 0.0008632456563058217,
+    "ci95": [
+     -0.18804526246489844,
+     -0.0605845225479436
+    ],
+    "hl": -0.05898243662981706,
+    "median": -0.03561451580213518,
+    "wins_first": 39,
+    "ties": 0,
+    "wins_second": 15,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": -0.8306181293367859,
+      "wins_first": 3
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": -0.2204738358976678,
+      "wins_first": 12
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": -0.026469989632573614,
+      "wins_first": 11
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": -0.031499095685158345,
+      "wins_first": 10
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": -0.0077445085553971005,
+      "wins_first": 1
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": -0.0018396137526283478,
+      "wins_first": 2
+     }
+    }
+   }
+  },
+  {
+   "id": "E1113",
+   "metrik": "fark_ortalama",
+   "yontem": "excess_global@0.06:0.5 - random_global",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn, esit sure)",
+   "deger": -0.14976863682238192,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S2_equal_time['contrasts'][7]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S2.excess_global@0.06:0.5-random_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 1.963497048558069e-06,
+    "p_holm": 1.3744479339906484e-05,
+    "ci95": [
+     -0.21832860754060412,
+     -0.08948606041160244
+    ],
+    "hl": -0.09783210499426126,
+    "median": -0.08238191914371029,
+    "wins_first": 41,
+    "ties": 0,
+    "wins_second": 13,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": -0.6270118934843878,
+      "wins_first": 3
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": -0.3202751599203211,
+      "wins_first": 13
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": -0.02737742817769309,
+      "wins_first": 8
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": -0.0326742557551785,
+      "wins_first": 10
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": -0.14392792673886975,
+      "wins_first": 2
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": -0.0750185189656919,
+      "wins_first": 5
+     }
+    }
+   }
+  },
+  {
+   "id": "E1114",
+   "metrik": "ortalama_gap",
+   "yontem": "gain_global@0.04:0.5",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn, esit sure)",
+   "deger": 1.1429656656747853,
+   "birim": "%",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S2_counters['gain_global@0.04:0.5']['gap_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S2.gap.gain_global@0.04:0.5",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1115",
+   "metrik": "vurus_hizi",
+   "yontem": "gain_global@0.04:0.5",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn, esit sure)",
+   "deger": 1254.6643071213268,
+   "birim": "vurus/sn",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S2_counters['gain_global@0.04:0.5']['kicks_per_s']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S2.kps.gain_global@0.04:0.5",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "accept_rate": 0.017169768589590847,
+    "model_share": 0.06033030038423186,
+    "elapsed_mean": 10.003834198887407
+   }
+  },
+  {
+   "id": "E1116",
+   "metrik": "ortalama_gap",
+   "yontem": "excess_global@0.06:0.5",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn, esit sure)",
+   "deger": 1.0733808273099683,
+   "birim": "%",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S2_counters['excess_global@0.06:0.5']['gap_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S2.gap.excess_global@0.06:0.5",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1117",
+   "metrik": "vurus_hizi",
+   "yontem": "excess_global@0.06:0.5",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn, esit sure)",
+   "deger": 1502.9594396725397,
+   "birim": "vurus/sn",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S2_counters['excess_global@0.06:0.5']['kicks_per_s']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S2.kps.excess_global@0.06:0.5",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "accept_rate": 0.014367250492748753,
+    "model_share": 0.008875122364976581,
+    "elapsed_mean": 10.00340196185409
+   }
+  },
+  {
+   "id": "E1118",
+   "metrik": "ortalama_gap",
+   "yontem": "gain_global",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn, esit sure)",
+   "deger": 1.156086257079122,
+   "birim": "%",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S2_counters['gain_global']['gap_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S2.gap.gain_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1119",
+   "metrik": "vurus_hizi",
+   "yontem": "gain_global",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn, esit sure)",
+   "deger": 1129.1877373340158,
+   "birim": "vurus/sn",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S2_counters['gain_global']['kicks_per_s']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S2.kps.gain_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "accept_rate": 0.018730192246278782,
+    "model_share": 0.06050220050908745,
+    "elapsed_mean": 10.003723125927003
+   }
+  },
+  {
+   "id": "E1120",
+   "metrik": "ortalama_gap",
+   "yontem": "neurolkhfree_global@0.10:0.75",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn, esit sure)",
+   "deger": 1.06486367693392,
+   "birim": "%",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S2_counters['neurolkhfree_global@0.10:0.75']['gap_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S2.gap.neurolkhfree_global@0.10:0.75",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1121",
+   "metrik": "vurus_hizi",
+   "yontem": "neurolkhfree_global@0.10:0.75",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn, esit sure)",
+   "deger": 1438.819693919776,
+   "birim": "vurus/sn",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S2_counters['neurolkhfree_global@0.10:0.75']['kicks_per_s']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S2.kps.neurolkhfree_global@0.10:0.75",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "accept_rate": 0.015683225957775694,
+    "model_share": 0.04285293523301564,
+    "elapsed_mean": 10.003380668150365
+   }
+  },
+  {
+   "id": "E1122",
+   "metrik": "ortalama_gap",
+   "yontem": "neurolkh_global@0.10:0.75",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn, esit sure)",
+   "deger": 1.1713269852092754,
+   "birim": "%",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S2_counters['neurolkh_global@0.10:0.75']['gap_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S2.gap.neurolkh_global@0.10:0.75",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1123",
+   "metrik": "vurus_hizi",
+   "yontem": "neurolkh_global@0.10:0.75",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn, esit sure)",
+   "deger": 1430.4825386766267,
+   "birim": "vurus/sn",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S2_counters['neurolkh_global@0.10:0.75']['kicks_per_s']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S2.kps.neurolkh_global@0.10:0.75",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "accept_rate": 0.017014748643523103,
+    "model_share": 0.044419382230383324,
+    "elapsed_mean": 9.080954115185348
+   }
+  },
+  {
+   "id": "E1124",
+   "metrik": "ortalama_gap",
+   "yontem": "gnn_global@0.04:0.5",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn, esit sure)",
+   "deger": 1.1923498364434484,
+   "birim": "%",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S2_counters['gnn_global@0.04:0.5']['gap_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S2.gap.gnn_global@0.04:0.5",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1125",
+   "metrik": "vurus_hizi",
+   "yontem": "gnn_global@0.04:0.5",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn, esit sure)",
+   "deger": 1305.4120302604247,
+   "birim": "vurus/sn",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S2_counters['gnn_global@0.04:0.5']['kicks_per_s']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S2.kps.gnn_global@0.04:0.5",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "accept_rate": 0.0170345701696184,
+    "model_share": 0.09593412221062145,
+    "elapsed_mean": 10.00603617648152
+   }
+  },
+  {
+   "id": "E1126",
+   "metrik": "ortalama_gap",
+   "yontem": "random_global",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn, esit sure)",
+   "deger": 1.2231494641323502,
+   "birim": "%",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S2_counters['random_global']['gap_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S2.gap.random_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1127",
+   "metrik": "vurus_hizi",
+   "yontem": "random_global",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn, esit sure)",
+   "deger": 2180.1753697702634,
+   "birim": "vurus/sn",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S2_counters['random_global']['kicks_per_s']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S2.kps.random_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "accept_rate": 0.010788335656582947,
+    "model_share": 0.0,
+    "elapsed_mean": 10.003109674443948
+   }
+  },
+  {
+   "id": "E1128",
+   "metrik": "fark_ortalama",
+   "yontem": "excess_global@0.06:0.5 - gnn_global@0.04:0.5",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, 20 000 vurus)",
+   "deger": -0.0037833644712902794,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S1_equal_kicks['contrasts'][0]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S1.excess_global@0.06:0.5-gnn_global@0.04:0.5",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 0.6327448000022401,
+    "p_holm": 0.6327448000022401,
+    "ci95": [
+     -0.07621092768442006,
+     0.06469696799547242
+    ],
+    "hl": 0.007320649689158687,
+    "median": 0.01580815937197405,
+    "wins_first": 25,
+    "ties": 0,
+    "wins_second": 29,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": -0.045322955366261,
+      "wins_first": 3
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": 0.028599542173557226,
+      "wins_first": 8
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": 0.02650306335771438,
+      "wins_first": 5
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": 0.01779303802473123,
+      "wins_first": 5
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": -0.3747697722216122,
+      "wins_first": 2
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": 0.0059062485883174904,
+      "wins_first": 2
+     }
+    }
+   }
+  },
+  {
+   "id": "E1129",
+   "metrik": "fark_ortalama",
+   "yontem": "excess_global@0.06:0.5 - gain_global@0.04:0.5",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, 20 000 vurus)",
+   "deger": 0.07369650314046623,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S1_equal_kicks['contrasts'][1]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S1.excess_global@0.06:0.5-gain_global@0.04:0.5",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 0.03758357187614823,
+    "p_holm": 0.07516714375229645,
+    "ci95": [
+     0.0018582330052999926,
+     0.16602447806486517
+    ],
+    "hl": 0.03989189149425085,
+    "median": 0.035478983881580384,
+    "wins_first": 22,
+    "ties": 0,
+    "wins_second": 32,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": 0.012844744961164167,
+      "wins_first": 2
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": 0.21978938778261403,
+      "wins_first": 4
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": 0.008619922458923152,
+      "wins_first": 6
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": 0.025197531836237488,
+      "wins_first": 7
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": 0.010047587831339336,
+      "wins_first": 2
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": 0.060073063686470064,
+      "wins_first": 1
+     }
+    }
+   }
+  },
+  {
+   "id": "E1130",
+   "metrik": "fark_ortalama",
+   "yontem": "excess_global@0.06:0.5 - neurolkh_global@0.10:0.75",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, 20 000 vurus)",
+   "deger": 0.038524067937278195,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S1_equal_kicks['contrasts'][2]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S1.excess_global@0.06:0.5-neurolkh_global@0.10:0.75",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 0.016878881029308557,
+    "p_holm": 0.050636643087925676,
+    "ci95": [
+     -0.02827195693493938,
+     0.10591024335458109
+    ],
+    "hl": 0.05139679298900701,
+    "median": 0.058891963655207824,
+    "wins_first": 14,
+    "ties": 0,
+    "wins_second": 40,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": -0.5078085055739096,
+      "wins_first": 3
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": 0.12464486334097936,
+      "wins_first": 5
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": 0.06614972343468582,
+      "wins_first": 2
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": 0.07023928878988231,
+      "wins_first": 1
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": -0.07581634445824392,
+      "wins_first": 1
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": 0.029449993465302953,
+      "wins_first": 2
+     }
+    }
+   }
+  },
+  {
+   "id": "E1131",
+   "metrik": "fark_ortalama",
+   "yontem": "excess_global@0.06:0.5 - knn_global@0.04:0.75",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, 20 000 vurus)",
+   "deger": 0.0882999848792501,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S1_equal_kicks['contrasts'][3]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S1.excess_global@0.06:0.5-knn_global@0.04:0.75",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 0.0026939432140706144,
+    "p_holm": 0.010775772856282458,
+    "ci95": [
+     0.03254067080769734,
+     0.15553863763411138
+    ],
+    "hl": 0.045579393334627016,
+    "median": 0.032072765937477876,
+    "wins_first": 17,
+    "ties": 0,
+    "wins_second": 37,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": 0.14875887876465096,
+      "wins_first": 1
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": 0.1888654175301998,
+      "wins_first": 6
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": 0.03546662801485639,
+      "wins_first": 4
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": 0.02787821505506014,
+      "wins_first": 5
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": 0.14068668723087097,
+      "wins_first": 0
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": 0.061486472848551944,
+      "wins_first": 1
+     }
+    }
+   }
+  },
+  {
+   "id": "E1132",
+   "metrik": "fark_ortalama",
+   "yontem": "gnn_global@0.04:0.5 - random_global",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, 20 000 vurus)",
+   "deger": -0.22004059344880036,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S1_equal_kicks['contrasts'][4]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S1.gnn_global@0.04:0.5-random_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 3.849422034905335e-08,
+    "p_holm": 1.9247110174526676e-07,
+    "ci95": [
+     -0.30554942447253775,
+     -0.1405068399009404
+    ],
+    "hl": -0.19600770345623864,
+    "median": -0.16860416437108094,
+    "wins_first": 51,
+    "ties": 0,
+    "wins_second": 3,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": -0.46682815287153206,
+      "wins_first": 3
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": -0.3574955394850424,
+      "wins_first": 12
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": -0.12173241783347785,
+      "wins_first": 14
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": -0.10869162001932876,
+      "wins_first": 13
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": -0.12179943885712048,
+      "wins_first": 3
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": -0.31423919805322925,
+      "wins_first": 6
+     }
+    }
+   }
+  },
+  {
+   "id": "E1133",
+   "metrik": "fark_ortalama",
+   "yontem": "gain_global@0.04:0.5 - random_global",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, 20 000 vurus)",
+   "deger": -0.2975204610605569,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S1_equal_kicks['contrasts'][5]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S1.gain_global@0.04:0.5-random_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 5.430177229331769e-09,
+    "p_holm": 3.801124060532238e-08,
+    "ci95": [
+     -0.42335598626990134,
+     -0.18527840745727478
+    ],
+    "hl": -0.2472897635111514,
+    "median": -0.21556976355408247,
+    "wins_first": 50,
+    "ties": 0,
+    "wins_second": 4,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": -0.5249958531989573,
+      "wins_first": 3
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": -0.548685385094099,
+      "wins_first": 13
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": -0.10384927693468662,
+      "wins_first": 12
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": -0.11609611383083503,
+      "wins_first": 13
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": -0.506616798910072,
+      "wins_first": 3
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": -0.36840601315138183,
+      "wins_first": 6
+     }
+    }
+   }
+  },
+  {
+   "id": "E1134",
+   "metrik": "fark_ortalama",
+   "yontem": "neurolkh_global@0.10:0.75 - random_global",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, 20 000 vurus)",
+   "deger": -0.2623480258573688,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S1_equal_kicks['contrasts'][6]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S1.neurolkh_global@0.10:0.75-random_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 1.8360735075722525e-08,
+    "p_holm": 1.1016441045433514e-07,
+    "ci95": [
+     -0.34514359555752155,
+     -0.1892847109196985
+    ],
+    "hl": -0.21760192302135953,
+    "median": -0.21734304711948704,
+    "wins_first": 49,
+    "ties": 0,
+    "wins_second": 5,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": -0.0043426026638835324,
+      "wins_first": 1
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": -0.4535408606524645,
+      "wins_first": 12
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": -0.1613790779104493,
+      "wins_first": 13
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": -0.16113787078447986,
+      "wins_first": 14
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": -0.4207528666204888,
+      "wins_first": 3
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": -0.33778294293021477,
+      "wins_first": 6
+     }
+    }
+   }
+  },
+  {
+   "id": "E1135",
+   "metrik": "fark_ortalama",
+   "yontem": "excess_global@0.06:0.5 - random_global",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, 20 000 vurus)",
+   "deger": -0.22382395792009066,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S1_equal_kicks['contrasts'][7]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S1.excess_global@0.06:0.5-random_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 2.6172160630612768e-09,
+    "p_holm": 2.0937728504490214e-08,
+    "ci95": [
+     -0.2935861978232351,
+     -0.15748640802288713
+    ],
+    "hl": -0.19263548693015442,
+    "median": -0.15536963051194191,
+    "wins_first": 51,
+    "ties": 0,
+    "wins_second": 3,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": -0.5121511082377931,
+      "wins_first": 3
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": -0.3288959973114852,
+      "wins_first": 13
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": -0.09522935447576349,
+      "wins_first": 13
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": -0.09089858199459754,
+      "wins_first": 13
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": -0.49656921107873275,
+      "wins_first": 3
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": -0.3083329494649118,
+      "wins_first": 6
+     }
+    }
+   }
+  },
+  {
+   "id": "E1136",
+   "metrik": "ortalama_gap",
+   "yontem": "excess_global@0.06:0.5",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, 20 000 vurus)",
+   "deger": 0.9426291663258322,
+   "birim": "%",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S1_counters['excess_global@0.06:0.5']['gap_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S1.gap.excess_global@0.06:0.5",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1137",
+   "metrik": "vurus_hizi",
+   "yontem": "excess_global@0.06:0.5",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, 20 000 vurus)",
+   "deger": 1196.34087851507,
+   "birim": "vurus/sn",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S1_counters['excess_global@0.06:0.5']['kicks_per_s']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S1.kps.excess_global@0.06:0.5",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "accept_rate": 0.011815185185185186,
+    "model_share": 0.007413196240131777,
+    "elapsed_mean": 16.717643239629602
+   }
+  },
+  {
+   "id": "E1138",
+   "metrik": "ortalama_gap",
+   "yontem": "gnn_global@0.04:0.5",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, 20 000 vurus)",
+   "deger": 0.9464125307971225,
+   "birim": "%",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S1_counters['gnn_global@0.04:0.5']['gap_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S1.gap.gnn_global@0.04:0.5",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1139",
+   "metrik": "vurus_hizi",
+   "yontem": "gnn_global@0.04:0.5",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, 20 000 vurus)",
+   "deger": 524.055437976807,
+   "birim": "vurus/sn",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S1_counters['gnn_global@0.04:0.5']['kicks_per_s']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S1.kps.gnn_global@0.04:0.5",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "accept_rate": 0.012429814814814815,
+    "model_share": 0.5161474401554029,
+    "elapsed_mean": 38.16390127962977
+   }
+  },
+  {
+   "id": "E1140",
+   "metrik": "ortalama_gap",
+   "yontem": "neurolkh_global@0.10:0.75",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, 20 000 vurus)",
+   "deger": 0.904105098388554,
+   "birim": "%",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S1_counters['neurolkh_global@0.10:0.75']['gap_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S1.gap.neurolkh_global@0.10:0.75",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1141",
+   "metrik": "vurus_hizi",
+   "yontem": "neurolkh_global@0.10:0.75",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, 20 000 vurus)",
+   "deger": 1072.914054742573,
+   "birim": "vurus/sn",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S1_counters['neurolkh_global@0.10:0.75']['kicks_per_s']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S1.kps.neurolkh_global@0.10:0.75",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "accept_rate": 0.012370185185185185,
+    "model_share": 0.07196135800381778,
+    "elapsed_mean": 18.640822078520216
+   }
+  },
+  {
+   "id": "E1142",
+   "metrik": "ortalama_gap",
+   "yontem": "gain_global@0.04:0.5",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, 20 000 vurus)",
+   "deger": 0.868932663185366,
+   "birim": "%",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S1_counters['gain_global@0.04:0.5']['gap_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S1.gap.gain_global@0.04:0.5",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1143",
+   "metrik": "vurus_hizi",
+   "yontem": "gain_global@0.04:0.5",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, 20 000 vurus)",
+   "deger": 919.0288685134815,
+   "birim": "vurus/sn",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S1_counters['gain_global@0.04:0.5']['kicks_per_s']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S1.kps.gain_global@0.04:0.5",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "accept_rate": 0.012152407407407407,
+    "model_share": 0.12049172316415875,
+    "elapsed_mean": 21.76210202444431
+   }
+  },
+  {
+   "id": "E1144",
+   "metrik": "ortalama_gap",
+   "yontem": "knn_global@0.04:0.75",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, 20 000 vurus)",
+   "deger": 0.854329181446582,
+   "birim": "%",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S1_counters['knn_global@0.04:0.75']['gap_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S1.gap.knn_global@0.04:0.75",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1145",
+   "metrik": "vurus_hizi",
+   "yontem": "knn_global@0.04:0.75",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, 20 000 vurus)",
+   "deger": 866.6406489129828,
+   "birim": "vurus/sn",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S1_counters['knn_global@0.04:0.75']['kicks_per_s']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S1.kps.knn_global@0.04:0.75",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "accept_rate": 0.011753148148148148,
+    "model_share": 0.03116704893393823,
+    "elapsed_mean": 23.07761587814484
+   }
+  },
+  {
+   "id": "E1146",
+   "metrik": "ortalama_gap",
+   "yontem": "random_global",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, 20 000 vurus)",
+   "deger": 1.1664531242459226,
+   "birim": "%",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S1_counters['random_global']['gap_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S1.gap.random_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1147",
+   "metrik": "vurus_hizi",
+   "yontem": "random_global",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, 20 000 vurus)",
+   "deger": 1690.4092701582529,
+   "birim": "vurus/sn",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S1_counters['random_global']['kicks_per_s']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S1.kps.random_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "accept_rate": 0.012267222222222223,
+    "model_share": 0.0,
+    "elapsed_mean": 11.831454283333194
+   }
+  },
+  {
+   "id": "E1148",
+   "metrik": "fark_ortalama",
+   "yontem": "onlinepos_global - linprior_global",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn)",
+   "deger": -0.053709319769066254,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S3_credit['contrasts'][0]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S3.onlinepos_global-linprior_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 0.06476282916925331,
+    "p_holm": 0.12952565833850663,
+    "ci95": [
+     -0.11056567727382804,
+     -0.004017549402375358
+    ],
+    "hl": -0.029334311199855023,
+    "median": -0.018264997443049102,
+    "wins_first": 31,
+    "ties": 0,
+    "wins_second": 23,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": -0.4898525333680464,
+      "wins_first": 3
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": -0.034310523484577034,
+      "wins_first": 9
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": 0.0027350531434748105,
+      "wins_first": 6
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": -0.021781955198229366,
+      "wins_first": 7
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": -0.16896681118227588,
+      "wins_first": 2
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": -0.029473546054661477,
+      "wins_first": 4
+     }
+    }
+   }
+  },
+  {
+   "id": "E1149",
+   "metrik": "fark_ortalama",
+   "yontem": "onlinesucc_global - linprior_global",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn)",
+   "deger": -0.003103832619570519,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S3_credit['contrasts'][1]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S3.onlinesucc_global-linprior_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 0.620538332390351,
+    "p_holm": 0.620538332390351,
+    "ci95": [
+     -0.07215931563621421,
+     0.062070410578423586
+    ],
+    "hl": -0.006896628760990342,
+    "median": -0.006487583700237914,
+    "wins_first": 29,
+    "ties": 0,
+    "wins_second": 25,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": -0.3705958212809309,
+      "wins_first": 2
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": 0.09866789074284411,
+      "wins_first": 6
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": -0.0017681676776635552,
+      "wins_first": 7
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": -0.00995943314714713,
+      "wins_first": 8
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": -0.06261730810150283,
+      "wins_first": 1
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": -0.014188605360329213,
+      "wins_first": 5
+     }
+    }
+   }
+  },
+  {
+   "id": "E1150",
+   "metrik": "fark_ortalama",
+   "yontem": "onlinewarm_global - linprior_global",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn)",
+   "deger": 0.33503807837026095,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S3_credit['contrasts'][2]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S3.onlinewarm_global-linprior_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 1.9243957584004852e-10,
+    "p_holm": 9.75419074159858e-10,
+    "ci95": [
+     0.24532330719557655,
+     0.4320683819087157
+    ],
+    "hl": 0.27037586454686113,
+    "median": 0.1702375240786131,
+    "wins_first": 2,
+    "ties": 0,
+    "wins_second": 52,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": 0.3484090252162444,
+      "wins_first": 2
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": 0.6942838537307215,
+      "wins_first": 0
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": 0.12044776506443182,
+      "wins_first": 0
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": 0.11902578711431595,
+      "wins_first": 0
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": 0.2198681245621643,
+      "wins_first": 0
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": 0.5524368499877172,
+      "wins_first": 0
+     }
+    }
+   }
+  },
+  {
+   "id": "E1151",
+   "metrik": "fark_ortalama",
+   "yontem": "onlinepos_global - onlinewarm_global",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn)",
+   "deger": -0.3887473981393273,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S3_credit['contrasts'][3]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S3.onlinepos_global-onlinewarm_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 1.6256984569330967e-10,
+    "p_holm": 9.75419074159858e-10,
+    "ci95": [
+     -0.4940203879199628,
+     -0.29237205556290957
+    ],
+    "hl": -0.33348154284634707,
+    "median": -0.20235314465701287,
+    "wins_first": 54,
+    "ties": 0,
+    "wins_second": 0,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": -0.8382615585842909,
+      "wins_first": 3
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": -0.7285943772152983,
+      "wins_first": 14
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": -0.11771271192095702,
+      "wins_first": 14
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": -0.14080774231254528,
+      "wins_first": 14
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": -0.3888349357444402,
+      "wins_first": 3
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": -0.5819103960423787,
+      "wins_first": 6
+     }
+    }
+   }
+  },
+  {
+   "id": "E1152",
+   "metrik": "fark_ortalama",
+   "yontem": "onlinesucc_global - onlinewarm_global",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn)",
+   "deger": -0.33814191098983165,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S3_credit['contrasts'][4]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S3.onlinesucc_global-onlinewarm_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 1.6256984569330967e-10,
+    "p_holm": 9.75419074159858e-10,
+    "ci95": [
+     -0.42299919978384953,
+     -0.2606101368082153
+    ],
+    "hl": -0.3186049777674739,
+    "median": -0.18588669406096187,
+    "wins_first": 54,
+    "ties": 0,
+    "wins_second": 0,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": -0.7190048464971753,
+      "wins_first": 3
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": -0.5956159629878773,
+      "wins_first": 14
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": -0.12221593274209541,
+      "wins_first": 14
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": -0.12898522026146306,
+      "wins_first": 14
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": -0.28248543266366716,
+      "wins_first": 3
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": -0.5666254553480465,
+      "wins_first": 6
+     }
+    }
+   }
+  },
+  {
+   "id": "E1153",
+   "metrik": "fark_ortalama",
+   "yontem": "linprior_global - random_global",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn)",
+   "deger": -0.08110213613142045,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S3_credit['contrasts'][5]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S3.linprior_global-random_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 0.03527405016972559,
+    "p_holm": 0.10582215050917676,
+    "ci95": [
+     -0.1460969539445294,
+     -0.023490006234623724
+    ],
+    "hl": -0.0391020540984473,
+    "median": -0.015774071790584238,
+    "wins_first": 32,
+    "ties": 0,
+    "wins_second": 22,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": 0.21358563497567573,
+      "wins_first": 1
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": -0.2926344683462676,
+      "wins_first": 12
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": -0.008405378108889064,
+      "wins_first": 8
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": -0.0001840321054690072,
+      "wins_first": 6
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": -0.07501672170352484,
+      "wins_first": 2
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": -0.09634796517739952,
+      "wins_first": 3
+     }
+    }
+   }
+  },
+  {
+   "id": "E1154",
+   "metrik": "ortalama_gap",
+   "yontem": "linprior_global",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn)",
+   "deger": 1.1542529140572062,
+   "birim": "%",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S3_counters['linprior_global']['gap_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S3.gap.linprior_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1155",
+   "metrik": "vurus_hizi",
+   "yontem": "linprior_global",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn)",
+   "deger": 1109.1044219264998,
+   "birim": "vurus/sn",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S3_counters['linprior_global']['kicks_per_s']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S3.kps.linprior_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "accept_rate": 0.019051348275711276,
+    "model_share": 0.05356908520171369,
+    "elapsed_mean": 10.00353658981438
+   }
+  },
+  {
+   "id": "E1156",
+   "metrik": "ortalama_gap",
+   "yontem": "onlinesucc_global",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn)",
+   "deger": 1.1511490814376357,
+   "birim": "%",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S3_counters['onlinesucc_global']['gap_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S3.gap.onlinesucc_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1157",
+   "metrik": "vurus_hizi",
+   "yontem": "onlinesucc_global",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn)",
+   "deger": 1580.730798274164,
+   "birim": "vurus/sn",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S3_counters['onlinesucc_global']['kicks_per_s']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S3.kps.onlinesucc_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "accept_rate": 0.014103615844814553,
+    "model_share": 0.05338430028323664,
+    "elapsed_mean": 10.003513013332526
+   }
+  },
+  {
+   "id": "E1158",
+   "metrik": "ortalama_gap",
+   "yontem": "onlinepos_global",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn)",
+   "deger": 1.1005435942881399,
+   "birim": "%",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S3_counters['onlinepos_global']['gap_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S3.gap.onlinepos_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1159",
+   "metrik": "vurus_hizi",
+   "yontem": "onlinepos_global",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn)",
+   "deger": 1550.1579169206316,
+   "birim": "vurus/sn",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S3_counters['onlinepos_global']['kicks_per_s']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S3.kps.onlinepos_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "accept_rate": 0.014260579716479397,
+    "model_share": 0.05278005888106976,
+    "elapsed_mean": 10.003500537777478
+   }
+  },
+  {
+   "id": "E1160",
+   "metrik": "ortalama_gap",
+   "yontem": "onlinewarm_global",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn)",
+   "deger": 1.489290992427467,
+   "birim": "%",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S3_counters['onlinewarm_global']['gap_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S3.gap.onlinewarm_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1161",
+   "metrik": "vurus_hizi",
+   "yontem": "onlinewarm_global",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn)",
+   "deger": 2744.5651387918174,
+   "birim": "vurus/sn",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S3_counters['onlinewarm_global']['kicks_per_s']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S3.kps.onlinewarm_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "accept_rate": 0.007855263772021245,
+    "model_share": 0.05423291545804023,
+    "elapsed_mean": 10.003854250555742
+   }
+  },
+  {
+   "id": "E1162",
+   "metrik": "ortalama_gap",
+   "yontem": "random_global",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn)",
+   "deger": 1.2353550501886266,
+   "birim": "%",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S3_counters['random_global']['gap_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S3.gap.random_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1163",
+   "metrik": "vurus_hizi",
+   "yontem": "random_global",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn)",
+   "deger": 2140.020172117242,
+   "birim": "vurus/sn",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S3_counters['random_global']['kicks_per_s']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S3.kps.random_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "accept_rate": 0.010926438944215569,
+    "model_share": 0.0,
+    "elapsed_mean": 10.003475279258284
+   }
+  },
+  {
+   "id": "E1164",
+   "metrik": "fark_ortalama",
+   "yontem": "excess_global@0.06:0.5 - random_global",
+   "veri_seti": "holdout2 (54 problem x 2 tohum, 10 sn, tek isci)",
+   "deger": -0.09292704079582582,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S4_single['contrasts'][0]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S4.excess_global@0.06:0.5-random_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 0.09742510254366388,
+    "p_holm": 0.19485020508732775,
+    "ci95": [
+     -0.18200001493860302,
+     -0.011580666496022057
+    ],
+    "hl": -0.04239806794122086,
+    "median": -0.029665942912285415,
+    "wins_first": 29,
+    "ties": 0,
+    "wins_second": 25,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": -0.05733695039335333,
+      "wins_first": 1
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": -0.22120282106239936,
+      "wins_first": 9
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": 0.007961517325685603,
+      "wins_first": 5
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": -0.017688017335129657,
+      "wins_first": 8
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": -0.428719529494197,
+      "wins_first": 2
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": -0.05448004471768938,
+      "wins_first": 4
+     }
+    }
+   }
+  },
+  {
+   "id": "E1165",
+   "metrik": "fark_ortalama",
+   "yontem": "excess_global@0.06:0.5 - gnn_global@0.04:0.5",
+   "veri_seti": "holdout2 (54 problem x 2 tohum, 10 sn, tek isci)",
+   "deger": -0.05729808126269282,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S4_single['contrasts'][1]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S4.excess_global@0.06:0.5-gnn_global@0.04:0.5",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 0.3546547071754086,
+    "p_holm": 0.3546547071754086,
+    "ci95": [
+     -0.12752139547207042,
+     0.007063650826064862
+    ],
+    "hl": -0.021592995342771648,
+    "median": -0.013119372306920618,
+    "wins_first": 30,
+    "ties": 0,
+    "wins_second": 24,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": -0.2499069248901371,
+      "wins_first": 2
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": -0.12633366472892574,
+      "wins_first": 7
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": 0.014919128289426629,
+      "wins_first": 7
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": -0.002499589586156457,
+      "wins_first": 9
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": -0.2665300866393356,
+      "wins_first": 1
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": 0.00833540179369722,
+      "wins_first": 4
+     }
+    }
+   }
+  },
+  {
+   "id": "E1166",
+   "metrik": "ortalama_gap",
+   "yontem": "excess_global@0.06:0.5",
+   "veri_seti": "holdout2 (54 problem x 2 tohum, 10 sn, tek isci)",
+   "deger": 0.8962192317928895,
+   "birim": "%",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S4_counters['excess_global@0.06:0.5']['gap_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S4.gap.excess_global@0.06:0.5",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1167",
+   "metrik": "vurus_hizi",
+   "yontem": "excess_global@0.06:0.5",
+   "veri_seti": "holdout2 (54 problem x 2 tohum, 10 sn, tek isci)",
+   "deger": 2622.292570165297,
+   "birim": "vurus/sn",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S4_counters['excess_global@0.06:0.5']['kicks_per_s']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S4.kps.excess_global@0.06:0.5",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "accept_rate": 0.008790108709733327,
+    "model_share": 0.006228268666011995,
+    "elapsed_mean": 10.003110877776635
+   }
+  },
+  {
+   "id": "E1168",
+   "metrik": "ortalama_gap",
+   "yontem": "gnn_global@0.04:0.5",
+   "veri_seti": "holdout2 (54 problem x 2 tohum, 10 sn, tek isci)",
+   "deger": 0.9535173130555824,
+   "birim": "%",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S4_counters['gnn_global@0.04:0.5']['gap_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S4.gap.gnn_global@0.04:0.5",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1169",
+   "metrik": "vurus_hizi",
+   "yontem": "gnn_global@0.04:0.5",
+   "veri_seti": "holdout2 (54 problem x 2 tohum, 10 sn, tek isci)",
+   "deger": 2297.259552358135,
+   "birim": "vurus/sn",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S4_counters['gnn_global@0.04:0.5']['kicks_per_s']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S4.kps.gnn_global@0.04:0.5",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "accept_rate": 0.010581808057613901,
+    "model_share": 0.0849045555070828,
+    "elapsed_mean": 10.003469042592634
+   }
+  },
+  {
+   "id": "E1170",
+   "metrik": "ortalama_gap",
+   "yontem": "random_global",
+   "veri_seti": "holdout2 (54 problem x 2 tohum, 10 sn, tek isci)",
+   "deger": 0.9891462725887155,
+   "birim": "%",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S4_counters['random_global']['gap_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S4.gap.random_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1171",
+   "metrik": "vurus_hizi",
+   "yontem": "random_global",
+   "veri_seti": "holdout2 (54 problem x 2 tohum, 10 sn, tek isci)",
+   "deger": 3797.866703715902,
+   "birim": "vurus/sn",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S4_counters['random_global']['kicks_per_s']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S4.kps.random_global",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "accept_rate": 0.006733269801189887,
+    "model_share": 0.0,
+    "elapsed_mean": 10.002959653701746
+   }
+  },
+  {
+   "id": "E1172",
+   "metrik": "fark_ortalama",
+   "yontem": "lkh_ils_excess - lkh_ils_random",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, LKH-3, 10 sn)",
+   "deger": 0.0006450607544249651,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S5_lkh['contrasts'][0]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S5.lkh_ils_excess-lkh_ils_random",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 0.5922403794660841,
+    "p_holm": 0.5922403794660841,
+    "ci95": [
+     -0.07494874697440732,
+     0.06748851456743275
+    ],
+    "hl": -0.0019514929212144198,
+    "median": -0.002643391559196939,
+    "wins_first": 30,
+    "ties": 1,
+    "wins_second": 23,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": 0.0036925669204873612,
+      "wins_first": 2
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": -0.02223403593853787,
+      "wins_first": 6
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": -0.004903537645397803,
+      "wins_first": 9
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": -0.001770178690533822,
+      "wins_first": 9
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": 0.008832194682816782,
+      "wins_first": 1
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": 0.06699458796193479,
+      "wins_first": 3
+     }
+    }
+   }
+  },
+  {
+   "id": "E1173",
+   "metrik": "fark_ortalama",
+   "yontem": "lkh_ils_random - lkh_default",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, LKH-3, 10 sn)",
+   "deger": 0.06224161482478762,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S5_lkh['contrasts'][1]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S5.lkh_ils_random-lkh_default",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 9.808753324456468e-06,
+    "p_holm": 2.9426259973369403e-05,
+    "ci95": [
+     0.01751447873789381,
+     0.11003583425557031
+    ],
+    "hl": 0.02723861927597802,
+    "median": 0.02074743549764055,
+    "wins_first": 10,
+    "ties": 0,
+    "wins_second": 44,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": 0.3048151715636677,
+      "wins_first": 0
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": 0.12119626808076091,
+      "wins_first": 5
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": 0.018272958008944382,
+      "wins_first": 0
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": 0.016659349126730193,
+      "wins_first": 3
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": 0.14623393830089682,
+      "wins_first": 0
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": -0.029650030347543196,
+      "wins_first": 2
+     }
+    }
+   }
+  },
+  {
+   "id": "E1174",
+   "metrik": "fark_ortalama",
+   "yontem": "lkh_ils_excess - lkh_default",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, LKH-3, 10 sn)",
+   "deger": 0.0628866755792126,
+   "birim": "puan",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S5_lkh['contrasts'][2]",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S5.lkh_ils_excess-lkh_default",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p_wilcoxon": 0.0005639343014683945,
+    "p_holm": 0.001127868602936789,
+    "ci95": [
+     -0.009030980579171267,
+     0.13688473946482538
+    ],
+    "hl": 0.022861453720646213,
+    "median": 0.014848976414606122,
+    "wins_first": 15,
+    "ties": 0,
+    "wins_second": 39,
+    "n_inst": 54,
+    "by_stratum": {
+     "national3": {
+      "n": 3,
+      "mean": 0.3085077384841551,
+      "wins_first": 0
+     },
+     "synth_clustered": {
+      "n": 14,
+      "mean": 0.09896223214222304,
+      "wins_first": 7
+     },
+     "synth_mixed": {
+      "n": 14,
+      "mean": 0.013369420363546576,
+      "wins_first": 4
+     },
+     "synth_uniform": {
+      "n": 14,
+      "mean": 0.01488917043619637,
+      "wins_first": 2
+     },
+     "tsplib3": {
+      "n": 3,
+      "mean": 0.1550661329837136,
+      "wins_first": 0
+     },
+     "vlsi6": {
+      "n": 6,
+      "mean": 0.037344557614391614,
+      "wins_first": 2
+     }
+    }
+   }
+  },
+  {
+   "id": "E1175",
+   "metrik": "ortalama_gap",
+   "yontem": "lkh_default",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, LKH-3, 10 sn)",
+   "deger": 0.2570620690057089,
+   "birim": "%",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S5_counters['lkh_default']['gap_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S5.gap.lkh_default",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1176",
+   "metrik": "deneme_sayisi",
+   "yontem": "lkh_default",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, LKH-3, 10 sn)",
+   "deger": 64.6,
+   "birim": "deneme",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S5_counters['lkh_default']['trials_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S5.trials.lkh_default",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1177",
+   "metrik": "ortalama_gap",
+   "yontem": "lkh_ils_random",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, LKH-3, 10 sn)",
+   "deger": 0.31930368383049645,
+   "birim": "%",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S5_counters['lkh_ils_random']['gap_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S5.gap.lkh_ils_random",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1178",
+   "metrik": "deneme_sayisi",
+   "yontem": "lkh_ils_random",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, LKH-3, 10 sn)",
+   "deger": 896.9777777777778,
+   "birim": "deneme",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S5_counters['lkh_ils_random']['trials_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S5.trials.lkh_ils_random",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1179",
+   "metrik": "ortalama_gap",
+   "yontem": "lkh_ils_excess",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, LKH-3, 10 sn)",
+   "deger": 0.31994874458492145,
+   "birim": "%",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S5_counters['lkh_ils_excess']['gap_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S5.gap.lkh_ils_excess",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1180",
+   "metrik": "deneme_sayisi",
+   "yontem": "lkh_ils_excess",
+   "veri_seti": "holdout2 (54 problem x 5 tohum, LKH-3, 10 sn)",
+   "deger": 698.7333333333333,
+   "birim": "deneme",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S5_counters['lkh_ils_excess']['trials_mean']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S5.trials.lkh_ils_excess",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)"
+   }
+  },
+  {
+   "id": "E1181",
+   "metrik": "sira_etkisi_spearman",
+   "yontem": "konum vs goreli vurus hizi",
+   "veri_seti": "holdout2 (54 problem x 10 tohum, 10 sn, esit sure)",
+   "deger": 0.12010214599029323,
+   "birim": "rho",
+   "kaynak": "yazilim",
+   "kaynak_dosya": "results/kick_targeting/v5_analysis.json",
+   "kaynak_konum": "S2_order['spearman_position_vs_relative_rate']",
+   "atif": null,
+   "durum": "gecerli",
+   "ek": {
+    "uretici": "build_v5",
+    "anahtar": "v5.S2.order_rho",
+    "asama": 3,
+    "not_": "kesifsel, protokol sonrasi (PROTOCOL_v4_exploratory.json)",
+    "p": 1.2776263611503908e-13,
+    "by_position": {
+     "0": 0.8248690114215198,
+     "1": 0.9609387115038881,
+     "2": 1.0531088204505328,
+     "3": 1.0633079802083496,
+     "4": 1.0692035329523348,
+     "5": 1.067172462710918,
+     "6": 0.961399480752457
+    }
+   }
   }
  ],
  "deney_meta_v3": {

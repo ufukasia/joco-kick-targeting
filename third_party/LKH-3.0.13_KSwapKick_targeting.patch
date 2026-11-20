@@ -1,0 +1,191 @@
+--- a/SRC/KSwapKick.c
++++ b/SRC/KSwapKick.c
+@@ -1,37 +1,158 @@
+ #include "LKH.h"
+ 
+ /*
+- * The KSwapKick function makes a random K-swap kick, K>=4 
++ * The KSwapKick function makes a random K-swap kick, K>=4
+  * (a generalization of the double-bridge kick).
+  *
+- * The algorithm is inspired by the thesis 
++ * The algorithm is inspired by the thesis
+  *
+  *    D. Richter,
+  *    Toleranzen in Helsgauns Lin-Kernighan-Heuristik fur das TSP,
+  *    Diplomarbeit, Martin-Luther-Universitat Halle-Wittenberg, 2006.
++ *
++ * ---------------------------------------------------------------------------
++ * KICK-TARGETING PATCH (joco-kick-targeting, 2026).  This is the only file
++ * changed with respect to LKH-3.0.13.  The patch is inactive unless the
++ * environment variable LKH_KICK_DREF names a file; LKH then behaves exactly
++ * as the official code.  When active (symmetric TSP only), each of the K
++ * kick nodes N -- which remove the tour edge (N, N->Suc) -- is, with
++ * probability LKH_KICK_PROB, drawn uniformly from the pool of the
++ * m = max(12, floor(LKH_KICK_FRAC * n)) current tour edges with the largest
++ * excess length  d(u,v) - (dref(u) + dref(v)) / 2, where dref(u) (read from
++ * the file, one value per node in node order) is the mean distance from u to
++ * its two nearest neighbours; otherwise it is drawn as in the original code.
++ * The pool is recomputed from the current tour at every kick (O(n)), and
++ * this time is part of LKH's own run time.
++ * ---------------------------------------------------------------------------
+  */
+ 
+-static Node *RandomNode(void);
++#include <math.h>
++
++static Node *RandomNode();
+ static int compare(const void *Na, const void *Nb);
+ 
++static int TgInit = 0, TgOn = 0, TgM = 0;
++static double TgFrac = 0.06, TgProb = 0.5;
++static double *TgDref = 0, *TgScore = 0;
++static Node **TgEdge = 0;
++
++static void TgSetup()
++{
++    char *f = getenv("LKH_KICK_DREF"), *s;
++    FILE *fp;
++    int i;
++
++    TgInit = 1;
++    if (!f || !*f)
++        return;
++    if (Dimension != DimensionSaved)
++        eprintf("LKH_KICK_DREF: symmetric TSP only");
++    if (!(fp = fopen(f, "r")))
++        eprintf("LKH_KICK_DREF: cannot open %s", f);
++    assert(TgDref = (double *) malloc((Dimension + 1) * sizeof(double)));
++    for (i = 1; i <= Dimension; i++)
++        if (fscanf(fp, "%lf", &TgDref[i]) != 1)
++            eprintf("LKH_KICK_DREF: %d values expected", Dimension);
++    fclose(fp);
++    if ((s = getenv("LKH_KICK_FRAC")))
++        TgFrac = atof(s);
++    if ((s = getenv("LKH_KICK_PROB")))
++        TgProb = atof(s);
++    assert(TgScore = (double *) malloc(Dimension * sizeof(double)));
++    assert(TgEdge = (Node **) malloc(Dimension * sizeof(Node *)));
++    TgOn = 1;
++}
++
++/* Partial selection: afterwards the k largest scores are in positions 0..k-1 */
++static void TgSelect(int lo, int hi, int k)
++{
++    while (lo < hi) {
++        double pivot = TgScore[(lo + hi) / 2];
++        int i = lo, j = hi;
++        while (i <= j) {
++            while (TgScore[i] > pivot)
++                i++;
++            while (TgScore[j] < pivot)
++                j--;
++            if (i <= j) {
++                double t = TgScore[i];
++                Node *T = TgEdge[i];
++                TgScore[i] = TgScore[j];
++                TgEdge[i] = TgEdge[j];
++                TgScore[j] = t;
++                TgEdge[j] = T;
++                i++;
++                j--;
++            }
++        }
++        if (k <= j)
++            hi = j;
++        else if (k >= i)
++            lo = i;
++        else
++            return;
++    }
++}
++
++static void TgBuildPool()
++{
++    Node *N = FirstNode;
++    int n = 0;
++
++    do {
++        double dx = N->X - N->Suc->X, dy = N->Y - N->Suc->Y;
++        TgScore[n] = sqrt(dx * dx + dy * dy) -
++            0.5 * (TgDref[N->Id] + TgDref[N->Suc->Id]);
++        TgEdge[n++] = N;
++    } while ((N = N->Suc) != FirstNode);
++    TgM = (int) (TgFrac * n);
++    if (TgM < 12)
++        TgM = 12;
++    if (TgM > n)
++        TgM = n;
++    TgSelect(0, n - 1, TgM - 1);
++}
++
++static Node *TgNode()
++{
++    int t;
++    for (t = 0; t < 32; t++) {
++        Node *N = TgEdge[Random() % TgM];
++        if (!N->V && !FixedOrCommon(N, N->Suc))
++            return N;
++    }
++    return RandomNode();
++}
++
++static Node *PickNode()
++{
++    if (TgOn && Random() % 1000000 < (unsigned) (TgProb * 1000000))
++        return TgNode();
++    return RandomNode();
++}
++
+ void KSwapKick(int K)
+ {
+     Node **s, *N;
+     int Count, i;
+ 
+-    s = (Node **) malloc(K * sizeof(Node *));
++    if (!TgInit)
++        TgSetup();
++    assert(s = (Node **) malloc(K * sizeof(Node *)));
+     Count = 0;
+     N = FirstNode;
+     do {
+         N->Rank = ++Count;
+-        N->V = FixedOrCommon(N, N->Suc);
++        N->V = 0;
+     } while ((N = N->Suc) != FirstNode);
+-    N = s[0] = RandomNode();
++    if (TgOn)
++        TgBuildPool();
++    N = s[0] = PickNode();
+     if (!N)
+         goto End_KSwapKick;
+     N->V = 1;
+     for (i = 1; i < K; i++) {
+-        N = s[i] = RandomNode();
++        N = s[i] = PickNode();
+         if (!N)
+             K = i;
+         else
+@@ -51,11 +172,11 @@
+ /*
+  * The RandomNode function returns a random node N, for
+  * which the edge (N, N->Suc) is neither a fixed edge nor
+- * a common edge of tours to be merged, and N has not 
++ * a common edge of tours to be merged, and N has not
+  * previously been chosen.
+  */
+ 
+-static Node *RandomNode(void)
++static Node *RandomNode()
+ {
+     Node *N;
+     int Count;
+@@ -68,7 +189,7 @@
+             N = N->Suc;
+     }
+     Count = 0;
+-    while (N->V && Count < Dimension) {
++    while ((N->V || FixedOrCommon(N, N->Suc)) && Count < Dimension) {
+         N = N->Suc;
+         Count++;
+     }

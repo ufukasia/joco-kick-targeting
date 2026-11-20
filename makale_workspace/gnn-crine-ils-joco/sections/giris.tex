@@ -12,7 +12,8 @@ kalitesini doğrudan etkiler \citep{johnson_1997_case, applegate_2003_clk}.
 \begin{figure}[!htbp]
 \centering
 \input{../figures/manset.tex}
-\caption{54 holdout2 probleminde 10~sn gap farkı, sıralı: (a) fazla-uzunluk$-$GNN, (b) fazla-uzunluk$-$rastgele; mavi: vekil lehine. Vitrinler, GNN'nin kendi çeyrekler arası aralığında kaldığı problemlerden katman başına en büyük avantajla seçildi; ölçüm gürültüsünün altındaki farklar beraberlik sayıldığında vekil problemlerin \%70'inde GNN'den iyidir.} % V013
+\caption{54 holdout2 probleminde 10~sn gap farkı, sıralı: (a) fazla-uzunluk$-$GNN, (b) fazla-uzunluk$-$rastgele; mavi: vekil lehine. İşaretli problemlerin seçimi Bölüm~\ref{sec:bulgular-dogrulayici}'te açıklanmıştır.}
+% kaynak: V013
 \label{fig:manset}
 \end{figure}
 
@@ -38,15 +39,17 @@ kolayca abartılır \citep{hooker_1995_testing, nosek_2018_prereg}.
 
 Bu çalışmada vuruş hedeflemeyi bu üç tuzaktan arındırılmış bir düzenekte inceledik. Önce saniyede
 binlerce vuruş atabilen hızlı bir ILS test ortamı kurduk ve bütün model sürelerini bütçeye yükledik.
-Ardından çalışmayı üç aşamada yürüttük. Aşama~1'de yavaş bir iskelette gözlediğimiz anlamlı yararın
-ölçüm gürültüsü olduğunu gördük ve bu iddiayı geri çektik. Aşama~2'de, ön-kayıtlı bir protokolle 38
+Ardından çalışmayı üç aşamada yürüttük. Aşama~1'deki ön inceleme, düşük vuruş frekanslı prototip
+motorlarda hedefleme etkisinin tohum varyansından ayrıştırılamadığını ortaya koymuş ve yüksek
+verimli bir test ortamı tasarımını zorunlu kılmıştır. Aşama~2'de, ön-kayıtlı bir protokolle 38
 yeni çok büyük ölçekli tümleşik devre (very-large-scale integration, VLSI) probleminde GNN
-hedeflemesini rastgele vuruşa ve eğitimsiz bir $k$-en yakın komşu (kNN) sırasına karşı sınadık. % E797
+hedeflemesini rastgele vuruşa ve eğitimsiz bir $k$-en yakın komşu (kNN) sırasına karşı sınadık.
 Aşama~3 doğrulayıcı aşamadır. Yöntem ve havuz ayarları yalnız geliştirme setlerinde seçildi. Protokol
 SHA-256 özetiyle donduruldu ve özet koşudan önce OpenTimestamps'a gönderildi; Bitcoin blok
 976258'e bağlanan bu kanıt, protokolün sonuçlar analiz edilmeden önce var olduğunu üçüncü
-kişilerce doğrulanabilir kılar. Test, geliştirmede hiç kullanılmamış 54 problemde (holdout2)
-koşuldu. % E584, E585, E586
+kişilerce doğrulanabilir kılar. Test, Aşama~2 ve 3'ün geliştirme koşularında hiç kullanılmamış 54
+problemde (holdout2) koşuldu.
+% kaynak: E584-E586, E797
 
 Sınanan adaylardan biri, güdümlü yerel aramanın (guided local search, GLS) ``uzun kenar şüphelidir''
 ilkesini \citep{voudouris_1999_gls} vuruş hedeflemeye taşıyan, eğitimsiz ve kenar başına $O(1)$
@@ -54,11 +57,13 @@ maliyetli bir fazla-uzunluk vekilidir. Kenar uzunluğuna dayanan basit bir sinya
 noktaların yerel komşu ölçeğini çıkarır. Şekil~\ref{fig:manset} sonucu problem düzeyinde gösterir: her çubuk bir problemdir ve
 sıfırın altındaki mavi çubuklar vekilin daha düşük gap verdiği problemlerdir. Vekil 54 problemin
 41'inde GNN'den, 44'ünde rastgele vuruştan daha iyi sonuç verir; çubukların en uzunları kümeli ve
-gerçek problemlerdedir. % E789, E790
+gerçek problemlerdedir.
 GNN'ye karşı ön-kayıtlı iddia bir kötü-değil iddiasıdır; problemlerin çoğundaki üstünlük keşifsel
-bir bulgudur. Aynı ölçütü kendi vekilimize de uyguladık: protokol sonrası keşifsel bir kolda yerel
-ölçek düzeltmesi olmadan ham kenar uzunluğu da vekilden ortalamada ayrışmadı. Bu, yararın kenar
-uzunluğu bilgisinin kendisinden geldiğini düşündürür (Bölüm~\ref{sec:bulgular-duyarlilik}). % E972
+bir bulgudur. Aynı ölçütü kendi vekilimize de uyguladık: protokol sonrası keşifsel bir ablasyonda
+yerel ölçek düzeltmesi çıkarıldı ve en yalın sinyal olan ham kenar uzunluğu da vekilden ortalamada
+ayrışmadı. Bu, yararın kenar uzunluğu bilgisinin kendisinden geldiğini ve ek bir normalizasyona
+gerek olmadığını düşündürür (Bölüm~\ref{sec:bulgular-duyarlilik}).
+% kaynak: E789, E790, E972
 
 Bu çalışmanın başlıca katkıları şunlardır:
 \begin{itemize}
@@ -66,22 +71,33 @@ Bu çalışmanın başlıca katkıları şunlardır:
   gap'i 0,172 puan düşürdüğünü ($p=3{,}7\times10^{-7}$) ve GNN ile kazanç hedefli çok katmanlı
   algılayıcıya (multilayer perceptron, MLP) 0,05 puanlık sınırla kötü olmadığını ön-kayıtlı
   testlerle gösteriyoruz. Koşulardan önce kaydedilen keşifsel bloklar, sonucun klasik segment
-  vuruşuna, 60~sn bütçeye ve havuz kuralının komşu ayarlarına karşı sağlam olduğunu gösterir. % E600, E601, E602, E589, E1047, E1078, E1086
+  vuruşuna, 60~sn bütçeye ve havuz kuralının komşu ayarlarına karşı sağlam olduğunu gösterir.
+  Yayımlanmış NeuroLKH modeline, eşit vuruş sayısına ve LKH-3'e karşı koşulan bloklar ise vekilin
+  eşit süredeki konumunun sinyalin niteliğinden çok maliyetinden geldiğini ve etkinin LK düzeyindeki
+  bir yerel aramada kaybolduğunu gösterir.
+% kaynak: E589, E600-E602, E1047, E1078, E1086, E1106, E1107, E1128-E1131, E1172
   \item Öğrenilmiş skorlarda kestirim doğruluğunun arama faydasına kendiliğinden dönüşmediğini
   ölçüyoruz: Aşama~2'de GNN yanlış kenarları 58 problemin 57'sinde kNN'den isabetli ayırt ettiği
   hâlde aramada onun gerisinde kaldı; holdout2'de ikisi ayrışmadı, ucuz ve sürekli güncel vekil ise
-  ikisinden de iyi sonuç verdi (keşifsel). % E890, E805, E605, E604, E607
+  ikisinden de iyi sonuç verdi (keşifsel).
+% kaynak: E604, E605, E607, E805, E890
   \item Koşu içinde çevrimiçi öğrenmenin aynı doğrusal modelin sabit hâline göre gap'i 0,291 puan
   artırdığını ($p=1{,}6\times10^{-10}$) ve mekanizmasını ölçüyoruz: model kendi vuruş ödülünü
-  yükseltirken (12/12 problem) yerel aramanın onardığı nötr vuruşlara yönelir (\%47'den \%88'e). % E599, E941, E944
+  yükseltirken (12/12 problem) yerel aramanın onardığı nötr vuruşlara yönelir (\%47'den \%88'e).
+  Kredi kabul edilen iyileşmelere dayandırıldığında zarar 54 problemin 54'ünde kaybolur (keşifsel).
+% kaynak: E599, E941, E944, E1151, E1152
   \item Geliştirmede seçim, SHA-256 ile dondurma, dış zaman damgası ve 54 bağımsız problemle
   doğrulamadan oluşan bir ön-kayıt protokolünü ve ``öğrenilmiş skoru önce en basit eğitimsiz vekile
-  karşı sına'' ilkesini sunuyor, ilkeyi kendi vekilimize de uyguluyoruz: daha basit ham kenar
-  uzunluğu keşifsel olarak vekilden ayrışmadı. % E585, E586, E972
+  karşı sına'' ilkesini sunuyor, ilkeyi kendi vekilimize de uyguluyoruz: yerel ölçek düzeltmesinin
+  ablasyonunda ham kenar uzunluğu keşifsel olarak vekilden ayrışmadı; en yalın uzunluk sinyali
+  yeterlidir.
+% kaynak: E585, E586, E972
 \end{itemize}
 
 Uygulayıcı için sonuç sadedir: bu motorda ve 10~sn bütçede vuruşları hedeflemek kazandırır;
-sınanan öğrenilmiş skorlar karşısında bunun için model eğitmek gerekmedi. % E588
+sınanan öğrenilmiş skorlar karşısında bunun için model eğitmek gerekmedi. Yayımlanmış bir model
+bile ancak süresi yok sayıldığında küçük bir fark sağladı.
+% kaynak: E588, E1106, E1107
 
 Makalenin geri kalanı şöyle düzenlenmiştir.
 Bölüm~\ref{sec:ilgili-calismalar} ilgili çalışmaları, Bölüm~\ref{sec:yontem} test ortamını ve

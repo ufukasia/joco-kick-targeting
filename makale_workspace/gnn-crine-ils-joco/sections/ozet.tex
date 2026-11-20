@@ -1,25 +1,21 @@
 \abstract{%
 İteratif yerel aramada (ILS) double-bridge vuruşunun hangi tur kenarlarını kıracağı, gezgin satıcı
-probleminde arama verimini belirleyen bir karardır. Bu karar için graf sinir ağı (GNN) gibi
-öğrenilmiş skorlar önerilmektedir; ancak eğitim ve çıkarım maliyetlerine değip değmedikleri, en
-basit eğitimsiz alternatife karşı nadiren sınanır. Hızlı bir 2-opt/Or-opt ILS'te rastgele vuruşu;
-eğitimsiz, $O(1)$ maliyetli bir kenar uzunluğu vekilini (kenarın yerel komşu
-ölçeğini aşan uzunluğu); LKH-3 turlarıyla eğitilmiş bir GNN'yi; iki çok katmanlı algılayıcıyı
-(MLP) ve koşu içinde öğrenen bir modeli karşılaştırdık. Seçimleri geliştirme setlerinde yapıp
-protokolü SHA-256 ve zaman damgasıyla dondurduk. % E584, E585
-Geliştirmede kullanılmamış 54 problemde (10 tohum, 10 sn)
+probleminde arama verimini belirler. Bu karar için graf sinir ağı (GNN) gibi öğrenilmiş skorlar
+önerilmektedir; ancak maliyetlerine değip değmedikleri en basit eğitimsiz alternatife karşı nadiren
+sınanır. Hızlı bir 2-opt/Or-opt ILS'te rastgele vuruşu; eğitimsiz, $O(1)$ maliyetli bir kenar
+uzunluğu vekilini; LKH-3 turlarıyla eğitilmiş bir GNN'yi; iki çok katmanlı algılayıcıyı (MLP) ve
+koşu içinde öğrenen bir modeli karşılaştırdık. Seçimler geliştirme setlerinde yapıldı, protokol
+SHA-256 ve zaman damgasıyla donduruldu. Geliştirmede kullanılmamış 54 problemde (10 tohum, 10 sn)
 dört ön-kayıtlı hipotezin dördü de desteklendi: vekil, rastgele vuruşa göre gap'i 0,172 puan
-düşürdü ($p=3{,}7\times10^{-7}$), GNN'ye ve kazanç hedefli MLP'ye karşı 0,05 puanlık sınırla
-kötü-değil testlerini geçti; keşifsel olarak 41/54 problemde GNN'den iyiydi. % E600, E601, E602, E589, E789
-Hedefleme kazancı kümeli ve gerçek problemlerde toplandı, uniformda anlamlı değildi. % E618, E634, E626
-Önceden kaydedilen keşifsel bloklarda hedefli vuruş klasik segment vuruşundan 1,04 puan iyiydi ve
-vekilin GNN'ye karşı avantajı 60 sn'de daralarak sürdü ($-0{,}078$ puan). % E1047, E1078
-Aynı ölçütü vekilimize uygulayan keşifsel bir kolda, ölçek düzeltmesiz ham kenar uzunluğu vekilden
-ayrışmadı ($+0{,}009$ puan). % E972
-Çevrimiçi model kendi vuruş ödülünü artırırken son gap'i, sabit hâline göre 0,291 puan
-kötüleştirdi. % E599, E941
-Bu motorda, 10 sn bütçede ve sınanan öğrenilmiş skorlar için vuruş hedefleme öğrenilmiş model
-gerektirmedi; öğrenilmiş arama bileşenleri önce en basit eğitimsiz vekillere karşı
-değerlendirilmelidir.
+düşürdü ($p=3{,}7\times10^{-7}$) ve GNN ile kazanç hedefli MLP'ye karşı 0,05 puanlık sınırla
+kötü-değil testlerini geçti. Önceden kaydedilen keşifsel bloklarda vekil, ağın süresi bütçeden
+düşüldüğünde yayımlanmış NeuroLKH modelinden ayrışmadı; süre sayılmadığında NeuroLKH problemlerin
+çoğunda küçük bir farkla öndeydi. Eşit vuruş sayısında öğrenilmiş skorlar vekilden kötü değildi ve
+vuruş başına en iyi sinyal eğitimsiz kNN sırasıydı: eşit süredeki sıralamayı sinyalin niteliğinden
+çok maliyeti belirler. Çevrimiçi modelin zararı işaretli ödülden geliyordu; kabule dayalı krediyle
+kayboldu. LKH-3 içinde hedeflemenin ölçülebilir bir etkisi olmadı. Hızlı ILS'te vuruş hedefleme
+öğrenilmiş model gerektirmedi; öğrenilmiş arama bileşenleri önce en basit eğitimsiz vekillere
+karşı ve eşit maliyetle sınanmalıdır.
 }
-\keywords{gezgin satıcı problemi, iteratif yerel arama, vuruş hedefleme, eğitimsiz vekil, ön-kayıtlı deney, kötü-değil testi}
+\keywords{gezgin satıcı problemi, iteratif yerel arama, vuruş hedefleme, eğitimsiz vekil, ön-kayıtlı deney, NeuroLKH}
+% kaynak: E584, E585, E589, E599-E602, E1106, E1107, E1128-E1131, E1148-E1152, E1172

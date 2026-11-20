@@ -21,6 +21,7 @@ ENTRY = [
     "fast_ils", "kick_targeting_experiment", "test_fast_ils", "v2_targeting_experiment", "holdout2_suite",
     "v2_analysis", "cheap_scorer", "online_targeting", "gnn_trained", "v3_extra_experiment", "v4_robustness_experiment",
     "analysis_online_mechanism", "analysis_online_reward", "test_online_reward", "kick_targeting_analysis",
+    "v5_experiment", "online_credit", "neurolkh_prep", "neurolkh_infer", "lkh_b3_experiment",  # PROTOCOL_v4 blocks
     "kick_mechanism_analysis", "cheap_analysis", "cheap_mechanism", "cheap_targeting_experiment",
     "pool_composition", "make_synth_suite", "kick_oracle_analysis", "kick_oracle_experiment",
     # GNN / MLP training
@@ -44,7 +45,7 @@ STAGE1_SINGLE = ["elite_entropy_validation_40_summary", "entropy_fusion_holdout_
                  "entropy_holdout_100_t1_summary", "entropy_tsplib_9x10_summary", "tsplib_circuit_regimes",
                  "tsplib_scale_72x5_analysis"]
 PAPER = ["paper/main.tex", "paper/main_tek.tex", "paper/main.pdf", "paper/references.bib", "paper/sn-jnl.cls",
-         "paper/sn-basic.bst", "paper/tek_dosya_uret.py", "sections", "figures", "evidence/evidence.json",
+         "paper/sn-basic.bst", "paper/tek_dosya_uret.py", "sections", "figures", "evidence/evidence.json", "evidence/v4_ids.json", "evidence/v5_ids.json",
          "evidence/scripts", "evidence/tables", "evidence/build_v3c.py", "evidence/logs"]
 SKIP = {"__pycache__", ".tmp", "_onceki", "_v1_crine_taslak", "_onizleme"}
 
@@ -71,7 +72,8 @@ def closure():
 def cp(src, dst):
     if src.is_dir():
         for p in src.rglob("*"):
-            if p.is_file() and not (set(p.parts) & SKIP) and p.suffix not in (".pyc", ".bak", ".tmp"):
+            if (p.is_file() and not (set(p.parts) & SKIP) and p.suffix not in (".pyc", ".bak", ".tmp")
+                    and not p.name.endswith(".graph.npz")):   # NeuroLKH input graphs: rebuilt by neurolkh_prep.py
                 q = dst / p.relative_to(src)
                 q.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(p, q)
@@ -120,9 +122,13 @@ def main():
     p3 = OUT / "results/kick_targeting/PROTOCOL_v3_exploratory.json"
     if p3.exists():   # exploratory robustness block: analysis script + runner are frozen too
         reg.update({f"v3:{a}": b for a, b in json.loads(p3.read_text(encoding="utf-8"))["code_and_data_sha256"].items()})
+    p4 = OUT / "results/kick_targeting/PROTOCOL_v4_exploratory.json"
+    if p4.exists():   # reviewer blocks; third-party code is not redistributed (see third_party/README.md)
+        reg.update({f"v4:{a}": b for a, b in json.loads(p4.read_text(encoding="utf-8"))["code_and_data_sha256"].items()
+                    if not a.startswith("third_party/")})
     bad = []
     for f, h in (reg.items() if isinstance(reg, dict) else []):
-        q = OUT / f.removeprefix("v1:").removeprefix("v3:")
+        q = OUT / f.removeprefix("v1:").removeprefix("v3:").removeprefix("v4:")
         if not q.exists() or hashlib.sha256(q.read_bytes()).hexdigest() != h:
             bad.append(f)
     size = sum(p.stat().st_size for p in OUT.rglob("*") if p.is_file() and ".git" not in p.parts)

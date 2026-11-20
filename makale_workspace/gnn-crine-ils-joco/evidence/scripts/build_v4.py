@@ -145,10 +145,7 @@ for g in ("S1", "S2", "S3"):
     for _, lab, r in rr:
         lines.append(f"{lab} & {cell(r)} & {ci(r['ci95'])} & {r['wins_first']}/{r['n_inst']} & {trp(r['p_holm'])} \\\\")
 HEAD = (r"\begin{table}[!htbp]" "\n" r"\centering\small\setlength{\tabcolsep}{3pt}" "\n"
-        r"\caption{Keşifsel sağlamlık blokları (holdout2, protokol sonrası; PROTOCOL\_v3\_exploratory koşulardan önce "
-        r"kaydedildi). Fark: problem başı ortalama gap farkı [puan], negatif değer ilk terim lehinedir. Önde: ilk terimin "
-        r"daha düşük gap verdiği problem sayısı. $p_{\mathrm{Holm}}$: blok (b'de her zaman noktası) içinde Holm düzeltmeli "
-        r"Wilcoxon; renk $p_{\mathrm{Holm}}<0{,}05$ ve GA'nın sıfırı dışladığını gösterir.}" "\n"
+        r"\caption{Keşifsel sağlamlık blokları (holdout2; protokol koşulardan önce kaydedildi). Fark [puan]: negatif değer ilk terim lehine. Önde: ilk terimin önde olduğu problem sayısı. $p_{\mathrm{Holm}}$: blok içinde (b'de her zaman noktasında) Holm düzeltmeli Wilcoxon. Renk: $p_{\mathrm{Holm}}<0{,}05$ ve GA sıfırı dışlar.}" "\n"
         r"\label{tab:v4-robustness}" "\n"
         r"\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc}" "\n" r"\toprule" "\n"
         r"Karşılaştırma & Fark & \%95 GA & Önde & $p_{\mathrm{Holm}}$ \\" "\n" r"\midrule" "\n")

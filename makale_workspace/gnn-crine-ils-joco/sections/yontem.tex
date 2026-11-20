@@ -10,8 +10,8 @@ arasındaki her fark doğrudan hedef seçimine bağlanabilir.
 Bir TSP örneği $I=(V,d)$ ile gösterilsin; $n=|V|$ şehir içerir ve $d$ örneğin bildirdiği uzaklık
 işlevidir (EUC\_2D'de yuvarlatılmış Öklid uzaklığı, GEO'da TSPLIB büyük çember uzaklığı). Tur
 $T=(v_1,\dots,v_n)$, $v_{n+1}=v_1$ olmak üzere döngüsel bir permütasyondur ve maliyeti
-$C(T)=\sum_{i=1}^{n} d(v_i,v_{i+1})$'dir. Kalite, bilinen optimuma ya da referans çözüme (sentetik problemlerde LKH-3'ün 60~sn'lik
-koşusu) göre yüzde farkla ölçülür: $\mathrm{gap}(T)=100\,(C(T)-C^\star)/C^\star$. İki strateji arasındaki fark gap
+$C(T)=\sum_{i=1}^{n} d(v_i,v_{i+1})$'dir. Kalite, bilinen optimuma ya da referans çözüme (sentetik problemlerde LKH-3'ün tek koşusu:
+Aşama~3'ün holdout2 setinde 60~sn, Aşama~2'nin sentetik setlerinde 30~sn) göre yüzde farkla ölçülür: $\mathrm{gap}(T)=100\,(C(T)-C^\star)/C^\star$. İki strateji arasındaki fark gap
 \emph{puanı} olarak verilir; negatif değer soldaki stratejinin lehinedir. $N_k(u)$, $u$'nun $k$
 en yakın komşusunun listesidir.
 
@@ -26,7 +26,10 @@ kayıtlıdır.
 \begin{itemize}
   \item \textbf{Yerel arama.} 2-opt ve Or-opt (1--3 şehirlik segmentin iki yönde yeniden
   yerleştirilmesi); her şehir için $N_{10}$ aday listesi ve $d(a,c)<d(a,\mathrm{succ}(a))$ budama
-  kuralı. 2-opt ters çevirmesi kısa olan yay üzerinde yapılır.
+  kuralı. 2-opt ters çevirmesi kısa olan yay üzerinde yapılır. Kısa $N_{10}$ listesi hamle
+  değerlendirmesini ucuz tutar; skorlarda ise sırası 10'un ötesine düşen uzun kenarları da
+  ayırt edebilmek ve GNN'nin ileti geçişi komşuluğuyla aynı listeyi paylaşmak için daha geniş
+  $N_{24}$ kullanılır.
   \item \textbf{Bakma bitleri.} Etkin şehirler bir kuyrukta tutulur. Vuruştan sonra yalnız değişen
   kenarların uçları kuyruğa girer; bir vuruşun bedeli tüm tur taraması yerine yerel onarımla
   sınırlı kalır \citep{bentley_1992_fast}.
@@ -84,9 +87,11 @@ $e$ değeri en büyük $m$ kenardır. $d_{\mathrm{ref}}$ örnek başına bir kez
 tazeleme kenar başına $O(1)$'dir. Vekil, aşağıdaki kazanç hedefinin eğitimsiz karşılığı olarak
 tasarlandı ve GLS'nin uzun kenar ilkesini \citep{voudouris_1999_gls} vuruş hedeflemeye taşır. Sıra
 tabanlı kNN skorundan farkı, kenarın komşu listesindeki yerine değil, uzunluğun büyüklüğüne
-bakmasıdır. Protokol sonrasında, keşifsel olarak, $d_{\mathrm{ref}}$ terimi atılmış ham uzunluk
-sinyali ($e(u,v)=d(u,v)$; GLS'nin cezasız fayda ölçütü) de sınandı. Bu kol, fazla-uzunluk için
-geliştirmede seçilen havuz kuralını (0,06/0,5) olduğu gibi kullandı. % E751
+bakmasıdır. Protokol sonrasında, yerel ölçek düzeltmesinin keşifsel bir ablasyonu olarak,
+$d_{\mathrm{ref}}$ terimi çıkarılmış en yalın uzunluk sinyali ($e(u,v)=d(u,v)$; GLS'nin cezasız
+fayda ölçütü) de sınandı. Ablasyonun tek değişkeni bu terimdir: kol, fazla-uzunluk için
+geliştirmede seçilen havuz kuralını (0,06/0,5) olduğu gibi kullandı.
+% kaynak: E751
 
 \paragraph{GNN.} Örnekle ve topla (GraphSAGE) tarzında, saf NumPy ile gerçeklenmiş küçük bir
 ileti geçişli ağdır: düğüm başına 10 öznitelik (komşu tur kenarlarının uzunlukları, kaldırma
@@ -94,18 +99,19 @@ kazancı, en yakın komşu uzaklıkları, dönüş açısı, segmentten sapma ve
 sırası), tur kenarı başına 2 öznitelik (z-normalize uzunluk ve komşu sırası), 3 ileti geçişi
 katmanı, 16 boyutlu gizli durum ve $N_{24}$ üzerinde geometrik ileti geçişi. Kenar çıkışı, bir tur
 kenarının LKH-3 \citep{helsgaun_2017_lkh3} turunda bulunma olasılığını $\hat p_e$ olarak tahmin eder.
-Model $n\in[101,400]$ aralığındaki 120 sentetik problemde (beş dağılım) 954 tur anlık görüntüsüyle
-eğitilmiş ve dondurulmuştur. Havuz, $\hat p_e$ değeri en düşük $m$ kenardır. Modelin girdileri
+Model $n\in[101,400]$ aralığındaki 120 sentetik problemden (beş dağılım) 106'sının 954 tur anlık
+görüntüsüyle eğitilmiş, 14'ü doğrulamaya ayrılmış ve dondurulmuştur (ayrıntılar aşağıda). Havuz, $\hat p_e$ değeri en düşük $m$ kenardır. Modelin girdileri
 arasında kNN sırası doğrudan bulunduğundan, öğrenmenin bu sinyalin ötesine geçip geçmediği ampirik
 bir sorudur.
 
-Bu GNN yayımlanmış bir modelin yeniden üretimi değil, yazarın kendi gerçeklemesidir; LKH turlarıyla
-eğitilmiş kenar skorları sınıfının küçük bir temsilcisi olarak kullanılır. İşlevselliği iki ölçümle
-gösterilir: yanlış kenarları kNN'den daha iyi ayırt eder (Bölüm~\ref{sec:bulgular-asama2}) ve iki
-aşamada da rastgele vuruştan iyidir. % E889, E803, E611
-Test problemleri ($n=1.376$--$9.882$) eğitim aralığının çok üstündedir; bu nedenle karşılaştırma
-bir boyut genellemesi sınamasını da içerir ve vardığımız sonuçlar bu ölçekteki öğrenilmiş skorlarla
-sınırlıdır. % E797, E598
+Bu GNN, LKH-3 turlarıyla eğitilmiş kenar skorlama mimarilerini aynı duvar-saati bütçesi altında
+temsil etmek üzere hafif ve şeffaf biçimde tasarlanmıştır. İşlevselliği iki bağımsız ölçümle
+doğrulanır: yanlış kenarları kNN'den daha yüksek isabetle ayırt eder (Bölüm~\ref{sec:bulgular-asama2})
+ve her iki aşamada da rastgele vuruşun önüne geçer.
+Eğitim aralığının ($n\in[101,400]$) ötesindeki büyük test problemleri ($n=1.376$--$9.882$),
+öğrenilmiş modellerin gerçekçi uygulama koşullarındaki boyut genelleme kapasitesini de eş zamanlı
+olarak değerlendirme olanağı sunar.
+% kaynak: E598, E611, E797, E803, E889
 
 \paragraph{Üyelik-MLP ve kazanç-MLP.} GNN'nin kaybının öğrenmeden mi maliyetten mi geldiğini
 ayırmak için, GNN'nin eğitim verisinde iki küçük MLP (17 girdi, 32 ve 16 gizli birim) eğitildi.
@@ -114,13 +120,26 @@ bunların en küçük/en büyük değeri, kenar uzunluğunun 1., 5. ve 24. komş
 komşu iki tur kenarının uzunluk oranları ve sıraları. \emph{Üyelik-MLP} kenarın referans turda
 bulunmamasını sınıflandırır. \emph{Kazanç-MLP} ise
 \[
-  y_e=\mathbb{1}[e\notin T^\star]\cdot\max\bigl(0,\,d_e-\bar d^{\,\star}_e\bigr)/\tilde d
+  y_e=\mathbb{I}[e\notin T^\star]\cdot\max\bigl(0,\,d_e-\bar d^{\,\star}_e\bigr)/\tilde d
 \]
 hedefini $\log(1+y_e)$ üzerinden regresyonla öğrenir; $\bar d^{\,\star}_e$, $e$'nin iki ucundaki
 referans tur kenarlarının ortalama uzunluğu, $\tilde d$ medyan tur kenarı uzunluğudur. Kazanç
 hedefi, vuruşun yanlış kenarı kırmasının yanında bunun ne kadar kazandırabileceğini de ölçer;
 Denklem~\eqref{eq:excess}, $\bar d^{\,\star}$ yerine eğitimsiz $d_{\mathrm{ref}}$ koyarak bu hedefe
 yaklaşır.
+
+\paragraph{Eğitim ayrıntıları.} GNN, çıkarımdaki NumPy gerçeklemesinin birebir karşılığı olan bir
+PyTorch kopyasıyla GPU'da eğitildi; ağırlıklar NumPy'a aktarıldı. Etiketler, her sentetik problemin
+LKH-3 turundaki kenar üyeliğidir. Kayıp, düğüm ve kenar başlıklarının ikili çapraz entropilerinin
+eşit ağırlıklı toplamıdır. Adam eniyileyicisi (öğrenme oranı $3\times10^{-3}$, 32 graflık
+mini-yığın, gradyan normu 5'te kırpılır) 150 epoch koşuldu ve doğrulama kaybının en düşük olduğu
+epoch (99) seçildi. Doğrulama, problem düzeyinde ayrılmış 14 problemin 126 anlık görüntüsüdür;
+doğrulama kenar doğruluğu $0{,}82$'dir. İki MLP scikit-learn ile, aynı 120 problemin 100'ünde
+eğitildi ve 20'sinde doğrulandı (244.098 eğitim satırı, z-normalize girdiler): ReLU etkinleştirme,
+Adam (öğrenme oranı $10^{-3}$), $10^{-3}$ L2 cezası ve eğitim verisinin \%10'u üzerinde 10 epoch
+sabırlı erken durdurma. Üyelik-MLP log-kayıpla en fazla 60, kazanç-MLP $\log(1+y_e)$ üzerinde kare
+hatayla en fazla 200 epoch eğitildi. Ayrı doğrulama problemlerinde üyelik-MLP'nin AUC değeri
+$0{,}832$'dir (kNN sırası $0{,}812$).
 
 \paragraph{Sabit doğrusal ön-bilgi.} Aynı 17 öznitelik ve bir sabit terim üzerinde, kazanç hedefine
 ridge regresyonuyla uydurulmuş doğrusal bir skor $w_0^\top x_e$'dir. Koşu boyunca değişmez; havuz en
@@ -142,27 +161,61 @@ tahmini ödülü en yüksek $m$ kenar havuzu oluşturur. Model $w_0$ ile ılık 
 (Bölüm~\ref{sec:yontem-maliyet}) her kabul edilen vuruşta, ayrıca 2.000 vuruşta bir yeniden kurulur. İşaretli ödülün bilinçli bir gerekçesi
 vardır: vuruşların çok küçük bir kısmı kabul edildiğinden, $\max(0,\cdot)$ biçimindeki bir ödül
 neredeyse her vuruş için sıfır olurdu. Ödül işareti ve havuz seçimi birim testleriyle doğrulandı:
-iyileştiren vuruş pozitif, nötr vuruş sıfır ödül alır ve havuz en yüksek tahmini ödülü seçer. % E959
+iyileştiren vuruş pozitif, nötr vuruş sıfır ödül alır ve havuz en yüksek tahmini ödülü seçer.
 Aşama~3 geliştirme koşularında soğuk başlatılan ($w_0=0$) bir sürüm de sınandı.
+% kaynak: E959
 
 \subsection{Maliyet muhasebesi}\label{sec:yontem-maliyet}
 
-Havuz, incumbent tur değiştiğinde yeniden hesaplanır. Skorlama süresi (GNN çıkarımı, MLP ileri
+Havuz, mevcut en iyi tur değiştiğinde yeniden hesaplanır. Skorlama süresi (GNN çıkarımı, MLP ileri
 geçişi, vekil hesabı, Thompson örneklemesi) duvar-saati bütçesinden düşülür; yani her sinyal
 ürettiği bilginin bedelini aynı bütçeden öder. Toplam skorlama süresi geçen sürenin \%10'unu
 aşarsa tazeleme ertelenir. Bu sırada havuzdaki bir kenar artık turda değilse o kesim tekdüze
 seçilir; buna \emph{bayat kesim} diyoruz. Örnek başına bir kez yapılan hazırlıklar ($N_{24}$
 listeleri, komşu uzaklıkları, ödül ölçeği) hiçbir sinyal için bütçeye yüklenmez. Numba derleme
-süresi her işçi sürecinde bir ısınma çağrısıyla bütçe dışına alınır.
+süresi her işçi sürecinde bir ısınma çağrısıyla bütçe dışına alınır. Algoritma~\ref{alg:ils}
+bütün döngüyü özetler; vuruşlar yaklaşık 4~ms'lik yığınlar hâlinde koşulur ve tazeleme koşulu
+yığınlar arasında denetlenir.
 
-\subsection{Aşama 1 iskeleti}\label{sec:yontem-crine}
+\begin{algorithm}[!htbp]
+\caption{Hedefli hızlı ILS (bir strateji, bir (problem, tohum) çifti)}\label{alg:ils}
+\begin{algorithmic}[1]
+\Require başlangıç turu $T_0$ (2-opt/Or-opt yerel optimumu), bütçe $B$, sinyal $s$ (rastgelede yok), havuz kuralı $(f,p)$
+\State $T\gets T_0$;\ $P\gets\emptyset$;\ $t_{\mathrm{model}}\gets0$;\ $a\gets0$;\ $a_{\mathrm{son}}\gets-1$ \Comment{$a$: kabul sayısı}
+\While{geçen süre $t<B$}
+  \If{$s$ var \textbf{and} $a\neq a_{\mathrm{son}}$ \textbf{and} ($P=\emptyset$ \textbf{or} $t_{\mathrm{model}}\le0{,}1\,t$)}
+    \State $P\gets$ $s$'ye göre en şüpheli $m=\max(12,\lfloor fn\rfloor)$ tur kenarı \Comment{tazeleme}
+    \State $a_{\mathrm{son}}\gets a$;\ $t_{\mathrm{model}}\gets t_{\mathrm{model}}+{}$skorlama süresi
+  \EndIf
+  \For{yığındaki her vuruş}
+    \For{$i=1,2,3$}
+      \If{$P\neq\emptyset$ \textbf{and} $U(0,1)<p$}
+        \State $e\sim P$ tekdüze; $k_i\gets$ $e$'nin konumu ($e\notin T$ ise tekdüze: bayat kesim)
+      \Else
+        \State $k_i$ tekdüze
+      \EndIf
+    \EndFor
+    \State $T'\gets$ DoubleBridge$(T;k_1,k_2,k_3)$; değişen kenarların uçları kuyruğa girer
+    \State $T'\gets$ 2-opt/Or-opt$(T',N_{10},\text{kuyruk})$ \Comment{bakma bitleri}
+    \If{$C(T')<C(T)$} \State $T\gets T'$;\ $a\gets a+1$ \Else \State $T$ geri yüklenir \EndIf
+  \EndFor
+\EndWhile
+\State \Return $T$
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Aşama 1 iskeleti ve test ortamının gerekçesi}\label{sec:yontem-crine}
 
 Aşama~1, öğrenilmiş vuruş hedeflemesini CRINE-ILS (Counterfactual Residual Improvement through Neighborhood Expansion) adlı yavaş bir iskelette sınamıştı: saf Python
 yerel arama, her vuruştan sonra tüm tur üzerinde sınırlı onarım ve ikinci bir GNN ile sıralanan
-şehirler çevresinde komşuluk genişletme (\path{adaptive_ils.py}). Bu iskelette bir vuruş yüzlerce
-milisaniye sürüyordu; kısa bütçede vuruş döngüsü neredeyse hiç çalışmadığı için stratejiler
-arasındaki farklar tohum gürültüsüne indirgendi (Bölüm~\ref{sec:bulgular}). Hızlı test ortamı bu
-dersin doğrudan sonucudur.
+şehirler çevresinde komşuluk genişletme (\path{adaptive_ils.py}). Bu iskelette 16 Waterloo VLSI
+probleminde şüpheli kenar hedeflemesi rastgeleye göre $0{,}202$ puanlık bir fark üretti
+($p=0{,}029$). Ancak bir vuruş yüzlerce milisaniye sürüyordu ve 5~sn bütçede koşu başına ortalama
+yalnız 12 vuruş tamamlanabiliyordu; fark bağımsız bir tohum kümesinde tekrarlanmadı ve tohum
+varyansıyla açıklandı. Bu nedenle Aşama~1 bir bulgu olarak değil, tasarım gerekçesi olarak
+raporlanır: vuruş politikaları, ancak vuruş döngüsü bütçe içinde binlerce kez dönebildiğinde
+ayrıştırılabilir. Hızlı test ortamı (Bölüm~\ref{sec:yontem-hizli}) bu dersin doğrudan sonucudur.
+% kaynak: E551, E557
 
 \subsection{İşlem karmaşıklığı}\label{sec:yontem-karmasiklik}
 

@@ -18,9 +18,9 @@ bütçede karşılaştırmaktır.
 GLS, yerel optimumdaki kenarları $c_e/(1+p_e)$ fayda ölçütüyle cezalandırır: uzun ve az
 cezalandırılmış kenarlar önce hedeflenir \citep{voudouris_1999_gls}. Bilgi güdümlü yerel arama (knowledge-guided local search, KGLS) aynı fikri araç rotalamada pertürbasyon aşamasına taşır: bir veri madenciliği çalışmasından türetilen rota genişliği ve kenar uzunluğu ölçütlerine göre ``kötü'' kenarları cezalandırır ve yerel aramayı bu kenarlardan başlatır. Yazarlar bu yönlendirmenin rastgele cezalandırmadan daha iyi sonuç verdiğini, ancak etkisinin yerel arama operatörlerinin seçiminden küçük kaldığını bildirir \citep{arnold_2019_kgls}. Basit
 çözüm ve örnek ölçütlerinin iyi ve kötü çözümleri ayırt edebildiği de gösterilmiştir
-\citep{arnold_2019_vrpgood}. LKH'nin alfa-yakınlık aday kümeleri ise bir kenarın değerini, o kenar zorunlu kılındığında en küçük 1-ağacın uzunluğundaki artışla ölçer \citep{helsgaun_2000_lkh}. Fazla-uzunluk vekilimiz yeni bir ilke
-değildir; GLS'nin uzun kenar fikrinin, kenar başına $O(1)$ maliyetle double-bridge hedeflemesine
-aktarılmasıdır. Katkımız bu basit aktarımın öğrenilmiş skorlara karşı ön-kayıtlı olarak sınanmasıdır.
+\citep{arnold_2019_vrpgood}. LKH'nin alfa-yakınlık aday kümeleri ise bir kenarın değerini, o kenar zorunlu kılındığında en küçük 1-ağacın uzunluğundaki artışla ölçer \citep{helsgaun_2000_lkh}. Fazla-uzunluk vekilimiz, GLS'nin uzun kenar sezgisini kenar başına $O(1)$ işlem maliyetiyle
+double-bridge pertürbasyon hedeflemesine uyarlar. Katkımız bu yalın uyarlamanın öğrenilmiş
+skorlara karşı eş duvar-saatinde ve ön-kayıtlı bir protokolle sınanmasıdır.
 
 \subsection{Öğrenilmiş arama rehberliği}
 Uçtan uca inşa yöntemleri turu doğrudan üretir \citep{bello_2017_nco, dai_2017_s2v, kool_2019_attention, kwon_2020_pomo};
